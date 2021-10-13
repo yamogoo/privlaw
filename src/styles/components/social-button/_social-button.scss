@@ -1,0 +1,49 @@
+.social-button-group {
+    display: flex;
+    flex-direction: row;
+    gap: $social-button-group-gap;
+}
+
+.social-button {
+
+    &-container {
+        padding: $social-button-padding;
+        background-color: $social-button-background-color;
+        border-radius: $social-button-border-radius;
+    }
+
+    &-content {
+            
+    }
+
+    &__icon {
+        font-family: $icon;
+        font-size: $social-button-font-size;
+        // color: $social-button-icon-color; //Theme
+    }
+
+    &.facebook {
+        
+        .social-button__icon {
+            @extend .icon-facebook !optional;
+        }
+    }
+    &.vkontakte {
+        
+        .social-button__icon {
+            @extend .icon-vkontakte !optional;
+        }
+    }
+    &.twitter {
+        
+        .social-button__icon {
+            @extend .icon-twitter !optional;
+        }
+    }
+    &.instagram {
+        
+        .social-button__icon {
+            @extend .icon-instagram !optional;
+        }
+    }
+}

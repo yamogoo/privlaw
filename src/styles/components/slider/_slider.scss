@@ -1,0 +1,56 @@
+.slider {
+    // height: calc(100vh - #{$app-header-height});
+    // top: -$app-content-offset-y;
+    height: 540px;
+    overflow: hidden;
+
+    &__items {
+        position: relative;
+        @include box(inherit);
+    }
+
+    &__item {
+        position: relative;
+        @include box(inherit);
+
+        &__content {
+            display: flex;
+            position: absolute;
+            flex-direction: column;
+            justify-content: center;
+            @include box(inherit);
+        }
+
+        &__group {
+            width: 60%;
+            padding: 80px;
+        }
+
+        &__title {
+
+            h2, h3 {
+                font-size: $slider-title-font-size;
+                font-weight: 500;
+                color: $slider-title-color-inverse;
+            }
+        }
+
+        &__description {
+            // width: 70px;
+
+            p {
+                font-size: $slider-description-font-size;
+                color: $slider-title-color-inverse;
+            }
+        }
+
+        &__image {
+            min-width: 100%;
+
+            img {
+                // width: 100%;
+                // object-fit: cover;
+            }
+        }
+    }
+}

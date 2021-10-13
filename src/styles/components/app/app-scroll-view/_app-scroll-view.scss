@@ -1,0 +1,6 @@
+.app-scroll-view {
+    display: block;
+    position: relative;
+    @include box(100%);
+    overflow: auto;
+}

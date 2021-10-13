@@ -1,0 +1,66 @@
+// @import "../../../assets/icons/style.css";
+
+$nav-line-color: 'neutralColor';
+$nav-line-active-color: 'accentColor';
+$nav-line-gap: px2em(20px);
+$nav-line-icon-offset-x: px2em(20px);
+
+.nav-line {
+    padding-top: 55px;
+
+    &-container {
+        display: flex;
+        position: relative;
+        gap: $nav-line-gap;
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        @include box(auto);
+        list-style: none;
+
+        a {
+            // color: $neutral-color;
+        }
+
+        //Last child
+        &:last-child {
+            
+            a {
+                // color: $nav-line-active-color;
+                @include themify($themes-app) {
+                    color: themed($nav-line-active-color); 
+                }
+            }
+        }
+        //Not last child
+        &:not(:last-child) {
+            
+            a {
+                display: flex;
+                // color: $nav-line-color;
+                @include themify($themes-app) {
+                    color: themed($nav-line-color); 
+                }
+                gap: $nav-line-icon-offset-x;
+
+                &::after {
+                    font-family: icomoon;
+                    @extend .icon-navigation-line:before;
+                    color: inherit;
+                }
+            }
+            //
+            &:hover, &:focus {
+
+                a {
+                    // color: $nav-line-active-color;
+                    @include themify($themes-app) {
+                        color: themed($nav-line-active-color); 
+                    }
+                }
+            }
+        }
+    }
+}

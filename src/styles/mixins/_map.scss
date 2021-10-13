@@ -1,0 +1,19 @@
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
+
+@mixin get-template($map, $key) {
+    @function template($key) {
+    @if map-has-key($map, $key) {
+        @return map-get($map, $key);
+    }
+
+    @warn "Unknown `#{$key}` in $templates.";
+    @return null;
+    }
+}

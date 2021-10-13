@@ -1,0 +1,246 @@
+// @font-face {
+//   font-family: "Roboto";
+//   src: url("~assets/fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"),
+//     url("~assets/fonts/Roboto-Medium.woff") format("woff"),
+//     url("~assets/fonts/Roboto-Medium.ttf") format("truetype"),
+//     url("~assets/fonts/Roboto-Medium.svg#Roboto-Medium") format("svg");
+//   font-weight: 500;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Roboto";
+//   src: url("~ssets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"),
+//     url("~assets/fonts/Roboto-Regular.woff") format("woff"),
+//     url("~eassets/fonts/Roboto-Regular.ttf") format("truetype"),
+//     url("~assets/fonts/Roboto-Regular.svg#Roboto-Regular") format("svg");
+//   font-weight: 400;
+//   font-style: normal;
+// }
+
+// @font-face {
+//   font-family: "Roboto";
+//   src: url("~assets/fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"),
+//     url("~assets/fonts/Roboto-Light.woff") format("woff"),
+//     url("~assets/fonts/Roboto-Light.ttf") format("truetype"),
+//     url("~assets/fonts/Roboto-Light.svg#Roboto-Light") format("svg");
+//   font-weight: 300;
+//   font-style: normal;
+// }
+
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-MediumItalic.eot');
+    src: local('Graphik LCG Medium Italic'), local('GraphikLCG-MediumItalic'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-MediumItalic.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-MediumItalic.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-SuperItalic.eot');
+    src: local('Graphik LCG Super Italic'), local('GraphikLCG-SuperItalic'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SuperItalic.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SuperItalic.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SuperItalic.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SuperItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-SemiboldItalic.eot');
+    src: local('Graphik LCG Semibold Italic'), local('GraphikLCG-SemiboldItalic'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SemiboldItalic.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SemiboldItalic.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SemiboldItalic.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-SemiboldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Black.eot');
+    src: local('Graphik LCG Black'), local('GraphikLCG-Black'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Black.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Black.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Black.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Super.eot');
+    src: local('Graphik LCG Super'), local('GraphikLCG-Super'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Super.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Super.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Super.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Super.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Thin.eot');
+    src: local('Graphik LCG Thin'), local('GraphikLCG-Thin'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Thin.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Thin.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Thin.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-ExtralightItalic.eot');
+    src: local('Graphik LCG Extralight Italic'), local('GraphikLCG-ExtralightItalic'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-ExtralightItalic.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-ExtralightItalic.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-ExtralightItalic.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-ExtralightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Regular.eot');
+    src: local('Graphik LCG Regular'), local('GraphikLCG-Regular'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Regular.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Regular.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Graphik LCG';
+//     src: url('GraphikLCG-BoldItalic.eot');
+//     src: local('Graphik LCG Bold Italic'), local('GraphikLCG-BoldItalic'),
+//         url('GraphikLCG-BoldItalic.eot?#iefix') format('embedded-opentype'),
+//         url('GraphikLCG-BoldItalic.woff2') format('woff2'),
+//         url('GraphikLCG-BoldItalic.woff') format('woff'),
+//         url('GraphikLCG-BoldItalic.ttf') format('truetype');
+//     font-weight: bold;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Graphik LCG';
+//     src: url('GraphikLCG-LightItalic.eot');
+//     src: local('Graphik LCG Light Italic'), local('GraphikLCG-LightItalic'),
+//         url('GraphikLCG-LightItalic.eot?#iefix') format('embedded-opentype'),
+//         url('GraphikLCG-LightItalic.woff2') format('woff2'),
+//         url('GraphikLCG-LightItalic.woff') format('woff'),
+//         url('GraphikLCG-LightItalic.ttf') format('truetype');
+//     font-weight: 300;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Graphik LCG';
+//     src: url('GraphikLCG-BlackItalic.eot');
+//     src: local('Graphik LCG Black Italic'), local('GraphikLCG-BlackItalic'),
+//         url('GraphikLCG-BlackItalic.eot?#iefix') format('embedded-opentype'),
+//         url('GraphikLCG-BlackItalic.woff2') format('woff2'),
+//         url('GraphikLCG-BlackItalic.woff') format('woff'),
+//         url('GraphikLCG-BlackItalic.ttf') format('truetype');
+//     font-weight: 900;
+//     font-style: italic;
+// }
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Medium.eot');
+    src: local('Graphik LCG Medium'), local('GraphikLCG-Medium'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Medium.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Medium.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Light.eot');
+    src: local('Graphik LCG Light'), local('GraphikLCG-Light'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Light.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Light.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Light.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Semibold.eot');
+    src: local('Graphik LCG Semibold'), local('GraphikLCG-Semibold'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Semibold.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Semibold.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Bold.eot');
+    src: local('Graphik LCG Bold'), local('GraphikLCG-Bold'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Bold.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Bold.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
+    src: url('GraphikLCG-Extralight.eot');
+    src: local('Graphik LCG Extralight'), local('GraphikLCG-Extralight'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Extralight.eot?#iefix') format('embedded-opentype'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Extralight.woff2') format('woff2'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Extralight.woff') format('woff'),
+        url('./src/assets/fonts/GraphikLCG/GraphikLCG-Extralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+// @font-face {
+//     font-family: 'Graphik LCG';
+//     src: url('GraphikLCG-ThinItalic.eot');
+//     src: local('Graphik LCG Thin Italic'), local('GraphikLCG-ThinItalic'),
+//         url('GraphikLCG-ThinItalic.eot?#iefix') format('embedded-opentype'),
+//         url('GraphikLCG-ThinItalic.woff2') format('woff2'),
+//         url('GraphikLCG-ThinItalic.woff') format('woff'),
+//         url('GraphikLCG-ThinItalic.ttf') format('truetype');
+//     font-weight: 100;
+//     font-style: italic;
+// }
+
+// @font-face {
+//     font-family: 'Graphik LCG';
+//     src: url('GraphikLCG-RegularItalic.eot');
+//     src: local('Graphik LCG Regular Italic'), local('GraphikLCG-RegularItalic'),
+//         url('GraphikLCG-RegularItalic.eot?#iefix') format('embedded-opentype'),
+//         url('GraphikLCG-RegularItalic.woff2') format('woff2'),
+//         url('GraphikLCG-RegularItalic.woff') format('woff'),
+//         url('GraphikLCG-RegularItalic.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: italic;
+// }

@@ -1,0 +1,6 @@
+@mixin background-blur($x) {
+    -webkit-filter: blur($x);
+    -moz-filter: blur($x);
+    -o-filter: blur($x);
+    -ms-filter: blur($x);
+}

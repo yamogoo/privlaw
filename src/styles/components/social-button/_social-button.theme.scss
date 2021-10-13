@@ -1,0 +1,8 @@
+.social-button {
+
+    &__icon {
+        @include themify($themes-header) {
+            color: themed('socialButtonIconColor'); 
+        }
+    }
+}

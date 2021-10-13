@@ -1,0 +1,8 @@
+@mixin user-select($value) {
+    -webkit-touch-callout: $value; // iOS Safari
+    -webkit-user-select: $value;   // Chrome/Safari/Opera
+    -khtml-user-select: $value;    // Konqueror
+    -moz-user-select: $value;      // Firefox
+    -ms-user-select: $value;       // Internet Explorer/Edge
+    user-select: $value;           // Non-prefixed version, currently
+}

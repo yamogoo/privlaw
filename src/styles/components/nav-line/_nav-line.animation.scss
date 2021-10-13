@@ -1,0 +1,28 @@
+.nav-line {
+
+    &__item {
+
+        //Not last child
+        &:not(:last-child) {
+            
+            a {
+                @include transition(color, 125ms, ease-in-out);
+
+                &::after {
+                    transform: rotate(0deg);
+                    @include transition(transform, 125ms, ease-in-out);
+                }
+            }
+            //
+            &:hover, &:focus {
+
+                a {
+
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}

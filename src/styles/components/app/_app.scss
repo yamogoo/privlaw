@@ -1,0 +1,28 @@
+.app {
+    display: block;
+    position: relative;
+    @include box(100vw, 100vh);
+    // background-color: $background-color;
+
+    &-container {
+        
+    }
+}
+
+.theme-poor-vision {
+
+    p {
+        font-size: 1.25em;
+        color: $black !important;
+    }
+
+    a {
+        font-size: 1.25em;
+        color: $black !important;
+    }
+
+    h3 {
+        font-size: 1.25em;
+        color: $black !important;
+    }
+}

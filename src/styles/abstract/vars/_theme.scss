@@ -1,0 +1,20 @@
+/*
+ * Theme definitions
+ */
+
+$themes: (
+  -light: (
+    //Common
+    backgroundColor: $background-color,
+    foregroundColor: $primary-color,
+    neutralColor: $neutral-color,
+    dividerColor: $divider-color,
+  ),
+  -dark: (
+    //Common
+    backgroundColor: $background-color-inverse,
+    foregroundColor: $primary-color,
+    neutralColor: $neutral-color,
+    dividerColor: $divider-color-inverse,
+  ),
+);

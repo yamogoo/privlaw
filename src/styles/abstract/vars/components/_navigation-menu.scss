@@ -1,0 +1,25 @@
+$navigation-menu-item-link-font-size: px2em(16px);
+$navigation-menu-item-underline: $app-header-navigation-item-undrline-width;
+
+$navigation-menu-item-group-top: $navigation-menu-height - $app-header-border-bottom-width;
+$navigation-menu-item-group-max-width: 320px;
+$navigation-menu-item-icon-font-size: 0.75em;
+$navigation-menu-item-text-font-weight: 500;
+$navigation-menu-item-content-gap: 4px;
+// $navigation-menu-height: 69px;
+
+//Theme
+$navigation-menu-item-link-color: rgba($primary-color, 1.0);
+$navigation-menu-item-link-color-hover: $accent-color;
+
+$navigation-menu-item-link-color-inverse: rgba($white,1.0);
+$navigation-menu-item-link-color-hover-inverse: $white;
+
+$navigation-menu-item-underline-color: rgba($primary-color, 1.0);
+$navigation-menu-item-underline-color-hover: $navigation-menu-item-link-color-hover;
+
+$navigation-menu-item-underline-color-inverse: rgba($white, 1.0);
+$navigation-menu-item-underline-color-hover-inverse: $navigation-menu-item-link-color-hover-inverse;
+
+$navigation-menu-item-group-link-color: rgba($primary-color, 1.0);
+$navigation-menu-item-group-link-color-inverse: rgba($primary-color, 1.0);

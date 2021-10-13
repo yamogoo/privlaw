@@ -1,0 +1,50 @@
+//Card Template
+
+@include respond-above (xl) {
+
+    .entities-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@include respond-between (sm, xl) {
+
+    .entities-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include respond-below (sm) {
+
+    .entities-container {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+}
+
+//List Template
+
+@include respond-above (sm) {
+
+    .entities-container-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+
+@include respond-below (sm) {
+
+    .entities-container-list {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+}

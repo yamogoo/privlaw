@@ -1,0 +1,22 @@
+/*
+ * Theme definitions
+ */
+
+$themes-app: (
+  normal: (
+    fontSize: 1.0em,
+    foregroundColor: $foreground-color,
+    backgroundColor: $background-color,
+    neutralColor: $neutral-color,
+    accentColor: $accent-color,
+    visibility: block,
+  ),
+  poor-vision: (
+    fontSize: 1.5em,
+    foregroundColor: $black,
+    backgroundColor: $white,
+    neutralColor: $black,
+    accentColor: $black,
+    visibility: none,
+  ),
+);

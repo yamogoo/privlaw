@@ -1,0 +1,9 @@
+.navigation-top-menu {
+
+    &__item {
+
+        &__underline {
+            @include transition(width, 125ms, ease-in-out);
+        }
+    }
+}

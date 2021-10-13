@@ -1,0 +1,6 @@
+sass --watch ./src/styles.scss:style.css --style compressed
+
+
+
+compass watch [/src/styles.scss]
+compass create <style.css>

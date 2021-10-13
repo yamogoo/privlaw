@@ -1,0 +1,26 @@
+.app-header {
+    @include themify($themes-header) {
+        background-color: themed('appHeaderBackgroundColor'); 
+    }
+
+    &__content-section {
+
+        &-top {
+            @include themify($themes-header) {
+                border-bottom-color: themed('appHeaderBorderBottomColor'); 
+            }
+        }
+    }
+
+    &__logo-section {
+        // @include themify($themes-header) {
+        //     background-color: themed('logoBackgroundColor'); 
+        // }
+
+        .logo {
+            @include themify($themes-header) {
+                background-image: themed('logoImage');
+            }
+        }
+    }
+}

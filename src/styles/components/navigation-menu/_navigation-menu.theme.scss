@@ -1,0 +1,41 @@
+.navigation-menu {
+
+    &__item {
+
+        &-underline {
+            @include themify($themes-header) {
+                background-color: themed('navigationMenuItemUnderlineColor'); 
+            }
+        }
+
+        a, p {
+            @include themify($themes-header) {
+                color: themed('navigationMenuItemLinkColor'); 
+            }
+        }
+
+        &:hover, &.active {
+
+            .navigation-menu__item-underline {
+                @include themify($themes-header) {
+                    background-color: themed('navigationTopMenuItemUnderlineColorHover'); 
+                }
+            }
+
+            a, p {
+                @include themify($themes-header) {
+                    color: themed('navigationMenuItemLinkColorHover'); 
+                }
+            }
+        }
+
+        &-group {
+
+            a {
+                @include themify($themes-header) {
+                    color: themed('navigationMenuItemGroupLinkColor'); 
+                }
+            }
+        }
+    }
+}

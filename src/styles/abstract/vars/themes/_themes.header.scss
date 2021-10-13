@@ -1,0 +1,55 @@
+/*
+ * Theme definitions
+ */
+
+$themes-header: (
+  header--light: (
+    //Common
+    appHeaderBackgroundColor: $white,
+    appHeaderForegroundColor: $primary-color,
+    //
+    navigationMenuItemLinkColor: $navigation-menu-item-link-color,
+    navigationMenuItemLinkColorHover: $navigation-menu-item-link-color-hover,
+    navigationMenuItemGroupLinkColor: $navigation-menu-item-group-link-color,
+    navigationMenuItemUnderlineColor: $navigation-menu-item-underline-color,
+    //
+    navigationMenuTopItemLinkColor: $navigation-top-menu-item-link-color,
+    navigationTopMenuItemUnderlineColor: $navigation-top-menu-item-underline-color,
+    navigationTopMenuItemUnderlineColorHover:$navigation-menu-item-underline-color-hover,
+    //
+    appHeaderDividerColor: $divider-color,
+    appHeaderBorderBottomColor: $app-header-border-bottom-color,
+    //
+    logoImage: url(./src/assets/images/logo/logo.svg),
+    // logoBackgroundColor: none,
+    //Social Buttons
+    socialButtonIconColor: $social-button-icon-color,
+    //Search
+    searchButtonIconColor: $search-button-icon-color,
+  ),
+  header--dark: (
+    //Common
+    appHeaderBackgroundColor: darken($accent-color, 3%),
+    appHeaderForegroundColor: $white,
+    //
+    navigationMenuItemLinkColor: $navigation-menu-item-link-color-inverse,
+    navigationMenuItemLinkColorHover: $navigation-menu-item-link-color-hover-inverse,
+    navigationMenuItemGroupLinkColor: $navigation-menu-item-group-link-color,
+    navigationMenuItemUnderlineColor: $navigation-menu-item-underline-color-inverse,
+    //
+    navigationMenuTopItemLinkColor: $navigation-top-menu-item-link-color-inverse,
+    navigationTopMenuItemUnderlineColor: $navigation-top-menu-item-underline-color-inverse,
+    navigationTopMenuItemUnderlineColorHover:$navigation-menu-item-underline-color-hover-inverse,
+    //
+    headerDividerColor: $divider-color-inverse,
+    appHeaderBorderBottomColor: $app-header-border-bottom-color-inverse,
+    //
+    logoImage: url(./src/assets/images/logo/logo-inverse.svg),
+    // logoBackgroundColor: $accent-color,
+    //Social Buttons
+    socialButtonIconColor: $social-button-icon-color-inverse,
+    //Search
+    searchButtonIconColor: $search-button-icon-color-inverse,
+    //Slider
+  ),
+);

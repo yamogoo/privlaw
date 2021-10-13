@@ -1,0 +1,8 @@
+.search-button {
+
+    &-icon {
+        font-family: $icon;
+        font-size: $search-button-icon-font-size;
+        @extend .icon-search !optional;
+    }
+}

@@ -1,0 +1,8 @@
+.search-button {
+
+    &-icon {
+        @include themify($themes-header) {
+            color: themed('searchButtonIconColor'); 
+        }
+    }
+}

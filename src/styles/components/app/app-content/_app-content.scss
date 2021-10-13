@@ -1,0 +1,17 @@
+.app-content {
+    // @extend .main-container;
+    @include box(100vw, 100vh);
+    // background: url(./src/assets/images//background/index-bg.jpg);
+    // filter: grayscale(1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+
+    &-container {
+        @extend .main-container;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: $app-content-padding-top;
+    }
+}

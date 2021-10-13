@@ -1,0 +1,54 @@
+.news {
+
+    &-container {
+        @extend .entities-container;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: auto;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        &-container {
+
+        }
+
+        &-image {
+            @include themify($themes-app) {
+                display: themed('visibility'); 
+            }
+            width: inherit;
+            // height: 240px;
+            border-radius: 4px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 4px;
+            }
+        }
+
+        &-content {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            padding-top: 20px;
+        }
+
+        &-date {
+            font-size: px2em(14px);
+            font-weight: 400;
+            color: $neutral-color;
+        }
+
+        &-title {
+            font-size: px2em(17px);
+            font-weight: 500;
+            color: $primary-color;
+        }
+    }
+}
