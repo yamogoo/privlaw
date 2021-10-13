@@ -1,6 +1,8 @@
 .date {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
+    @include flexbox();
+    @include flex-direction(row);
     gap: 15px;
 
     &-number {
@@ -10,8 +12,10 @@
     }
 
     &-group {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        @include flexbox();
+        @include flex-direction(column);
     }
 
     &-month {

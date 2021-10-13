@@ -23,9 +23,11 @@
     }
 
     &__logo-section {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        // display: flex;
+        @include flexbox();
+        // justify-content: center;
+        @include justify-content(center);
+        @include align-items(center);
         // background-color: $accent-color;//Theme
         // height: 140px;
         // position: absolute;
@@ -40,16 +42,22 @@
     }
 
     &__content-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-between;
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(space-between);
         height: 100%;
 
         &-top {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
+            // display: flex;
+            // flex-direction: row;
+            // justify-content: flex-end;
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-end);
+            @include align-items(center);
             height: inherit;
             gap: 25px;
             border-bottom-style: solid;

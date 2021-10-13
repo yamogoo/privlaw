@@ -5,8 +5,10 @@
     }
 
     &__item {
-        display: flex;
-        flex-direction: column;
+        // display: flex;
+        // flex-direction: column;
+        @include flexbox();
+        @include flex-direction(column);
         position: relative;
         width: auto;
         overflow: hidden;
@@ -33,8 +35,10 @@
         }
 
         &-content {
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+            @include flexbox();
+            @include flex-direction(column);
             gap: 15px;
             padding-top: 20px;
         }

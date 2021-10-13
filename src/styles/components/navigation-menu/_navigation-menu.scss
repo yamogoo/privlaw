@@ -10,9 +10,12 @@
     }
 
     &-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+        // display: flex;
+        // flex-direction: row;
+        @include flexbox();
+        @include flex-direction(row);
+        // justify-content: flex-end;
+        @include justify-content(flex-end);
         @include box(inherit);
         gap: 20px;
         list-style: none;
@@ -20,17 +23,23 @@
 
     //ul
     &__item {
-        display: flex;
+        @include flexbox();
+        @include flex-direction(column);
         position: relative;
-        flex-direction: column;
+        // display: flex;
+        // position: relative;
+        // flex-direction: column;
         height: inherit;
 
         &-content {
-            display: flex;
-            flex-direction: row;
+            // display: flex;
+            // flex-direction: row;
+            @include flexbox();
+            @include flex-direction(row);
             gap: $navigation-menu-item-content-gap;
-            justify-content: center;
-            align-items: center;
+            // justify-content: center;
+            @include justify-content(center);
+            @include align-items(center);
             height: inherit;
 
             p {
@@ -93,8 +102,10 @@
             max-width: $navigation-menu-item-group-max-width;
 
             &-container {
-                display: flex;
-                flex-direction: column;
+                // display: flex;
+                // flex-direction: column;
+                @include flexbox();
+                @include flex-direction(column);
                 gap: px2em(20px);
             }
 

@@ -1,0 +1,67 @@
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+     -moz-justify-content: $justify;
+      -ms-justify-content: $justify;
+          justify-content: $justify;
+            -ms-flex-pack: $justify;
+}
+
+@mixin flex-direction($value: row) {
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin flex-wrap($value: nowrap) {
+  // No Webkit/FF Box fallback.
+  -webkit-flex-wrap: $value;
+  @if $value == nowrap {
+    -ms-flex-wrap: none;
+  } @else {
+    -ms-flex-wrap: $value;
+  }
+  flex-wrap: $value;
+}
+
+@mixin flex-flow($values: (row nowrap)) {
+  // No Webkit/FF Box fallback.
+  -webkit-flex-flow: $values;
+  -ms-flex-flow: $values;
+  flex-flow: $values;
+}
+
+@mixin align-items($x) {
+    -webkit-box-align: $x;
+    -webkit-align-items: $x;
+    -ms-flex-align: $x;
+    align-items: $x;
+}

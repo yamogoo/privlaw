@@ -8,9 +8,11 @@
         border-top: 1px solid $divider-color;
 
         &-container {
-            display: flex;
-            flex-direction: row;
-            align-items: flex-start;
+            // display: flex;
+            // flex-direction: row;
+            @include flexbox();
+            @include flex-direction(row);
+            @include align-items(flex-start);
             @extend .entity__item-container--list;
             padding-top: 32px;
             gap: 30px;
@@ -32,8 +34,10 @@
         }
 
         &-content {
-            display: flex;
-            flex-direction: column;
+            // display: flex;
+            // flex-direction: column;
+            @include flexbox();
+            @include flex-direction(column);
             gap: 15px;
             padding-top: 0px;
         }

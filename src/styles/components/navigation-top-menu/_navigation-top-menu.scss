@@ -7,9 +7,12 @@
     }
 
     &-content {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
+        // display: flex;
+        // flex-direction: row;
+        @include flexbox();
+        @include flex-direction(row);
+        // justify-content: flex-end;
+        @include justify-content(flex-end);
         gap: 30px;
         width: auto;
         @include box(inherit);
@@ -30,9 +33,12 @@
         }
 
         &-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            // display: flex;
+            @include flexbox();
+            @include flex-direction(column);
+            // justify-content: center;
+            @include justify-content(center);
+            @include align-items(center);
             @include box(inherit);
         }
 

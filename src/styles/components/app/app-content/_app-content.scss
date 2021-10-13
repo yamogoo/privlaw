@@ -10,7 +10,8 @@
     &-container {
         @extend .main-container;
         display: flex;
-        flex-direction: column;
+        // flex-direction: column;
+        @include flex-direction(column);
         gap: 30px;
         padding-top: $app-content-padding-top;
     }

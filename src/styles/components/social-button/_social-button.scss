@@ -1,6 +1,6 @@
 .social-button-group {
-    display: flex;
-    flex-direction: row;
+    @include flexbox();
+    @include flex-direction(row);
     gap: $social-button-group-gap;
 }
 

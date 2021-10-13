@@ -14,10 +14,13 @@
         @include box(inherit);
 
         &__content {
-            display: flex;
+            // display: flex;
+            @include flexbox();
             position: absolute;
-            flex-direction: column;
-            justify-content: center;
+            @include flex-direction(column);
+            // flex-direction: column;
+            // justify-content: center;
+            @include justify-content(center);
             @include box(inherit);
         }
 
