@@ -23,14 +23,9 @@
     }
 
     &__logo-section {
-        // display: flex;
         @include flexbox();
-        // justify-content: center;
         @include justify-content(center);
         @include align-items(center);
-        // background-color: $accent-color;//Theme
-        // height: 140px;
-        // position: absolute;
 
         .logo {
             @include box(126px, 65px);
@@ -42,18 +37,12 @@
     }
 
     &__content-section {
-        // display: flex;
-        // flex-direction: column;
-        // justify-content: space-between;
         @include flexbox();
         @include flex-direction(column);
         @include justify-content(space-between);
         height: 100%;
 
         &-top {
-            // display: flex;
-            // flex-direction: row;
-            // justify-content: flex-end;
             @include flexbox();
             @include flex-direction(row);
             @include justify-content(flex-end);

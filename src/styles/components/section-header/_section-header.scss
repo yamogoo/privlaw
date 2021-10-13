@@ -1,4 +1,9 @@
 .section-header {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(center);
+    width: 100%;
     
     h5, .section-title {
         font-size: 38px;

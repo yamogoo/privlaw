@@ -1,13 +1,14 @@
 .filter-dropdown {
+    position: relative;
     width: 275px;
+    cursor: pointer;
 
-    .filter-dropdown-container {
+    &-container {
         @include flexbox();
         @include align-items(center);
-        padding: 14px 20px;
-        border-radius: 6px;
         width: 100%;
-        border: 1px solid #e2e8f0;
+        padding: 15px 20px;
+        border: 1px solid $border-color;
         border-radius: 6px;
 
         input {
@@ -17,7 +18,29 @@
             left: 0;
         }
     }
-    .filter-dropdown-list {
+    &-list {
+        display: block;
+        position: absolute;
+        border-radius: 6px;
+        border: 1px solid $border-color;
+        left: 0;
+        width: 100%;
+        overflow: auto;
+        background-color: $white;
+        top: 60px;
+        z-index: 3;
 
+        &-container {
+            height: auto;
+        }
+
+        p {
+            padding: 15px 20px;
+
+            &:hover {
+                color: $white;
+                background-color: $accent-color;
+            }
+        }
     }
 }

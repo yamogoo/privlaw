@@ -10,11 +10,8 @@
     }
 
     &-content {
-        // display: flex;
-        // flex-direction: row;
         @include flexbox();
         @include flex-direction(row);
-        // justify-content: flex-end;
         @include justify-content(flex-end);
         @include box(inherit);
         gap: 20px;
@@ -89,15 +86,12 @@
             position: absolute;
             top: $navigation-menu-item-group-top;
             background-color: $white;
-            // opacity: 0.0;
             visibility: hidden;
             padding: px2em(20px);
             width: max-content;
             max-width: $navigation-menu-item-group-max-width;
 
             &-container {
-                // display: flex;
-                // flex-direction: column;
                 @include flexbox();
                 @include flex-direction(column);
                 gap: px2em(20px);
@@ -116,7 +110,6 @@
         &:hover {
 
             .navigation-menu__item-group {
-                // opacity: 1.0;
                 visibility: visible;
             }
         }
