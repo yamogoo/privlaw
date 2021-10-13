@@ -14,12 +14,9 @@
         @include box(inherit);
 
         &__content {
-            // display: flex;
             @include flexbox();
             position: absolute;
             @include flex-direction(column);
-            // flex-direction: column;
-            // justify-content: center;
             @include justify-content(center);
             @include box(inherit);
         }

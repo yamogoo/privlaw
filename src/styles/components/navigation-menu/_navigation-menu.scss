@@ -26,18 +26,12 @@
         @include flexbox();
         @include flex-direction(column);
         position: relative;
-        // display: flex;
-        // position: relative;
-        // flex-direction: column;
         height: inherit;
 
         &-content {
-            // display: flex;
-            // flex-direction: row;
             @include flexbox();
             @include flex-direction(row);
             gap: $navigation-menu-item-content-gap;
-            // justify-content: center;
             @include justify-content(center);
             @include align-items(center);
             height: inherit;

@@ -21,14 +21,13 @@ $nav-line-icon-offset-x: px2em(20px);
         list-style: none;
 
         a {
-            // color: $neutral-color;
+
         }
 
         //Last child
         &:last-child {
             
             a {
-                // color: $nav-line-active-color;
                 @include themify($themes-app) {
                     color: themed($nav-line-active-color); 
                 }
@@ -38,8 +37,7 @@ $nav-line-icon-offset-x: px2em(20px);
         &:not(:last-child) {
             
             a {
-                display: flex;
-                // color: $nav-line-color;
+                @include flexbox();
                 @include themify($themes-app) {
                     color: themed($nav-line-color); 
                 }
@@ -47,7 +45,7 @@ $nav-line-icon-offset-x: px2em(20px);
 
                 &::after {
                     font-family: icomoon;
-                    @extend .icon-navigation-line:before;
+                    @extend .icon-navigation-line:before !optional;
                     color: inherit;
                 }
             }
@@ -55,7 +53,6 @@ $nav-line-icon-offset-x: px2em(20px);
             &:hover, &:focus {
 
                 a {
-                    // color: $nav-line-active-color;
                     @include themify($themes-app) {
                         color: themed($nav-line-active-color); 
                     }

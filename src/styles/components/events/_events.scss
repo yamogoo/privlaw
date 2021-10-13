@@ -7,35 +7,34 @@
     &__item {
         border-top: 1px solid $divider-color;
 
-        &-container {
-            // display: flex;
-            // flex-direction: row;
+        &-container { //Link
             @include flexbox();
             @include flex-direction(row);
             @include align-items(flex-start);
             @extend .entity__item-container--list;
             padding-top: 32px;
             gap: 30px;
+
+            &:hover {
+
+                h3, .events-item-title {
+                    text-decoration: underline;
+                }
+            }
         }
 
         &-image {
             @include themify($themes-app) {
                 display: themed('visibility'); 
             }
-            // width: inherit;
             border-radius: 4px;
-            // overflow: hidden;
 
             img {
-                // width: 100%;
-                // object-fit: cover;
                 border-radius: 4px;
             }
         }
 
         &-content {
-            // display: flex;
-            // flex-direction: column;
             @include flexbox();
             @include flex-direction(column);
             gap: 15px;

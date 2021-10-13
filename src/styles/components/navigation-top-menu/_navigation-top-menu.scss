@@ -7,11 +7,8 @@
     }
 
     &-content {
-        // display: flex;
-        // flex-direction: row;
         @include flexbox();
         @include flex-direction(row);
-        // justify-content: flex-end;
         @include justify-content(flex-end);
         gap: 30px;
         width: auto;
@@ -25,18 +22,15 @@
         a {
         font-size: $navigation-top-menu-item-link-font-size;
         font-weight: 400;
-        // color: $navigation-top-menu-item-link-color;//Theme
         }
 
         p {
-            // color: $navigation-top-menu-item-link-color;//Theme
+
         }
 
         &-content {
-            // display: flex;
             @include flexbox();
             @include flex-direction(column);
-            // justify-content: center;
             @include justify-content(center);
             @include align-items(center);
             @include box(inherit);
