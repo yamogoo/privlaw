@@ -2,8 +2,12 @@
 
     & {
 
-        .filter-dropdown-container {
+        .filter-dropdown__expansion-icon {
+            @include transition(transform, 125ms, ease-in-out);
+        }
 
+        .filter-dropdown-container {
+            
         }
 
         .filter-dropdown-list {
@@ -19,6 +23,10 @@
 
     &.active {
 
+        .filter-dropdown__expansion-icon {
+            transform: rotate(180deg);
+        }
+
         .filter-dropdown-container {
 
         }
@@ -27,8 +35,9 @@
             // visibility: 1.0;
             // height: 53px * 3;
             // transform: translateY(0px);
+            display: block;
             opacity: 1.0;
-            animation-duration: 325ms;
+            animation-duration: 375ms;
             animation-timing-function: cubic-bezier(0.68, -0.32, 0.32, 1.32);
             animation-name: anim-filter-dropdown-list-in;
             
@@ -44,7 +53,7 @@
     opacity: 0.0;
   }
   65% {
-    transform: scale(1.03);
+    transform: scale(1.01);
     // transform: translateY(0px);
     opacity: 1.0;
   }

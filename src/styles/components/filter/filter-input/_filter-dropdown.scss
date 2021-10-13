@@ -3,23 +3,29 @@
     width: 275px;
     cursor: pointer;
 
+    &__expansion-icon {
+        @extend .icon-expansion-arrow;
+        font-family: icomoon;
+    }
+
     &-container {
         @include flexbox();
         @include align-items(center);
+        @include justify-content(space-between);
         width: 100%;
         padding: 15px 20px;
         border: 1px solid $border-color;
         border-radius: 6px;
 
         input {
-            visibility: hidden;
+            display: none;
             position: absolute;
             top: 0;
             left: 0;
         }
     }
     &-list {
-        display: block;
+        display: none;
         position: absolute;
         border-radius: 6px;
         border: 1px solid $border-color;
@@ -28,7 +34,8 @@
         overflow: auto;
         background-color: $white;
         top: 60px;
-        z-index: 3;
+        box-shadow: 0px 4px 16px rgba($app-header-shadow-color, 0.1);
+        z-index: 9998;
 
         &-container {
             height: auto;
@@ -40,6 +47,10 @@
             &:hover {
                 color: $white;
                 background-color: $accent-color;
+            }
+
+            &.active {
+                display: none;
             }
         }
     }

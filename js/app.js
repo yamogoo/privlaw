@@ -18,23 +18,33 @@ $(document).ready(function () {
 
     //Filter
     function toggleFilter() {
-        let button = $('.filter-dropdown-container');
+        let field = $('.filter-dropdown-container');
+        let filter = $('.filter-dropdown');
         let items = $('.filter-dropdown-list p');
         let clear = $('.filter__wrapper-clear');
         let eventClear = $('.events-filter .filter__wrapper-clear');
-        button.on('click', function () {
+
+        //Filter Input
+        field.on('click', function () {
             // $(this).next().slideToggle();
             $(this).parent().toggleClass('active');
             // button.not(this).parent().removeClass('active');
             // button.not(this).next().slideUp();
         });
-        // items.on('click', function () {
-        //     // $(this).parent().slideUp();
-        //     $(this).parent().children().removeClass('active');
-        //     $(this).parent().prev().removeClass('active');
-        //     $(this).addClass('active');
-        //     $(this).parent().prev().children('span').text($(this).text());
-        //     $(this).parent().prev().children('input')[0].value = ($(this).text());
+
+        items.on('click', function () {
+            // $(this).parent().slideUp();
+            $(this).parent().parent().removeClass('active');
+            $(this).parent().children().removeClass('active');
+            $(this).parent().prev().removeClass('active');
+            $(this).addClass('active');
+            $(this).parent().prev().children('span').text($(this).text());
+            $(this).parent().prev().children('input')[0].value = ($(this).text());
+        });
+
+        //Hide List
+        // overlay.on('click', function () {
+        //     button.parent().removeClass('active');
         // });
         // clear.on('click', function () {
         //     button.removeClass('active');
@@ -50,10 +60,14 @@ $(document).ready(function () {
         //     $('#text-tags').text('Р’СЃРµ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ');
         //     $('#calendar').datepicker('setDate', null);
         // });
+
+        //Click Outside
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(filter).length) {
+                filter.removeClass('active');
+            }
+        });
     }
     toggleFilter();
-
-    //
-
 
 });
