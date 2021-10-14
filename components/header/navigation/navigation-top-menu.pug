@@ -1,27 +1,23 @@
+mixin article(href, title)
+    li.navigation-top-menu__item
+        a(href=href class="navigation-top-menu__item-content")
+            p=title
+        div.navigation-top-menu__item-underline
+
 // Navigation Top Menu
 div.navigation-top-menu
     div.navigation-top-menu-container
         ul.navigation-top-menu-content
             // Items
-            li.navigation-top-menu__item
-                a(href="./events.html" class="navigation-top-menu__item-content")
-                    p Мероприятия
-                div.navigation-top-menu__item-underline
-            li.navigation-top-menu__item.active
-                a(href="./news.html" class="navigation-top-menu__item-content")
-                    p Новости
-                div.navigation-top-menu__item-underline
-            li.navigation-top-menu__item
-                a(href="./persons.html" class="navigation-top-menu__item-content")
-                    p Персоналии
-                div.navigation-top-menu__item-underline
-            li.navigation-top-menu__item
-                a(href="#" class="navigation-top-menu__item-content")
-                    p Фото и видео
-                div.navigation-top-menu__item-underline
-            li.navigation-top-menu__item
-                a(href="#" class="navigation-top-menu__item-content")
-                    p Контакты
-                div.navigation-top-menu__item-underline
+            -
+                var list=[
+                    {href: "./events.html", title: "Мероприятия"},
+                    {href: "./news.html", title: "Новости"},
+                    {href: "./persons.html", title: "Персоналии"},
+                    {href: "./foto-and-video.html", title: "Фото и видео"},
+                    {href: "./contacts", title: "Контакты"}
+                    ]
+            each item in list
+                +article(item.href, item.title)
             // Items
 // Navigation Top Menu
