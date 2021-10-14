@@ -24,6 +24,7 @@
         @include flex-direction(column);
         position: relative;
         height: inherit;
+        cursor: pointer;
 
         &-content {
             @include flexbox();

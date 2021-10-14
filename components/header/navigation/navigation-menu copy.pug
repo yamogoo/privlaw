@@ -1,23 +1,32 @@
 mixin items(...items)
 
-    mixin nestedItem(href, title)
-        span.navigation-menu__item-group__nested-item
-            a(href=href)=title
-
-    mixin item(href, title, nested)
+    mixin item(href, title, ...nestedItems)
+        li.navigation-menu__item
             a(href=href class="navigation-menu__item-content")
                 p=title
             div.navigation-menu__item-underline
 
-    each item in list
-        li.navigation-menu__item
-            +item(item.href, item.title)
+        //- mixin nestedItem(href, title)
+        //-     span.navigation-menu__item-group__nested-item
+        //-         a(href=href)=title
 
-            if item.nested[0].href.length > 0
-                div.navigation-menu__item-group
-                    div.navigation-menu__item-group-container
-                        each nestedItem in item.nested
-                            +nestedItem(nestedItem.href, nestedItem.title)
+            //- each item in 
+
+    each item in list
+        +item(item.href, item.title)
+
+        //- each nestedItem in item.nested
+        //-     +nestedItem(nestedItem.href, nestedItem.title)
+
+mixin nestedItems(...items)
+
+    mixin item(href, title, nested)
+        span.navigation-menu__item-group__nested-item
+            a(href=href)=title
+
+    each item in list
+        each nestedItem in item.nested
+            +item(nestedItem.href, nestedItem.title)
 
 // Navigation Menu
 nav.navigation-menu
@@ -33,33 +42,33 @@ nav.navigation-menu
                     {href: "./rshchp.html", title: "РШЧП",
                         nested: [
                             {href: "", title: ""}
-                        ]},
+                        ]}},
                     {href: "./codification-council.html", title: "Совет по кодификации",
                         nested: [
                             {href: "", title: ""}
-                        ]},
+                        ]}},
                     {href: "./private-law-dialogues.html", title: "Диалоги о частном праве",
                         nested: [
                             {href: "", title: ""}
-                        ]},
+                        ]}},
                     {href: "./educational-projects.html", title: "Просветительские проекты",
                         nested: [
-                            {href: "./family-law-club.html", title: "Клуб семейного права"},
-                            {href: "./alekseevsky-readings.html", title: "Алексеевские чтения"}
-                        ]},
-                    {href: "./museum.html", title: "Музей",
-                        nested: [
-                            {href: "", title: ""}
-                        ]}
+                            {href: "./family-law-club.html", title: "Клуб семейного права"}
+                            //- {href: "./alekseevsky-readings.html", title: "Алексеевские чтения"}
+                        ]}},
+                    {href: "./museum.html", title: "Музей"},
                 ]
-            +items(list)
-            // Items
-// Navigation Menu
+            //- +items(list)
+            +nestedItems(list)
+            //- each item in list
+            //-     +article(item.href, item.title)
 
 
-
-
-
+            //- ["./rshchp.html", "РШЧП"],
+                    //- ["./codification-council.html", "Совет по кодификации"],
+                    //- ["./private-law-dialogues.html", "Диалоги о частном праве"],
+                    //- ["./educational-projects", "Просветительские проекты"],
+                    //- ["museum", "Музей"]
 
 
             //- li.navigation-menu__item
@@ -93,3 +102,5 @@ nav.navigation-menu
             //-     a(href="#" class="navigation-menu__item-content")
             //-         p Музей
             //-     div.navigation-menu__item-underline
+            // Items
+// Navigation Menu

@@ -1,8 +1,13 @@
-mixin article(href, title)
-    li.navigation-top-menu__item
-        a(href=href class="navigation-top-menu__item-content")
-            p=title
-        div.navigation-top-menu__item-underline
+mixin items(...items)
+
+    mixin item(href, title)
+        li.navigation-top-menu__item
+            a(href=href class="navigation-top-menu__item-content")
+                p=title
+            div.navigation-top-menu__item-underline
+
+    each item in list
+        +item(item.href, item.title)
 
 // Navigation Top Menu
 div.navigation-top-menu
@@ -17,7 +22,7 @@ div.navigation-top-menu
                     {href: "./foto-and-video.html", title: "Фото и видео"},
                     {href: "./contacts", title: "Контакты"}
                     ]
-            each item in list
-                +article(item.href, item.title)
+
+            +items(list)
             // Items
 // Navigation Top Menu
