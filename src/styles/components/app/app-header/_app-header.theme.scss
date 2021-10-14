@@ -12,14 +12,11 @@
         }
     }
 
-    &__logo-section {
-        // @include themify($themes-header) {
-        //     background-color: themed('logoBackgroundColor'); 
-        // }
+    .app-logo {
 
-        .logo {
+        .app-logo-img {
             @include themify($themes-header) {
-                background-image: themed('logoImage');
+                background-image: themed('logoImage') !important;
             }
         }
     }

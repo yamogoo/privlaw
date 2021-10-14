@@ -1,0 +1,28 @@
+.app-logo {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+
+    &-img {
+        @include box(126px, 65px);
+        padding: 0 40px;
+        background-image: url(./src/assets/images/logo/logo-inverse.svg); //default
+        background-repeat: no-repeat;
+        background-position: left;
+    }
+}
+
+.app-logo-descriptor {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    gap: 35px;
+
+    p {
+        font-size: px2em(14px);
+        font-weight: 400;
+        letter-spacing: px2em(0.35px);
+        line-height: 1.6 !important;
+        color: $white;
+    }
+}

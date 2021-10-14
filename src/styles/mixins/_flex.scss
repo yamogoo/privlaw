@@ -59,9 +59,9 @@
   flex-flow: $values;
 }
 
-@mixin align-items($x) {
-    -webkit-box-align: $x;
-    -webkit-align-items: $x;
-    -ms-flex-align: $x;
-    align-items: $x;
+@mixin align-items($align) {
+    -webkit-box-align: $align;
+    -webkit-align-items: $align;
+    -ms-flex-align: $align;
+    align-items: $align;
 }

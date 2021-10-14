@@ -22,20 +22,6 @@
         gap: 50px;
     }
 
-    &__logo-section {
-        @include flexbox();
-        @include justify-content(center);
-        @include align-items(center);
-
-        .logo {
-            @include box(126px, 65px);
-            padding: 0 40px;
-            // background-image: url(./src/assets/images/logo/logo-inverse.svg);//Theme
-            background-repeat: no-repeat;
-            background-position: left;
-        }
-    }
-
     &__content-section {
         @include flexbox();
         @include flex-direction(column);

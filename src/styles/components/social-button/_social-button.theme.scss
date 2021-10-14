@@ -1,8 +1,22 @@
+
+/*
+ * Theme definitions
+ */
+
+
 .social-button {
+    color: $accent-color; //default
 
     &__icon {
         @include themify($themes-header) {
             color: themed('socialButtonIconColor'); 
         }
+    }
+}
+
+.social-button.inverse {
+
+    .social-button__icon {
+        color: $white !important;
     }
 }

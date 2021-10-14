@@ -1,0 +1,6 @@
+.app-footer {
+
+    &-container {
+        @extend .main-container;
+    }
+}

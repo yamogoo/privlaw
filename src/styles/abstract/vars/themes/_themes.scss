@@ -6,7 +6,8 @@ $themes-app: (
   normal: (
     fontSize: 1.0em,
     foregroundColor: $foreground-color,
-    backgroundColor: $background-color,
+    backgroundColor: $white,
+    backgroundSecondaryColor: $background-color,
     neutralColor: $neutral-color,
     accentColor: $accent-color,
     visibility: block,
@@ -15,6 +16,7 @@ $themes-app: (
     fontSize: 1.5em,
     foregroundColor: $black,
     backgroundColor: $white,
+    backgroundSecondaryColor: $white,
     neutralColor: $black,
     accentColor: $black,
     visibility: none,
