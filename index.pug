@@ -8,4 +8,13 @@ html
     link(href="./style.css", rel="stylesheet")
 
 body
-    include ./components/app.pug
+    app.theme-header--light.theme-normal#app
+        div.app-container
+
+            include ./components/header/header.pug
+
+            main.app-content
+                div.app-scroll-view
+                    div.app-content-container
+
+                        include ./components/nav-line/nav-line.pug
