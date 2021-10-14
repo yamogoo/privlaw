@@ -43,10 +43,11 @@
 
         p {
             padding: 15px 20px;
+            border-bottom: 1px solid rgba($divider-color, 0.5);
 
             &:hover {
-                color: $white;
-                background-color: $accent-color;
+                color: $neutral-color;
+                background-color: $background-color;
             }
 
             &.active {

@@ -14,11 +14,13 @@ $item-tag-border-radius: px2em(3px);
     height: px2em(38px);
     padding: px2em(0px) px2em(10px);
     border-radius: $item-tag-border-radius;
+    background-color: rgba($white, 0.9); //default
+    color: $primary-color; //default
     @include themify($themes-app) {
         color: themed($item-tag-color); 
     }
     @include themify($themes-app) {
-        background-color: rgba(themed($item-tag-background-color), 0.9); 
+        background-color: rgba(themed($item-tag-background-color), 0.9) !important; 
     }
 
         p {

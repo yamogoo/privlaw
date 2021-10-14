@@ -37,9 +37,10 @@ $nav-line-icon-offset-x: px2em(20px);
         &:not(:last-child) {
             
             a {
+                color: $neutral-color; //default
                 @include flexbox();
                 @include themify($themes-app) {
-                    color: themed($nav-line-color); 
+                    color: themed($nav-line-color) !important; 
                 }
                 gap: $nav-line-icon-offset-x;
 
@@ -53,8 +54,9 @@ $nav-line-icon-offset-x: px2em(20px);
             &:hover, &:focus {
 
                 a {
+                    color: $accent-color; //default
                     @include themify($themes-app) {
-                        color: themed($nav-line-active-color); 
+                        color: themed($nav-line-active-color) !important; 
                     }
                 }
             }

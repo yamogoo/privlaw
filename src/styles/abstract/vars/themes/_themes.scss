@@ -3,7 +3,7 @@
  */
 
 $themes-app: (
-  normal: (
+  app--normal: (
     fontSize: 1.0em,
     foregroundColor: $foreground-color,
     backgroundColor: $white,
@@ -12,7 +12,7 @@ $themes-app: (
     accentColor: $accent-color,
     visibility: block,
   ),
-  poor-vision: (
+  app--poor-vision: (
     fontSize: 1.5em,
     foregroundColor: $black,
     backgroundColor: $white,

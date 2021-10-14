@@ -3,25 +3,34 @@ $secondary-color: #2B2F3C;
 $neutral-color: #9093a2;
 $accent-color: #7a1c3e;
 
-$primary-color-30: lighten($primary-color, 3%);
-$primary-color-50: lighten($primary-color, 5%);
-$primary-color-100: lighten($primary-color, 10%);
-$primary-color-150: lighten($primary-color, 15%);
-$primary-color-200: lighten($primary-color, 20%);
-$primary-color-250: lighten($primary-color, 25%);
-$primary-color-300: lighten($primary-color, 30%);
-$primary-color-400: lighten($primary-color, 40%);
-$primary-color-500: lighten($primary-color, 50%);
-$primary-color-600: lighten($primary-color, 60%);
-$primary-color-700: lighten($primary-color, 70%);
-$primary-color-800: lighten($primary-color, 80%);
-$primary-color-900: lighten($primary-color, 90%);
-$primary-color-950: lighten($primary-color, 95%);
-$primary-color-975: lighten($primary-color, 97.5%);
+$primary-color-lighten-30: lighten($primary-color, 3%);
+$primary-color-lighten-50: lighten($primary-color, 5%);
+$primary-color-lighten-100: lighten($primary-color, 10%);
+$primary-color-lighten-150: lighten($primary-color, 15%);
+$primary-color-lighten-200: lighten($primary-color, 20%);
+$primary-color-lighten-250: lighten($primary-color, 25%);
+$primary-color-lighten-300: lighten($primary-color, 30%);
+$primary-color-lighten-400: lighten($primary-color, 40%);
+$primary-color-lighten-500: lighten($primary-color, 50%);
+$primary-color-lighten-600: lighten($primary-color, 60%);
+$primary-color-lighten-700: lighten($primary-color, 70%);
+$primary-color-lighten-800: lighten($primary-color, 80%);
+$primary-color-lighten-900: lighten($primary-color, 90%);
+$primary-color-lighten-950: lighten($primary-color, 95%);
+$primary-color-lighten-975: lighten($primary-color, 97.5%);
 
-$primary-color-1025: darken($primary-color, 2.5%);
-$primary-color-1050: darken($primary-color, 5%);
-$primary-color-1100: darken($primary-color, 10%);
+$primary-color-darken-25: darken($primary-color, 2.5%);
+$primary-color-darken-50: darken($primary-color, 5%);
+$primary-color-darken-100: darken($primary-color, 10%);
+
+
+$accent-color-lighten-25: lighten($accent-color, 2.5%);
+$accent-color-lighten-50: lighten($accent-color, 5%);
+$accent-color-lighten-100: lighten($accent-color, 10%);
+
+$accent-color-darken-25: darken($accent-color, 2.5%);
+$accent-color-darken-50: darken($accent-color, 5%);
+$accent-color-darken-100: darken($accent-color, 10%);
 
 
 $white: #fff;

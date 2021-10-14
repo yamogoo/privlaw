@@ -3,6 +3,7 @@
     height: 500px;
     background-color: $accent-color;
     margin-top: 50px;
+    // background-color: $accent-color-darken-50;
 
     &-container {
         width: 100%;
@@ -24,6 +25,7 @@
         @include justify-content(space-between);
         @include align-items(center);
         border: 1px solid rgba($white, 0.15);
+        // background-color: $accent-color-darken-100;
 
         .app-logo {
             padding: 25px 0px;

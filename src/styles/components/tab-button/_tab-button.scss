@@ -1,0 +1,41 @@
+.tab-button {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    height: 100%;
+    
+    &-content {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        padding: px2em(0px) px2em(20px);
+
+        p {
+            font-size: px2em(14px);
+            font-weight: 400;
+            color: $primary-color;
+            white-space: nowrap;
+        }
+    }
+
+    & {
+        border-left: 1px solid $divider-color;
+    }
+
+    &.last {
+
+        .tab-button-content {
+            padding-right: px2em(0px);
+        }
+    }
+}
+
+
+.tab-button-group {
+    @include flexbox();
+    @include flex-direction(row);
+    @include align-items(center);
+    @include flex-wrap(nowrap);
+    gap: 0;
+    height: 100%;
+}
