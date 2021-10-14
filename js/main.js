@@ -2,19 +2,19 @@
 /* eslint-disable no-undef */
 
 $(document).ready(function () {
-    // rendering body
-    (function renderPage() {
-        let render = $('.render');
-        let tl = new TimelineLite();
-        tl
-            .fromTo(render, 0.5, { opacity: '1', zIndex: '99999' }, { opacity: '0', zIndex: '-1' })
-            .delay(0.4)
-            .call(hideRender);
-        function hideRender() {
-            $(render).remove();
-        }
+    // // rendering body
+    // (function renderPage() {
+    //     let render = $('.render');
+    //     let tl = new TimelineLite();
+    //     tl
+    //         .fromTo(render, 0.5, { opacity: '1', zIndex: '99999' }, { opacity: '0', zIndex: '-1' })
+    //         .delay(0.4)
+    //         .call(hideRender);
+    //     function hideRender() {
+    //         $(render).remove();
+    //     }
 
-    })();
+    // })();
 
     //Filter
     function toggleFilter() {
