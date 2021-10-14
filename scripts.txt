@@ -4,3 +4,8 @@ sass --watch ./src/styles.scss:style.css --style compressed
 
 compass watch [/src/styles.scss]
 compass create <style.css>
+
+
+
+//pug npm install pug-cli --g, npm install pug --save-dev # из директории проекта, 
+//compile: pug --pretty index.pug, watching: pug --pretty -w index.pug

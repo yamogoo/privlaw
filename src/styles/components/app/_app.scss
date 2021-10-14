@@ -5,7 +5,10 @@
     // background-color: $background-color;
 
     &-container {
-        
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        @include box(100vw, 100vh);
     }
 }
 

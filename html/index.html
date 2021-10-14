@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div class="app theme-header--light theme-normal">
+    <div class="app theme-header--light" id="app">
         <div class="app-container">
             <!--App Header-->
             <div class="app-header">
@@ -34,7 +34,7 @@
                                                 </a>
                                                 <div class="navigation-top-menu__item-underline"></div>
                                             </li>
-                                            <li class="navigation-top-menu__item active">
+                                            <li class="navigation-top-menu__item">
                                                 <a href="./news.html" class="navigation-top-menu__item-content">
                                                     <p>Новости</p>
                                                 </a>
@@ -163,41 +163,35 @@
             <!--App Header-->
 
             <main class="app-content">
-                <div class="app-scroll-view">
+                <div class="app-scroll-view" id="app-scroll-view">
+                    {{scrollOffset}}
                     <div class="app-content-container">
-                        <!--Nav Line-->
-                        <div class="nav-line">
-                            <ul class="nav-line-container">
-                                <li class="nav-line__item">
-                                    <a href="#">Главная</a>
-                                </li>
-                                <li class="nav-line__item">
-                                    <a href="#">Новости</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--Nav Line-->
-                        <div class="section-header">
-                            <h5 class="section-title">Новости</h5>
-                            <!--Filter-->
-                            <div class="filter-dropdown">
-                                <div class="filter-dropdown-container">
-                                    <input type="radio" name="tags">
-                                    <span id="text-tags">Все новости</span>
-                                    <div class="filter-dropdown__expansion-icon"></div>
-                                </div>
-                                <div class="filter-dropdown-list">
-                                    <p class="active">Все новости</p>
-                                    <p>Центр</p>
-                                    <p>РШЧП</p>
-                                    <p>Совет по кодификации</p>
-                                    <p>Диалоги о частном праве</p>
-                                    <p>Клуб семейного права</p>
-                                    <p>Алексеевские чтения</p>
+                        <!--Main Cover-->
+                        <div class="slider">
+                            <div class="slider__items">
+                                <div class="slider__item">
+                                    <div class="slider__item__content">
+                                        <div class="slider__item__group">
+                                            <div class="slider__item__title">
+                                                <h2>Исследовательский центр частного права имени С.С. Алексеева при
+                                                    Президенте
+                                                    Российской
+                                                    Федерации
+                                                </h2>
+                                            </div>
+                                            <div class="slider__item__description">
+                                                <p>Уникальное научное учреждение, созданное для<br>
+                                                    разработки законов в области частного права</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="slider__item__image">
+                                        <img src="./src/assets/images/background/index-slider-1.jpg">;
+                                    </div>
                                 </div>
                             </div>
-                            <!--Filter-->
                         </div>
+                        <!--Main Cover-->
                         <!--News-->
                         <div class="news">
                             <div class="news-container">
@@ -250,132 +244,10 @@
                                         </div>
                                     </a>
                                 </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news1.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news2.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news3.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
                                 <!--Items-->
                             </div>
                         </div>
                         <!--News-->
-                        <!--Events-->
-                        <div class="events">
-                            <div class="events-container">
-                                <!--Items-->
-                                <article class="events__item">
-                                    <a href="/" class="events__item-container">
-                                        <span class="events__item-image">
-                                            <img src="src/assets/images/background/event1.jpg" />
-                                        </span>
-                                        <div class="events__item-content">
-                                            <span class="events__item-tag">Диалоги о частном праве</span>
-                                            </span>
-                                            <h3 class="events__item-title">
-                                                Теория и практика правового регулирования в современной России:
-                                                особенности, тенденции, проблемы
-                                            </h3>
-                                            <span class="date">
-                                                <span class="date-number">12</span>
-                                                <div class="date-group">
-                                                    <span class="date-month">апреля 2020</span>
-                                                    <span class="date-day">суббота</span>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="events__item">
-                                    <a href="/" class="events__item-container">
-                                        <span class="events__item-image">
-                                            <img src="src/assets/images/background/event2.jpg" />
-                                        </span>
-                                        <div class="events__item-content">
-                                            <span class="events__item-tag">Диалоги о частном праве</span>
-                                            </span>
-                                            <h3 class="events__item-title">
-                                                Теория и практика правового регулирования в современной России:
-                                                особенности, тенденции, проблемы
-                                            </h3>
-                                            <span class="date">
-                                                <span class="date-number">21</span>
-                                                <div class="date-group">
-                                                    <span class="date-month">марта 2020</span>
-                                                    <span class="date-day">четверг</span>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="events__item">
-                                    <a href="/" class="events__item-container">
-                                        <span class="events__item-image">
-                                            <img src="src/assets/images/background/event3.jpg" />
-                                        </span>
-                                        <div class="events__item-content">
-                                            <span class="events__item-tag">Диалоги о частном праве</span>
-                                            </span>
-                                            <h3 class="events__item-title">
-                                                Теория и практика правового регулирования в современной России:
-                                                особенности, тенденции, проблемы
-                                            </h3>
-                                            <span class="date">
-                                                <span class="date-number">06</span>
-                                                <div class="date-group">
-                                                    <span class="date-month">марта 2020</span>
-                                                    <span class="date-day">среда</span>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </article>
-                                <!--Items-->
-                            </div>
-                        </div>
-                        <!--Events-->
                     </div>
                 </div>
             </main>
