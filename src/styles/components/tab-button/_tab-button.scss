@@ -3,19 +3,36 @@
     @include justify-content(center);
     @include align-items(center);
     height: 100%;
+
+    &-container {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include box (100%);
+        padding: 3px;
+    }
+
+    &-box {
+        @include flexbox();
+        @include justify-content(center);
+        @include align-items(center);
+        @include box (100%);
+        border-radius: 4px;
+        // background-color: $background-color;
+    }
     
     &-content {
         @include flexbox();
         @include justify-content(center);
         @include align-items(center);
         padding: px2em(0px) px2em(20px);
+    }
 
-        p {
-            font-size: px2em(14px);
-            font-weight: 400;
-            color: $primary-color;
-            white-space: nowrap;
-        }
+    p {
+        font-size: px2em(14px);
+        font-weight: 400;
+        color: $primary-color;
+        white-space: nowrap;
     }
 
     & {
@@ -38,4 +55,11 @@
     @include flex-wrap(nowrap);
     gap: 0;
     height: 100%;
+}
+
+.tab-button.poor-vision {
+
+    .icon-poor-vision {
+        font-size: px2em(24px);
+    }
 }
