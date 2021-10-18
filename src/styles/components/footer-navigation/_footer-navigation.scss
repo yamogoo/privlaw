@@ -1,0 +1,39 @@
+.footer-navigation {
+    width: 100%;
+
+    &-content {
+        @include flexbox();
+        @include flex-direction(row);
+        gap: $navigation-menu-item-content-gap;
+        @include justify-content(center);
+        @include align-items(center);
+        @include box(inherit);
+    }
+
+    &-list {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(flex-end);
+        @include box(inherit);
+        gap: 25px;
+        list-style: none;
+    }
+
+    &-item {
+        @include flexbox();
+        @include flex-direction(column);
+        position: relative;
+        @include box(inherit);
+        cursor: pointer;
+
+        a, &-content {
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            gap: $navigation-menu-item-content-gap;
+            // @include align-items(center);
+            height: inherit;
+            color: $white;
+        }
+    }
+}
