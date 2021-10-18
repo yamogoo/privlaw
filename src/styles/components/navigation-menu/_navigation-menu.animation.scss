@@ -1,9 +1,12 @@
 .navigation-menu {
 
-    &__item {
+    &__list {
 
-        &-underline {
-            @include transition(width, 125ms, ease-in-out);
+        &-item {
+
+            &-underline {
+                @include transition(width, 125ms, ease-in-out);
+            }
         }
     }
 }

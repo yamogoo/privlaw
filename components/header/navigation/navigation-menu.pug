@@ -1,30 +1,29 @@
 mixin items(...items)
 
     mixin nestedItem(href, title)
-        span.navigation-menu__item-group__nested-item
+        span.navigation-menu__list-item-group__nested-item
             a(href=href)=title
 
     mixin item(href, title, nested)
-            a(href=href class="navigation-menu__item-content")
-                p=title
-            div.navigation-menu__item-underline
+        a(href=href class="navigation-menu__list-item-content")=title
+            div.navigation-menu__list-item-underline
 
     each item in list
         if item.nested[0].href.length > 0
-            li.navigation-menu__item.expansion
+            li.navigation-menu__list-item.expansion
                 +item(item.href, item.title)
-                div.navigation-menu__item-group
-                    div.navigation-menu__item-group-container
+                div.navigation-menu__list-item-group
+                    div.navigation-menu__list-item-group-container
                         each nestedItem in item.nested
                             +nestedItem(nestedItem.href, nestedItem.title)
         else 
-            li.navigation-menu__item
+            li.navigation-menu__list-item
                 +item(item.href, item.title)
 
 // Navigation Menu
 nav.navigation-menu
     div.navigation-menu-container
-        ul.navigation-menu-content
+        ul.navigation-menu__list
             // Items
             -
                 var list=[
