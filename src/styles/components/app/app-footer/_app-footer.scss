@@ -47,7 +47,8 @@
         @include flex-direction(row);
         @include justify-content(space-between);
         @include align-items(center);
-        height: 400px;
+        padding: 30px 0px;
+        // height: 400px;
         // background-color: $accent-color-darken-100;
 
         &-content {
