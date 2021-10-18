@@ -2,8 +2,8 @@ body {
     font-family: $font-family, "Helvetica Neue", sans-serif;
     font-weight: $font-weight;
     font-size: $font-size;
-    // -webkit-font-smoothing: antialiased;
-    // -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     box-sizing: border-box;
 }
 
