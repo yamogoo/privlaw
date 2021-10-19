@@ -13,8 +13,8 @@ $themes-header: (
     navigationMenuItemGroupLinkColor: $navigation-menu-item-group-link-color,
     navigationMenuItemUnderlineColor: $navigation-menu-item-underline-color,
     //
-    navigationMenuTopItemLinkColor: $navigation-top-menu-item-link-color,
-    navigationTopMenuItemUnderlineColor: $navigation-top-menu-item-underline-color,
+    navigationMenuTopItemLinkColor: $navigation-menu-secondary-item-link-color,
+    navigationTopMenuItemUnderlineColor: $navigation-menu-secondary-item-underline-color,
     navigationTopMenuItemUnderlineColorHover:$navigation-menu-item-underline-color-hover,
     //
     appHeaderDividerColor: $divider-color,
@@ -37,8 +37,8 @@ $themes-header: (
     navigationMenuItemGroupLinkColor: $navigation-menu-item-group-link-color,
     navigationMenuItemUnderlineColor: $navigation-menu-item-underline-color-inverse,
     //
-    navigationMenuTopItemLinkColor: $navigation-top-menu-item-link-color-inverse,
-    navigationTopMenuItemUnderlineColor: $navigation-top-menu-item-underline-color-inverse,
+    navigationMenuTopItemLinkColor: $navigation-menu-secondary-item-link-color-inverse,
+    navigationTopMenuItemUnderlineColor: $navigation-menu-secondary-item-underline-color-inverse,
     navigationTopMenuItemUnderlineColorHover:$navigation-menu-item-underline-color-hover-inverse,
     //
     headerDividerColor: $divider-color-inverse,

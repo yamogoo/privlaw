@@ -1,6 +1,6 @@
-.navigation-top-menu {
+.navigation-menu-secondary {
     @include box(100%);
-    height: $navigation-top-menu-height;
+    height: $navigation-menu-secondary-height;
 
     &-container {
         @include box(inherit);
@@ -24,7 +24,7 @@
                 @include justify-content(center);
                 @include align-items(center);
                 @include box(inherit);
-                font-size: $navigation-top-menu-item-link-font-size;
+                font-size: $navigation-menu-secondary-item-link-font-size;
                 font-weight: 400;
                 white-space: nowrap;
             }
@@ -32,15 +32,15 @@
             &-underline {
                 display: block;
                 position: relative;
-                height: $navigation-top-menu-item-underline;
+                height: $navigation-menu-secondary-item-underline;
                 width: 0%;
-                background-color: $navigation-top-menu-item-underline-color;
+                background-color: $navigation-menu-secondary-item-underline-color;
                 margin: auto;
             }
 
             &:hover, &.active {
 
-                .navigation-top-menu__list-item-underline {
+                .navigation-menu-secondary__list-item-underline {
                     width: 100%;
                 }
             }

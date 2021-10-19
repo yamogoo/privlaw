@@ -1,4 +1,4 @@
-.navigation-top-menu {
+.navigation-menu-secondary {
 
     &__list {
 
@@ -7,7 +7,7 @@
             &__underline {
                 @include themify($themes-header) {
                     background-color: themed('navigationTopMenuItemUnderlineColor'); 
-                }     
+                }
             }
 
             a, p {
@@ -17,7 +17,7 @@
             }
             &:hover, &.active {
 
-                .navigation-top-menu__list-item-underline {
+                .navigation-menu-secondary__list-item-underline {
                     @include themify($themes-header) {
                         background-color: themed('navigationTopMenuItemUnderlineColorHover'); 
                     }

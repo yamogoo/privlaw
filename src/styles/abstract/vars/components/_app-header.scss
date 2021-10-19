@@ -1,6 +1,6 @@
 $navigation-menu-height: 69px;
-$navigation-top-menu-height: 50px;
-$app-header-height: $navigation-menu-height + $navigation-top-menu-height;
+$navigation-menu-secondary-height: 50px;
+$app-header-height: $navigation-menu-height + $navigation-menu-secondary-height;
 $app-header-navigation-item-undrline-width: 1px;
 $app-header-border-bottom-color: $divider-color;
 $app-header-border-bottom-color-inverse: rgba($white, 0.1);
