@@ -1,0 +1,32 @@
+.footer-copyright {
+    width: 100%;
+    padding-top: 30px;
+    border-top: 1px solid rgba($white, 0.15);
+
+    &-container {
+        @include flexbox();
+        @include flex-direction(row);
+        @include justify-content(space-between);
+        @include box(inherit);
+        gap: px2em(20px);
+    }
+
+    &-column {
+        @include flexbox();
+        @include flex-direction(row);
+        @include box(auto, auto);
+        gap: px2em(20px);
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: 500;
+    }
+
+    a, p, span {
+        display: inline-block;
+        color: $accent-light-color;
+        letter-spacing: px2em(0.3px);
+        padding: px2em(8px) px2em(0px);
+        text-decoration: none;
+    }
+}

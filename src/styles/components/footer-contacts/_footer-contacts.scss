@@ -1,11 +1,8 @@
 .footer-contacts {
     width: 100%;
+    padding: 30px 0px;
 
     &-container {
-        // @include flexbox();
-        // @include flex-direction(row);
-        // gap: 30px;
-        // @include justify-content(center);
         @include box(inherit);
     }
 
