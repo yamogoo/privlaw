@@ -1,18 +1,15 @@
 .footer-navigation {
     width: 100%;
 
-    &-content {
-        @include flexbox();
-        @include flex-direction(row);
-        gap: 30px;
-        @include justify-content(center);
-        // @include align-items(center);
+    &-container {
+        // @include flexbox();
+        // @include flex-direction(row);
+        // gap: 30px;
+        // @include justify-content(center);
         @include box(inherit);
     }
 
     &-column {
-        // @include flexbox();
-        // @include flex-direction(column);
         @include box(100%, auto);
     }
 

@@ -1,0 +1,60 @@
+@include respond-above (xl) {
+
+    .footer-navigation {
+
+        &-container {
+            @include flexbox();
+            @include flex-direction(row);
+            gap: 30px;
+        }
+    }
+}
+
+@include respond-between (sm, xl) {
+
+    .footer-navigation {
+        &-container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@include respond-below (sm) {
+
+    .footer-navigation {
+        
+        &-container {
+            @include flexbox();
+            @include flex-direction(column);
+            gap: 20px;
+            width: 100%;
+        }
+    }
+}
+
+// //List Template
+
+// @include respond-above (sm) {
+
+//     .entities-container-list {
+//         // display: flex;
+//         // flex-direction: column;
+//         @include flexbox();
+//         @include flex-direction(column);
+//         gap: 30px;
+//     }
+// }
+
+
+// @include respond-below (sm) {
+
+//     .entities-container-list {
+//         // display: flex;
+//         // flex-direction: column;
+//         @include flexbox();
+//         @include flex-direction(column);
+//         gap: 30px;
+//     }
+// }

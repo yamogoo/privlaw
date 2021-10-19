@@ -29,7 +29,7 @@
         // background-color: $accent-color-darken-100;
 
         .app-logo {
-            padding: 40px 0px;
+            // padding: 40px 0px;
         }
 
         &-content {
@@ -37,7 +37,9 @@
             @include flex-direction(row);
             @include justify-content(space-between);
             @include align-items(center);
+            gap: 20px;
             width: 100%;
+            padding: 40px 0px;
         }
     }
 
