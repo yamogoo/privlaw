@@ -17,22 +17,16 @@
 
         &-item {
             height: inherit;
-
-            a {
-            font-size: $navigation-top-menu-item-link-font-size;
-            font-weight: 400;
-            }
-
-            p {
-                white-space: nowrap;
-            }
-
+            
             &-link {
                 @include flexbox();
                 @include flex-direction(column);
                 @include justify-content(center);
                 @include align-items(center);
                 @include box(inherit);
+                font-size: $navigation-top-menu-item-link-font-size;
+                font-weight: 400;
+                white-space: nowrap;
             }
 
             &-underline {

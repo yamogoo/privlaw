@@ -21,10 +21,11 @@
         //li
         &-item {
             @include flexbox();
-            @include flex-direction(column);
+            @include flex-direction(row);
+            @include align-items(center);
+            gap: px2em(6px);
             position: relative;
             height: inherit;
-            cursor: pointer;
 
             //a
             &-link {
@@ -39,6 +40,7 @@
                 padding: 0;
                 margin: 0;
                 white-space: nowrap;
+                cursor: pointer;
             }
 
             &-underline {
@@ -76,21 +78,23 @@
             //     //     content: '^';
             //     // }
             // }
+            &.expansion {
 
-            // & > .navigation-menu__list {
-                
-            //     .navigation-menu__list-item-link {
-            //         // @extend .icon-backward !optional; 
+                &::after {
+                    @extend .icon-backward:before !optional; 
+                    font-family: $icon;
+                    font-size: $navigation-menu-item-icon-font-size;
+                    // padding-top: 2px;
+                    opacity: 0.4;
+                }
 
-            //         &::after {
-            //             @extend .icon-backward:before !optional; 
-            //             font-family: $icon;
-            //             font-size: $navigation-menu-item-icon-font-size;
-            //             padding-top: 2px;
-            //             opacity: 0.8;
-            //         }
-            //     }
-            // }
+                &:hover, &.active, &:focus {
+
+                    &::after {
+                        transform: rotate(180deg);
+                    }
+                }
+            }
             
             //Dropdown
             .navigation-menu__list {
@@ -107,7 +111,7 @@
                 min-width: 100%;
                 max-width: $navigation-menu-item-group-max-width;
                 height: auto;
-                box-shadow: 0px 4px 16px rgba($app-header-shadow-color, 0.1);
+                box-shadow: 0px 8px 16px rgba($app-header-shadow-color, 0.1);
                 border-radius: 0px 0px 3px 3px;
 
                 // &-container {
@@ -125,6 +129,7 @@
                         white-space: pre-wrap;
                         font-size: px2em(15px);
                         font-weight: 400;
+                        cursor: pointer;
                         // color: $navigation-menu-item-link-color-inverse;//Theme
                     }
                 }

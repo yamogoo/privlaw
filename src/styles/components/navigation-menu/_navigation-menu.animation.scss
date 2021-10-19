@@ -4,6 +4,13 @@
 
         &-item {
 
+            &.expansion {
+
+                &::after {
+                    @include transition(transform, 125ms, ease-in-out);
+                }
+            }
+
             &-underline {
                 @include transition(width, 125ms, ease-in-out);
             }

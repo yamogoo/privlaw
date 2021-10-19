@@ -12,9 +12,9 @@ mixin items(...items)
 
     each item in list
         if item.nested[0].title.length > 0
-            li.navigation-menu__list-item
+            li.navigation-menu__list-item.expansion
                 +item(item.href, item.title)
-                ul.navigation-menu__list.expansion
+                ul.navigation-menu__list
                     //- div.navigation-menu__list-item-group-container
                     each nestedItem in item.nested
                         +nestedItem(nestedItem.href, nestedItem.title)
@@ -30,7 +30,7 @@ nav.navigation-menu
             -
                 var list=[
                     {href: "./centre.html",
-                    title: "Исследовательский центр",
+                    title: "ИЦЧП",
                         nested: [
                             {
                                 href: "./about-center.html",

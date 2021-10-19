@@ -10,7 +10,7 @@
             }
         }
 
-        a, p {
+        .navigation-menu__list-item-link {
             @include themify($themes-header) {
                 color: themed('navigationMenuItemLinkColor'); 
             }
@@ -24,7 +24,7 @@
                 }
             }
 
-            a, p {
+            .navigation-menu__list-item-link {
                 @include themify($themes-header) {
                     color: themed('navigationMenuItemLinkColorHover') !important; 
                 }
@@ -33,7 +33,7 @@
 
         .navigation-menu__list {
 
-            a, p {
+            .navigation-menu__list-item-link {
                 @include themify($themes-header) {
                     color: themed('navigationMenuItemGroupLinkColor') !important; 
                 }
