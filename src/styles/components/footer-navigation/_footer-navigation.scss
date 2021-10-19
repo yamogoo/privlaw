@@ -26,7 +26,6 @@
             @include flex-direction(column);
             position: relative;
             @include box(inherit);
-            cursor: pointer;
 
             a {
                 @include flexbox();
@@ -39,6 +38,7 @@
                 font-weight: 500;
                 letter-spacing: px2em(0.3px);
                 padding: px2em(10px) px2em(0px);
+                cursor: pointer;
 
                 &:hover {
                     text-decoration: underline;
@@ -54,7 +54,7 @@
                 a {
                     font-size: px2em(14px) !important;
                     font-weight: 400 !important;
-                    color: #FAC5D8 !important;//$accent-color-lighten-300;
+                    color: $accent-light-color !important;//$accent-color-lighten-300;
 
                     &:hover {
                         text-decoration: underline;

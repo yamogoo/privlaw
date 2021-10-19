@@ -1,0 +1,37 @@
+@include respond-above (xl) {
+
+    .footer-contacts {
+
+        &-container {
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(space-between);
+            gap: 30px;
+        }
+    }
+}
+
+@include respond-between (sm, xl) {
+
+    .footer-contacts {
+
+        &-container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@include respond-below (sm) {
+
+    .footer-contacts {
+        
+        &-container {
+            @include flexbox();
+            @include flex-direction(column);
+            gap: 20px;
+            width: 100%;
+        }
+    }
+}

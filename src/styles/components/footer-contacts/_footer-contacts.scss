@@ -1,0 +1,54 @@
+.footer-contacts {
+    width: 100%;
+
+    &-container {
+        // @include flexbox();
+        // @include flex-direction(row);
+        // gap: 30px;
+        // @include justify-content(center);
+        @include box(inherit);
+    }
+
+    &-column {
+        @include box(auto, auto);
+    }
+
+    p, h1, h2, h3, h4, h5 {
+        color: $white;
+        font-weight: 400;
+    }
+
+    h1, h2, h3, h4, h5 {
+        font-weight: 500;
+    }
+
+    a, p, span {
+        color: $accent-light-color;
+        letter-spacing: px2em(0.3px);
+        padding: px2em(8px) px2em(0px);
+    }
+
+    .email {
+
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    ul {
+        padding-top: 15px;
+        list-style: none;
+
+        li {
+            @include flexbox();
+            @include flex-direction(column);
+            position: relative;
+            @include box(inherit);
+
+            a, p, span {
+                font-size: px2em(14px);
+                text-decoration: none;
+            }
+        }
+    }
+}
