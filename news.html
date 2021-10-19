@@ -1,388 +1,311 @@
-<!-- <!doctype html> -->
-<html lang="ru">
-
-<head>
-    <meta charset="utf-8">
-    <title>Privlaw</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
-    <link href="./src/assets/icons/style.css" rel="stylesheet">
-    <link href="./style.css" rel="stylesheet">
-</head>
-
-<body>
-    <div class="app theme-header--light theme-normal">
-        <div class="app-container">
-            <!--App Header-->
-            <div class="app-header">
-                <div class="app-header-container">
-                    <div class="app-header-content">
-                        <div class="app-header__logo-section">
-                            <a href="./index.html" class="logo">
-                            </a>
-                        </div>
-                        <div class="app-header__content-section">
-                            <div class="app-header__content-section-top">
-                                <!--Navigation Top Menu-->
-                                <div class="navigation-top-menu">
-                                    <div class="navigation-top-menu-container">
-                                        <ul class="navigation-top-menu-content">
-                                            <!--items-->
-                                            <li class="navigation-top-menu__item">
-                                                <a href="./events.html" class="navigation-top-menu__item-content">
-                                                    <p>Мероприятия</p>
-                                                </a>
-                                                <div class="navigation-top-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-top-menu__item active">
-                                                <a href="./news.html" class="navigation-top-menu__item-content">
-                                                    <p>Новости</p>
-                                                </a>
-                                                <div class="navigation-top-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-top-menu__item">
-                                                <a href="./persons.html" class="navigation-top-menu__item-content">
-                                                    <p>Персоналии</p>
-                                                </a>
-                                                <div class="navigation-top-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-top-menu__item">
-                                                <a href="#" class="navigation-top-menu__item-content">
-                                                    <p>Фото и видео</p>
-                                                </a>
-                                                <div class="navigation-top-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-top-menu__item">
-                                                <a href="#" class="navigation-top-menu__item-content">
-                                                    <p>Контакты</p>
-                                                </a>
-                                                <div class="navigation-top-menu__item-underline"></div>
-                                            </li>
-                                            <!--items-->
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!--Navigation Top Menu-->
-                                <!--Social Buttons-->
-                                <div class="social-button-group">
-                                    <div class="social-button facebook">
-                                        <div class="social-button-container">
-                                            <a href="" class="social-button-content">
-                                                <div class="social-button__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="social-button vkontakte">
-                                        <div class="social-button-container">
-                                            <a href="" class="social-button-content">
-                                                <div class="social-button__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="social-button twitter">
-                                        <div class="social-button-container">
-                                            <a href="" class="social-button-content">
-                                                <div class="social-button__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="social-button instagram">
-                                        <div class="social-button-container">
-                                            <a href="" class="social-button-content">
-                                                <div class="social-button__icon"></div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--Social Buttons-->
-                                <!--Search Button-->
-                                <div class="search-button">
-                                    <div class="search-button-icon"></div>
-                                </div>
-                                <!--Search Button-->
-                            </div>
-                            <div class="app-header__content-section-bottom">
-                                <!--Navigation Menu-->
-                                <nav class="navigation-menu">
-                                    <div class="navigation-menu-container">
-                                        <ul class="navigation-menu-content">
-                                            <!--items-->
-                                            <li class="navigation-menu__item">
-                                                <!-- <navigation-item v-for="item in items" v-bind:item="item" v-bind:key="item.id"></navigation-item> -->
-                                                <a href="#" class="navigation-menu__item-content">
-                                                    <p>Центр</p>
-                                                </a>
-                                                <div class="navigation-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-menu__item">
-                                                <a href="#" class="navigation-menu__item-content">
-                                                    <p>РШЧП</p>
-                                                </a>
-                                                <div class="navigation-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-menu__item">
-                                                <a href="#" class="navigation-menu__item-content">
-                                                    <p>Совет по кодификации</p>
-                                                </a>
-                                                <div class="navigation-menu__item-underline"></div>
-                                            </li>
-                                            <li class="navigation-menu__item">
-                                                <a href="#" class="navigation-menu__item-content">
-                                                    <p>Диалоги о частном праве</p>
-                                                </a>
-                                                <div class="navigation-menu__item-underline"></div>
-                                            </li>
-
-                                            <li class="navigation-menu__item expansion">
-                                                <a href="#" class="navigation-menu__item-content">
-                                                    <p>Просветительские проекты</p>
-                                                    <div class="navigation-menu__item-expansion-icon"></div>
-                                                </a>
-                                                <div class="navigation-menu__item-underline"></div>
-                                                <div class="navigation-menu__item-group">
-                                                    <div class="navigation-menu__item-group-container">
-                                                        <span class="navigation-menu__item-group__nested-item">
-                                                            <a href="#">Клуб семейного права</a>
-                                                        </span>
-                                                        <span class="navigation-menu__item-group__nested-item">
-                                                            <a href="#">Алексеевские чтения</a>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </li>
-                                            <!--items-->
-                                        </ul>
-                                    </div>
-                                </nav>
-                                <!--Navigation Menu-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--App Header-->
-
-            <main class="app-content">
-                <div class="app-scroll-view">
-                    <div class="app-content-container">
-                        <!--Nav Line-->
-                        <div class="nav-line">
-                            <ul class="nav-line-container">
-                                <li class="nav-line__item">
-                                    <a href="#">Главная</a>
-                                </li>
-                                <li class="nav-line__item">
-                                    <a href="#">Новости</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--Nav Line-->
-                        <div class="section-header">
-                            <h5 class="section-title">Новости</h5>
-                            <!--Filter-->
-                            <div class="filter-dropdown">
-                                <div class="filter-dropdown-container">
-                                    <input type="radio" name="tags">
-                                    <span id="text-tags">Все новости</span>
-                                    <div class="filter-dropdown__expansion-icon"></div>
-                                </div>
-                                <div class="filter-dropdown-list">
-                                    <p class="active">Все новости</p>
-                                    <p>Центр</p>
-                                    <p>РШЧП</p>
-                                    <p>Совет по кодификации</p>
-                                    <p>Диалоги о частном праве</p>
-                                    <p>Клуб семейного права</p>
-                                    <p>Алексеевские чтения</p>
-                                </div>
-                            </div>
-                            <!--Filter-->
-                        </div>
-                        <!--News-->
-                        <div class="news">
-                            <div class="news-container">
-                                <!--Items-->
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news1.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news2.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news3.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news1.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news2.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="news__item">
-                                    <a href="/" class="news__item-container">
-                                        <span class="news__item-image">
-                                            <img src="src/assets/images/background/news3.jpg" />
-                                        </span>
-                                        <div class="news__item-content">
-                                            <span class="news__item-date">
-                                                16 октября 2021
-                                            </span>
-                                            <h3 class="news__item-title">
-                                                Интеграл Гамильтона, очевидно, основан на опыте. Относительная
-                                                погрешность соответствует интеграл
-                                            </h3>
-                                        </div>
-                                    </a>
-                                </article>
-                                <!--Items-->
-                            </div>
-                        </div>
-                        <!--News-->
-                        <!--Events-->
-                        <div class="events">
-                            <div class="events-container">
-                                <!--Items-->
-                                <article class="events__item">
-                                    <a href="/" class="events__item-container">
-                                        <span class="events__item-image">
-                                            <img src="src/assets/images/background/event1.jpg" />
-                                        </span>
-                                        <div class="events__item-content">
-                                            <span class="events__item-tag">Диалоги о частном праве</span>
-                                            </span>
-                                            <h3 class="events__item-title">
-                                                Теория и практика правового регулирования в современной России:
-                                                особенности, тенденции, проблемы
-                                            </h3>
-                                            <span class="date">
-                                                <span class="date-number">12</span>
-                                                <div class="date-group">
-                                                    <span class="date-month">апреля 2020</span>
-                                                    <span class="date-day">суббота</span>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="events__item">
-                                    <a href="/" class="events__item-container">
-                                        <span class="events__item-image">
-                                            <img src="src/assets/images/background/event2.jpg" />
-                                        </span>
-                                        <div class="events__item-content">
-                                            <span class="events__item-tag">Диалоги о частном праве</span>
-                                            </span>
-                                            <h3 class="events__item-title">
-                                                Теория и практика правового регулирования в современной России:
-                                                особенности, тенденции, проблемы
-                                            </h3>
-                                            <span class="date">
-                                                <span class="date-number">21</span>
-                                                <div class="date-group">
-                                                    <span class="date-month">марта 2020</span>
-                                                    <span class="date-day">четверг</span>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </article>
-                                <article class="events__item">
-                                    <a href="/" class="events__item-container">
-                                        <span class="events__item-image">
-                                            <img src="src/assets/images/background/event3.jpg" />
-                                        </span>
-                                        <div class="events__item-content">
-                                            <span class="events__item-tag">Диалоги о частном праве</span>
-                                            </span>
-                                            <h3 class="events__item-title">
-                                                Теория и практика правового регулирования в современной России:
-                                                особенности, тенденции, проблемы
-                                            </h3>
-                                            <span class="date">
-                                                <span class="date-number">06</span>
-                                                <div class="date-group">
-                                                    <span class="date-month">марта 2020</span>
-                                                    <span class="date-day">среда</span>
-                                                </div>
-                                            </span>
-                                        </div>
-                                    </a>
-                                </article>
-                                <!--Items-->
-                            </div>
-                        </div>
-                        <!--Events-->
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
-    <script type="text/javascript" src="./js/libs.min.js"></script>
-    <script type="text/javascript" src="./js/main.js"></script>
-</body>
-
+<!DOCTYPE html>
+<html>
+  <head></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
+  <title>Index</title>
+  <link href="./src/assets/icons/style.css" rel="stylesheet">
+  <link href="./style.css" rel="stylesheet">
 </html>
+<body>
+  <app class="theme-header--light theme-app--normal" id="app">
+    <div class="app-container">
+      <!-- App Header-->
+      <div class="app-header">
+        <div class="app-header-container">
+          <div class="app-header-content">
+            <div class="app-logo"><a class="app-logo-img" href="./index.html"></a></div>
+            <div class="app-header__content-section">
+              <div class="app-header__content-section-top">
+                <!-- Navigation Top Menu-->
+                <div class="navigation-top-menu">
+                  <div class="navigation-top-menu-container">
+                    <ul class="navigation-top-menu__list">
+                      <!-- Items-->
+                                                      <li class="navigation-top-menu__list-item"><a class="navigation-top-menu__list-item-link" href="./events.html">
+                                                          <p>Мероприятия</p></a>
+                                                        <div class="navigation-top-menu__list-item-underline"></div>
+                                                      </li>
+                                                      <li class="navigation-top-menu__list-item"><a class="navigation-top-menu__list-item-link" href="./news.html">
+                                                          <p>Новости</p></a>
+                                                        <div class="navigation-top-menu__list-item-underline"></div>
+                                                      </li>
+                                                      <li class="navigation-top-menu__list-item"><a class="navigation-top-menu__list-item-link" href="./persons.html">
+                                                          <p>Персоналии</p></a>
+                                                        <div class="navigation-top-menu__list-item-underline"></div>
+                                                      </li>
+                                                      <li class="navigation-top-menu__list-item"><a class="navigation-top-menu__list-item-link" href="./foto-and-video.html">
+                                                          <p>Фото и видео</p></a>
+                                                        <div class="navigation-top-menu__list-item-underline"></div>
+                                                      </li>
+                                                      <li class="navigation-top-menu__list-item"><a class="navigation-top-menu__list-item-link" href="./contacts">
+                                                          <p>Контакты</p></a>
+                                                        <div class="navigation-top-menu__list-item-underline"></div>
+                                                      </li>
+                      <!-- Items-->
+                    </ul>
+                  </div>
+                </div>
+                <!-- Navigation Top Menu-->
+                <!--Search Button-->
+                <div class="search-button">
+                  <div class="search-button-icon"></div>
+                </div>
+                <!--Search Button-->
+                <div class="tab-button-group">
+                  <button class="tab-button poor-vision"><span class="tab-button-container"><span class="tab-button-box"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></span></span></button>
+                  <button class="tab-button"><span class="tab-button-content">
+                      <p>Ru</p></span></button>
+                  <button class="tab-button last"><span class="tab-button-content">
+                      <p>Для студентов</p></span></button>
+                </div>
+              </div>
+              <div class="app-header__content-section-bottom">
+                <!-- Navigation Menu-->
+                <nav class="navigation-menu">
+                  <div class="navigation-menu-container">
+                    <ul class="navigation-menu__list">
+                      <!-- Items-->
+                                      <!---->
+                                      <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./centre.html">Исследовательский центр</a>
+                                                        <div class="navigation-menu__list-item-underline"></div>
+                                        <ul class="navigation-menu__list expansion">
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./about-center.html">О центре</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./scientific-departments.html">Научные отделы</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./ural-branch.html">Уральский филиал</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./expert-and-research-activities.html">Экспертная и научно-исследовательская деятельность</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./editions.html">Издания</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./countering-terrorism-and-corruption.html">Противодействие терроризму и коррупции</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./rshchp.html">РШЧП</a>
+                                                        <div class="navigation-menu__list-item-underline"></div>
+                                        <ul class="navigation-menu__list expansion">
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Об РШЧП</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Магистратура</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Повышение квалификации</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Кафедры</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Выпускники</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Учебный отдел</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Стажировки и практика</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./codification-council.html">Совет по кодификации</a>
+                                                        <div class="navigation-menu__list-item-underline"></div>
+                                        <ul class="navigation-menu__list expansion">
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">О Совете</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Новости</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="">Деятельность</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./private-law-dialogues.html">Диссертационный совет</a>
+                                                        <div class="navigation-menu__list-item-underline"></div>
+                                      </li>
+                                      <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./educational-projects.html">Просветительские проекты</a>
+                                                        <div class="navigation-menu__list-item-underline"></div>
+                                        <ul class="navigation-menu__list expansion">
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./private-law-dialogues.html">Диалоги о частном праве</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./family-law-club.html">Клуб семейного права</a></li>
+                                                          <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./alekseevsky-readings.html">Алексеевские чтения</a></li>
+                                        </ul>
+                                      </li>
+                                      <li class="navigation-menu__list-item"><a class="navigation-menu__list-item-link" href="./museum.html">Музей</a>
+                                                        <div class="navigation-menu__list-item-underline"></div>
+                                      </li>
+                      <!-- Items-->
+                    </ul>
+                  </div>
+                </nav>
+                <!-- Navigation Menu-->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <main class="app-content">
+        <div class="app-scroll-view">
+          <div class="app-content-container">
+            <!-- Nav Line-->
+            <div class="nav-line">
+              <ul class="nav-line-container">
+                <li class="nav-line__item"><a href="#">Главная</a></li>
+                <li class="nav-line__item"><a href="#">Новости</a></li>
+              </ul>
+            </div>
+            <!-- Nav Line-->
+            <!-- Section Header-->
+            <div class="section-header">
+              <h5 class="section-title">Новости</h5>
+              <!-- Filter Dropdown-->
+              <div class="filter-dropdown">
+                <div class="filter-dropdown-container">
+                  <input type="radio" name="tags"><span id="text-tags">Все новости</span>
+                  <div class="filter-dropdown__expansion-icon"></div>
+                </div>
+                <div class="filter-dropdown-list">
+                  <p class="active">Все новости</p>
+                  <p>ИЦЧП</p>
+                  <p>РШЧП</p>
+                  <p>Совет по кодификации</p>
+                </div>
+              </div>
+              <!-- Filter Dropdown-->
+            </div>
+            <!-- Section Header-->
+            <!-- News-->
+            <div class="news">
+              <div class="news-container">
+                <!-- Items-->
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">Исследовательский центр</span><img src="src/assets/images/news/news_17.10.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">17 октября 2021</span>
+                      <h3 class="news__item-title">Исследовательский центр посетила делегация цивилистов из Казахстана</h3>
+                    </div></a></article>
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">Исследовательский центр</span><img src="src/assets/images/news/news_11.10.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">11 октября 2021</span>
+                      <h3 class="news__item-title">Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом</h3>
+                    </div></a></article>
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">Исследовательский центр</span><img src="src/assets/images/news/news_04.10.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">4 октября 2021</span>
+                      <h3 class="news__item-title">Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП</h3>
+                    </div></a></article>
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">Диалоги о частном праве</span><img src="src/assets/images/news/news_28.09.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">28 сентября 2021</span>
+                      <h3 class="news__item-title">Проект «Диалоги о частном праве» возобновляет работу</h3>
+                    </div></a></article>
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">РШЧП</span><img src="src/assets/images/news/news_21.09.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">21 сентября 2021</span>
+                      <h3 class="news__item-title">Студенты-первокурсники РШЧП получили студенческие билеты</h3>
+                    </div></a></article>
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">Исследовательский центр</span><img src="src/assets/images/news/news_19.09.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">19 сентября 2021</span>
+                      <h3 class="news__item-title">Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр</h3>
+                    </div></a></article>
+                <article class="news__item"><a class="news__item-container" href="/"><span class="news__item-image"><span class="item-tag">РШЧП</span><img src="src/assets/images/news/news_08.07.2021_sm-1.png"></span>
+                    <div class="news__item-content"><span class="news__item-date">8 июля 2021</span>
+                      <h3 class="news__item-title">Лекции зарубежных профессоров в РШЧП в новом учебном году</h3>
+                    </div></a></article>
+                <!-- Items-->
+              </div>
+            </div>
+            <!-- News-->
+          </div>
+          <!-- Footer-->
+          <div class="app-footer">
+            <div class="app-footer-content">
+              <div class="app-footer-container">
+                <div class="app-footer-section-top">
+                  <div class="app-footer-section-top-content">
+                    <div class="app-logo-descriptor">
+                      <div class="app-logo"><a class="app-logo-img" href="./index.html"></a></div><span class="app-logo-description">Исследовательский центр частного права имени <br/> С.С. Алексеева при Президенте Российской Федерации</span>
+                    </div>
+                    <!-- Social Buttons-->
+                    <div class="social-button-group">
+                      <div class="social-button inverse facebook">
+                        <div class="social-button-container"><a class="social-button-content" href="">
+                            <div class="social-button__icon"></div></a></div>
+                      </div>
+                      <div class="social-button inverse vkontakte">
+                        <div class="social-button-container"><a class="social-button-content" href="">
+                            <div class="social-button__icon"></div></a></div>
+                      </div>
+                      <div class="social-button inverse twitter">
+                        <div class="social-button-container"><a class="social-button-content" href="">
+                            <div class="social-button__icon"></div></a></div>
+                      </div>
+                      <div class="social-button inverse instagram">
+                        <div class="social-button-container"><a class="social-button-content" href="">
+                            <div class="social-button__icon"></div></a></div>
+                      </div>
+                    </div>
+                    <!-- Social Buttons-->
+                  </div>
+                </div>
+              </div>
+              <div class="app-footer-section-center">
+                <div class="app-footer-container">
+                  <div class="app-footer-section-center-content">
+                    <!--Footer Navigation-->
+                    <div class="footer-navigation">
+                      <div class="footer-navigation-container">
+                        <div class="footer-navigation-column">
+                          <ul>
+                            <li><a href="/events.html">Мероприятия</a></li>
+                            <li><a href="/news.html">Новости</a></li>
+                            <li><a href="/personalities.html">Персоналии</a></li>
+                            <li><a href="/foto-and-video.html">Фото и видео</a></li>
+                            <li><a href="/contacts.html">Контакты</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer-navigation-column">
+                          <ul>
+                            <li><a href="#">Исследовательский центр</a></li>
+                            <ul>
+                              <li><a href="#">О центре</a></li>
+                              <li><a href="#">Научные отделы</a></li>
+                              <li><a href="#">Уральский филиал</a></li>
+                              <li><a href="#">Экспертная и научно-исследовательская деятельность</a></li>
+                              <li><a href="#">Издания</a></li>
+                              <li><a href="#">Противодействие терроризму и коррупции</a></li>
+                            </ul>
+                          </ul>
+                        </div>
+                        <div class="footer-navigation-column">
+                          <ul>
+                            <li><a href="#">Российская школа частного права</a></li>
+                            <ul>
+                              <li><a href="#">Об РШЧП</a></li>
+                              <li><a href="#">Магистратура</a></li>
+                              <li><a href="#">Повышение квалификации</a></li>
+                              <li><a href="#">Кафедры</a></li>
+                              <li><a href="#">Выпускники</a></li>
+                              <li><a href="#">Учебный отдел</a></li>
+                              <li><a href="#">Стажировки и практика</a></li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li><a href="#">Диссертационный совет</a></li>
+                          </ul>
+                        </div>
+                        <div class="footer-navigation-column">
+                          <ul>
+                            <li><a href="#">Совет по кодификации</a></li>
+                            <ul>
+                              <li><a href="#">О Совете</a></li>
+                              <li><a href="#">Новости</a></li>
+                              <li><a href="#">Деятельность</a></li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li><a href="#">Просветительские проекты</a></li>
+                            <ul>
+                              <li><a href="#">Диалоги о частном праве</a></li>
+                              <li><a href="#">Клуб семейного права</a></li>
+                              <li><a href="#">Алексеевские чтения</a></li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li><a href="#">Музей</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Footer Navigation-->
+                  </div>
+                </div>
+              </div>
+              <div class="app-footer-section-bottom">
+                <div class="app-footer-container">
+                  <div class="app-footer-section-bottom-content">
+                    <p>Все права защищены, 1991-2022</p><a>Политика конфиденциальности</a><a>Пользовательское соглашение</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </app>
+  <script type="text/javascript" src="./js/libs.min.js"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+</body>

@@ -1,77 +1,134 @@
+//- mixin items(...items)
+
+//-     mixin nestedItem(href, title)
+//-         span.navigation-menu__list-item-group__nested-item
+//-             a(href=href)=title
+
+//-     mixin item(href, title, nested)
+//-         a(href=href class="navigation-menu__list-item-content")=title
+//-             div.navigation-menu__list-item-underline
+
+//-     each item in list
+//-         if item.nested[0].href.length > 0
+//-             li.navigation-menu__list-item.expansion
+//-                 +item(item.href, item.title)
+//-                 div.navigation-menu__list-item-group
+//-                     div.navigation-menu__list-item-group-container
+//-                         each nestedItem in item.nested
+//-                             +nestedItem(nestedItem.href, nestedItem.title)
+//-         else 
+//-             li.navigation-menu__list-item
+//-                 +item(item.href, item.title)
+
+//- -
+//-     var list=[
+//-         {href: "./centre.html", title: "Исследовательский центр",
+//-             nested: [
+//-                 {href: "", title: ""}
+//-             ]},
+//-         {href: "./rshchp.html", title: "РШЧП",
+//-             nested: [
+//-                 {href: "", title: ""}
+//-             ]},
+//-         {href: "./codification-council.html", title: "Совет по кодификации",
+//-             nested: [
+//-                 {href: "", title: ""}
+//-             ]},
+//-         {href: "./private-law-dialogues.html", title: "Диссертационный совет",
+//-             nested: [
+//-                 {href: "", title: ""}
+//-             ]},
+//-         {href: "./educational-projects.html", title: "Просветительские проекты",
+//-             nested: [
+//-                 {href: "./family-law-club.html", title: "Клуб семейного права"},
+//-                 {href: "./alekseevsky-readings.html", title: "Алексеевские чтения"}
+//-             ]},
+//-         {href: "./museum.html", title: "Музей",
+//-             nested: [
+//-                 {href: "", title: ""}
+//-             ]}
+//-     ]
+//- //Footer Navigation
+//- div.footer-navigation
+//-     div.footer-navigation-container
+//-         +items(list)
+
+//Footer Navigation
 div.footer-navigation
     div.footer-navigation-container
         div.footer-navigation-column
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Мероприятия
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Новости
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Персоналии
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Фото и видео
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Контакты
+            ul
+                li
+                    a(href="/events.html") Мероприятия
+                li
+                    a(href="/news.html") Новости
+                li
+                    a(href="/personalities.html") Персоналии
+                li
+                    a(href="/foto-and-video.html") Фото и видео
+                li
+                    a(href="/contacts.html") Контакты
         div.footer-navigation-column
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Исследовательский центр
-                ul.footer-navigation-list
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") О центре
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Научные отделы
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Уральский филиал
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Экспертная и научно-исследовательская деятельность
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Издания
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Противодействие терроризму и коррупции
+            ul
+                li
+                    a(href="#") Исследовательский центр
+                ul
+                    li
+                        a(href="#") О центре
+                    li
+                        a(href="#") Научные отделы
+                    li
+                        a(href="#") Уральский филиал
+                    li
+                        a(href="#") Экспертная и научно-исследовательская деятельность
+                    li
+                        a(href="#") Издания
+                    li
+                        a(href="#") Противодействие терроризму и коррупции
         div.footer-navigation-column
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Российская школа частного права
-                ul.footer-navigation-list
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Об РШЧП
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Магистратура
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Повышение квалификации
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Кафедры
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Выпускники
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Учебный отдел
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Стажировки и практика
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Диссертационный совет
+            ul
+                li
+                    a(href="#") Российская школа частного права
+                ul
+                    li
+                        a(href="#") Об РШЧП
+                    li
+                        a(href="#") Магистратура
+                    li
+                        a(href="#") Повышение квалификации
+                    li
+                        a(href="#") Кафедры
+                    li
+                        a(href="#") Выпускники
+                    li
+                        a(href="#") Учебный отдел
+                    li
+                        a(href="#") Стажировки и практика
+            ul
+                li
+                    a(href="#") Диссертационный совет
         div.footer-navigation-column
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Совет по кодификации
-                ul.footer-navigation-list
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") О Совете
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Новости
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Деятельность
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Просветительские проекты
-                ul.footer-navigation-list
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Диалоги о частном праве
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Клуб семейного права
-                    li.footer-navigation-list-item
-                        a(href="#" class="footer-navigation-content") Алексеевские чтения
-            ul.footer-navigation-list
-                li.footer-navigation-list-item
-                    a(href="#" class="footer-navigation-content") Музей
+            ul
+                li
+                    a(href="#") Совет по кодификации
+                ul
+                    li
+                        a(href="#") О Совете
+                    li
+                        a(href="#") Новости
+                    li
+                        a(href="#") Деятельность
+            ul
+                li
+                    a(href="#") Просветительские проекты
+                ul
+                    li
+                        a(href="#") Диалоги о частном праве
+                    li
+                        a(href="#") Клуб семейного права
+                    li
+                        a(href="#") Алексеевские чтения
+            ul
+                li
+                    a(href="#") Музей
+//Footer Navigation

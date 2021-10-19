@@ -1,29 +1,32 @@
 .navigation-top-menu {
 
-    &__item {
+    &__list {
 
-        &__underline {
-            @include themify($themes-header) {
-                background-color: themed('navigationTopMenuItemUnderlineColor'); 
-            }     
-        }
+        &-item {
 
-        a, p {
-            @include themify($themes-header) {
-                color: themed('navigationMenuTopItemLinkColor'); 
-            }
-        }
-        &:hover, &.active {
-
-            .navigation-top-menu__item-underline {
+            &__underline {
                 @include themify($themes-header) {
-                    background-color: themed('navigationTopMenuItemUnderlineColorHover'); 
-                }
+                    background-color: themed('navigationTopMenuItemUnderlineColor'); 
+                }     
             }
 
             a, p {
                 @include themify($themes-header) {
-                    color: themed('navigationMenuItemLinkColorHover'); 
+                    color: themed('navigationMenuTopItemLinkColor'); 
+                }
+            }
+            &:hover, &.active {
+
+                .navigation-top-menu__list-item-underline {
+                    @include themify($themes-header) {
+                        background-color: themed('navigationTopMenuItemUnderlineColorHover'); 
+                    }
+                }
+
+                a, p {
+                    @include themify($themes-header) {
+                        color: themed('navigationMenuItemLinkColorHover'); 
+                    }
                 }
             }
         }

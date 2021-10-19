@@ -1,10 +1,10 @@
 mixin items(...items)
 
     mixin item(href, title)
-        li.navigation-top-menu__item
-            a(href=href class="navigation-top-menu__item-content")
+        li.navigation-top-menu__list-item
+            a(href=href class="navigation-top-menu__list-item-link")
                 p=title
-            div.navigation-top-menu__item-underline
+            div.navigation-top-menu__list-item-underline
 
     each item in list
         +item(item.href, item.title)
@@ -12,7 +12,7 @@ mixin items(...items)
 // Navigation Top Menu
 div.navigation-top-menu
     div.navigation-top-menu-container
-        ul.navigation-top-menu-content
+        ul.navigation-top-menu__list
             // Items
             -
                 var list=[

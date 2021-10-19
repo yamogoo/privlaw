@@ -18,6 +18,7 @@
         gap: 25px;
         list-style: none;
 
+        //li
         &-item {
             @include flexbox();
             @include flex-direction(column);
@@ -25,18 +26,19 @@
             height: inherit;
             cursor: pointer;
 
-            &-content {
+            //a
+            &-link {
                 @include flexbox();
                 @include flex-direction(row);
                 gap: $navigation-menu-item-content-gap;
                 @include justify-content(center);
                 @include align-items(center);
                 height: inherit;
-
-                p {
-                    font-weight: $navigation-menu-item-text-font-weight;
-                    white-space: nowrap;
-                }
+                font-size: px2em(15px);//$navigation-menu-item-link-font-size;
+                font-weight: 500;//$navigation-menu-item-text-font-weight;
+                padding: 0;
+                margin: 0;
+                white-space: nowrap;
             }
 
             &-underline {
@@ -49,19 +51,19 @@
                 margin: auto;
             }
 
-            &:hover, &.active {
+            &:hover, &.active, &:focus {
 
                 .navigation-menu__list-item-underline {
                     width: 100%;
                 }
             }
 
-            a , p {
-                font-size: $navigation-menu-item-link-font-size;
-                padding: 0;
-                margin: 0;
-                white-space: nowrap;
-            }
+            // a , p {
+            //     font-size: $navigation-menu-item-link-font-size;
+            //     padding: 0;
+            //     margin: 0;
+            //     white-space: nowrap;
+            // }
 
             // .navigation-menu__item-group ~ a {
             //     content: "icon-backward";
@@ -75,46 +77,54 @@
             //     // }
             // }
 
-            &.expansion {
+            // & > .navigation-menu__list {
                 
-                .navigation-menu__list-item-content {
-                    // @extend .icon-backward !optional; 
+            //     .navigation-menu__list-item-link {
+            //         // @extend .icon-backward !optional; 
 
-                    &::after {
-                        @extend .icon-backward:before !optional; 
-                        font-family: $icon;
-                        font-size: $navigation-menu-item-icon-font-size;
-                        padding-top: 2px;
-                        opacity: 0.8;
-                    }
-                }
-            }
+            //         &::after {
+            //             @extend .icon-backward:before !optional; 
+            //             font-family: $icon;
+            //             font-size: $navigation-menu-item-icon-font-size;
+            //             padding-top: 2px;
+            //             opacity: 0.8;
+            //         }
+            //     }
+            // }
             
-            //Dropdown group
-            &-group {
-                display: block;
+            //Dropdown
+            .navigation-menu__list {
+                @include flexbox();
+                @include flex-direction(column);
+                @include align-items(flex-start);
+                gap: 0;
                 position: absolute;
                 top: $navigation-menu-item-group-top;
                 background-color: $white;
                 visibility: hidden;
-                padding: px2em(20px);
+                padding: px2em(30px) px2em(35px);
                 width: max-content;
                 min-width: 100%;
                 max-width: $navigation-menu-item-group-max-width;
+                height: auto;
                 box-shadow: 0px 4px 16px rgba($app-header-shadow-color, 0.1);
+                border-radius: 0px 0px 3px 3px;
 
-                &-container {
-                    @include flexbox();
-                    @include flex-direction(column);
-                    // gap: px2em(20px);
-                }
+                // &-container {
+                //     @include flexbox();
+                //     @include flex-direction(column);
+                //     // gap: px2em(20px);
+                // }
 
-                &__nested-item {
+                &-item {
 
-                    a, p {
+                    .navigation-menu__list-item-link {
                         display: flex;
-                        padding: px2em(10px) 0px;
+                        padding: px2em(12px) 0px;
                         margin: 0;
+                        white-space: pre-wrap;
+                        font-size: px2em(15px);
+                        font-weight: 400;
                         // color: $navigation-menu-item-link-color-inverse;//Theme
                     }
                 }
@@ -122,7 +132,7 @@
 
             &:hover {
 
-                .navigation-menu__list-item-group {
+                .navigation-menu__list {
                     visibility: visible;
                 }
             }

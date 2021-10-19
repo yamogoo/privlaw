@@ -13,7 +13,7 @@
         @include box(100%, auto);
     }
 
-    &-list {
+    ul {
         @include flexbox();
         @include flex-direction(column);
         @include justify-content(flex-start);
@@ -21,14 +21,14 @@
         // gap: 25px;
         list-style: none;
 
-        &-item {
+        li {
             @include flexbox();
             @include flex-direction(column);
             position: relative;
             @include box(inherit);
             cursor: pointer;
 
-            a, &-content {
+            a {
                 @include flexbox();
                 @include flex-direction(row);
                 @include justify-content(flex-start);
@@ -46,16 +46,19 @@
             }
         }
         //Nested List
-        & > & {
+        & > ul {
             padding-bottom: 15px;
 
-            a, .footer-navigation-item-content {
-                font-size: px2em(14px);
-                font-weight: 400;
-                color: #FAC5D8;//$accent-color-lighten-300;
+            li {
 
-                &:hover {
-                    text-decoration: underline;
+                a {
+                    font-size: px2em(14px) !important;
+                    font-weight: 400 !important;
+                    color: #FAC5D8 !important;//$accent-color-lighten-300;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

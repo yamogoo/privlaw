@@ -26,12 +26,12 @@
 
             a, p {
                 @include themify($themes-header) {
-                    color: themed('navigationMenuItemLinkColorHover'); 
+                    color: themed('navigationMenuItemLinkColorHover') !important; 
                 }
             }
         }
 
-        &-group {
+        .navigation-menu__list {
 
             a, p {
                 @include themify($themes-header) {

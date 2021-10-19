@@ -6,7 +6,7 @@
         @include box(inherit);
     }
 
-    &-content {
+    &__list {
         @include flexbox();
         @include flex-direction(row);
         @include justify-content(flex-end);
@@ -14,41 +14,41 @@
         width: auto;
         @include box(inherit);
         list-style: none;
-    }
 
-    &__item {
-        height: inherit;
+        &-item {
+            height: inherit;
 
-        a {
-        font-size: $navigation-top-menu-item-link-font-size;
-        font-weight: 400;
-        }
+            a {
+            font-size: $navigation-top-menu-item-link-font-size;
+            font-weight: 400;
+            }
 
-        p {
-            white-space: nowrap;
-        }
+            p {
+                white-space: nowrap;
+            }
 
-        &-content {
-            @include flexbox();
-            @include flex-direction(column);
-            @include justify-content(center);
-            @include align-items(center);
-            @include box(inherit);
-        }
+            &-link {
+                @include flexbox();
+                @include flex-direction(column);
+                @include justify-content(center);
+                @include align-items(center);
+                @include box(inherit);
+            }
 
-        &-underline {
-            display: block;
-            position: relative;
-            height: $navigation-top-menu-item-underline;
-            width: 0%;
-            background-color: $navigation-top-menu-item-underline-color;
-            margin: auto;
-        }
+            &-underline {
+                display: block;
+                position: relative;
+                height: $navigation-top-menu-item-underline;
+                width: 0%;
+                background-color: $navigation-top-menu-item-underline-color;
+                margin: auto;
+            }
 
-        &:hover, &.active {
+            &:hover, &.active {
 
-            .navigation-top-menu__item-underline {
-                width: 100%;
+                .navigation-top-menu__list-item-underline {
+                    width: 100%;
+                }
             }
         }
     }

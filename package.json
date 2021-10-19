@@ -1,5 +1,5 @@
 {
     "scripts": {
-        "start": "sass --watch ./src/styles.scss:style.css --style compressed & pug --pretty -w index.pug"
+        "start": "sass --watch ./src/styles.scss:style.css --style compressed & pug --pretty -w *.pug"
     }
 }
