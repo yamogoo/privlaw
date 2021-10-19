@@ -10,9 +10,11 @@
         @include box(auto, auto);
     }
 
+    h5 {
+        font-size: px2em(15px);
+    }
     p, h1, h2, h3, h4, h5 {
         color: $white;
-        font-weight: 400;
     }
 
     h1, h2, h3, h4, h5 {
@@ -23,12 +25,15 @@
         color: $accent-light-color;
         letter-spacing: px2em(0.3px);
         padding: px2em(8px) px2em(0px);
+        font-size: px2em(14px);
+        font-weight: 400;
+        text-decoration: none;
     }
 
     .email {
 
         a {
-            text-decoration: underline;
+            text-decoration: underline !important;
         }
     }
 
@@ -41,11 +46,6 @@
             @include flex-direction(column);
             position: relative;
             @include box(inherit);
-
-            a, p, span {
-                font-size: px2em(14px);
-                text-decoration: none;
-            }
         }
     }
 }

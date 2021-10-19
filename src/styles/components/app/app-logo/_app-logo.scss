@@ -17,7 +17,7 @@
     // @include justify-content(center);
     @include align-items(center);
     gap: 35px;
-    flex-wrap: wrap;
+    @include flex-wrap(wrap);
 
     .app-logo-description {
         font-size: px2em(14px);
