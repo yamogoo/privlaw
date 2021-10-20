@@ -46,4 +46,10 @@
             @extend .icon-instagram !optional;
         }
     }
+    &.youtube {
+        
+        .social-button__icon {
+            @extend .icon-youtube !optional;
+        }
+    }
 }
