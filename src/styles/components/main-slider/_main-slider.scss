@@ -1,5 +1,5 @@
 .main-slider {
-    @include box(100%, 540px);
+    @include box(100%, 360px);
     background-color: $accent-color;
 
     &__item {
