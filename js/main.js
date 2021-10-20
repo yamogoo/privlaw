@@ -2,9 +2,10 @@
 /* eslint-disable no-undef */
 
 $(document).ready(function () {
-    // // rendering body
+    // rendering body
     // (function renderPage() {
-    //     let render = $('.render');
+    //     // let render = $('.render');
+    //     let render = $('body');
     //     let tl = new TimelineLite();
     //     tl
     //         .fromTo(render, 0.5, { opacity: '1', zIndex: '99999' }, { opacity: '0', zIndex: '-1' })
@@ -15,6 +16,7 @@ $(document).ready(function () {
     //     }
 
     // })();
+
 
     //Carousel
     $('.main-slider').owlCarousel({

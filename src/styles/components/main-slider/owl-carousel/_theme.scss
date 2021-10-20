@@ -8,13 +8,13 @@
 	.owl-nav {
 		// margin-top: 10px;
 		position: absolute;
-		bottom: 0;
+		bottom: 50px;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
+		color: $carousel-nav-color;
 
 		[class*='owl-'] {
-			color: $carousel-nav-color;
-			font-size: $carousel-nav-font-size;
+			font-size: $carousel-nav-font-size !important;
 			margin: $carousel-nav-margin;
 			padding: $carousel-nav-padding;
 			background: $carousel-nav-background;
@@ -28,6 +28,15 @@
 				text-decoration: none;
 			}
 		}
+
+		// .owl-nav button.owl-prev,
+		// .owl-nav button.owl-next {
+			
+		// 	span {
+		// 		color: $carousel-nav-color !important;
+		// 	}
+		// }
+
 		.disabled {
 			opacity: $carousel-nav-disabled-opacity;
 			cursor: default;
@@ -41,7 +50,8 @@
 
 	.owl-dots {
 		position: absolute;
-		bottom: 0;
+		width: 100%;
+		bottom: $carousel-dot-bottom-position;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 
