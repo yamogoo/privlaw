@@ -1,0 +1,72 @@
+.owl-theme-privlaw {
+	height: 100%;
+
+	.owl-stage, .owl-stage-outer, .owl-wrapper, .owl-item {
+		height: 100%;
+	}
+	// Styling Next and Prev buttons
+	.owl-nav {
+		// margin-top: 10px;
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+			color: $carousel-nav-color;
+			font-size: $carousel-nav-font-size;
+			margin: $carousel-nav-margin;
+			padding: $carousel-nav-padding;
+			background: $carousel-nav-background;
+			display: inline-block;
+			cursor: pointer;
+			border-radius: 3px;
+
+			&:hover {
+				background: $carousel-nav-background-hover;
+				color:$carousel-nav-color-hover;
+				text-decoration: none;
+			}
+		}
+		.disabled {
+			opacity: $carousel-nav-disabled-opacity;
+			cursor: default;
+		}
+	}
+
+	// Styling dots
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				width: $carousel-dot-width;
+				height: $carousel-dot-height;
+				margin: $carousel-dot-margin;
+				background: $carousel-dot-background;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: opacity 200ms ease;
+				border-radius: $carousel-dot-rounded;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: $carousel-dot-background-active;
+				}
+			}
+		}
+	}
+}

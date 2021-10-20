@@ -1,0 +1,51 @@
+.main-slider {
+    @include box(100%, 540px);
+    background-color: $accent-color;
+
+    &__item {
+        @include box(inherit);
+
+        &-container {
+            @include flexbox();
+            @include justify-content(center);
+            @include box(inherit);
+        }
+
+        &-image, &-content {
+            width: 100%;
+            height: 100%;
+        }
+
+        &-image {
+
+            &-link {
+                @include box(100%);
+            }
+
+            img {
+                @include box(100%);
+            }
+        }
+
+        &-content {
+            @include flexbox();
+            @include justify-content(flex-start);
+            @include align-items(center);
+
+            &-group {
+
+                h3 {
+                    font-size: px2em(40px);
+                    font-weight: 400;
+                    color: $white !important;
+                }
+
+                p {
+                    font-size: px2em(20px);
+                    font-weight: 400;
+                    color: $white !important;
+                }
+            }
+        }
+    }
+}

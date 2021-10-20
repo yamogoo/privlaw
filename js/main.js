@@ -16,6 +16,25 @@ $(document).ready(function () {
 
     // })();
 
+    //Carousel
+    $('.main-slider').owlCarousel({
+        loop: true,
+        margin: 50,
+        nav: true,
+        dots: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 1
+            }
+        }
+    })
+
     //Filter
     function toggleFilter() {
         let field = $('.filter-dropdown-container');
