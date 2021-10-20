@@ -9,3 +9,5 @@ compass create <style.css>
 
 //pug npm install pug-cli --g, npm install pug --save-dev # из директории проекта, 
 //compile: pug --pretty index.pug, watching: pug --pretty -w index.pug
+
+"start": "sass --watch ./src/styles.scss:style.css --style compressed & pug --pretty -w *.pug"
