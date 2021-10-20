@@ -49,6 +49,10 @@
 	}
 
 	.owl-dots {
+		@include flexbox();
+		@include flex-direction(row);
+		@include align-items(center);
+		@include justify-content(center);
 		position: absolute;
 		width: 100%;
 		bottom: $carousel-dot-bottom-position;
@@ -61,20 +65,27 @@
 			*display: inline;
 
 			span {
-				width: $carousel-dot-width;
-				height: $carousel-dot-height;
+				@include box($carousel-dot-size);
 				margin: $carousel-dot-margin;
 				background: $carousel-dot-background;
 				display: block;
 				-webkit-backface-visibility: visible;
 				transition: opacity 200ms ease;
 				border-radius: $carousel-dot-rounded;
+				@include transition(width height background-color, 75ms, ease-in-out);
 			}
 
 			&.active,
 			&:hover {
 				span {
 					background: $carousel-dot-background-active;
+				}
+			}
+
+			&.active {
+				
+				span {
+					@include box($carousel-dot-size-active);
 				}
 			}
 		}
