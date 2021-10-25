@@ -13,7 +13,7 @@
             @include flexbox();
             @include justify-content(flex-start);
             @include box(inherit);
-            @extend .main-container;
+            @extend %main-container;
         }
 
         &-image, &-content {

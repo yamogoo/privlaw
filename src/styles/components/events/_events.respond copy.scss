@@ -1,0 +1,56 @@
+@include respond-above(sm) {
+
+    .events {
+
+        &__item {
+
+            &-container { //Link
+                display: grid;
+                grid-template-columns: auto 1fr;
+                gap: 30px;
+            }
+
+            &-image {
+
+                img {
+                    
+                }
+            }
+        }
+    }
+}
+
+@include respond-below(sm) {
+    .events {
+
+        &__item {
+
+            &-container { //Link
+                @include flexbox();
+                @include flex-direction(row);
+                @include align-items(flex-start);
+                gap: 30px;
+            }
+
+            &-image {
+
+                img {
+                    object-fit: cover;
+                    min-width: 83px;
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@include respond-above(lg) {
+
+    .events {
+
+        &__item:not(:nth-last-child(1), :nth-last-child(2)) {
+            border-bottom: 1px solid $divider-color;
+        }
+    }
+}

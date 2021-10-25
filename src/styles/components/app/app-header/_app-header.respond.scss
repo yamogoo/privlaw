@@ -1,6 +1,6 @@
 .app-header {
 
     &-container {
-        @extend .main-container;
+        @extend %main-container;
     }
 }

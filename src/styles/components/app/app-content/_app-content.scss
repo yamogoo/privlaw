@@ -8,7 +8,7 @@
     overflow: hidden;
 
     &-container {
-        @extend .main-container;
+        @extend %main-container;
         @include flexbox();
         @include flex-direction(column);
         gap: 30px;

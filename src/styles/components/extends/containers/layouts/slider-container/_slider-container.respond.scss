@@ -1,0 +1,26 @@
+@include respond-above (xl) {
+
+    %slider-container {
+        width: $slider-container-width-lg;
+        padding-left: $slider-container-padding-lg;
+        padding-right: $slider-container-padding-lg;
+    }
+}
+
+@include respond-between (sm, xl) {
+
+    %slider-container {
+        width: $slider-container-width-md;
+        padding-left: $slider-container-padding-md;
+        padding-right: $slider-container-padding-md;
+    }
+}
+
+@include respond-below (sm) {
+
+    %slider-container {
+        width: $slider-container-width-sm;
+        padding-left: $slider-container-padding-sm;
+        padding-right: $slider-container-padding-sm;
+    }
+}

@@ -1,0 +1,26 @@
+@include respond-above (xl) {
+
+    %main-container {
+        max-width: $main-container-width-lg;
+        padding-left: $main-container-padding-lg;
+        padding-right: $main-container-padding-lg;
+    }
+}
+
+@include respond-between (sm, xl) {
+
+    %main-container {
+        width: $main-container-width-md;
+        padding-left: $main-container-padding-md;
+        padding-right: $main-container-padding-md;
+    }
+}
+
+@include respond-below (sm) {
+
+    %main-container {
+        width: $main-container-width-sm;
+        padding-left: $main-container-padding-sm;
+        padding-right: $main-container-padding-sm;
+    }
+}

@@ -1,0 +1,17 @@
+//Card Template
+//entities-container-events
+@include respond-above (md) {
+
+    %entities-container-events {
+        // gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include respond-below (md) {
+
+    %entities-container-events {
+        grid-template-columns: 1fr;
+        // gap: 30px;
+    }
+}

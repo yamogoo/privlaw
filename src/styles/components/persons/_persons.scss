@@ -1,7 +1,7 @@
 .persons {
 
     &-container {
-        @extend .entities-container-persons;
+        @extend %entities-container-persons;
     }
 
     &__item {

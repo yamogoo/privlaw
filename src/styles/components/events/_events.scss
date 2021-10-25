@@ -1,7 +1,7 @@
 .events {
 
     &-container {
-        @extend .entities-container-events;
+        @extend %entities-container-events;
     }
 
     &__item {
@@ -53,6 +53,10 @@
             color: $neutral-color;
         }
 
+        &-tag-state {
+            @extend %item-tag--in-image-light;
+        }
+
         &-date-num {
 
             p {
@@ -66,6 +70,14 @@
             font-size: px2em(17px);
             font-weight: 500;
             color: $primary-color;
+        }
+
+        &.past {
+
+            .events__item-tag-state {
+                color: $white;
+                background-color: rgba($accent-color, 0.75) !important;
+            }
         }
     }
 }

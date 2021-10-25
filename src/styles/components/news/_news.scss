@@ -1,7 +1,7 @@
 .news {
 
     &-container {
-        @extend .entities-container-news;
+        @extend %entities-container-news;
     }
 
     &__item {
@@ -35,6 +35,10 @@
                 object-fit: cover;
                 border-radius: 4px;
             }
+        }
+
+        &-tag {
+            @extend %item-tag--in-image-light;
         }
 
         &-content {
