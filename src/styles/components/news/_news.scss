@@ -13,6 +13,7 @@
         // margin-bottom: 30px;
 
         &-container { //Link
+            padding-bottom: 30px;
 
             &:hover {
 
@@ -38,7 +39,9 @@
         }
 
         &-tag {
-            @extend %item-tag--in-image-light;
+            @extend %entity__item-tag--news;
+            color: $primary-color;
+            background-color: rgba($white, 0.9);
         }
 
         &-content {

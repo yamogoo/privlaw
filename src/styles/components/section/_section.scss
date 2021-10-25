@@ -1,11 +1,17 @@
 .section {
     display: flex;
     flex-direction: column;
-    padding-bottom: 50px;
     gap: 30px;
     
     &:not(:nth-last-child(1)) {
         border-bottom: $section-border-bottom;
+    }
+
+    &:not(:nth-child(1)) {
+        padding-top: 40px;
+    }
+    &:not(:nth-last-child(1)) {
+        padding-bottom: 80px;
     }
 
     //Header

@@ -46,7 +46,7 @@
 }
 
 // Border
-@include respond-above(xl) {
+@include respond-above(lg) {
 
     .events {
 
@@ -55,7 +55,7 @@
         }
     }
 }
-@include respond-below(xl) {
+@include respond-below(lg) {
 
     .events {
 

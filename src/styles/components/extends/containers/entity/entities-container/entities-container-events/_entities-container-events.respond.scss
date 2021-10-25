@@ -1,6 +1,6 @@
 //Card Template
 //entities-container-events
-@include respond-above (md) {
+@include respond-above(lg) {
 
     %entities-container-events {
         // gap: 30px;
@@ -8,7 +8,7 @@
     }
 }
 
-@include respond-below (md) {
+@include respond-below(lg) {
 
     %entities-container-events {
         grid-template-columns: 1fr;

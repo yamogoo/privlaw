@@ -1,4 +1,5 @@
 .section-button {
+    @include flexbox();
 
     a {
         font-size: px2em(16px);

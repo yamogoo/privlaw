@@ -7,6 +7,7 @@
     &__item {
 
         &-container {
+            height: 100%;
             padding-bottom: 32px;
             gap: 30px;
 
@@ -53,10 +54,6 @@
             color: $neutral-color;
         }
 
-        &-tag-state {
-            @extend %item-tag--in-image-light;
-        }
-
         &-date-num {
 
             p {
@@ -72,11 +69,25 @@
             color: $primary-color;
         }
 
-        &.past {
+        &-tag-state {
+            @extend %entity__item-tag--events;
+            color: $primary-color;
+            background-color: rgba($white, 0.9);
+            
+            &::before {
+                content: 'Скоро';
+            }
+        }
+
+        &.passed {
 
             .events__item-tag-state {
                 color: $white;
-                background-color: rgba($accent-color, 0.75) !important;
+                background-color: rgba($accent-color, 0.9) !important;
+
+                &::before {
+                    content: 'Пройдено';
+                }
             }
         }
     }
