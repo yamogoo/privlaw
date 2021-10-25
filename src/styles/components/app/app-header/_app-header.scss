@@ -11,6 +11,8 @@
     // background-color: darken($accent-color, 3%);//rgba($accent-color, 1.0);//Theme
 
     &-container {
+        @include flexbox();
+        @extend %main-container;
         height: 100%;
         // width: auto;
     }
@@ -20,6 +22,7 @@
         position: relative;
         grid-template-columns: auto 1fr;
         gap: 50px;
+        width: 100%;
     }
 
     &__content-section {

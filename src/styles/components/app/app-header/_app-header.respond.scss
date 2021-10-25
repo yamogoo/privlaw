@@ -1,6 +1,23 @@
-.app-header {
+// .app-header {
 
-    &-container {
-        @extend %main-container;
+//     &-container {
+//         @extend %main-container;
+//     }
+// }
+
+@include respond-above(lg) {
+    // .app-header {
+    //     &__content-section {
+    //     }
+    // }
+}
+
+@include respond-below(lg) {
+
+    .app-header {
+
+        &__content-section {
+            display: none;
+        }
     }
 }
