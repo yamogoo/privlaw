@@ -1,10 +1,10 @@
 .date-lg {
     @include flexbox();
     @include flex-direction(row);
-    gap: 15px;
+    gap: px2em(15px);
 
     &__number {
-        font-size: 40px;
+        font-size: px2em(40px);
         line-height: 1.0;
         color: $primary-color;
     }
@@ -15,12 +15,12 @@
     }
 
     &__month {
-        font-size: 16px;
+        font-size: px2em(16px);
         color: $primary-color;
         white-space: nowrap;
     }
     &__day {
-        font-size: 16px;
+        font-size: px2em(16px);
         color: $neutral-color;
     }
 

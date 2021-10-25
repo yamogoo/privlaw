@@ -8,11 +8,6 @@
         border-top: 1px solid $divider-color;
 
         &-container { //Link
-            // @include flexbox();
-            // @include flex-direction(row);
-            // @include align-items(flex-start);
-            // display: grid;
-            // grid-template-columns: auto 1fr;
             @extend .entity__item-container--list;
             padding-top: 32px;
             gap: 30px;
@@ -34,6 +29,7 @@
 
             img {
                 border-radius: 4px;
+                max-width: 200px;
             }
         }
 
