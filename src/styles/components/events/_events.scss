@@ -1,7 +1,7 @@
 .events {
 
     &-container {
-        @extend .entities-container-list-half;
+        @extend .entities-container-events;
     }
 
     &__item {

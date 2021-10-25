@@ -1,0 +1,33 @@
+//Card Template
+//entities-container-news
+@include respond-above (xl) {
+
+    .entities-container-news {
+        // gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@include respond-between (md, xl) {
+
+    .entities-container-news {
+        // gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@include respond-between (sm, md) {
+
+    .entities-container-news {
+        // gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include respond-below (sm) {
+
+    .entities-container-news {
+        grid-template-columns: 1fr;
+        // gap: 30px;
+    }
+}

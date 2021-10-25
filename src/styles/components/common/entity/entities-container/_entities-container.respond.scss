@@ -1,116 +1,116 @@
-//Card Template
-//entities-container lg
-@include respond-above (xl) {
+// //Card Template
+// //entities-container lg
+// @include respond-above (xl) {
 
-    .entities-container {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
+//     .entities-container {
+//         display: grid;
+//         gap: 30px;
+//         grid-template-columns: 1fr 1fr 1fr;
+//     }
+// }
 
-@include respond-between (md, xl) {
+// @include respond-between (md, xl) {
 
-    .entities-container {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
+//     .entities-container {
+//         display: grid;
+//         gap: 30px;
+//         grid-template-columns: 1fr 1fr 1fr;
+//     }
+// }
 
-@include respond-between (sm, md) {
+// @include respond-between (sm, md) {
 
-    .entities-container {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 1fr 1fr;
-    }
-}
+//     .entities-container {
+//         display: grid;
+//         gap: 30px;
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
 
-@include respond-below (sm) {
+// @include respond-below (sm) {
 
-    .entities-container {
-        @include flexbox();
-        @include flex-direction(column);
-        gap: 30px;
-        width: 100%;
-    }
-}
-//entities-container-for-events
-@include respond-above (xl) {
+//     .entities-container {
+//         // @include flexbox();
+//         // @include flex-direction(column);
+//         gap: 30px;
+//         width: 100%;
+//     }
+// }
+// //entities-container-for-events
+// @include respond-above (xl) {
 
-    .entities-container-for-events{
-        display: grid;
-        gap: 50px;
-        grid-template-columns: 1fr 1fr;
-    }
-}
+//     .entities-container-for-events{
+//         display: grid;
+//         gap: 50px;
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
 
-@include respond-between (md, xl) {
+// @include respond-between (md, xl) {
 
-    .entities-container-for-events {
-        display: grid;
-        gap: 50px;
-        grid-template-columns: 1fr 1fr;
-    }
-}
+//     .entities-container-for-events {
+//         display: grid;
+//         gap: 50px;
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
 
-@include respond-between (sm, md) {
+// @include respond-between (sm, md) {
 
-    .entities-container-for-events {
-        display: grid;
-        gap: 50px;
-        grid-template-columns: 1fr;
-    }
-}
+//     .entities-container-for-events {
+//         display: grid;
+//         gap: 50px;
+//         grid-template-columns: 1fr;
+//     }
+// }
 
-@include respond-below (sm) {
+// @include respond-below (sm) {
 
-    .entities-container-for-events {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 1fr;
-    }
-}
+//     .entities-container-for-events {
+//         display: grid;
+//         gap: 30px;
+//         grid-template-columns: 1fr;
+//     }
+// }
 
 //List Template
 
-@include respond-above (sm) {
+// @include respond-above (sm) {
 
-    .entities-container-list {
-        @include flexbox();
-        @include flex-direction(column);
-        gap: 30px;
-    }
-}
-
-
-@include respond-below (sm) {
-
-    .entities-container-list {
-        @include flexbox();
-        @include flex-direction(column);
-        gap: 30px;
-    }
-}
-
-//List Half Template
-
-@include respond-above (xl) {
-
-    .entities-container-list-half {
-        display: grid;
-        gap: 30px;
-        grid-template-columns: 1fr 1fr;
-    }
-}
+//     .entities-container-list {
+//         @include flexbox();
+//         @include flex-direction(column);
+//         gap: 30px;
+//     }
+// }
 
 
-@include respond-below (xl) {
+// @include respond-below (sm) {
 
-    .entities-container-list-half {
-        @include flexbox();
-        @include flex-direction(column);
-        gap: 30px;
-    }
-}
+//     .entities-container-list {
+//         @include flexbox();
+//         @include flex-direction(column);
+//         gap: 30px;
+//     }
+// }
+
+// //List Half Template
+
+// @include respond-above (xl) {
+
+//     .entities-container-list-half {
+//         display: grid;
+//         gap: 30px;
+//         grid-template-columns: 1fr 1fr;
+//     }
+// }
+
+
+// @include respond-below (xl) {
+
+//     .entities-container-list-half {
+//         @include flexbox();
+//         @include flex-direction(column);
+//         gap: 30px;
+//     }
+// }

@@ -1,7 +1,7 @@
 .news {
 
     &-container {
-        @extend .entities-container;
+        @extend .entities-container-news;
     }
 
     &__item {
