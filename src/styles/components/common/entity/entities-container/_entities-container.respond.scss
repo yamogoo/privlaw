@@ -1,5 +1,5 @@
 //Card Template
-
+//entities-container lg
 @include respond-above (xl) {
 
     .entities-container {
@@ -34,6 +34,42 @@
         @include flex-direction(column);
         gap: 30px;
         width: 100%;
+    }
+}
+//entities-container-for-events
+@include respond-above (xl) {
+
+    .entities-container-for-events{
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include respond-between (md, xl) {
+
+    .entities-container-for-events {
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@include respond-between (sm, md) {
+
+    .entities-container-for-events {
+        display: grid;
+        gap: 80px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@include respond-below (sm) {
+
+    .entities-container-for-events {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr;
     }
 }
 

@@ -50,7 +50,7 @@ $(document).ready(function () {
             let itemHeight = $(item).height();
             if (count > 3) {
                 console.log("this height > " + count);
-                $(el).height(itemHeight * 3);
+                $(el).height(itemHeight * 3 + (count - 1));
             }
         });
 

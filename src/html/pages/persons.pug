@@ -2,7 +2,7 @@ doctype html
 html
     head
     include ../components/src/meta.pug
-    title Index
+    title Персоналии
     include ../components/src/style.pug
 body
     div.app.theme-header--light.theme-app--normal#app
@@ -21,18 +21,18 @@ body
                                 li.nav-line__item
                                     a(href="index.html") Главная
                                 li.nav-line__item
-                                    a(href="#") Мероприятия
+                                    a(href="#") Персоналии
                         //Nav Line
 
                         // Section Header
                         div.section-header
-                            h5.section-title Новости
+                            h5.section-title Персоналии
 
-                            include ../components/filter/filter-for-news.pug
+                            //- include ../components/filter/filter-for-events.pug
 
                         // Section Header
 
-                        include ../components/news/news.pug
+                        include ../components/persons/persons.pug
                     
                     include ../components/footer/footer.pug
 

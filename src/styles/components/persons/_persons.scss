@@ -1,7 +1,7 @@
-.news {
+.persons {
 
     &-container {
-        @extend .entities-container;
+        @extend .entities-container-for-events;
     }
 
     &__item {
@@ -13,11 +13,19 @@
         // margin-bottom: 30px;
 
         &-container { //Link
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 30px;
 
             &:hover {
 
-                h3, .news__item-title {
+                h3, .persons__item-name {
+                    color: $accent-color;
                     text-decoration: underline;
+                }
+
+                p, .persons__item-description {
+                    color: $primary-color;
                 }
             }
         }
@@ -29,6 +37,7 @@
             width: inherit;
             border-radius: 4px;
             overflow: hidden;
+            width: 80px;
 
             img {
                 width: 100%;
@@ -40,20 +49,21 @@
         &-content {
             @include flexbox();
             @include flex-direction(column);
-            gap: 15px;
-            padding-top: 20px;
+            gap: 10px;
+            // padding-top: 20px;
         }
 
-        &-date {
+        &-description {
             font-size: px2em(14px);
             font-weight: 400;
             color: $neutral-color;
         }
 
-        &-title {
+        &-name {
             font-size: px2em(17px);
             font-weight: 500;
-            color: $primary-color;
+            // color: $primary-color;
+            color: $accent-color;
         }
     }
 }
