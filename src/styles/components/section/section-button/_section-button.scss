@@ -4,8 +4,8 @@
     a {
         font-size: px2em(16px);
         color: $accent-color;
-        padding: 10px;
+        padding: px2em(10px) px2em(20px);
         border: 1px solid $accent-color;
-        border-radius: 4px;
+        border-radius: px2em(3px);
     }
 }
