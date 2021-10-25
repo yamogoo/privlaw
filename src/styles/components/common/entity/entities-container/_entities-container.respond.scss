@@ -9,7 +9,16 @@
     }
 }
 
-@include respond-between (sm, xl) {
+@include respond-between (md, xl) {
+
+    .entities-container {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@include respond-between (sm, md) {
 
     .entities-container {
         display: grid;
@@ -23,7 +32,7 @@
     .entities-container {
         @include flexbox();
         @include flex-direction(column);
-        gap: 20px;
+        gap: 30px;
         width: 100%;
     }
 }

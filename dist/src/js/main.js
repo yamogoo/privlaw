@@ -37,11 +37,22 @@ $(document).ready(function () {
 
     //Filter
     function toggleFilter() {
-        let field = $('.filter-dropdown-container');
         let filter = $('.filter-dropdown');
-        let items = $('.filter-dropdown-list p');
+        let field = filter.children('.filter-dropdown-container');
+        let list = filter.children('.filter-dropdown-list');
+        let item = $('.filter-dropdown-list p');
         let clear = $('.filter__wrapper-clear');
         let eventClear = $('.events-filter .filter__wrapper-clear');
+
+        // Height of List
+        $(list).each((i, el) => {
+            let count = $(el).children('*').length;
+            let itemHeight = $(item).height();
+            if (count > 3) {
+                console.log("this height > " + count);
+                $(el).height(itemHeight * 3);
+            }
+        });
 
         //Filter Input
         field.on('click', function () {
@@ -51,7 +62,15 @@ $(document).ready(function () {
             // button.not(this).next().slideUp();
         });
 
-        items.on('click', function () {
+        // if (list.length > 2) {
+        //     list.height(53 * 3);
+        // } else {
+
+        // }
+
+        // console.log(list.length);
+
+        item.on('click', function () {
             // $(this).parent().slideUp();
             $(this).parent().parent().removeClass('active');
             $(this).parent().children().removeClass('active');
@@ -67,8 +86,8 @@ $(document).ready(function () {
         // });
         // clear.on('click', function () {
         //     button.removeClass('active');
-        //     items.removeClass('active');
-        //     items.parent().slideUp();
+        //     item.removeClass('active');
+        //     item.parent().slideUp();
         //     button.children('input')[0].value = '';
         //     $('#text-years').text('Р’СЃРµ РіРѕРґС‹');
         //     $('#text-tags').text('Р’СЃРµ РЅРѕРІРѕСЃС‚Рё');

@@ -1,7 +1,7 @@
 .events {
 
     &-container {
-        @extend .entities-container-list;
+        @extend .entities-container-list-half;
     }
 
     &__item {
@@ -9,6 +9,8 @@
 
         &-container { //Link
             @extend .entity__item-container--list;
+            // display: grid;
+            // grid-template-columns: auto 1fr;
             padding-top: 32px;
             gap: 30px;
 
@@ -50,7 +52,7 @@
         }
 
         &-tag{
-            font-size: px2em(16px);
+            font-size: px2em(14px);
             font-weight: 400;
             color: $neutral-color;
         }

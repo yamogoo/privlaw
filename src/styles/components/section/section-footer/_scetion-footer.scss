@@ -1,0 +1,8 @@
+.section-footer {
+    display: flex;
+    width: 100%;
+
+    &.align-right {
+        flex-direction: row-reverse;
+    }
+}

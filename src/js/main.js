@@ -37,8 +37,9 @@ $(document).ready(function () {
 
     //Filter
     function toggleFilter() {
-        let field = $('.filter-dropdown-container');
         let filter = $('.filter-dropdown');
+        let field = $('.filter-dropdown-container');
+        let list = $(filter).children('.filter-dropdown-list');
         let items = $('.filter-dropdown-list p');
         let clear = $('.filter__wrapper-clear');
         let eventClear = $('.events-filter .filter__wrapper-clear');
@@ -51,6 +52,7 @@ $(document).ready(function () {
             // button.not(this).next().slideUp();
         });
 
+        list.css("height");
         items.on('click', function () {
             // $(this).parent().slideUp();
             $(this).parent().parent().removeClass('active');

@@ -14,13 +14,21 @@ body
                 div.app-scroll-view
                     div.app-content-container
 
-                        include ../components/nav-line/nav-line.pug
+                        //- include ../components/nav-line/nav-line.pug
+                        //Nav Line
+                        div.nav-line
+                            ul.nav-line-container
+                                li.nav-line__item
+                                    a(href="#") Главная
+                                li.nav-line__item
+                                    a(href="#") Мероприятия
+                        //Nav Line
 
                         // Section Header
                         div.section-header
-                            h5.section-title Новости
+                            h5.section-title Мероприятия
 
-                            include ../components/filter/filter-dropdown.pug
+                            include ../components/filter/filter-for-events.pug
 
                         // Section Header
 
