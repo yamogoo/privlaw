@@ -4,7 +4,7 @@
 
         &__item {
 
-            &-container { //Link
+            &-container {
                 display: grid;
                 grid-template-columns: auto 1fr;
                 gap: 30px;
@@ -25,7 +25,7 @@
 
         &__item {
 
-            &-container { //Link
+            &-container {
                 @include flexbox();
                 @include flex-direction(row);
                 @include align-items(flex-start);
@@ -51,7 +51,7 @@
     .events {
 
         &__item:not(:nth-last-child(1), :nth-last-child(2)) {
-            border-bottom: 1px solid $divider-color;
+            border-bottom: $entity-item-border-bottom;
         }
     }
 }
@@ -60,7 +60,7 @@
     .events {
 
         &__item:not(:nth-last-child(1)) {
-            border-bottom: 1px solid $divider-color;
+            border-bottom: $entity-item-border-bottom;
         }
     }
 }

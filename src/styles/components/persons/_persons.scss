@@ -13,9 +13,9 @@
         padding-bottom: 30px;
         // margin-bottom: 30px;
 
-        &:not(:nth-last-child(1), :nth-last-child(1)) {
-            border-bottom: 1px solid $divider-color;
-        }
+        // &:not(:nth-last-child(1), :nth-last-child(1)) {
+        //     border-bottom: 1px solid $divider-color;
+        // }
 
         &-container { //Link
             display: grid;
