@@ -5,12 +5,8 @@
         &__item {
 
             &-container { //Link
-                // @include flexbox();
-                // @include flex-direction(row);
-                // @include align-items(flex-start);
                 display: grid;
                 grid-template-columns: auto 1fr;
-                // @extend .entity__item-container--list;
                 gap: 30px;
             }
 
@@ -33,8 +29,6 @@
                 @include flexbox();
                 @include flex-direction(row);
                 @include align-items(flex-start);
-                // display: flex;
-                // @extend .entity__item-container--list;
                 gap: 30px;
             }
 
@@ -47,6 +41,17 @@
                     width: 100%;
                 }
             }
+        }
+    }
+}
+
+// Border
+@include respond-above(lg) {
+
+    .events {
+
+        &__item:not(:nth-last-child(1), :nth-last-child(2)) {
+            border-bottom: 1px solid $divider-color;
         }
     }
 }

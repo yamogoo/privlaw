@@ -5,13 +5,17 @@
     }
 
     &__item {
-        border-top: 1px solid $divider-color;
+        // border-bottom: 1px solid $divider-color;
+
+        // &:not(:nth-child(1)) {
+        //     border-top: 1px solid $divider-color;
+        // }
 
         &-container { //Link
             @extend .entity__item-container--list;
             // display: grid;
             // grid-template-columns: auto 1fr;
-            padding-top: 32px;
+            padding-bottom: 32px;
             gap: 30px;
 
             &:hover {
