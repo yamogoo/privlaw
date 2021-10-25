@@ -17,17 +17,23 @@ body
 
                     div.app-content-container
 
-                        include ../components/nav-line/nav-line.pug
+                        //- include ../components/nav-line/nav-line.pug
 
                         // Section Header
                         div.section-header
                             h5.section-title Новости
 
-                            include ../components/filter/filter-dropdown.pug
+                        // Section Header
+
+                        include ../components/news/news-for-index.pug
+
+                        // Section Header
+                        div.section-header
+                            h5.section-title Мероприятия
 
                         // Section Header
 
-                        include ../components/news/news.pug
+                        include ../components/events/events.pug
                     
                     include ../components/footer/footer.pug
 

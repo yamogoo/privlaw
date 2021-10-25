@@ -23,7 +23,7 @@ $(document).ready(function () {
         // autoplay: true,
         // autoplayTimeout: 5000,
         loop: true,
-        margin: 50,
+        margin: 0,
         nav: true,
         dots: true,
         responsiveRefreshRate: 20,

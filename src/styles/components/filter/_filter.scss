@@ -1,3 +1,4 @@
 .filter {
-    
+    @include flexbox();
+    gap: 20px;
 }

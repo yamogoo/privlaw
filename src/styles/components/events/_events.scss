@@ -8,9 +8,11 @@
         border-top: 1px solid $divider-color;
 
         &-container { //Link
-            @include flexbox();
-            @include flex-direction(row);
-            @include align-items(flex-start);
+            // @include flexbox();
+            // @include flex-direction(row);
+            // @include align-items(flex-start);
+            // display: grid;
+            // grid-template-columns: auto 1fr;
             @extend .entity__item-container--list;
             padding-top: 32px;
             gap: 30px;
@@ -27,6 +29,7 @@
             @include themify($themes-app) {
                 display: themed('visibility'); 
             }
+            position: relative;
             border-radius: 4px;
 
             img {
@@ -37,8 +40,17 @@
         &-content {
             @include flexbox();
             @include flex-direction(column);
+            @include justify-content(space-between);
             gap: 15px;
             padding-top: 0px;
+            width: 100%;
+
+            &-group {
+                @include flexbox();
+                @include flex-direction(column);
+                gap: 15px;
+                width: 100%;
+            }
         }
 
         &-tag{

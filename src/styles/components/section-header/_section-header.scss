@@ -4,6 +4,7 @@
     @include justify-content(space-between);
     @include align-items(center);
     width: 100%;
+    padding-bottom: 20px;
     
     h5, .section-title {
         font-size: 38px;

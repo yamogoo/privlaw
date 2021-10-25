@@ -1,9 +1,13 @@
 .main-slider {
-    @include box(100%, 540px);
+    @include box(100%, 400px);
     background-color: $accent-color;
 
     &__item {
         @include box(auto, inherit);
+        background-position: 10% 30%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: rgba($white, 1.0);
 
         &-container {
             @include flexbox();
@@ -35,7 +39,8 @@
             @include box(inherit);
 
             &-group {
-                @include box(inherit);
+                @include box(auto);
+                width: 70%;
 
                 h3 {
                     font-size: px2em(40px);

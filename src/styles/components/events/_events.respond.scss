@@ -1,0 +1,52 @@
+@include respond-above(sm) {
+
+    .events {
+
+        &__item {
+
+            &-container { //Link
+                // @include flexbox();
+                // @include flex-direction(row);
+                // @include align-items(flex-start);
+                display: grid;
+                grid-template-columns: auto 1fr;
+                // @extend .entity__item-container--list;
+                gap: 30px;
+            }
+
+            &-image {
+
+                img {
+                    
+                }
+            }
+        }
+    }
+}
+
+@include respond-below(sm) {
+    .events {
+
+        &__item {
+
+            &-container { //Link
+                @include flexbox();
+                @include flex-direction(row);
+                @include align-items(flex-start);
+                // display: flex;
+                // @extend .entity__item-container--list;
+                gap: 30px;
+            }
+
+            &-image {
+
+                img {
+                    object-fit: cover;
+                    min-width: 83px;
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

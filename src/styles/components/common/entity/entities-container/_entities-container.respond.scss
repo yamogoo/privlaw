@@ -21,8 +21,6 @@
 @include respond-below (sm) {
 
     .entities-container {
-        // display: flex;
-        // flex-direction: column;
         @include flexbox();
         @include flex-direction(column);
         gap: 20px;
@@ -35,8 +33,6 @@
 @include respond-above (sm) {
 
     .entities-container-list {
-        // display: flex;
-        // flex-direction: column;
         @include flexbox();
         @include flex-direction(column);
         gap: 30px;
@@ -47,8 +43,27 @@
 @include respond-below (sm) {
 
     .entities-container-list {
-        // display: flex;
-        // flex-direction: column;
+        @include flexbox();
+        @include flex-direction(column);
+        gap: 30px;
+    }
+}
+
+//List Half Template
+
+@include respond-above (xl) {
+
+    .entities-container-list-half {
+        display: grid;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@include respond-below (xl) {
+
+    .entities-container-list-half {
         @include flexbox();
         @include flex-direction(column);
         gap: 30px;
