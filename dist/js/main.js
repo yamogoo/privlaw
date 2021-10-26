@@ -19,26 +19,32 @@ let breakepoints = {
 
 $(document).ready(function () {
 
+    // App Header
+    function appHeaderChangeTheme() {
+        let $app = $("#app");
+        let $appScrollView = $(".app-scroll-view");
+        $($appScrollView).scroll(function () {
+            var scrolled = $($appScrollView).scrollTop();
+            let scrollDistance = 200;
+            let $changedObject = $app;
+            if (scrolled >= scrollDistance) {
+                $changedObject.removeClass("theme-header--light").addClass("theme-header--dark")
+            } else {
+                $changedObject.removeClass("theme-header--dark").addClass("theme-header--light")
+            }
+        });
+    }
+    // appHeaderChangeTheme();
 
-    // rendering body
-    // (function renderPage() {
-    //     // let render = $('.render');
-    //     let render = $('body');
-    //     let tl = new TimelineLite();
-    //     tl
-    //         .fromTo(render, 0.5, { opacity: '1', zIndex: '99999' }, { opacity: '0', zIndex: '-1' })
-    //         .delay(0.4)
-    //         .call(hideRender);
-    //     function hideRender() {
-    //         $(render).remove();
+    // Detect Scroll Down/Top Direction
+    // $(window).bind('mousewheel', function (event) {
+    //     if (event.originalEvent.wheelDelta >= 0) {
+    //         console.log('Scroll up');
     //     }
-
-    // })();
-
-    // $('.owl-carousel').owlCarousel({
-    //     smartSpeed: 1000
+    //     else {
+    //         console.log('Scroll down');
+    //     }
     // });
-
 
     //Main Slider
     $('.main-slider').owlCarousel({
@@ -95,39 +101,31 @@ $(document).ready(function () {
 
     //Filter
     function toggleFilter() {
-        let filter = $('.filter-dropdown');
-        let field = filter.find('.filter-dropdown-container');
-        let list = filter.find('.filter-dropdown-list');
-        let item = $('.filter-dropdown-list p');
-        let clear = $('.filter__wrapper-clear');
-        let eventClear = $('.events-filter .filter__wrapper-clear');
+        let $filter = $('.filter-dropdown');
+        let $field = $filter.find('.filter-dropdown-container');
+        let $list = $filter.find('.filter-dropdown-list');
+        let $item = $('.filter-dropdown-list p');
+        let $clear = $('.filter__wrapper-clear');
+        let $eventClear = $('.events-filter .filter__wrapper-clear');
 
         // Height of List
-        $(list).each((i, el) => {
+        $($list).each((i, el) => {
             let count = $(el).children('*').length;
-            let itemHeight = $(item).height();
+            let itemHeight = $($item).height();
             if (count > 3) {
                 $(el).height(itemHeight * 3 + (count - 1));
             }
         });
 
         //Filter Input
-        field.on('click', function () {
+        $field.on('click', function () {
             // $(this).next().slideToggle();
             $(this).parent().toggleClass('active');
             // button.not(this).parent().removeClass('active');
             // button.not(this).next().slideUp();
         });
 
-        // if (list.length > 2) {
-        //     list.height(53 * 3);
-        // } else {
-
-        // }
-
-        // console.log(list.length);
-
-        item.on('click', function () {
+        $item.on('click', function () {
             // $(this).parent().slideUp();
             $(this).parent().parent().removeClass('active');
             $(this).parent().children().removeClass('active');
@@ -158,8 +156,8 @@ $(document).ready(function () {
 
         //Click Outside
         $(document).on("click", function (event) {
-            if (!$(event.target).closest(filter).length) {
-                filter.removeClass('active');
+            if (!$(event.target).closest($filter).length) {
+                $filter.removeClass('active');
             }
         });
     }

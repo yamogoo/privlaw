@@ -287,19 +287,16 @@ h1 {
   position: relative;
   text-align: center;
   font-size: 25px;
-  top: 100px; }
+  top: 0px; }
 
 #preloader .icon_animate {
+  display: flex;
   position: absolute;
-  width: 170px;
-  height: 140px;
-  background-size: 140px;
+  width: 100vw;
+  height: 100vh;
   /* centering begin */
   margin-left: auto;
   margin-right: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   /* centering end */ }
 
 .app-header-container, .app-footer-container, .main-slider__item-container, .section-container {
@@ -698,7 +695,7 @@ h1 {
 .theme-header--light .app-header .app-logo .app-logo-img {
   background-image: url(../assets/logo/logo.svg) !important; }
 .theme-header--dark .app-header .app-logo .app-logo-img {
-  background-image: url(./src/assets/images/logo/logo-inverse.svg) !important; }
+  background-image: url(../assets/logo/logo-inverse.svg) !important; }
 
 .app-header {
   transition: border 250ms ease-in-out 0s; }
