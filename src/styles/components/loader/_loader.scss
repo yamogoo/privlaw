@@ -1,0 +1,32 @@
+#preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: $white;
+  z-index: 9999;
+}
+
+.pre_wrapper small {
+  display: block;
+  position: relative;
+  text-align: center;
+  font-size: 25px;
+  top: 100px;
+}
+
+#preloader .icon_animate {
+  position: absolute;
+  width: 170px;
+  height: 140px;
+//   background: url(../images/icons/preloader.svg) center center no-repeat; // Path to preloader icon
+  background-size: 140px;
+  /* centering begin */
+  margin-left: auto;
+  margin-right: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* centering end */
+}

@@ -1,4 +1,4 @@
-.entity__item {
+%entity__item {
     // display: flex;
     // flex-direction: column;
     @include flexbox();
@@ -14,7 +14,6 @@
 
     &-image {
         width: inherit;
-        // height: 240px;
         border-radius: 4px;
         overflow: hidden;
 
@@ -54,7 +53,7 @@
 }
 
 //List template
-.entity__item--list {
+%entity__item--list {
     
     // .entity__item-container {
     //     display: flex;
@@ -62,7 +61,7 @@
     // }
 }
 
-.entity__item-container--list {
+%entity__item-container--list {
     // display: flex;
     // flex-direction: row;
     @include flexbox();

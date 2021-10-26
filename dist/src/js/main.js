@@ -1,6 +1,14 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 
+// Preloader
+$(window).on('load', function () {
+    var $preloader = $('#preloader'),
+        $icon_animate = $preloader.find('.icon_animate');
+    $icon_animate.fadeOut();
+    $preloader.delay(100).fadeOut(10);
+});
+
 $(document).ready(function () {
     // rendering body
     // (function renderPage() {
@@ -38,8 +46,8 @@ $(document).ready(function () {
     //Filter
     function toggleFilter() {
         let filter = $('.filter-dropdown');
-        let field = filter.children('.filter-dropdown-container');
-        let list = filter.children('.filter-dropdown-list');
+        let field = filter.find('.filter-dropdown-container');
+        let list = filter.find('.filter-dropdown-list');
         let item = $('.filter-dropdown-list p');
         let clear = $('.filter__wrapper-clear');
         let eventClear = $('.events-filter .filter__wrapper-clear');
@@ -49,7 +57,6 @@ $(document).ready(function () {
             let count = $(el).children('*').length;
             let itemHeight = $(item).height();
             if (count > 3) {
-                console.log("this height > " + count);
                 $(el).height(itemHeight * 3 + (count - 1));
             }
         });
