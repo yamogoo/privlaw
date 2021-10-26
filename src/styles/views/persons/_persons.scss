@@ -27,6 +27,13 @@
                 p, .persons__item-description {
                     color: $primary-color;
                 }
+
+                .persons__item-image {
+
+                    img {
+                        // filter: grayscale(0.0);
+                    }
+                }
             }
         }
 
@@ -46,6 +53,7 @@
                 border-radius: 4px;
                 width: 100%;
                 height: auto;
+                filter: grayscale(1.0);
             }
         }
 
@@ -57,9 +65,10 @@
         }
 
         &-description {
-            font-size: px2em(14px);
+            font-size: px2em(13px);
             font-weight: 400;
             color: $neutral-color;
+            white-space: break-spaces;
         }
 
         &-name {

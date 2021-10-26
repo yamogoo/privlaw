@@ -64,12 +64,13 @@ $(document).ready(function () {
         }
     })
 
-    //Section Slider
-    $('.section-slider').owlCarousel({
+    //Section Slider Events
+    $('#section-slider-persons').owlCarousel({
         autoplay: true,
-        autoplayTimeout: 5000,
+        autoplayTimeout: 2000,
         loop: true,
-        smartSpeed: 150,
+        smartSpeed: 250,
+        slideBy: 1,
         // margin: 40,
         // nav: true,
         // dots: true,
@@ -77,24 +78,24 @@ $(document).ready(function () {
         // responsiveClass: true,
         responsive: {
             0: {
-                slideBy: 2,
+                // slideBy: 2,
                 items: 2,
                 margin: 20
             },
             544: {
-                slideBy: 3,
+                // slideBy: 3,
                 items: 3,
                 margin: 30
             },
             768: {
-                slideBy: 4,
+                // slideBy: 4,
                 items: 4,
                 margin: 40
             },
             992: {
-                slideBy: 5,
+                // slideBy: 5,
                 items: 5,
-                margin: 50
+                margin: 40
             }
         }
     })

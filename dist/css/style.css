@@ -425,11 +425,11 @@ h1 {
     -ms-flex-direction: column;
     flex-direction: column; }
   .date-box__month {
-    font-size: 1em;
+    font-size: 0.875em;
     color: #19191b;
     white-space: nowrap; }
   .date-box__day {
-    font-size: 1em;
+    font-size: 0.875em;
     color: #9093a2; }
 
 .tab-button {
@@ -2354,7 +2354,8 @@ h1 {
       object-fit: cover;
       border-radius: 4px;
       width: 100%;
-      height: auto; }
+      height: auto;
+      filter: grayscale(1); }
   .persons__item-content {
     display: -webkit-box;
     display: -moz-box;
@@ -2370,9 +2371,10 @@ h1 {
     flex-direction: column;
     gap: 10px; }
   .persons__item-description {
-    font-size: 0.875em;
+    font-size: 0.8125em;
     font-weight: 400;
-    color: #9093a2; }
+    color: #9093a2;
+    white-space: break-spaces; }
   .persons__item-name {
     font-size: 1.0625em;
     font-weight: 500;
