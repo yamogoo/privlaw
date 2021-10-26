@@ -6,7 +6,7 @@ $(window).on('load', function () {
     var $preloader = $('#preloader'),
         $icon_animate = $preloader.find('.icon_animate');
     $icon_animate.fadeOut();
-    $preloader.delay(100).fadeOut(10);
+    $preloader.delay(100).fadeOut(50);
 });
 
 $(document).ready(function () {

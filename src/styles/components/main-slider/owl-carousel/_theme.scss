@@ -7,6 +7,9 @@
 	// Styling Next and Prev buttons
 	.owl-nav {
 		// margin-top: 10px;
+		@include flexbox();
+		@include justify-content(space-between);
+		width: 100%;
 		position: absolute;
 		bottom: 50px;
 		text-align: center;
@@ -28,9 +31,15 @@
 				text-decoration: none;
 			}
 		}
+		
 
-		// .owl-nav button.owl-prev,
-		// .owl-nav button.owl-next {
+		button.owl-prev,
+		button.owl-next {
+			@include flexbox();
+			@include justify-content(space-between);
+			@include align-items(center);
+			@include box($carousel-nav-button-size);
+		}
 			
 		// 	span {
 		// 		color: $carousel-nav-color !important;

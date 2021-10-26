@@ -56,6 +56,10 @@
 		width: 100%;
 	}
 
+	.owl-nav {
+		pointer-events: none;
+	}
+
 	.owl-nav.disabled,
 	.owl-dots.disabled {
 		display: none;
@@ -65,6 +69,7 @@
 	.owl-nav .owl-next,
 	.owl-dot {
 		cursor: pointer;
+		pointer-events: all;
 		-webkit-user-select: none;
 		-khtml-user-select: none;
 		-moz-user-select: none;
