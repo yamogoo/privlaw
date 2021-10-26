@@ -18,7 +18,7 @@ $(document).ready(function () {
     // })();
 
 
-    //Carousel
+    //Main Slider
     $('.main-slider').owlCarousel({
         autoplay: true,
         autoplayTimeout: 5000,
@@ -26,6 +26,23 @@ $(document).ready(function () {
         margin: 50,
         nav: true,
         dots: true,
+        responsiveRefreshRate: 20,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            }
+        }
+    })
+
+    //Section Slider
+    $('.section-slider').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 5000,
+        loop: true,
+        margin: 50,
+        nav: true,
+        // dots: true,
         responsiveRefreshRate: 20,
         responsiveClass: true,
         responsive: {

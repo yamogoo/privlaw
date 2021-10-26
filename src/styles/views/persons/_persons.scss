@@ -14,7 +14,7 @@
 
         &-container {
             display: grid;
-            grid-template-columns: auto 1fr;
+            grid-template-rows: auto 1fr;
             gap: 30px;
 
             &:hover {
@@ -41,7 +41,7 @@
 
             img {
                 // width: 100%;
-                @include box(160px);
+                // @include box(160px);
                 object-fit: cover;
                 border-radius: 4px;
             }

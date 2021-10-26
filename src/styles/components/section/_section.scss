@@ -39,6 +39,7 @@
         gap: 30px;
         padding-top: 40px;
         @extend %main-container;
+        background-color: $app-page-background-color;
     }
 
     //Header

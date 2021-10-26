@@ -9,7 +9,17 @@ $(window).on('load', function () {
     $preloader.delay(100).fadeOut(50);
 });
 
+let breakepoints = {
+    xs: 320,
+    sm: 544,
+    md: 768,
+    lg: 992,
+    xl: 1280
+};
+
 $(document).ready(function () {
+
+
     // rendering body
     // (function renderPage() {
     //     // let render = $('.render');
@@ -25,12 +35,17 @@ $(document).ready(function () {
 
     // })();
 
+    // $('.owl-carousel').owlCarousel({
+    //     smartSpeed: 1000
+    // });
 
-    //Carousel
+
+    //Main Slider
     $('.main-slider').owlCarousel({
         // autoplay: true,
         // autoplayTimeout: 5000,
         loop: true,
+        smartSpeed: 200,
         margin: 0,
         nav: true,
         dots: true,
@@ -39,6 +54,36 @@ $(document).ready(function () {
         responsive: {
             0: {
                 items: 1
+            }
+        }
+    })
+
+    //Section Slider
+    $('.section-slider').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 5000,
+        loop: true,
+        smartSpeed: 150,
+        // margin: 40,
+        // nav: true,
+        // dots: true,
+        responsiveRefreshRate: 20,
+        // responsiveClass: true,
+        responsive: {
+            0: {
+                slideBy: 2,
+                items: 2,
+                margin: 20
+            },
+            544: {
+                slideBy: 2,
+                items: 2,
+                margin: 30
+            },
+            992: {
+                slideBy: 5,
+                items: 5,
+                margin: 50
             }
         }
     })

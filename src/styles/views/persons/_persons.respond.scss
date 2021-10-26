@@ -1,20 +1,20 @@
 
-// Border
-@include respond-above(lg) {
+// // Border
+// @include respond-above(lg) {
 
-    .persons {
+//     .persons {
 
-        &__item:not(:nth-last-child(1), :nth-last-child(2)) {
-            border-bottom: $entity-item-border-bottom;
-        }
-    }
-}
-@include respond-below(lg) {
+//         &__item:not(:nth-last-child(1), :nth-last-child(2)) {
+//             border-bottom: $entity-item-border-bottom;
+//         }
+//     }
+// }
+// @include respond-below(lg) {
 
-    .persons {
+//     .persons {
 
-        &__item:not(:nth-last-child(1)) {
-            border-bottom: $entity-item-border-bottom;
-        }
-    }
-}
+//         &__item:not(:nth-last-child(1)) {
+//             border-bottom: $entity-item-border-bottom;
+//         }
+//     }
+// }
