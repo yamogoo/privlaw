@@ -1,0 +1,10 @@
+%section-divider {
+
+    &:not(:nth-last-child(1)) {
+        border-bottom: $section-border-bottom;
+    }
+}
+
+%section-divider:not(:nth-last-child(1)) {
+    border-bottom: $section-border-bottom;
+}

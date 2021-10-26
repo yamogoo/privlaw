@@ -1,17 +1,44 @@
 .section {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    
+
+    // // Section Divider
     &:not(:nth-last-child(1)) {
-        border-bottom: $section-border-bottom;
+        // border-bottom: $section-border-bottom; // Outer Divider
+
+        .section-container {
+            border-bottom: $section-border-bottom; // Inner Divider
+        }
     }
 
-    &:not(:nth-child(1)) {
-        padding-top: 20px;
+    // If First Section
+    &:nth-child(1) {
+
+        .section-container {
+            padding-top: 80px;
+        }
     }
+
+    // If not Last Section
     &:not(:nth-last-child(1)) {
-        padding-bottom: 80px;
+
+        .section-container {
+            padding-bottom: 60px;
+        }
+    }
+
+    // If Last Section
+    &:nth-last-child(1) {
+
+        .section-container {
+            padding-bottom: 80px;
+        }
+    }
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding-top: 40px;
+        @extend %main-container;
     }
 
     //Header

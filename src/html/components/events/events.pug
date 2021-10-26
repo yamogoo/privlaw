@@ -1,133 +1,134 @@
 section.section
-    //Nav Line
-    div.nav-line
-        ul.nav-line-container
-            li.nav-line__item
-                a(href="index.html") Главная
-            li.nav-line__item
-                a(href="events.html") Мероприятия
-    //Nav Line
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="events.html") Мероприятия
+        //Nav Line
 
-    // Section Header
-    div.section-header
-        h5.section-title Мероприятия
+        // Section Header
+        div.section-header
+            h5.section-title Мероприятия
 
-        include ../filter/filter-for-events.pug
-    // Events
-    div.events
-        div.events-container
-            // Items
-            article.events__item
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_22.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми
-                        span.date-lg
-                            span.date-lg__number 22
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day пятница
-            article.events__item
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_21.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Круглый стол «Проблемы компенсации морального вреда в судебной практике» проведет Исследовательский центр частного права
-                        span.date-lg
-                            span.date-lg__number 21
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day четверг
-            article.events__item.passed
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_20.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Совет по кодификации рекомендовал начать реформу вещного права с блока норм о недвижимости
-                        span.date-lg
-                            span.date-lg__number 20
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day среда
-            article.events__item.passed
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_17.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Исследовательский центр посетила делегация цивилистов из Казахстана
-                        span.date-lg
-                            span.date-lg__number 17
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day среда
-            article.events__item.passed
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_22.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми
-                        span.date-lg
-                            span.date-lg__number 15
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day пятница
-            article.events__item.passed
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_21.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Круглый стол «Проблемы компенсации морального вреда в судебной практике» проведет Исследовательский центр частного права
-                        span.date-lg
-                            span.date-lg__number 14
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day четверг
-            article.events__item.passed
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_20.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Совет по кодификации рекомендовал начать реформу вещного права с блока норм о недвижимости
-                        span.date-lg
-                            span.date-lg__number 12
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day среда
-            article.events__item.passed
-                a(href="/" class="events__item-container")
-                    span.events__item-image
-                        span.events__item-tag-state
-                        img(src="images/events/events_17.10.2021_sm-1.png")
-                    div.events__item-content
-                        div.events__item-content-group
-                            span.events__item-tag Исследовательский центр
-                            h3.events__item-title Исследовательский центр посетила делегация цивилистов из Казахстана
-                        span.date-lg
-                            span.date-lg__number 09
-                            div.date-lg__group
-                                span.date-lg__month октября 2021
-                                span.date-lg__day среда
+            include ../filter/filter-for-events.pug
+        // Events
+        div.events
+            div.events-container
+                // Items
+                article.events__item
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_22.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми
+                            span.date-lg
+                                span.date-lg__number 22
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day пятница
+                article.events__item
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_21.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Круглый стол «Проблемы компенсации морального вреда в судебной практике» проведет Исследовательский центр частного права
+                            span.date-lg
+                                span.date-lg__number 21
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day четверг
+                article.events__item.passed
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_20.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Совет по кодификации рекомендовал начать реформу вещного права с блока норм о недвижимости
+                            span.date-lg
+                                span.date-lg__number 20
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day среда
+                article.events__item.passed
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_17.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Исследовательский центр посетила делегация цивилистов из Казахстана
+                            span.date-lg
+                                span.date-lg__number 17
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day среда
+                article.events__item.passed
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_22.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми
+                            span.date-lg
+                                span.date-lg__number 15
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day пятница
+                article.events__item.passed
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_21.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Круглый стол «Проблемы компенсации морального вреда в судебной практике» проведет Исследовательский центр частного права
+                            span.date-lg
+                                span.date-lg__number 14
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day четверг
+                article.events__item.passed
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_20.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Совет по кодификации рекомендовал начать реформу вещного права с блока норм о недвижимости
+                            span.date-lg
+                                span.date-lg__number 12
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day среда
+                article.events__item.passed
+                    a(href="/" class="events__item-container")
+                        span.events__item-image
+                            span.events__item-tag-state
+                            img(src="images/events/events_17.10.2021_sm-1.png")
+                        div.events__item-content
+                            div.events__item-content-group
+                                span.events__item-tag Исследовательский центр
+                                h3.events__item-title Исследовательский центр посетила делегация цивилистов из Казахстана
+                            span.date-lg
+                                span.date-lg__number 09
+                                div.date-lg__group
+                                    span.date-lg__month октября 2021
+                                    span.date-lg__day среда
         // Items
 // Events

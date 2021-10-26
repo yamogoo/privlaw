@@ -48,10 +48,10 @@ $black: #000;
 $divider-color: #e2e8f0;
 $divider-color-inverse: #2E333F;
 
-$border-color: #d7d8db;
+$border-color: #f3f2f2;//#d7d8db;
 $border-color-inverse: $divider-color-inverse;
 
-$section-divider-color: lighten($primary-color, 60%);
+$section-divider-color: lighten($primary-color, 80%);
 
 // Components
 

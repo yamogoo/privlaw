@@ -1,18 +1,15 @@
 .app-content {
-    // @extend .main-container;
     @include box(100vw, 100vh);
-    // background: url(./src/assets/images//background/index-bg.jpg);
-    // filter: grayscale(1);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: $app-background-color;
     overflow: hidden;
 
     &-container {
-        @extend %main-container;
+        // @extend %main-container;
         @include flexbox();
         @include flex-direction(column);
-        gap: 30px;
-        padding-top: 55px;
+        // gap: 30px;
+        // padding-top: 55px;
         padding-bottom: 35px;
+        background-color: $app-page-background-color;
     }
 }
