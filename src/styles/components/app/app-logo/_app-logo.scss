@@ -6,7 +6,7 @@
     &-img {
         @include box(126px, 65px);
         padding: 0 40px;
-        background-image: url(../assets/images/logo/logo-inverse.svg); //default
+        background-image: url(../assets/logo/logo-inverse.svg); //default
         background-repeat: no-repeat;
         background-position: left;
     }
