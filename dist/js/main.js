@@ -76,9 +76,14 @@ $(document).ready(function () {
                 margin: 20
             },
             544: {
-                slideBy: 2,
-                items: 2,
+                slideBy: 3,
+                items: 3,
                 margin: 30
+            },
+            768: {
+                slideBy: 4,
+                items: 4,
+                margin: 40
             },
             992: {
                 slideBy: 5,

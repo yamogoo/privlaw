@@ -1,4 +1,4 @@
-.date-lg {
+.date-box {
     @include flexbox();
     @include flex-direction(row);
     gap: px2em(15px);
