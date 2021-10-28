@@ -1,0 +1,9 @@
+@include respond-below(sm) {
+
+    .news {
+
+        .news__item-container {
+            padding-bottom: 30px;
+        }
+    }
+}
