@@ -64,10 +64,16 @@
             // padding-top: 20px;
         }
 
+        &-tag{
+            @extend %entity__item-tag--clear-text;
+            font-size: px2em(12px);
+            padding: 0;
+        }
+
         &-description {
             font-size: px2em(13px);
             font-weight: 400;
-            color: $neutral-color;
+            color: $primary-color;//$neutral-color;
             white-space: break-spaces;
         }
 

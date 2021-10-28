@@ -503,7 +503,7 @@ h1 {
   left: 8px;
   border-radius: 0.1875em; }
 
-.events__item-tag {
+.events__item-tag, .persons__item-tag {
   font-size: 0.875em;
   font-weight: 400;
   color: #9093a2; }
@@ -2477,6 +2477,8 @@ h1 {
   to {
     transform: scale(1);
     opacity: 1.0; } }
+.news__item-container {
+  padding-bottom: 0px; }
 .news__item-tag {
   color: #19191b;
   background-color: rgba(255, 255, 255, 0.9); }
@@ -2637,10 +2639,13 @@ h1 {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 10px; }
+  .persons__item-tag {
+    font-size: 0.75em;
+    padding: 0; }
   .persons__item-description {
     font-size: 0.8125em;
     font-weight: 400;
-    color: #9093a2;
+    color: #19191b;
     white-space: break-spaces; }
   .persons__item-name {
     font-size: 1.0625em;

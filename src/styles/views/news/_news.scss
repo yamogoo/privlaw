@@ -9,6 +9,7 @@
 
         &-container {
             @extend %entity__item-container;
+            padding-bottom: 0px;
         }
 
         &-image {

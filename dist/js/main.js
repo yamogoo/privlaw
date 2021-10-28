@@ -60,6 +60,8 @@ $(document).ready(function () {
         loop: true,
         smartSpeed: 250,
         slideBy: 1,
+        nav: false,
+        dots: false,
         responsiveRefreshRate: 20,
         responsive: {
             0: {
