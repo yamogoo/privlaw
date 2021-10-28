@@ -10,7 +10,6 @@
 @include respond-between(sm, xl) {
 
     .app-menu {
-        display: block;
         top: $app-header-height-md;
         height: calc(100% - #{$app-header-height-md});
     }
@@ -19,8 +18,19 @@
 @include respond-below(sm) {
 
     .app-menu {
-        display: none;
         top: $app-header-height-sm;
         height: calc(100% - #{$app-header-height-sm});
+    }
+}
+
+// Show/Hide
+@include respond-below(xl) {
+
+    .app-menu {
+        display: none;
+        
+        &.active {
+            display: block;
+        }
     }
 }

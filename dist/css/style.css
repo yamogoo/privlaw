@@ -1,4 +1,8 @@
 @charset "UTF-8";
+/**
+ * PrivLaw
+ * 2021 Misha Grebennikov
+ */
 html body {
   padding: 0px;
   margin: 0px; }
@@ -824,7 +828,11 @@ h1 {
   .app-header {
     height: 88px; } }
 @media (max-width: 1279px) {
-  .app-header__content-section {
+  .app-header__content-section-bottom {
+    display: none; }
+  .app-header__content-section-top {
+    border: none; }
+  .app-header .navigation-menu-secondary {
     display: none; } }
 .theme-header--light .app-header {
   background-color: #fff; }
@@ -1123,14 +1131,17 @@ h1 {
     height: calc(100% - 119px); } }
 @media (min-width: 544px) and (max-width: 1279px) {
   .app-menu {
-    display: block;
     top: 100px;
     height: calc(100% - 100px); } }
 @media (max-width: 543px) {
   .app-menu {
-    display: none;
     top: 88px;
     height: calc(100% - 88px); } }
+@media (max-width: 1279px) {
+  .app-menu {
+    display: none; }
+    .app-menu.active {
+      display: block; } }
 .menu-navigation {
   width: 100%; }
   .menu-navigation-container {

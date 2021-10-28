@@ -2,7 +2,15 @@
 
     .app-header {
 
-        &__content-section {
+        &__content-section-bottom {
+            display: none;
+        }
+
+        &__content-section-top {
+            border: none;
+        }
+
+        .navigation-menu-secondary {
             display: none;
         }
     }

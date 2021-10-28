@@ -34,22 +34,11 @@ $(document).ready(function () {
             }
         });
     }
-    // appHeaderChangeTheme();
 
-    // Detect Scroll Down/Top Direction
-    // $(window).bind('mousewheel', function (event) {
-    //     if (event.originalEvent.wheelDelta >= 0) {
-    //         console.log('Scroll up');
-    //     }
-    //     else {
-    //         console.log('Scroll down');
-    //     }
-    // });
-
-    //Main Slider
+    // Main slider
     $('.main-slider').owlCarousel({
-        // autoplay: true,
-        // autoplayTimeout: 5000,
+        autoplay: true,
+        autoplayTimeout: 5000,
         loop: true,
         smartSpeed: 200,
         margin: 0,
@@ -64,43 +53,47 @@ $(document).ready(function () {
         }
     })
 
-    //Section Slider Events
+    // Section slider
     $('#section-slider-persons').owlCarousel({
         autoplay: true,
         autoplayTimeout: 2000,
         loop: true,
         smartSpeed: 250,
         slideBy: 1,
-        // margin: 40,
-        // nav: true,
-        // dots: true,
         responsiveRefreshRate: 20,
-        // responsiveClass: true,
         responsive: {
             0: {
-                // slideBy: 2,
                 items: 2,
                 margin: 20
             },
             544: {
-                // slideBy: 3,
                 items: 3,
                 margin: 30
             },
             768: {
-                // slideBy: 4,
                 items: 4,
                 margin: 40
             },
             992: {
-                // slideBy: 5,
                 items: 5,
                 margin: 40
             }
         }
     })
 
-    //Filter
+    // Detect Scroll Down/Top Direction
+    // $(window).bind('mousewheel', function (event) {
+    //     if (event.originalEvent.wheelDelta >= 0) {
+    //         console.log('Scroll up');
+    //     }
+    //     else {
+    //         console.log('Scroll down');
+    //     }
+    // });
+
+
+
+    // Filter
     function toggleFilter() {
         let $filter = $('.filter-dropdown');
         let $field = $filter.find('.filter-dropdown-container');
@@ -164,7 +157,45 @@ $(document).ready(function () {
     }
     toggleFilter();
 
-    // Search Filter (test)
-    // $('h3:contains("Медведева")').css('background', 'red');
+    //
+    //
+    // Functions
+
+    // Toggle class by click on this element
+    function toggleClassByClick(el, cl) {
+        el.on("click", function (e) {
+            $(this).toggleClass(cl);
+            e.preventDefault();
+        });
+    }
+
+    // Toggle class of first element and change class of second element depands on class of first element
+    function changeClassByClickOnElement(el1, cl1, el2, cl2) {
+        var state = false;
+        el1.on("click", function (e) {
+            $(this).toggleClass(cl1);
+            e.preventDefault();
+            state = !state;
+            if (state === true) {
+                el2.addClass(cl2)
+            } else {
+                el2.removeClass(cl2)
+            }
+        });
+    }
+
+    //
+    //
+    // Elements
+
+    let $appMenuToggleButton = $('#app-menu-toggle-button');
+    let $appMenu = $('#app-menu');
+
+    //
+    //
+    // Actions
+
+    // Show app-menu by click on app-menu-toggle-button
+    changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active');
 
 });
