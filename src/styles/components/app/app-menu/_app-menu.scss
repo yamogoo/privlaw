@@ -1,14 +1,12 @@
 .app-menu {
-    // display: block;
     position: absolute;
     top: 119px;
     left: 0;
     width: 100%;
-    // min-height: 100%;
     height: 100%;
     background-color: $white;
     overflow: hidden;
-    z-index: 9999;
+    z-index: 9998;
 
     &-container {
         @extend %main-container;

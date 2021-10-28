@@ -1,6 +1,6 @@
 //Card Template
 //entities-container-persons
-@include respond-above (md) {
+@include respond-above (lg) {
 
     %entities-container-persons {
         // gap: 30px;
@@ -8,10 +8,27 @@
     }
 }
 
-@include respond-below (md) {
+
+@include respond-between (md, lg) {
 
     %entities-container-persons {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        // gap: 30px;
+    }
+}
+
+@include respond-between (sm, md) {
+
+    %entities-container-persons {
+        grid-template-columns: 1fr 1fr 1fr;
+        // gap: 30px;
+    }
+}
+
+@include respond-below (sm) {
+
+    %entities-container-persons {
+        grid-template-columns: 1fr 1fr;
         // gap: 30px;
     }
 }

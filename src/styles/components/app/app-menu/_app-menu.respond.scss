@@ -27,10 +27,35 @@
 @include respond-below(xl) {
 
     .app-menu {
-        display: none;
-        
+        display: block;
+        transform: translateX(100vw);
+        @include transition(transform , 175ms, ease-out);
+        // opacity: 0.0;
+
         &.active {
             display: block;
+            transform: translateX(0);
+            // visibility: visible;
+            // opacity: 1.0;
         }
+
+        // &:not(.active) {
+        //     @include transition(visibility , 0ms, ease-in-out, 125ms);
+        //     visibility: hidden;
+        // }
     }
 }
+
+// @keyframes anim-dropdown-selector-list-in {
+//   from {
+//     transform: scale(0.5);// rotate3d(0, 1, 0, -45deg);
+//     opacity: 0.0;
+//   }
+//   65% {
+//     transform: scale(1.03);
+//     opacity: 1.0;
+//   }
+//   to {
+//     transform: scale(1.0);// rotate3d(0, 1, 0, 0deg);
+//   }
+// }
