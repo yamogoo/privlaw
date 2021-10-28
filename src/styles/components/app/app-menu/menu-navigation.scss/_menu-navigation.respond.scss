@@ -1,0 +1,35 @@
+@include respond-above (xl) {
+
+    .menu-navigation {
+
+        &-container {
+            @include flexbox();
+            @include flex-direction(row);
+            gap: 30px;
+        }
+    }
+}
+
+@include respond-between (sm, xl) {
+
+    .menu-navigation {
+        &-container {
+            display: grid;
+            gap: 30px;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@include respond-below (sm) {
+
+    .menu-navigation {
+        
+        &-container {
+            @include flexbox();
+            @include flex-direction(column);
+            gap: 20px;
+            width: 100%;
+        }
+    }
+}

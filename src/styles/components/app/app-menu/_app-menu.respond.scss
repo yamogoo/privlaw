@@ -1,0 +1,13 @@
+@include respond-above(xl) {
+
+    .app-menu {
+        display: none;
+    }
+}
+
+@include respond-below(xl) {
+
+    .app-menu {
+        display: block;
+    }
+}

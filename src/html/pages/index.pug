@@ -9,7 +9,9 @@ body
     div.app.theme-header--light.theme-app--normal#app
         div.app-container
 
-            include ../components/header/header.pug
+            div.app-header__wrapper
+                include ../components/header/header.pug
+                include ../components/menu/menu.pug
 
             main.app-content
                 div.app-scroll-view

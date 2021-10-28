@@ -164,4 +164,7 @@ $(document).ready(function () {
     }
     toggleFilter();
 
+    // Search Filter (test)
+    // $('h3:contains("Медведева")').css('background', 'red');
+
 });

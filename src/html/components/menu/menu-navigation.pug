@@ -1,62 +1,7 @@
-//- mixin items(...items)
-
-//-     mixin nestedItem(href, title)
-//-         span.navigation-menu__list-item-group__nested-item
-//-             a(href=href)=title
-
-//-     mixin item(href, title, nested)
-//-         a(href=href class="navigation-menu__list-item-content")=title
-//-             div.navigation-menu__list-item-underline
-
-//-     each item in list
-//-         if item.nested[0].href.length > 0
-//-             li.navigation-menu__list-item.expansion
-//-                 +item(item.href, item.title)
-//-                 div.navigation-menu__list-item-group
-//-                     div.navigation-menu__list-item-group-container
-//-                         each nestedItem in item.nested
-//-                             +nestedItem(nestedItem.href, nestedItem.title)
-//-         else 
-//-             li.navigation-menu__list-item
-//-                 +item(item.href, item.title)
-
-//- -
-//-     var list=[
-//-         {href: "./centre.html", title: "Исследовательский центр",
-//-             nested: [
-//-                 {href: "", title: ""}
-//-             ]},
-//-         {href: "./rshchp.html", title: "РШЧП",
-//-             nested: [
-//-                 {href: "", title: ""}
-//-             ]},
-//-         {href: "./codification-council.html", title: "Совет по кодификации",
-//-             nested: [
-//-                 {href: "", title: ""}
-//-             ]},
-//-         {href: "./private-law-dialogues.html", title: "Диссертационный совет",
-//-             nested: [
-//-                 {href: "", title: ""}
-//-             ]},
-//-         {href: "./educational-projects.html", title: "Просветительские проекты",
-//-             nested: [
-//-                 {href: "./family-law-club.html", title: "Клуб семейного права"},
-//-                 {href: "./alekseevsky-readings.html", title: "Алексеевские чтения"}
-//-             ]},
-//-         {href: "./museum.html", title: "Музей",
-//-             nested: [
-//-                 {href: "", title: ""}
-//-             ]}
-//-     ]
-//- //Footer Navigation
-//- div.footer-navigation
-//-     div.footer-navigation-container
-//-         +items(list)
-
-//Footer Navigation
-div.footer-navigation
-    div.footer-navigation-container
-        div.footer-navigation-group
+// Menu Navigation
+div.menu-navigation
+    div.menu-navigation-container
+        div.menu-navigation-group
             ul
                 li
                     a(href="/events.html") Мероприятия
@@ -68,7 +13,7 @@ div.footer-navigation
                     a(href="/foto-and-video.html") Фото и видео
                 li
                     a(href="/contacts.html") Контакты
-        div.footer-navigation-group
+        div.menu-navigation-group
             ul
                 li
                     a(href="#") Исследовательский центр
@@ -88,7 +33,7 @@ div.footer-navigation
             ul
                 li
                     a(href="#") Музей
-        div.footer-navigation-group
+        div.menu-navigation-group
             ul
                 li
                     a(href="#") Российская школа частного права
@@ -110,7 +55,7 @@ div.footer-navigation
             ul
                 li
                     a(href="#") Диссертационный совет
-        div.footer-navigation-group
+        div.menu-navigation-group
             ul
                 li
                     a(href="#") Совет по кодификации
@@ -131,4 +76,3 @@ div.footer-navigation
                         a(href="#") Клуб семейного права
                     li
                         a(href="#") Алексеевские чтения
-//Footer Navigation
