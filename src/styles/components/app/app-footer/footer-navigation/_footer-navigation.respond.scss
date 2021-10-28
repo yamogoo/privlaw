@@ -33,28 +33,3 @@
         }
     }
 }
-
-// //List Template
-
-// @include respond-above (sm) {
-
-//     .entities-container-list {
-//         // display: flex;
-//         // flex-direction: column;
-//         @include flexbox();
-//         @include flex-direction(column);
-//         gap: 30px;
-//     }
-// }
-
-
-// @include respond-below (sm) {
-
-//     .entities-container-list {
-//         // display: flex;
-//         // flex-direction: column;
-//         @include flexbox();
-//         @include flex-direction(column);
-//         gap: 30px;
-//     }
-// }

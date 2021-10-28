@@ -30,7 +30,12 @@
                 gap: $navigation-menu-item-content-gap;
                 height: inherit;
                 color: $white;
-                font-size: px2em(14px);
+                @include respond-above (sm) {
+                    font-size: px2em(14px);
+                }
+                @include respond-below (sm) {
+                    font-size: px2em(13px);
+                }
                 font-weight: 500;
                 letter-spacing: px2em(0.3px);
                 padding: px2em(6px) px2em(0px);
@@ -48,9 +53,14 @@
             li {
 
                 a {
-                    font-size: px2em(14px) !important;
+                    @include respond-above (sm) {
+                        font-size: px2em(14px) !important;
+                    }
+                    @include respond-below (sm) {
+                        font-size: px2em(13px) !important;
+                    }
                     font-weight: 400 !important;
-                    color: $app-footer-navigation-font-color !important;//$accent-color-lighten-300;
+                    color: $app-footer-navigation-font-color !important;
 
                     &:hover {
                         text-decoration: underline;

@@ -22,9 +22,14 @@
         font-size: px2em(13px);
         font-weight: 400;
         letter-spacing: px2em(0.3px);
-        padding: px2em(8px) px2em(0px);
+        @include respond-above (sm) {
+            padding: px2em(10px);
+        }
+        @include respond-below (sm) {
+            padding: px2em(4px);
+        }
+        // padding: px2em(8px) px2em(0px);
         text-decoration: none;
         white-space: nowrap;
-        padding: px2em(10px);
     }
 }

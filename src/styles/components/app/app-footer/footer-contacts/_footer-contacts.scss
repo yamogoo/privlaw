@@ -11,7 +11,13 @@
     }
 
     h5 {
-        font-size: px2em(15px);
+        // font-size: px2em(15px);
+        @include respond-above (sm) {
+            font-size: px2em(15px);
+        }
+        @include respond-below (sm) {
+            font-size: px2em(13px);
+        }
         font-weight: 500;
         color: $white;
     }
@@ -20,7 +26,13 @@
         color: $app-footer-contacts-font-color;//$accent-light-color;
         letter-spacing: px2em(0.3px);
         padding: px2em(6px) px2em(0px);
-        font-size: px2em(14px);
+        // font-size: px2em(14px);
+        @include respond-above (sm) {
+            font-size: px2em(14px);
+        }
+        @include respond-below (sm) {
+            font-size: px2em(14px);
+        }
         font-weight: 400;
         text-decoration: none;
     }

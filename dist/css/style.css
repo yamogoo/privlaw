@@ -680,7 +680,8 @@ h1 {
     position: relative;
     flex-direction: column;
     width: 100vw;
-    height: 100vh; }
+    height: 100vh;
+    overflow: hidden; }
 
 .theme-poor-vision p {
   font-size: 1.25em;
@@ -1536,19 +1537,29 @@ h1 {
         gap: 4px;
         height: inherit;
         color: #fff;
-        font-size: 0.875em;
         font-weight: 500;
         letter-spacing: 0.01875em;
         padding: 0.375em 0em;
         cursor: pointer; }
+        @media (min-width: 544px) {
+          .footer-navigation ul li a {
+            font-size: 0.875em; } }
+        @media (max-width: 543px) {
+          .footer-navigation ul li a {
+            font-size: 0.8125em; } }
         .footer-navigation ul li a:hover {
           text-decoration: underline; }
     .footer-navigation ul > ul {
       padding-bottom: 15px; }
       .footer-navigation ul > ul li a {
-        font-size: 0.875em !important;
         font-weight: 400 !important;
         color: #f0bed0 !important; }
+        @media (min-width: 544px) {
+          .footer-navigation ul > ul li a {
+            font-size: 0.875em !important; } }
+        @media (max-width: 543px) {
+          .footer-navigation ul > ul li a {
+            font-size: 0.8125em !important; } }
         .footer-navigation ul > ul li a:hover {
           text-decoration: underline; }
 
@@ -1598,16 +1609,26 @@ h1 {
     width: auto;
     height: auto; }
   .footer-contacts h5 {
-    font-size: 0.9375em;
     font-weight: 500;
     color: #fff; }
+    @media (min-width: 544px) {
+      .footer-contacts h5 {
+        font-size: 0.9375em; } }
+    @media (max-width: 543px) {
+      .footer-contacts h5 {
+        font-size: 0.8125em; } }
   .footer-contacts a, .footer-contacts p, .footer-contacts span {
     color: #e795b2;
     letter-spacing: 0.01875em;
     padding: 0.375em 0em;
-    font-size: 0.875em;
     font-weight: 400;
     text-decoration: none; }
+    @media (min-width: 544px) {
+      .footer-contacts a, .footer-contacts p, .footer-contacts span {
+        font-size: 0.875em; } }
+    @media (max-width: 543px) {
+      .footer-contacts a, .footer-contacts p, .footer-contacts span {
+        font-size: 0.875em; } }
   .footer-contacts .email a {
     text-decoration: underline !important; }
   .footer-contacts ul {
@@ -1707,10 +1728,14 @@ h1 {
     font-size: 0.8125em;
     font-weight: 400;
     letter-spacing: 0.01875em;
-    padding: 0.5em 0em;
     text-decoration: none;
-    white-space: nowrap;
-    padding: 0.625em; }
+    white-space: nowrap; }
+    @media (min-width: 544px) {
+      .footer-copyright a, .footer-copyright p, .footer-copyright span {
+        padding: 0.625em; } }
+    @media (max-width: 543px) {
+      .footer-copyright a, .footer-copyright p, .footer-copyright span {
+        padding: 0.25em; } }
 
 .app-content {
   width: 100vw;

@@ -10,6 +10,7 @@
         position: relative;
         flex-direction: column;
         @include box(100vw, 100vh);
+        overflow: hidden;
     }
 }
 
