@@ -7,6 +7,7 @@
     // background-color: $accent-color-darken-50;
 
     &-container {
+        @extend %main-container;
         width: 100%;
     }
 
@@ -37,7 +38,7 @@
             @include flexbox();
             @include flex-direction(row);
             @include justify-content(space-between);
-            @include align-items(center);
+            // @include align-items(center);
             gap: 20px;
             width: 100%;
             padding: 40px 0px;

@@ -21,11 +21,12 @@
     @include flex-wrap(wrap);
 
     .app-logo-description {
-        font-size: px2em(14px);
-        font-weight: 400;
+        // font-size: px2em(14px);
+        font-weight: 400px;
         letter-spacing: px2em(0.35px);
         line-height: 1.7 !important;
-        white-space: nowrap;
+        white-space: pre-wrap;
+        max-width: 340px;
         color: $white;
     }
 }

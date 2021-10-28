@@ -729,25 +729,38 @@ h1 {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
   .app-logo-descriptor .app-logo-description {
-    font-size: 0.875em;
-    font-weight: 400;
+    font-weight: 400px;
     letter-spacing: 0.02188em;
     line-height: 1.7 !important;
-    white-space: nowrap;
+    white-space: pre-wrap;
+    max-width: 340px;
     color: #fff; }
 
 @media (min-width: 992px) {
   .app-logo-img {
     width: 126px;
-    height: 65px; } }
+    height: 65px; }
+
+  .app-logo-descriptor .app-logo-description {
+    font-size: 0.875em; } }
 @media (min-width: 544px) and (max-width: 991px) {
   .app-logo-img {
     width: 96px;
-    height: 49.52381px; } }
+    height: 49.52381px; }
+
+  .app-logo-descriptor {
+    gap: 20px; }
+    .app-logo-descriptor .app-logo-description {
+      font-size: 0.8125em; } }
 @media (max-width: 543px) {
   .app-logo-img {
     width: 88px;
-    height: 45.39683px; } }
+    height: 45.39683px; }
+
+  .app-logo-descriptor {
+    gap: 20px; }
+    .app-logo-descriptor .app-logo-description {
+      font-size: 0.75em; } }
 .app-header {
   display: block;
   position: relative;
@@ -1335,10 +1348,6 @@ h1 {
       -ms-justify-content: space-between;
       justify-content: space-between;
       -ms-flex-pack: space-between;
-      -webkit-box-align: center;
-      -webkit-align-items: center;
-      -ms-flex-align: center;
-      align-items: center;
       gap: 20px;
       width: 100%;
       padding: 40px 0px; }
@@ -1451,6 +1460,18 @@ h1 {
   .app-footer .social-button__icon {
     font-size: 1.5em; }
 
+@media (min-width: 768px) {
+  .app-footer-section-top-content {
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; } }
+@media (max-width: 767px) {
+  .app-footer-section-top-content {
+    -webkit-box-align: flex-start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: flex-start;
+    align-items: flex-start; } }
 .footer-navigation {
   width: 100%; }
   .footer-navigation-container {

@@ -1,6 +1,35 @@
-.app-footer {
+// .app-footer {
 
-    &-container {
-        @extend %main-container;
+//     &-section-top {
+
+//         &-content {
+
+//         }
+//     }
+// }
+
+@include respond-above(md) {
+
+    .app-footer {
+
+        &-section-top {
+
+            &-content {
+                @include align-items(center);
+            }
+        }
+    }
+}
+
+@include respond-below(md) {
+
+    .app-footer {
+
+        &-section-top {
+
+            &-content {
+                @include align-items(flex-start);
+            }
+        }
     }
 }

@@ -6,6 +6,13 @@
             @include box($app-logo-width-lg, $app-logo-height-lg);
         }
     }
+
+    .app-logo-descriptor {
+
+        .app-logo-description {
+            font-size: px2em(14px);
+        }
+    }
 }
 
 @include respond-between(sm, lg) {
@@ -16,6 +23,14 @@
             @include box($app-logo-width-md, $app-logo-height-md);
         }
     }
+
+    .app-logo-descriptor {
+         gap: 20px;
+         
+        .app-logo-description {
+            font-size: px2em(13px);
+        }
+    }
 }
 
 @include respond-below(sm) {
@@ -24,6 +39,14 @@
 
         &-img {
             @include box($app-logo-width-sm, $app-logo-height-sm);
+        }
+    }
+
+    .app-logo-descriptor {
+        gap: 20px;
+
+        .app-logo-description {
+            font-size: px2em(12px);
         }
     }
 }
