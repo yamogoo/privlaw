@@ -1062,7 +1062,7 @@ h1 {
         color: #2B2F3C !important; }
         .menu-navigation ul > ul li a:hover {
           text-decoration: underline;
-          color: #7a1c3e; }
+          color: #7a1c3e !important; }
 
 @media (min-width: 1280px) {
   .menu-navigation-container {

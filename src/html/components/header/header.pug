@@ -1,21 +1,26 @@
-// App Header
-div.app-header
-    div.app-header-container
-        div.app-header-content
-        
-            include ../logo/logo.pug
-                
-            div.app-header__content-section
-                div.app-header__content-section-top
-
-                    include ./navigation/navigation-menu-secondary.pug
-
-                    //- include ../social-buttons/social-buttons.pug
+// App Header Wrapper
+div.app-header__wrapper
+    // App Header
+    div.app-header
+        div.app-header-container
+            div.app-header-content
+            
+                include ../logo/logo.pug
                     
-                    include ./search/search-button.pug
+                div.app-header__content-section
+                    div.app-header__content-section-top
 
-                    include ./header-tabbar-group/header-tabbar-group.pug
+                        include ./navigation/navigation-menu-secondary.pug
 
-                div.app-header__content-section-bottom
-                    
-                    include ./navigation/navigation-menu.pug
+                        //- include ../social-buttons/social-buttons.pug
+                        
+                        include ./search/search-button.pug
+
+                        include ./header-tabbar-group/header-tabbar-group.pug
+
+                    div.app-header__content-section-bottom
+                        
+                        include ./navigation/navigation-menu.pug
+    // App Header
+    include ../menu/menu.pug
+// App Header Wrapper
