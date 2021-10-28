@@ -1,0 +1,18 @@
+@include respond-above(sm) {
+
+    .section-header {
+        
+        h5, .section-title {
+            font-size: 38px !important;
+        }
+     }
+}
+
+@include respond-below(sm) {
+
+    .section-header {
+        h5, .section-title {
+            font-size: 32px !important;
+        }
+     }
+}

@@ -19,6 +19,7 @@
     a, p, span {
         display: inline-block;
         color: $accent-light-color;
+        font-size: px2em(13px);
         font-weight: 400;
         letter-spacing: px2em(0.3px);
         padding: px2em(8px) px2em(0px);

@@ -1233,7 +1233,7 @@ h1 {
         font-size: 0.9375em;
         font-weight: 500;
         letter-spacing: 0.01875em;
-        padding: 0.625em 0em;
+        padding: 0.5em 0em;
         cursor: pointer; }
         .menu-navigation ul li a:hover {
           text-decoration: underline;
@@ -1538,10 +1538,10 @@ h1 {
         gap: 4px;
         height: inherit;
         color: #fff;
-        font-size: 0.9375em;
+        font-size: 0.875em;
         font-weight: 500;
         letter-spacing: 0.01875em;
-        padding: 0.625em 0em;
+        padding: 0.375em 0em;
         cursor: pointer; }
         .footer-navigation ul li a:hover {
           text-decoration: underline; }
@@ -1708,6 +1708,7 @@ h1 {
   .footer-copyright a, .footer-copyright p, .footer-copyright span {
     display: inline-block;
     color: #FAC5D8;
+    font-size: 0.8125em;
     font-weight: 400;
     letter-spacing: 0.01875em;
     padding: 0.5em 0em;
@@ -2315,9 +2316,14 @@ h1 {
   padding-bottom: 20px;
   gap: 20px; }
   .section-header h5, .section-header .section-title {
-    font-size: 38px;
     font-weight: 500; }
 
+@media (min-width: 544px) {
+  .section-header h5, .section-header .section-title {
+    font-size: 38px !important; } }
+@media (max-width: 543px) {
+  .section-header h5, .section-header .section-title {
+    font-size: 32px !important; } }
 .section-footer {
   display: flex;
   width: 100%; }
