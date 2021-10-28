@@ -1,0 +1,6 @@
+$app-footer-section-bottom-background-color: $accent-color-darken-100;
+$app-footer-copyright-font-color: lighten($app-footer-section-bottom-background-color, 55%);
+$app-footer-contacts-font-color: $app-footer-copyright-font-color; //$accent-light-color
+
+$app-footer-background-color: $accent-color;
+$app-footer-navigation-font-color: lighten($app-footer-background-color, 55%);

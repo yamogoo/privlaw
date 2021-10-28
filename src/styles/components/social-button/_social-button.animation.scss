@@ -1,0 +1,11 @@
+.social-button {
+    @include transition(transform, 50ms, ease-out);
+
+    &:hover {
+        transform: scale(0.97);
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}

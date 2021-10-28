@@ -1457,8 +1457,6 @@ h1 {
         text-decoration: underline; }
   .app-footer .social-button-group {
     gap: 10px; }
-  .app-footer .social-button__icon {
-    font-size: 1.5em; }
 
 @media (min-width: 768px) {
   .app-footer-section-top-content {
@@ -1550,7 +1548,7 @@ h1 {
       .footer-navigation ul > ul li a {
         font-size: 0.875em !important;
         font-weight: 400 !important;
-        color: #FAC5D8 !important; }
+        color: #f0bed0 !important; }
         .footer-navigation ul > ul li a:hover {
           text-decoration: underline; }
 
@@ -1600,15 +1598,13 @@ h1 {
     width: auto;
     height: auto; }
   .footer-contacts h5 {
-    font-size: 0.9375em; }
-  .footer-contacts p, .footer-contacts h1, .footer-contacts h2, .footer-contacts h3, .footer-contacts h4, .footer-contacts h5 {
+    font-size: 0.9375em;
+    font-weight: 500;
     color: #fff; }
-  .footer-contacts h1, .footer-contacts h2, .footer-contacts h3, .footer-contacts h4, .footer-contacts h5 {
-    font-weight: 500; }
   .footer-contacts a, .footer-contacts p, .footer-contacts span {
-    color: #FAC5D8;
+    color: #e795b2;
     letter-spacing: 0.01875em;
-    padding: 0.5em 0em;
+    padding: 0.375em 0em;
     font-size: 0.875em;
     font-weight: 400;
     text-decoration: none; }
@@ -1707,7 +1703,7 @@ h1 {
     display: block; }
   .footer-copyright a, .footer-copyright p, .footer-copyright span {
     display: inline-block;
-    color: #FAC5D8;
+    color: #e795b2;
     font-size: 0.8125em;
     font-weight: 400;
     letter-spacing: 0.01875em;
@@ -2199,16 +2195,21 @@ h1 {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  gap: 0.375em; }
+  gap: 0.5em; }
 
 .social-button-container {
   padding: 0em;
   background-color: none;
   border-radius: 0px; }
 .social-button__icon {
-  font-family: icomoon;
-  font-size: 1.125em; }
+  font-family: icomoon; }
 
+@media (min-width: 544px) {
+  .social-button__icon {
+    font-size: 1.5em; } }
+@media (max-width: 543px) {
+  .social-button__icon {
+    font-size: 1.25em; } }
 /*
  * Theme definitions
  */
@@ -2221,6 +2222,13 @@ h1 {
 
 .social-button.inverse .social-button__icon {
   color: #fff !important; }
+
+.social-button {
+  transition: transform 50ms ease-out 0s; }
+  .social-button:hover {
+    transform: scale(0.97); }
+  .social-button:active {
+    transform: scale(0.95); }
 
 .search-button-icon {
   font-family: icomoon;

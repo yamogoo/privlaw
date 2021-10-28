@@ -1,0 +1,19 @@
+@include respond-above(sm) {
+
+    .social-button {
+
+        &__icon {
+            font-size: $social-button-font-size-lg;
+        }
+    }
+}
+
+@include respond-below(sm) {
+
+    .social-button {
+
+        &__icon {
+            font-size: $social-button-font-size-sm;
+        }
+    }
+}

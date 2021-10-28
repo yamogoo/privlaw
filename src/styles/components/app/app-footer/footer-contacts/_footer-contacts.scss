@@ -12,19 +12,14 @@
 
     h5 {
         font-size: px2em(15px);
-    }
-    p, h1, h2, h3, h4, h5 {
+        font-weight: 500;
         color: $white;
     }
 
-    h1, h2, h3, h4, h5 {
-        font-weight: 500;
-    }
-
     a, p, span {
-        color: $accent-light-color;
+        color: $app-footer-contacts-font-color;//$accent-light-color;
         letter-spacing: px2em(0.3px);
-        padding: px2em(8px) px2em(0px);
+        padding: px2em(6px) px2em(0px);
         font-size: px2em(14px);
         font-weight: 400;
         text-decoration: none;

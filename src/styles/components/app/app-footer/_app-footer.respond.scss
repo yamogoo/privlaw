@@ -33,3 +33,30 @@
         }
     }
 }
+
+// // Social Buttons
+// @include respond-above(sm) {
+
+//     .app-footer {
+        
+//         .social-button {
+
+//             &__icon {
+//                 font-size: $social-button-font-size-lg;
+//             }
+//         }
+//     }
+// }
+
+// @include respond-below(sm) {
+
+//     .app-footer {
+
+//         .social-button {
+
+//             &__icon {
+//                 font-size: $social-button-font-size-sm;
+//             }
+//         }
+//     }
+// }
