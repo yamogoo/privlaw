@@ -1,0 +1,14 @@
+%entity__item-image {
+    @include themify($themes-app) {
+        display: themed('visibility'); 
+    }
+    width: inherit;
+    border-radius: 4px;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 4px;
+    }
+}

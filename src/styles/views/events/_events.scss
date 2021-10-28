@@ -7,17 +7,10 @@
     &__item {
 
         &-container {
+            @extend %entity__item-container;
             height: 100%;
             padding-bottom: 32px;
             gap: 30px;
-
-            &:hover {
-
-                h3, .events__item-title {
-                    color: $accent-color;
-                    text-decoration: underline;
-                }
-            }
         }
 
         &-image {
@@ -50,24 +43,11 @@
         }
 
         &-tag{
-            font-size: px2em(14px);
-            font-weight: 400;
-            color: $neutral-color;
-        }
-
-        &-date-num {
-
-            p {
-                font-size: px2em(14px);
-                font-weight: 400;
-                color: $neutral-color;
-            }
+            @extend %entity__item-tag--clear-text;
         }
 
         &-title {
-            font-size: px2em(17px);
-            font-weight: 500;
-            color: $primary-color;
+            @extend %entity__item-title;
         }
 
         &-tag-state {

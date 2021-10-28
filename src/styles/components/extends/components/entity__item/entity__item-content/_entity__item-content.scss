@@ -1,0 +1,6 @@
+%entity__item-content {
+    @include flexbox();
+    @include flex-direction(column);
+    gap: 15px;
+    padding-top: 20px;
+}

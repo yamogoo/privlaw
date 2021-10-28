@@ -33,3 +33,9 @@ $item-tag-border-radius: px2em(3px);
     left: 8px;
     border-radius: $item-tag-border-radius;
 }
+
+%entity__item-tag--clear-text {
+    font-size: px2em(14px);
+    font-weight: 400;
+    color: $neutral-color;
+}

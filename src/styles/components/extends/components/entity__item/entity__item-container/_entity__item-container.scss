@@ -1,0 +1,11 @@
+%entity__item-container {
+    padding-bottom: 30px;
+
+    &:hover {
+
+        h3, %entity__item-title {
+            color: $accent-color;
+            text-decoration: underline;
+        }
+    }
+}

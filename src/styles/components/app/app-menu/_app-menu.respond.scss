@@ -10,7 +10,7 @@
 @include respond-between(sm, xl) {
 
     .app-menu {
-        display: none;
+        display: block;
         top: $app-header-height-md;
         height: calc(100% - #{$app-header-height-md});
     }

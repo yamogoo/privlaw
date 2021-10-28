@@ -1,4 +1,4 @@
-.news {
+.photos-and-videos {
 
     &-container {
         @extend %entities-container-news;
@@ -13,12 +13,6 @@
 
         &-image {
             @extend %entity__item-image;
-        }
-
-        &-tag {
-            @extend %entity__item-tag--news;
-            color: $primary-color;
-            background-color: rgba($white, 0.9);
         }
 
         &-content {
