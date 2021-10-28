@@ -1,0 +1,12 @@
+$app-logo-width: 126px;
+$app-logo-height: 65px;
+$app-logo-aspect-ratio: $app-logo-height/$app-logo-width;
+
+$app-logo-width-lg: $app-logo-width;
+$app-logo-height-lg: $app-logo-width-lg*$app-logo-aspect-ratio;
+
+$app-logo-width-md: 96px;
+$app-logo-height-md: $app-logo-width-md*$app-logo-aspect-ratio;
+
+$app-logo-width-sm: 88px;
+$app-logo-height-sm: $app-logo-width-sm*$app-logo-aspect-ratio;

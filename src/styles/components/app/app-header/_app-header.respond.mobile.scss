@@ -1,3 +1,9 @@
-.app-header {
-    
+@include respond-below(xl) {
+
+    .app-header {
+
+        &__content-section {
+            display: none;
+        }
+    }
 }

@@ -575,12 +575,11 @@ h1 {
   -ms-flex-align: center;
   align-items: center; }
   .app-logo-img {
-    width: 126px;
-    height: 65px;
     padding: 0 40px;
     background-image: url(../assets/logo/logo-inverse.svg);
     background-repeat: no-repeat;
-    background-position: left; }
+    background-position: left;
+    background-size: contain; }
 
 .app-logo-descriptor {
   display: -webkit-box;
@@ -604,11 +603,22 @@ h1 {
     white-space: nowrap;
     color: #fff; }
 
+@media (min-width: 992px) {
+  .app-logo-img {
+    width: 126px;
+    height: 65px; } }
+@media (min-width: 544px) and (max-width: 991px) {
+  .app-logo-img {
+    width: 96px;
+    height: 49.52381px; } }
+@media (max-width: 543px) {
+  .app-logo-img {
+    width: 88px;
+    height: 45.39683px; } }
 .app-header {
   display: block;
   position: relative;
   width: 100%;
-  height: 119px;
   border-bottom-style: solid;
   border-bottom-width: 1px;
   border-bottom-color: #e2e8f0;
@@ -681,6 +691,15 @@ h1 {
   .app-header:hover {
     border-bottom-color: #e2e8f0; }
 
+@media (min-width: 1280px) {
+  .app-header {
+    height: 119px; } }
+@media (min-width: 544px) and (max-width: 1279px) {
+  .app-header {
+    height: 100px; } }
+@media (max-width: 543px) {
+  .app-header {
+    height: 88px; } }
 @media (max-width: 1279px) {
   .app-header__content-section {
     display: none; } }
@@ -968,7 +987,7 @@ h1 {
   overflow: hidden;
   z-index: 9999; }
   .app-menu-container {
-    height: inherit;
+    height: 100%;
     overflow: auto; }
   .app-menu-content {
     padding-top: 50px;
@@ -976,10 +995,19 @@ h1 {
 
 @media (min-width: 1280px) {
   .app-menu {
-    display: none; } }
-@media (max-width: 1279px) {
+    display: none;
+    top: 119px;
+    height: calc(100% - 119px); } }
+@media (min-width: 544px) and (max-width: 1279px) {
   .app-menu {
-    display: block; } }
+    display: block;
+    top: 100px;
+    height: calc(100% - 100px); } }
+@media (max-width: 543px) {
+  .app-menu {
+    display: block;
+    top: 88px;
+    height: calc(100% - 88px); } }
 .menu-navigation {
   width: 100%; }
   .menu-navigation-container {

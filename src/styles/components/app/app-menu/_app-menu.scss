@@ -12,7 +12,7 @@
 
     &-container {
         @extend %main-container;
-        height: inherit;
+        height: 100%;
         overflow: auto;
     }
 

@@ -1,23 +1,18 @@
-// .app-header {
-
-//     &-container {
-//         @extend %main-container;
-//     }
-// }
-
-@include respond-above(lg) {
-    // .app-header {
-    //     &__content-section {
-    //     }
-    // }
-}
-
-@include respond-below(xl) {
+@include respond-above(xl) {
 
     .app-header {
+        height: $app-header-height-lg;
+    }
+}
+@include respond-between(sm, xl) {
 
-        &__content-section {
-            display: none;
-        }
+    .app-header {
+        height: $app-header-height-md;
+    }
+}
+@include respond-below(sm) {
+
+    .app-header {
+        height: $app-header-height-sm;
     }
 }

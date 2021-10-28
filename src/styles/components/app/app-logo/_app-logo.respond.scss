@@ -1,0 +1,29 @@
+@include respond-above(lg) {
+
+    .app-logo {
+
+        &-img {
+            @include box($app-logo-width-lg, $app-logo-height-lg);
+        }
+    }
+}
+
+@include respond-between(sm, lg) {
+
+    .app-logo {
+
+        &-img {
+            @include box($app-logo-width-md, $app-logo-height-md);
+        }
+    }
+}
+
+@include respond-below(sm) {
+
+    .app-logo {
+
+        &-img {
+            @include box($app-logo-width-sm, $app-logo-height-sm);
+        }
+    }
+}
