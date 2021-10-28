@@ -428,6 +428,9 @@ h1 {
   width: auto;
   overflow: hidden; }
 
+@media (max-width: 543px) {
+  .news__item:not(:nth-last-child(1)), .photos-and-videos__item:not(:nth-last-child(1)) {
+    border-bottom: 1px solid #e2e8f0; } }
 .news__item-container, .events__item-container, .photos-and-videos__item-container {
   padding-bottom: 30px; }
   .news__item-container:hover h3, .events__item-container:hover h3, .photos-and-videos__item-container:hover h3, .news__item-container:hover .news__item-title, .events__item-container:hover .news__item-title, .photos-and-videos__item-container:hover .news__item-title, .news__item-container:hover .events__item-title, .events__item-container:hover .events__item-title, .photos-and-videos__item-container:hover .events__item-title, .news__item-container:hover .photos-and-videos__item-title, .events__item-container:hover .photos-and-videos__item-title, .photos-and-videos__item-container:hover .photos-and-videos__item-title {
@@ -2465,6 +2468,9 @@ h1 {
   height: 100%;
   padding-bottom: 32px;
   gap: 30px; }
+  .events__item-container:hover h3, .events__item-container:hover .events__item-title {
+    color: #7a1c3e;
+    text-decoration: underline; }
 .events__item-image {
   position: relative;
   border-radius: 4px; }
