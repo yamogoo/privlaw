@@ -1,0 +1,104 @@
+@include respond-above(xl) {
+
+    .section {
+        
+        &-container {
+            gap: 30px;
+            padding-top: 40px;
+        }
+
+        // If First Section
+        &:nth-child(1) {
+
+            .section-container {
+                padding-top: 80px;
+            }
+        }
+
+        // If not Last Section
+        &:not(:nth-last-child(1)) {
+
+            .section-container {
+                padding-bottom: 60px;
+            }
+        }
+
+        // If Last Section
+        &:nth-last-child(1) {
+
+            .section-container {
+                padding-bottom: 80px;
+            }
+        }
+    }
+}
+
+@include respond-between(sm, xl) {
+
+    .section {
+        
+        &-container {
+            gap: 30px;
+            padding-top: 40px;
+        }
+
+        // If First Section
+        &:nth-child(1) {
+
+            .section-container {
+                padding-top: 80px;
+            }
+        }
+
+        // If not Last Section
+        &:not(:nth-last-child(1)) {
+
+            .section-container {
+                padding-bottom: 60px;
+            }
+        }
+
+        // If Last Section
+        &:nth-last-child(1) {
+
+            .section-container {
+                padding-bottom: 80px;
+            }
+        }
+    }
+}
+
+@include respond-below(sm) {
+
+    .section {
+        
+        &-container {
+            gap: 20px;
+            padding-top: 30px;
+        }
+
+        // If First Section
+        &:nth-child(1) {
+
+            .section-container {
+                padding-top: 30px;
+            }
+        }
+
+        // If not Last Section
+        &:not(:nth-last-child(1)) {
+
+            .section-container {
+                padding-bottom: 30px;
+            }
+        }
+
+        // If Last Section
+        &:nth-last-child(1) {
+
+            .section-container {
+                padding-bottom: 30px;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@
 
     %entities-container-events {
         // gap: 30px;
+        gap: 50px;
         grid-template-columns: 1fr 1fr;
     }
 }
@@ -12,6 +13,7 @@
 
     %entities-container-events {
         grid-template-columns: 1fr;
+        gap: 30px;
         // gap: 30px;
     }
 }
