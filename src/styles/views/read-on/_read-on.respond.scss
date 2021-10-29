@@ -1,0 +1,27 @@
+@include respond-above(lg) {
+
+    .read-on {
+        width: $read-on-width-lg;
+    }
+}
+
+@include respond-between(md,lg) {
+
+    .read-on {
+        width: $read-on-width-md;
+    }
+}
+
+@include respond-between(sm,md) {
+
+    .read-on {
+        width: $read-on-width-md;
+    }
+}
+
+@include respond-below(sm) {
+
+    .read-on {
+        width: $read-on-width-sm;
+    }
+}

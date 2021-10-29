@@ -24,5 +24,6 @@ p {
 @for $i from 1 through 6 {
     h#{7 - $i} {
         line-height: #{$text-line-height};
+        font-weight: 500;
     }
 }
