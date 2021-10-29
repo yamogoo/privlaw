@@ -169,7 +169,7 @@ $(document).ready(function () {
         animType: 'svg',
         loop: false,
         autoplay: false,
-        path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json'
+        path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json' //'assets/lottie/app-menu-toggle-button.json'
     });
 
     //
