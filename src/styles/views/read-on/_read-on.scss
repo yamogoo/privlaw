@@ -1,0 +1,41 @@
+.read-on {
+
+    &-container {
+
+    }
+
+    &-header {
+
+    }
+
+    &-body {
+
+        &-container {
+            @include flexbox();
+            @include flex-direction(column);
+            gap: 30px;
+        }
+        
+    }
+
+    &__item {
+
+        &-container {
+            @include flexbox();
+            @include flex-direction(column);
+            gap: 10px;
+        }
+
+        &-tag {
+            @extend %entity__item-tag--clear-text--sm;
+        }
+
+        &-date {
+            @extend %entity__item-date--sm;
+        }
+
+        &-title {
+            @extend %entity__item-title--sm;
+        }
+    }
+}
