@@ -2,8 +2,10 @@
 
 $nav-line-color: 'neutralColor';
 $nav-line-active-color: 'accentColor';
-$nav-line-gap: px2em(20px);
-$nav-line-icon-offset-x: px2em(20px);
+$nav-line-gap: px2em(50px);
+// $nav-line-icon-offset-x: px2em(20px);
+$nav-line-icon-offset-x: px2em(-35px);
+$nav-line-icon-offset-y: px2em(3px);
 
 .nav-line {
     // padding-top: 30px;
@@ -46,6 +48,10 @@ $nav-line-icon-offset-x: px2em(20px);
                 gap: $nav-line-icon-offset-x;
 
                 &::after {
+                    position: absolute;
+                    right: $nav-line-icon-offset-x;
+                    line-height: 1.0;
+                    top: $nav-line-icon-offset-y;
                     font-family: icomoon;
                     @extend .icon-navigation-line:before !optional;
                     color: inherit;

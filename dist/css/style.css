@@ -2290,7 +2290,7 @@ h1 {
 .nav-line-container {
   display: flex;
   position: relative;
-  gap: 1.25em; }
+  gap: 3.125em; }
 .nav-line__item {
   display: -webkit-box;
   display: -moz-box;
@@ -2312,12 +2312,16 @@ h1 {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    gap: 1.25em; }
+    gap: -2.1875em; }
     .theme-app--normal .nav-line__item:not(:last-child) a {
       color: #9093a2 !important; }
     .theme-app--poor-vision .nav-line__item:not(:last-child) a {
       color: #000 !important; }
     .nav-line__item:not(:last-child) a::after {
+      position: absolute;
+      right: -2.1875em;
+      line-height: 1.0;
+      top: 0.1875em;
       font-family: icomoon;
       color: inherit; }
   .nav-line__item:not(:last-child):hover a, .nav-line__item:not(:last-child):focus a {
