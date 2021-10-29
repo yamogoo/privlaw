@@ -19,7 +19,7 @@
     a, p, span {
         display: inline-block;
         color: $app-footer-copyright-font-color;//$accent-light-color;
-        font-size: px2em(13px);
+        font-size: px2em(14px);
         font-weight: 400;
         letter-spacing: px2em(0.3px);
         @include respond-above (sm) {

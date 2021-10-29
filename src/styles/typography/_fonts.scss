@@ -1,5 +1,17 @@
 @font-face {
     font-family: 'Graphik LCG';
+    src: url('GraphikLCG-RegularItalic.eot');
+    src: local('Graphik LCG Regular Italic'), local('GraphikLCG-RegularItalic'),
+        url('../fonts/GraphikLCG/GraphikLCG-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GraphikLCG/GraphikLCG-RegularItalic.woff2') format('woff2'),
+        url('../fonts/GraphikLCG/GraphikLCG-RegularItalic.woff') format('woff'),
+        url('../fonts/GraphikLCG/GraphikLCG-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Graphik LCG';
     src: url('GraphikLCG-MediumItalic.eot');
     src: local('Graphik LCG Medium Italic'), local('GraphikLCG-MediumItalic'),
         url('../fonts/GraphikLCG/GraphikLCG-MediumItalic.eot?#iefix') format('embedded-opentype'),

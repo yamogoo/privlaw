@@ -12,4 +12,8 @@
         // font-size: 38px;
         font-weight: 500;
     }
+
+    p, .section-date {
+        @extend %entity__item-date;
+    }
 }
