@@ -5,7 +5,16 @@
 }
 
 %entity__item-title--sm {
-    font-size: px2em(15px);
+    // font-size: px2em(16px);
+    @include respond-above (lg) {
+        font-size: px2em(17px);
+    }
+    @include respond-between (md, lg) {
+        font-size: px2em(16px);
+    }
+    @include respond-below (md) {
+        font-size: px2em(14px);
+    }
     font-weight: 500;
     color: $primary-color;
 }
