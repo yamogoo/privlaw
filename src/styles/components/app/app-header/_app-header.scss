@@ -58,3 +58,7 @@
         border-bottom-color: $app-header-border-bottom-color;
     }
 }
+
+.tab-button:not(.last) {
+    display: none;
+}

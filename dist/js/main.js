@@ -161,18 +161,24 @@ $(document).ready(function () {
 
     //
     //
+    // Lotties
+
+    // Menu Toggle Buttton
+    var iconAppMenuToggleButton = bodymovin.loadAnimation({
+        wrapper: document.getElementById('app-menu-toggle-button-icon'),
+        animType: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json'
+    });
+
+    //
+    //
     // Functions
 
-    // Toggle class by click on this element
-    function toggleClassByClick(el, cl) {
-        el.on("click", function (e) {
-            $(this).toggleClass(cl);
-            e.preventDefault();
-        });
-    }
-
-    // Toggle class of first element and change class of second element depands on class of first element
-    function changeClassByClickOnElement(el1, cl1, el2, cl2) {
+    // Toggle class of first element and change class of second element (optional)
+    // depands on class of first element and play lottie of first element (optional)
+    function changeClassByClickOnElement(el1, cl1, el2 = false, cl2 = false, elLottie1 = false) {
         var state = false;
         el1.on("click", function (e) {
             $(this).toggleClass(cl1);
@@ -180,8 +186,12 @@ $(document).ready(function () {
             state = !state;
             if (state === true) {
                 el2.addClass(cl2)
+                elLottie1.setDirection(1);
+                elLottie1.play();
             } else {
                 el2.removeClass(cl2)
+                elLottie1.setDirection(-1);
+                elLottie1.play();
             }
         });
     }
@@ -198,6 +208,7 @@ $(document).ready(function () {
     // Actions
 
     // Show app-menu by click on app-menu-toggle-button
-    changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active');
-
+    changeClassByClickOnElement($appMenuToggleButton, 'active' ,$appMenu, 'active', iconAppMenuToggleButton);
 });
+
+  

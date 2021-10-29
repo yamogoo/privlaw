@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 
+
 $(document).ready(function () {
     // rendering body
     // (function renderPage() {
@@ -17,8 +18,11 @@ $(document).ready(function () {
 
     // })();
 
+    // Lottie
+    
 
-    //Main Slider
+
+    // Main Slider
     $('.main-slider').owlCarousel({
         autoplay: true,
         autoplayTimeout: 5000,
@@ -35,7 +39,7 @@ $(document).ready(function () {
         }
     })
 
-    //Section Slider
+    // Section Slider
     $('.section-slider').owlCarousel({
         autoplay: true,
         autoplayTimeout: 5000,

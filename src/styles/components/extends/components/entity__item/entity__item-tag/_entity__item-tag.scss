@@ -38,10 +38,15 @@ $item-tag-border-radius: px2em(3px);
     font-size: px2em(14px);
     font-weight: 400;
     color: $neutral-color;
+    // padding: px2em(4px) px2em(10px);
+    // border: 1px solid lighten($neutral-color, 15%);
 }
 
 %entity__item-tag--clear-text--sm {
+    display: inline-flex;
     font-size: px2em(12px);
     font-weight: 400;
-    color: $neutral-color;
+    color: $neutral-color;//lighten($accent-color, 10%);
+    // padding: px2em(4px) px2em(10px);
+    // border: 1px solid lighten($neutral-color, 30%);
 }
