@@ -2278,8 +2278,6 @@ h1 {
   width: auto;
   height: auto;
   list-style: none; }
-  .nav-line__item a {
-    line-height: 1.0; }
   .theme-app--normal .nav-line__item:last-child a {
     color: #7a1c3e; }
   .theme-app--poor-vision .nav-line__item:last-child a {
@@ -2357,6 +2355,11 @@ h1 {
 @media (max-width: 543px) {
   .section-header h5, .section-header .section-title {
     font-size: 32px !important; } }
+.section-body * {
+  line-height: 1.68; }
+.section-body p {
+  font-size: 1.125em; }
+
 .section-footer {
   display: flex;
   width: 100%; }

@@ -1,3 +1,11 @@
 .section-body {
     //
+
+    * {
+        line-height: 1.68;
+    }
+
+    p {
+        font-size: px2em(18px);
+    }
 }
