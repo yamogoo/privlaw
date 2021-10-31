@@ -2,5 +2,12 @@
 div.app-search-field#app-search-field
     div.app-search-field-container
         div.app-search-field-content
-            input(type="text")
+            div.search
+                div.search-container
+                    div.search-group
+                        input(type="text" placeholder="Введите поисковый запрос")
+                    div.search-group
+                        include ../filter/filter-dropdown-for-search.pug
+                        button(type="submit").app-search-button-start#search-button-start Поиск
+                        button.app-search-button-close#app-search-button-close Закрыть
 // Search Field

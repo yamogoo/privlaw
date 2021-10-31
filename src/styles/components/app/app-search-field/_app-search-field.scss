@@ -5,16 +5,20 @@
     width: 100vw;
     background-color: $white;
     @extend %app-header--height;
-    z-index: 9999;
+    border-bottom-style: solid;
+    border-bottom-width: $app-header-border-bottom-width;
+    border-bottom-color: $app-header-border-bottom-color;
+    // box-shadow: 0px 4px 16px rgba($app-header-shadow-color, 0.1);
 
     // height: 
 
     &-container {
         @extend %main-container;
+        padding-top: 20px;
+        padding-bottom: 20px;
     }
 
-    .app-search-field.active {
-        // display: block;
-        transform: translateY(0px);
+    &-content {
+        @include flexbox();
     }
 }

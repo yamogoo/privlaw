@@ -190,14 +190,15 @@ $(document).ready(function () {
     // Toggle a class of the first element and change the class of the second element (optional)
     // depands on class of the first element and play the lottie icon of the first element (optional)
     function changeClassByClickOnElement(el1, cl1, el2 = false, cl2 = false, elLottie1 = false) {
-        st1 = false
         el1.on("click", function (e) {
+            st1 = false;
             if (el1.hasClass(cl1)) {
                 $(this).removeClass(cl1)
             } else {
                 $(this).toggleClass(cl1)
             }
             e.preventDefault();
+            console.log("done");
             st1 = !st1;
             if (el2 != false) {
                 if (st1 === true) {
@@ -226,14 +227,13 @@ $(document).ready(function () {
     }
 
     function toggleSelfClassByClick(el1, cl1) {
-        st1 = false;
+        var state = false;
         el1.on("click", function (e) {
             if (el1.hasClass(cl1)) {
-                $(this).removeClass(cl1);
+                $(this).removeClass(cl1)
             } else {
                 $(this).toggleClass(cl1)
             }
-            st1 = !st1;
             e.preventDefault();
         });
     }
@@ -252,51 +252,20 @@ $(document).ready(function () {
     //
     // Actions
 
-    // function search() {
-    //     if (!$appSearchField('active')) {
-    //         changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
-    //     } else if ($appSearchField.hasClass('active')) {
-    //         changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
-    //     }
-    // };
-
-
-    function search() {
-        $appSearchButton.on("click", function() {
-            if (!$appSearchField.hasClass('active')) {
-                $appSearchField.addClass('active');
-            }
-        });
-        $appSearchButtonClose.on("click", function() {
-            if ($appSearchField.hasClass('active')) {
-                $appSearchField.removeClass('active');
-            }
-        });
-    }
-
-
-
-    function menu() {
-        changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
-    }
-
-    menu();
-    search();
-
 
     // Menu.on("click")
     // Show app-menu by click on app-menu-toggle-button
-    // function showSearch() {
-    //     changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
-    //     changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
-    // };
+    function showSearch() {
+        changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
+        changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
+    };
 
-    // function showMenu() {
-    //     changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
-    // };
+    function showMenu() {
+        changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
+    };
 
-    // showSearch();
-    // showMenu();
+    showSearch();
+    showMenu();
 });
 
   

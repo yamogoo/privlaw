@@ -1,0 +1,21 @@
+.search {
+    width: 100%;
+
+    &-container {
+        @include flexbox();
+        width: 100%;
+    }
+    
+    input {
+        width: 100%;
+        border: none;
+        font-size: 20px;
+        border-bottom: 1px solid $divider-color;
+    }
+
+    &-group {
+        @include flexbox();
+        width: 100%;
+    }
+
+}

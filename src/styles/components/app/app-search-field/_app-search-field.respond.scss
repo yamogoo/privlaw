@@ -16,3 +16,12 @@
         transform: translateY(-$app-header-height-sm);
     }
 }
+
+.app-search-field.active {
+    z-index: 9999;
+}
+
+.app-search-field.active {
+    transform: translateY(0px);
+    z-index: 9999;
+}

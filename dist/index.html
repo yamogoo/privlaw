@@ -139,7 +139,32 @@
         <div class="app-search-field" id="app-search-field">
           <div class="app-search-field-container">
             <div class="app-search-field-content">
-              <input type="text">
+              <div class="search">
+                <div class="search-container">
+                  <div class="search-group">
+                    <input type="text" placeholder="Введите поисковый запрос">
+                  </div>
+                  <div class="search-group">
+                    <!-- Filter Dropdown-->
+                    <div class="filter-dropdown">
+                      <div class="filter-dropdown-container">
+                        <input type="radio" name="tags"><span id="text-tags">Все разделы</span>
+                        <div class="filter-dropdown__expansion-icon"></div>
+                      </div>
+                      <div class="filter-dropdown-list">
+                        <p class="active">Все разделы</p>
+                        <p>Мероприятия</p>
+                        <p>Новости</p>
+                        <p>Персоналии</p>
+                        <p>Фото и видео</p>
+                      </div>
+                    </div>
+                    <!-- Filter Dropdown-->
+                    <button class="app-search-button-start" type="submit" id="search-button-start">Поиск</button>
+                    <button class="app-search-button-close" id="app-search-button-close">Закрыть</button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

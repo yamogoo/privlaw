@@ -189,8 +189,8 @@ $(document).ready(function () {
 
     // Toggle a class of the first element and change the class of the second element (optional)
     // depands on class of the first element and play the lottie icon of the first element (optional)
-    function changeClassByClickOnElement(el1, cl1, el2 = false, cl2 = false, elLottie1 = false) {
-        st1 = false
+    function changeClassByClickOnElement(el1, cl1, st1 = false, el2 = false, cl2 = false, st2 = false, elLottie1 = false) {
+        // var state = false;
         el1.on("click", function (e) {
             if (el1.hasClass(cl1)) {
                 $(this).removeClass(cl1)
@@ -198,13 +198,18 @@ $(document).ready(function () {
                 $(this).toggleClass(cl1)
             }
             e.preventDefault();
-            st1 = !st1;
+            console.log("done");
+            st1.state = !st1.state;
             if (el2 != false) {
                 if (st1 === true) {
                     if (el2.hasClass(cl2)) {
                         el2.removeClass(cl2);
+                        st2.state = !st2.state;
+                        console.log("done");
                     } else {
                         el2.addClass(cl2);
+                        st2.state = !st2.state;
+                        console.log("done");
                     }
                     if (elLottie1 != false) {
                         elLottie1.setDirection(1);
@@ -213,8 +218,12 @@ $(document).ready(function () {
                 } else if (st1 === false) {
                     if (el2.hasClass(cl2)) {
                         el2.removeClass(cl2);
+                        st2.state = !st2.state;
+                        console.log("done");
                     } else {
                         el2.addClass(cl2);
+                        st2.state = !st2.state;
+                        console.log("done");
                     }
                     if (elLottie1 != false) {
                         elLottie1.setDirection(-1);
@@ -226,14 +235,13 @@ $(document).ready(function () {
     }
 
     function toggleSelfClassByClick(el1, cl1) {
-        st1 = false;
+        var state = false;
         el1.on("click", function (e) {
             if (el1.hasClass(cl1)) {
-                $(this).removeClass(cl1);
+                $(this).removeClass(cl1)
             } else {
                 $(this).toggleClass(cl1)
             }
-            st1 = !st1;
             e.preventDefault();
         });
     }
@@ -247,56 +255,38 @@ $(document).ready(function () {
     let $appSearchButton = $('#app-search-button');
     let $appSearchField = $('#app-search-field');
     let $appSearchButtonClose = $('#app-search-button-close');
-    
     //
     //
     // Actions
 
-    // function search() {
-    //     if (!$appSearchField('active')) {
-    //         changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
-    //     } else if ($appSearchField.hasClass('active')) {
-    //         changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
-    //     }
-    // };
+    //
+    //
+    // Classes
 
-
-    function search() {
-        $appSearchButton.on("click", function() {
-            if (!$appSearchField.hasClass('active')) {
-                $appSearchField.addClass('active');
-            }
-        });
-        $appSearchButtonClose.on("click", function() {
-            if ($appSearchField.hasClass('active')) {
-                $appSearchField.removeClass('active');
-            }
-        });
+    class Menu {
+        
     }
 
-
-
-    function menu() {
-        changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
-    }
-
-    menu();
-    search();
-
-
-    // Menu.on("click")
     // Show app-menu by click on app-menu-toggle-button
-    // function showSearch() {
-    //     changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
-    //     changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
-    // };
+    function showSearch() {
+        var stateOfSearchField = {
+            state: false
+        }
+        if (stateOfSearchField === true) {
+            changeClassByClickOnElement($appSearchButton, 'active', false, $appSearchField, 'active', stateOfSearchField);
+            alert(done);
+        } else {
+            changeClassByClickOnElement($appSearchButtonClose, 'active', false, $appSearchField, 'active', stateOfSearchField);
+        }
+        
+        // }
+    };
+    function showMenu() {
+        changeClassByClickOnElement($appMenuToggleButton, 'active', false, $appMenu, 'active', false, $iconAppMenuToggleButton);
+    };
 
-    // function showMenu() {
-    //     changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
-    // };
-
-    // showSearch();
-    // showMenu();
+    showSearch();
+    showMenu();
 });
 
   
