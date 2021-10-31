@@ -1,0 +1,20 @@
+.app-search-field {
+    // display: none;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    background-color: $white;
+    @extend %app-header--height;
+    z-index: 9999;
+
+    // height: 
+
+    &-container {
+        @extend %main-container;
+    }
+
+    .app-search-field.active {
+        // display: block;
+        transform: translateY(0px);
+    }
+}

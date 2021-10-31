@@ -7,6 +7,7 @@
     border-bottom-width: $app-header-border-bottom-width;
     border-bottom-color: $app-header-border-bottom-color;
     box-shadow: 0px 4px 16px rgba($app-header-shadow-color, 0.1);
+    @extend %app-header--height;
     z-index: 9999;
     // background-color: darken($accent-color, 3%);//rgba($accent-color, 1.0);//Theme
 

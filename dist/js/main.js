@@ -164,7 +164,7 @@ $(document).ready(function () {
     // Lotties
 
     // Menu Toggle Buttton
-    var iconAppMenuToggleButton = bodymovin.loadAnimation({
+    var $iconAppMenuToggleButton = bodymovin.loadAnimation({
         wrapper: document.getElementById('app-menu-toggle-button-icon'),
         animType: 'svg',
         loop: false,
@@ -172,26 +172,43 @@ $(document).ready(function () {
         path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json' //'assets/lottie/app-menu-toggle-button.json'
     });
 
+    // var iconAppMenuToggleButton = LottieInteractivity.create({
+    //     wrapper: document.getElementById('app-menu-toggle-button-icon'),
+    //     mode:"cursor",
+    //     player: "#seventhLottie",
+    //     // animationData: 
+    //     // path: 'assets/lottie/app-menu-toggle-button.json'//'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json' //
+    // });
+
+
+    // iconAppMenuToggleButton.addEventListener('DOMLoaded',startAnimation);
+
     //
     //
     // Functions
 
-    // Toggle class of first element and change class of second element (optional)
-    // depands on class of first element and play lottie of first element (optional)
+    // Toggle a class of the first element and change the class of the second element (optional)
+    // depands on class of the first element and play the lottie icon of the first element (optional)
     function changeClassByClickOnElement(el1, cl1, el2 = false, cl2 = false, elLottie1 = false) {
         var state = false;
         el1.on("click", function (e) {
             $(this).toggleClass(cl1);
             e.preventDefault();
             state = !state;
-            if (state === true) {
-                el2.addClass(cl2)
-                elLottie1.setDirection(1);
-                elLottie1.play();
-            } else {
-                el2.removeClass(cl2)
-                elLottie1.setDirection(-1);
-                elLottie1.play();
+            if (el2 != false) {
+                if (state === true) {
+                    el2.addClass(cl2)
+                    if (elLottie1 != false) {
+                        elLottie1.setDirection(1);
+                        elLottie1.play();
+                    }
+                } else if (state === false) {
+                    el2.removeClass(cl2)
+                    if (elLottie1 != false) {
+                        elLottie1.setDirection(-1);
+                        elLottie1.play();
+                    }
+                }
             }
         });
     }
@@ -202,13 +219,15 @@ $(document).ready(function () {
 
     let $appMenuToggleButton = $('#app-menu-toggle-button');
     let $appMenu = $('#app-menu');
-
+    let $appSearchButton = $('#app-search-button');
+    let $appSearchField = $('#app-search-field');
     //
     //
     // Actions
 
     // Show app-menu by click on app-menu-toggle-button
-    changeClassByClickOnElement($appMenuToggleButton, 'active' ,$appMenu, 'active', iconAppMenuToggleButton);
+    changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
+    changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
 });
 
   

@@ -1,0 +1,11 @@
+@include respond-above(xl) {
+    #app-menu-toggle-button {
+        display: none;
+    }
+}
+
+@include respond-below(xl) {
+    #app-menu-toggle-button {
+        display: block;
+    }
+}

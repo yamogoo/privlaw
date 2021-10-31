@@ -1,0 +1,18 @@
+@include respond-above(xl) {
+
+    .app-search-field:not(.active) {
+        transform: translateY(-$app-header-height-lg);
+    }
+}
+@include respond-between(sm, xl) {
+
+    .app-search-field:not(.active) {
+        transform: translateY(-$app-header-height-md);
+    }
+}
+@include respond-below(sm) {
+
+    .app-search-field:not(.active) {
+        transform: translateY(-$app-header-height-sm);
+    }
+}
