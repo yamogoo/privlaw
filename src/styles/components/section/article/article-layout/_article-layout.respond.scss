@@ -1,0 +1,23 @@
+@include respond-above (sm) {
+    
+    .article {
+
+        &-container-columns {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+        }
+    }
+}
+
+@include respond-below (sm) {
+    
+    .article {
+
+        &-container-columns {
+            display: grid;
+            grid-template-rows: 1fr;
+            gap: 30px;
+        }
+    }
+}

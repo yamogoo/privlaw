@@ -1,23 +1,23 @@
-@include respond-above (sm) {
+// @include respond-above (sm) {
     
-    .article {
+//     .article {
 
-        &-container-columns {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 60px;
-        }
-    }
-}
+//         &-container-columns {
+//             display: grid;
+//             grid-template-columns: 1fr auto;
+//             gap: 60px;
+//         }
+//     }
+// }
 
-@include respond-below (sm) {
+// @include respond-below (sm) {
     
-    .article {
+//     .article {
 
-        &-container-columns {
-            display: grid;
-            grid-template-rows: 1fr;
-            gap: 30px;
-        }
-    }
-}
+//         &-container-columns {
+//             display: grid;
+//             grid-template-rows: 1fr;
+//             gap: 30px;
+//         }
+//     }
+// }

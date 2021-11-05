@@ -2631,6 +2631,14 @@ h1 {
   height: 320px;
   object-fit: cover; }
 
+.article-content {
+  width: 100%; }
+.article-side-content {
+  width: 200px; }
+  .article-side-content-container {
+    position: sticky;
+    top: 50px; }
+
 @media (min-width: 544px) {
   .article-container-columns {
     display: grid;
