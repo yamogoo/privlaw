@@ -425,7 +425,7 @@ h1 {
     flex-direction: column;
     gap: 15px;
     padding-top: 20px; }
-  .section-header p p, .section-header .section-date p, .news__item-date p, .photos-and-videos__item-date p {
+  .section-header p p, .section-header .section-date p, .article-date p, .news__item-date p, .photos-and-videos__item-date p {
     font-size: 0.875em;
     font-weight: 400;
     color: #9093a2; }
@@ -541,7 +541,7 @@ h1 {
   font-weight: 400;
   color: #9093a2; }
 
-.section-header p, .section-header .section-date, .news__item-date, .photos-and-videos__item-date {
+.section-header p, .section-header .section-date, .article-date, .news__item-date, .photos-and-videos__item-date {
   font-size: 0.875em;
   font-weight: 400;
   color: #9093a2; }
@@ -2497,26 +2497,6 @@ h1 {
     display: grid;
     grid-template-rows: 1fr;
     gap: 30px; } }
-.section-article *, .section-body article * {
-  line-height: 1.72; }
-.section-article p, .section-body article p {
-  font-size: 1.0625em; }
-.section-article q, .section-body article q {
-  display: block;
-  font-style: italic;
-  font-size: 1.1em;
-  font-weight: 400;
-  padding: 1.875em 1.875em 1.875em 3.125em;
-  margin: 1.875em 0em;
-  background-color: #F0F0F0; }
-  .section-article q::before, .section-body article q::before {
-    content: '"';
-    position: absolute;
-    transform: translate(-30px, -30px);
-    font-size: 44px; }
-  .section-article q::after, .section-body article q::after {
-    display: none; }
-
 .section-side-panel {
   width: 100%; }
 
@@ -2621,6 +2601,46 @@ h1 {
   .section-button:active {
     transform: scale(0.97); }
 
+.article * {
+  line-height: 1.72; }
+.article p {
+  font-size: 1.0625em; }
+.article q {
+  display: block;
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: 400;
+  padding: 1.875em 1.875em 1.875em 3.125em;
+  margin: 1.875em 0em;
+  background-color: #F0F0F0; }
+  .article q::before {
+    content: '"';
+    position: absolute;
+    transform: translate(-30px, -30px);
+    font-size: 44px; }
+  .article q::after {
+    display: none; }
+.article .article-gallery {
+  padding-bottom: 40px; }
+.article img {
+  width: 100%;
+  border-radius: 4px;
+  height: 320px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 320px;
+  object-fit: cover; }
+
+@media (min-width: 544px) {
+  .article-container-columns {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 60px; } }
+@media (max-width: 543px) {
+  .article-container-columns {
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 30px; } }
 .filter {
   display: -webkit-box;
   display: -moz-box;

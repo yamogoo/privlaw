@@ -1,0 +1,56 @@
+.article {
+
+    * {
+        line-height: 1.72;
+    }
+
+    // Paragraph
+    p {
+        font-size: px2em(17px);
+    }
+
+    // Quotes
+    q {
+        display: block;
+        font-style: italic;
+        font-size: 1.1em;
+        font-weight: 400;
+        padding: px2em(30px) px2em(30px) px2em(30px) px2em(50px);
+        margin: px2em(30px) px2em(0px);
+        // border-bottom: 1px solid darken($background-color, 10%);
+        background-color: $background-color;
+
+        &::before {
+            content: '"';
+            position: absolute;
+            transform: translate(-30px, -30px);
+            font-size: 44px;
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .article-gallery {
+        padding-bottom: 40px;
+    }
+
+    img {
+        width: 100%;
+        border-radius: 4px;
+        height: 320px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 320px;
+        object-fit: cover;
+    }
+
+    &-header {
+
+    }
+
+    &-date {
+        @extend %entity__item-date;
+    }
+}
