@@ -47,7 +47,13 @@
     }
 
     &-header {
+        @include flexbox();
+        @include justify-content(flex-end);
+        padding-bottom: 20px;
+    }
 
+    &-tag {
+        @extend %entity__item__article-tag;
     }
 
     &-date {

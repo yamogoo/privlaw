@@ -1,4 +1,4 @@
-@include respond-above (sm) {
+@include respond-above (md) {
     
     .article {
 
@@ -10,14 +10,14 @@
     }
 }
 
-@include respond-below (sm) {
+@include respond-below (md) {
     
     .article {
 
         &-container-columns {
             display: grid;
             grid-template-rows: 1fr;
-            gap: 30px;
+            gap: 0px;
         }
     }
 }
