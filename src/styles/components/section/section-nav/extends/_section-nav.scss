@@ -1,0 +1,23 @@
+%section-nav {
+    @include flexbox;
+    width: 100%;
+
+    &-container {
+        @include flexbox;
+        @include flex-direction(row);
+        gap: px2em(10px);
+        list-style: none;
+    }
+
+    &__item {
+        @include flexbox;
+        border-radius: px2em(20px);
+
+        a {
+            font-size: 15px;
+            line-height: 1;
+            color: inherit;
+            padding: px2em(8px) px2em(16px);
+        }
+    }
+}
