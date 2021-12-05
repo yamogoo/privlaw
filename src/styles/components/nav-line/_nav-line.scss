@@ -53,7 +53,7 @@ $nav-line-icon-offset-y: px2em(3px);
                     line-height: 1.0;
                     top: $nav-line-icon-offset-y;
                     font-family: icomoon;
-                    @extend .icon-navigation-line:before !optional;
+                    @extend .icon-navigation-line !optional; //@extend .icon-navigation-line:before !optional;
                     color: inherit;
                 }
             }

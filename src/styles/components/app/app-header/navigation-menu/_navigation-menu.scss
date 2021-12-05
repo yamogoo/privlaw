@@ -63,7 +63,7 @@
             &.expansion {
 
                 &::after {
-                    @extend .icon-backward:before !optional; 
+                    @extend .icon-backward !optional; 
                     font-family: $icon;
                     font-size: $navigation-menu-item-icon-font-size;
                     // padding-top: 2px;

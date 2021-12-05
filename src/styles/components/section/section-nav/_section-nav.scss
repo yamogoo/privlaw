@@ -1,0 +1,34 @@
+.section-nav {
+    @include flexbox;
+
+    &-container {
+        @include flexbox;
+        @include flex-direction(row);
+        gap: px2em(10px);
+        list-style: none;
+    }
+
+    &__item {
+        @include flexbox;
+        border-radius: px2em(20px);
+        border-width: 1px;
+        border-style: solid;
+        border-color: $neutral-color;
+
+        a {
+            font-size: 15px;
+            line-height: 1;
+            color: inherit;
+            padding: px2em(8px) px2em(16px);
+        }
+
+        &:not(.active) {
+            color: $secondary-color;
+        }
+
+        &.active, &:hover {
+            color: $accent-color;
+            border-color: $accent-color;
+        }
+    }
+}

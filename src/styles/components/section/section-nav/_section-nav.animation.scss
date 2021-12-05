@@ -1,0 +1,10 @@
+.section-nav {
+
+    &__item {
+        @include transition(color border, 125ms, ease-out);
+        
+        a {
+            
+        }
+    }
+}

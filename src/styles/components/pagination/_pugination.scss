@@ -1,0 +1,12 @@
+.pagination {
+
+        &-container {
+            @include flexbox;
+            @include justify-content(center);
+            @include align-items(center);
+
+            * {
+                color: $accent-color;
+            }
+        }
+}

@@ -163,6 +163,24 @@ $(document).ready(function () {
     //
     // Lotties
 
+    //Up Button
+
+    function upButton() {
+        var $changedObject = $('up-button');
+        var $appScrollView = $('app-scroll-view');
+        $($appScrollView).scroll(function () {
+            var scrolled = $($appScrollView).scrollTop();
+            let scrollDistance = 300;
+            if (scrolled > scrollDistance) {
+                $changedObject.addClass('active')
+            } else {
+                $changedObject.removeClass("active")
+            }
+        });
+    }
+
+    upButton();
+
     // Menu Toggle Buttton
     var $iconAppMenuToggleButton = bodymovin.loadAnimation({
         wrapper: document.getElementById('app-menu-toggle-button-icon'),
@@ -283,6 +301,16 @@ $(document).ready(function () {
     menu();
     search();
 
+    // $($appScrollView).scroll(function () {
+    //     var scrolled = $($appScrollView).scrollTop();
+    //     let scrollDistance = 200;
+    //     let $changedObject = $app;
+    //     if (scrolled >= scrollDistance) {
+    //         $changedObject.removeClass("theme-header--light").addClass("theme-header--dark")
+    //     } else {
+    //         $changedObject.removeClass("theme-header--dark").addClass("theme-header--light")
+    //     }
+    // });
 
     // Menu.on("click")
     // Show app-menu by click on app-menu-toggle-button

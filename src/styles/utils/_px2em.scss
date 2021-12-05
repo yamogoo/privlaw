@@ -2,5 +2,5 @@
 $base-font-size: $font-size;
 
 @function px2em($px, $base: $base-font-size) {
-    @return ($px / $base) + 0em;
+    @return calc($px / $base) + 0em;
 }

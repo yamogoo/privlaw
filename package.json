@@ -1,5 +1,10 @@
 {
     "scripts": {
-        "start": "sass --watch ./src/styles.scss:./dist/css/style.css --style nested & pug -w ./src/html/pages -o ./dist -P"
+        "start": "sass --watch ./src/styles.scss:./dist/css/style.css --style compressed & pug -w ./src/html/pages -o ./dist -P"
+    },
+    "dependencies": {
+        "node-sass": "^6.0.1",
+        "pug": "^3.0.2",
+        "pug-cli": "^1.0.0-alpha6"
     }
 }
