@@ -1,4 +1,8 @@
-.persons {
+%persons {
+
+    &-container {
+        @extend %entities-container-persons;
+    }
 
     &__item {
         @include flexbox();
@@ -85,37 +89,6 @@
             font-weight: 500;
             color: $primary-color;
             // color: $accent-color;
-        }
-    }
-
-    // Versions
-
-    // Large
-
-    & {
-        &-container {
-            @extend %entities-container-persons;
-        }
-    }
-
-    // Small
-
-    &.sm {
-
-        &-container {
-            @extend %entities-container-persons--sm;
-        }
-    }
-}
-
-// Versions
-
-.article-section {
-
-    .persons {
-
-        &-container {
-            @extend %entities-container-persons--sm;
         }
     }
 }

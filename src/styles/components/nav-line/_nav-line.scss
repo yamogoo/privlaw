@@ -1,5 +1,3 @@
-// @import "../../../assets/icons/style.css";
-
 $nav-line-color: 'neutralColor';
 $nav-line-active-color: 'accentColor';
 $nav-line-gap: px2em(50px);
@@ -23,8 +21,6 @@ $nav-line-icon-offset-y: px2em(3px);
         list-style: none;
 
         a {
-            // font-size: px2em(13px);
-            // line-height: 1.0;
         }
 
         //Last child
@@ -46,6 +42,7 @@ $nav-line-icon-offset-y: px2em(3px);
                     color: themed($nav-line-color) !important; 
                 }
                 gap: $nav-line-icon-offset-x;
+                @extend .icon-navigation-line !optional;
 
                 &::after {
                     position: absolute;
@@ -53,7 +50,7 @@ $nav-line-icon-offset-y: px2em(3px);
                     line-height: 1.0;
                     top: $nav-line-icon-offset-y;
                     font-family: icomoon;
-                    @extend .icon-navigation-line !optional; //@extend .icon-navigation-line:before !optional;
+                    @extend .icon-navigation-line, :before !optional;
                     color: inherit;
                 }
             }

@@ -1,0 +1,70 @@
+.documents {
+
+    &-container {
+        @include flexbox;
+        @include flex-direction(column);
+        gap: 10px;
+    }
+
+    &__item {
+
+        &-container, a {
+            @include flexbox;
+            @include flex-direction(row);
+            gap: 30px;
+            padding: 30px 0px;
+        }
+
+        &-icon {
+            @include box(35px, 41px);
+
+            img {
+                @include box(inherit);
+            }
+        }
+
+        &-content {
+            @include flexbox;
+            @include flex-direction(column);
+            gap: 10px;
+
+            &-group {
+                @include flexbox;
+                @include flex-direction(column);
+                gap: 10px;
+            }
+        }
+
+        &-title, h3, h5, h6 {
+            font-size: 17px;
+            font-weight: 400;
+            color: $primary-color;
+        }
+
+        &-description {
+
+        }
+
+        &-size {
+            
+        }
+
+        &-description, &-size {
+            font-size: 13px;
+            color: $neutral-color;
+        }
+
+        &:hover {
+
+            .documents__item-title, h3, h5, h6 {
+                color: $accent-color;
+                text-decoration: underline;
+            }
+
+        }
+
+        & {
+            border-bottom: 1px solid $divider-color;
+        }
+    }
+}

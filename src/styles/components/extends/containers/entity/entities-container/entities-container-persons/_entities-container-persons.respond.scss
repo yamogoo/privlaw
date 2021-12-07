@@ -3,8 +3,11 @@
 @include respond-above (lg) {
 
     %entities-container-persons {
-        // gap: 30px;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    %entities-container-persons--sm {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
 
@@ -13,7 +16,10 @@
 
     %entities-container-persons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
-        // gap: 30px;
+    }
+
+    %entities-container-persons--sm {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -21,7 +27,10 @@
 
     %entities-container-persons {
         grid-template-columns: 1fr 1fr 1fr;
-        // gap: 30px;
+    }
+
+    %entities-container-persons--sm {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -29,6 +38,9 @@
 
     %entities-container-persons {
         grid-template-columns: 1fr 1fr;
-        // gap: 30px;
+    }
+
+    %entities-container-persons--sm {
+        grid-template-columns: 1fr 1fr;
     }
 }

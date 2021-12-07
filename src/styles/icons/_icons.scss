@@ -1,4 +1,25 @@
-.icon-search:before {
+.icon-list-circle:before {
+  content: "\e90c";
+}
+.icon-list-disk:before {
+  content: "\e90d";
+}
+.icon-list-square:before {
+  content: "\e90e";
+}
+.icon-expansion-arrow:before {
+  content: "\e90a";
+}
+.icon-navigation-line:before {
+  content: "\e909";
+}
+.icon-poor-vision:before {
+  content: "\e908";
+}
+.icon-youtube:before {
+  content: "\e90b";
+}
+.icon-search-icon:before {
   content: "\e907";
 }
 .icon-facebook:before {
@@ -13,9 +34,6 @@
 .icon-vkontakte:before {
   content: "\e906";
 }
-.icon-youtube:before {
-  content: "\e90b";
-}
 .icon-move-up:before {
   content: "\e900";
 }
@@ -24,13 +42,4 @@
 }
 .icon-backward:before {
   content: "\e902";
-}
-.icon-poor-vision:before {
-  content: "\e908";
-}
-.icon-navigation-line:before {
-  content: "\e909";
-}
-.icon-expansion-arrow:before {
-  content: "\e90a";
 }

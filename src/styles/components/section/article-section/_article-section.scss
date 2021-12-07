@@ -1,0 +1,13 @@
+.article-section {
+    @include flexbox;
+    @include flex-direction(column);
+    gap: 40px;
+
+    &__header {
+
+        &-title, h3, h3, h5 {
+            font-size: 28px;
+            font-weight: 500;
+        }
+    }
+}

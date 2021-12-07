@@ -1,4 +1,4 @@
-@include respond-above (sm) {
+@include respond-above (md) {
     
     .section-body {
 
@@ -10,7 +10,7 @@
     }
 }
 
-@include respond-below (sm) {
+@include respond-below (md) {
     
     .section-body {
 

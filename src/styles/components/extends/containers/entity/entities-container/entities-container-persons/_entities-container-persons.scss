@@ -3,3 +3,9 @@
     gap: 40px;
     padding-bottom: $entities-container-padding-bottom;
 }
+
+%entities-container-persons--sm {
+    display: grid;
+    gap: 30px;
+    padding-bottom: $entities-container-padding-bottom;
+}

@@ -1,8 +1,8 @@
 .section-header {
     @include flexbox();
-    @include flex-direction(row);
+    @include flex-direction(column);
     @include justify-content(space-between);
-    @include align-items(center);
+    @include align-items(left);
     @include flex-wrap(wrap);
     width: 100%;
     padding-bottom: 20px;
