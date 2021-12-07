@@ -1,11 +1,15 @@
+
+.icon-download:before {
+  content: "\e90f";
+}
+.icon-list-square:before {
+  content: "\e90e";
+}
 .icon-list-circle:before {
   content: "\e90c";
 }
 .icon-list-disk:before {
   content: "\e90d";
-}
-.icon-list-square:before {
-  content: "\e90e";
 }
 .icon-expansion-arrow:before {
   content: "\e90a";

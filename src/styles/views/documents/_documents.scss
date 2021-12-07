@@ -25,12 +25,19 @@
 
         &-content {
             @include flexbox;
-            @include flex-direction(column);
-            gap: 10px;
+            @include flex-direction(row);
+            width: 100%;
+            gap: 20px;
+
+            .documents__item-helper-icon {
+                font-size: 20px;
+                color: $neutral-color;
+            }
 
             &-group {
                 @include flexbox;
                 @include flex-direction(column);
+                width: inherit;
                 gap: 10px;
             }
         }
@@ -63,7 +70,7 @@
 
         }
 
-        & {
+        &:not(:last-child) {
             border-bottom: 1px solid $divider-color;
         }
     }
