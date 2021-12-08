@@ -1,15 +1,23 @@
-
+.icon-slider-arrow-next:before {
+  content: "\e910";
+}
+.icon-slider-arrow-previous:before {
+  content: "\e911";
+}
 .icon-download:before {
   content: "\e90f";
 }
 .icon-list-square:before {
   content: "\e90e";
+  // color: #7a1c3e;
 }
 .icon-list-circle:before {
   content: "\e90c";
+  // color: #7a1c3e;
 }
 .icon-list-disk:before {
   content: "\e90d";
+  // color: #7a1c3e;
 }
 .icon-expansion-arrow:before {
   content: "\e90a";

@@ -6,12 +6,12 @@
 	}
 	// Styling Next and Prev buttons
 	.owl-nav {
-		// margin-top: 10px;
-		@include flexbox();
+		@include flexbox;
 		@include justify-content(space-between);
-		width: 100%;
+		@include align-items(center);
+		@include box(100%);
 		position: absolute;
-		bottom: 50px;
+		top: 0px;
 		text-align: center;
 		-webkit-tap-highlight-color: transparent;
 		color: $carousel-nav-color;
@@ -23,7 +23,7 @@
 			background: $carousel-nav-background;
 			display: inline-block;
 			cursor: pointer;
-			border-radius: 3px;
+			border-radius: $carousel-nav-rounded;
 
 			&:hover {
 				background: $carousel-nav-background-hover;
@@ -36,9 +36,28 @@
 		button.owl-prev,
 		button.owl-next {
 			@include flexbox();
-			@include justify-content(space-between);
+			@include justify-content(center);
 			@include align-items(center);
 			@include box($carousel-nav-button-size);
+			background-color: $accent-color;
+
+			.owl-button-icon {
+				font-size: 28px !important;
+			}
+		}
+
+		button.owl-prev {
+			
+			.owl-button-icon {
+				// transform: rotate(180deg);
+			}
+		}
+
+		button.owl-next {
+
+			.owl-button-icon {
+				
+			}
 		}
 			
 		// 	span {

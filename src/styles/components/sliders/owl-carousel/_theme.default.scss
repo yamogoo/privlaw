@@ -11,14 +11,14 @@ $carousel-color-gray:			$neutral-color !default;
 $carousel-nav-color: 			$carousel-color-white !default;
 $carousel-nav-color-hover:		$carousel-color-white !default;
 $carousel-nav-font-size: 		64px !default;
-$carousel-nav-rounded: 			3px !default;
-$carousel-nav-margin: 			5px !default;
-$carousel-nav-padding: 			4px 7px !default;
+$carousel-nav-rounded: 			0px !default;
+$carousel-nav-margin: 			0px !default;
+$carousel-nav-padding: 			0px 0px !default;
 $carousel-nav-background: 		none;//$carousel-color-gray !default;
-$carousel-nav-background-hover:	none;//$carousel-color-base !default;
+$carousel-nav-background-hover:	$accent-color-darken-50;//$carousel-color-base !default;
 $carousel-nav-disabled-opacity: 0.5 !default;
 
-$carousel-nav-button-size:      36px !default;
+$carousel-nav-button-size:      60px !default;
 
 //dots
 
