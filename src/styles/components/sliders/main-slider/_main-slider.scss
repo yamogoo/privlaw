@@ -90,7 +90,8 @@ $main-slider-background-gradient: 270deg, rgba(85, 66, 73, 0) 30%, rgba(0, 0, 0,
                 @include justify-content(center);
                 @include align-items(center);
                 color: inherit;
-                font-size: 14px;
+                font-size: 16px;
+                letter-spacing: 0.3px;
                 padding: px2em(10px) px2em(20px);
             }
 

@@ -1,19 +1,30 @@
 .up-button {
-    display: block;
+    @include flexbox();
+    @include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
     position: absolute;
     bottom: 90px;
     right: 0;
     @include box(72px);
-    background-color: $accent-color;
+    background-color: $white;
+    border: 1px solid $divider-color;
     border-radius: 1px;
     box-shadow: 0px 0px 20px rgba($accent-color-darken-25, 0.15);
     z-index: 3;
-    @include transition(opacity, 125ms, ease-in-out);
+    @include transition(opacity transform, 125ms, ease-in-out);
+    cursor: pointer;
+
+    &-icon {
+        font-size: 24px;
+    }
 
     &:not(.active) {
         opacity: 0.0;
+        bottom: 90px;
     }
     &.active {
         opacity: 1.0;
+        bottom: 0px;
     }
 }

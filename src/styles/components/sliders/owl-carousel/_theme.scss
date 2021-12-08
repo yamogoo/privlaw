@@ -33,17 +33,16 @@
 			}
 		}
 		
-
 		button.owl-prev,
 		button.owl-next {
 			@include flexbox();
 			@include justify-content(center);
 			@include align-items(center);
 			@include box($carousel-nav-button-size);
-			background-color: $accent-color;
+			background-color: rgba($black, 0.5);
 
 			.owl-button-icon {
-				font-size: 28px !important;
+				font-size: 20px !important;
 			}
 		}
 
