@@ -1,0 +1,6 @@
+.pagination {
+
+    &__item, li {
+        @include transition(color background-color border-color, 75ms, ease-in-out);
+    }
+}

@@ -1,12 +1,44 @@
 .pagination {
+    width: 100%;
+    margin-top: 50px;
 
-        &-container {
+    &-container, ul {
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        gap: 20px;
+    }
+
+    &__item, li {
+        @include flexbox;
+        list-style: none;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 2px;
+
+        &-link, a {
             @include flexbox;
             @include justify-content(center);
             @include align-items(center);
-
-            * {
-                color: $accent-color;
-            }
+            font-size: 14px;
+            color: inherit;
+            min-height: 32px;
+            min-width: 32px;
+            padding: 0px 10px;
         }
+
+        &:not(.active, :hover, :focus, :active) {
+            color: $primary-color;
+            background-color: $white;
+            border-color: $divider-color;
+        }
+
+        &.active, &:hover, &:focus, &:active {
+            color: $white;
+            background-color: $accent-color;
+            border-color: $accent-color;
+
+        }
+    }
 }
