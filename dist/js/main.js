@@ -37,7 +37,7 @@ $(document).ready(function () {
 
     // Main slider
     $('.main-slider').owlCarousel({
-        autoplay: true,
+        autoplay: false,
         autoplayTimeout: 5000,
         loop: true,
         smartSpeed: 200,

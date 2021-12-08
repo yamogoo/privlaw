@@ -1,5 +1,7 @@
+$main-slider-background-gradient: 270deg, rgba(85, 66, 73, 0) 30%, rgba(0, 0, 0, 0.5) 65%;
+
 .main-slider {
-    @include box(100%, 400px);
+    @include box(100%, 540px);
     background-color: $accent-color;
 
     &__item {
@@ -10,6 +12,16 @@
         background-color: rgba($white, 1.0);
 
         &-container {
+            // @include flexbox();
+            // @include justify-content(flex-start);
+            // @include box(inherit);
+            // @extend %main-container;
+            display: block;
+            @include box(100%);
+            background: linear-gradient($main-slider-background-gradient);
+        }
+
+        &-content {
             @include flexbox();
             @include justify-content(flex-start);
             @include box(inherit);
@@ -39,17 +51,21 @@
             @include box(inherit);
 
             &-group {
-                @include box(auto);
-                width: 70%;
+                // @include box(auto);
+                // width: 70%;
+                @include flexbox();
+                @include flex-direction(column);
+                gap: 20px;
 
                 h3 {
-                    font-size: px2em(40px);
+                    font-size: px2em(44px);
                     font-weight: 400;
                     color: $white !important;
                 }
 
                 p {
-                    font-size: px2em(20px);
+                    font-size: px2em(22px);
+                    line-height: 1.7;
                     font-weight: 400;
                     color: $white !important;
                 }

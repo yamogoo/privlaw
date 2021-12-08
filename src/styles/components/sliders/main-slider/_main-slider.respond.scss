@@ -1,0 +1,53 @@
+@include respond-above(md) {
+    .main-slider {
+
+        &__item {
+
+            &-container {
+                // background: linear-gradient($main-slider-background-gradient);
+            }
+
+            &-content {
+
+                &-group {
+                    width: 540px;
+
+                    h3 {
+                        // font-size: px2em(40px);
+                    }
+
+                    p {
+                        // font-size: px2em(20px);
+                    }
+                }
+            }
+        }
+    }
+}
+@include respond-below(md) {
+
+    .main-slider {
+
+        &__item {
+
+            &-container {
+                // background: linear-gradient($main-slider-background-gradient);
+            }
+
+            &-content {
+
+                &-group {
+                    width: 100%;
+
+                    h3 {
+                        // font-size: px2em(40px);
+                    }
+
+                    p {
+                        // font-size: px2em(20px);
+                    }
+                }
+            }
+        }
+    }
+}

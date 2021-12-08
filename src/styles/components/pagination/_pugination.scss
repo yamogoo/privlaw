@@ -7,7 +7,7 @@
         @include justify-content(center);
         @include align-items(center);
         @include flex-wrap(wrap);
-        gap: 20px;
+        gap: 10px;
     }
 
     &__item, li {
