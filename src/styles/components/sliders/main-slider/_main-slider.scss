@@ -55,8 +55,13 @@ $main-slider-background-gradient: 270deg, rgba(85, 66, 73, 0) 30%, rgba(0, 0, 0,
                 // width: 70%;
                 @include flexbox();
                 @include flex-direction(column);
+                @include justify-content(flex-start);
                 gap: 20px;
                 padding-left: 50px;
+
+                &-footer {
+                    padding-top: 20px;
+                }
 
                 h3 {
                     font-size: px2em(44px);
@@ -70,6 +75,35 @@ $main-slider-background-gradient: 270deg, rgba(85, 66, 73, 0) 30%, rgba(0, 0, 0,
                     font-weight: 400;
                     color: $white !important;
                 }
+            }
+        }
+
+        &-button, button {
+            display: inline-flex;
+            height: initial;
+            width: auto;
+            border-width: 1px;
+            border-style: solid;
+
+            &-link, a {
+                @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
+                color: inherit;
+                font-size: 14px;
+                padding: px2em(10px) px2em(20px);
+            }
+
+            &:not(.active, :hover, :focus, :active) {
+                color: $white;
+                border-color: $white;
+                background-color: rgba($accent-color, 0.0);
+            }
+            
+            &.active, &:hover, &:focus, &:active {
+                color: $white;
+                border-color: $accent-color;
+                background-color: $accent-color;
             }
         }
     }

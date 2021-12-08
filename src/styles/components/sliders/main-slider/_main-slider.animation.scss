@@ -1,0 +1,9 @@
+.main-slider {
+
+    &__item {
+
+        &-button, button {
+            @include transition(color background-color border-color, 75ms, ease-out);
+        }
+    }
+}

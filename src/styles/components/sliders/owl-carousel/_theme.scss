@@ -24,6 +24,7 @@
 			display: inline-block;
 			cursor: pointer;
 			border-radius: $carousel-nav-rounded;
+			@include transition(color background-color border-color, 75ms, ease-out);
 
 			&:hover {
 				background: $carousel-nav-background-hover;
