@@ -19,21 +19,52 @@ let breakepoints = {
 
 $(document).ready(function () {
 
+    // function upButton() {
+    //     var $changedObject = $('up-button');
+    //     var $appScrollView = $('app-scroll-view');
+    //     $($appScrollView).scroll(function () {
+    //         var scrolled = $($appScrollView).scrollTop();
+    //         let scrollDistance = 300;
+    //         if (scrolled > scrollDistance) {
+    //             $changedObject.addClass('active')
+    //         } else {
+    //             $changedObject.removeClass("active")
+    //         }
+    //     });
+    // }
+
     // App Header
     function appHeaderChangeTheme() {
         let $app = $("#app");
+        let $upButton = $('.up-button');
         let $appScrollView = $(".app-scroll-view");
         $($appScrollView).scroll(function () {
             var scrolled = $($appScrollView).scrollTop();
-            let scrollDistance = 200;
-            let $changedObject = $app;
+            let scrollDistance = 1200;
+            // let $changedObject = $app;
             if (scrolled >= scrollDistance) {
-                $changedObject.removeClass("theme-header--light").addClass("theme-header--dark")
+                $upButton.addClass('active');
+                // $app.removeClass("theme-header--light").addClass("theme-header--dark");
             } else {
-                $changedObject.removeClass("theme-header--dark").addClass("theme-header--light")
+                // $app.removeClass("theme-header--dark").addClass("theme-header--light");
+                $upButton.removeClass('active');
             }
         });
     }
+
+    appHeaderChangeTheme();
+
+    // Up Button
+    function upButtonScrolltoTop() {
+        let $upButton = $('.up-button');
+        let $appScrollView = $(".app-scroll-view");
+        $upButton.on("click", function() {
+            $appScrollView.animate(
+                { scrollTop: "300px" });
+        })
+    };
+
+    upButtonScrolltoTop();
 
     // Main slider
     $('.main-slider').owlCarousel({

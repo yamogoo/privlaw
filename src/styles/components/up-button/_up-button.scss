@@ -8,4 +8,12 @@
     border-radius: 1px;
     box-shadow: 0px 0px 20px rgba($accent-color-darken-25, 0.15);
     z-index: 3;
+    @include transition(opacity, 125ms, ease-in-out);
+
+    &:not(.active) {
+        opacity: 0.0;
+    }
+    &.active {
+        opacity: 1.0;
+    }
 }
