@@ -9,23 +9,24 @@
 
     &-content {
 
-        * {
-            line-height: 1.72;
+        >* {
+            line-height: 1.82;
         }
 
         h4 {
             font-size: 24px;
-            padding-top: px2em(15px);
+            // padding: px2em(15px) px2em(0px);
         }
 
         h5 {
             font-size: 22px;
-            padding-top: px2em(15px);
+            // padding: px2em(15px) px2em(0px);
         }
     
         // Paragraph
         p {
             font-size: 17px;
+            // line-height: 1.72;
         }
 
         b {
@@ -45,6 +46,7 @@
             padding: px2em(30px) px2em(30px) px2em(30px) px2em(50px);
             margin: px2em(20px) px2em(0px);
             background-color: $background-color;
+            line-height: 1.72;
     
             &::before {
                 content: '"';

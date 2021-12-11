@@ -17,7 +17,45 @@ let breakepoints = {
     xl: 1280
 };
 
+// Gallery
 $(document).ready(function () {
+
+    $('[data-fancybox="images"]').fancybox({
+        loop: false,
+        closeExisting: false,
+        preventCaptionOverlap: true,
+        arrows: true,
+        infobar: true,
+        smallBtn: "auto",
+        toolbar: "auto",
+        buttons: [
+            // "zoom",
+            //"share",
+            "slideShow",
+            //"fullScreen",
+            //"download",
+            "thumbs",
+            "close"
+          ],
+        image: {
+        // Wait for images to load before displaying
+        //   true  - wait for image to load and then display;
+        //   false - display thumbnail and load the full-sized image over top,
+        //           requires predefined image dimensions (`data-width` and `data-height` attributes)
+        preload: true
+        },
+        idleTime: 3,
+        gutter: 50,
+        toolbar  : true,
+        afterLoad : function(instance, current) {
+            var pixelRatio = window.devicePixelRatio || 1;
+    
+            if ( pixelRatio > 1.5 ) {
+                current.width  = current.width  / pixelRatio;
+                current.height = current.height / pixelRatio;
+            }
+        }
+    });
 
     // function upButton() {
     //     var $changedObject = $('up-button');

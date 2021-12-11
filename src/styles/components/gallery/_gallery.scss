@@ -1,0 +1,60 @@
+.gallery {
+    margin-bottom: 40px;
+
+    &-container {
+        display: block;
+        position: relative;
+    }
+
+    &-content {
+
+    }
+
+    &__tag {
+        display: block;
+        position: absolute;
+        font-size: 16px;
+        color: white;
+        background-color: rgba($primary-color, 0.8);
+        top: 10px;
+        right: 10px;
+        padding: px2em(12px) px2em(16px);
+        border-radius: 3px;
+        pointer-events: none;
+        @include transition(background-color, 75ms, ease-out);
+
+        &-content {
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(center);
+            @include align-items(center);
+            gap: 10px;
+            line-height: 1.0 !important;
+        }
+
+        &-icon {
+            @extend .icon-gallery;
+            font-family: icomoon;
+            size: 16px !important;
+
+            &::before {
+                @extend .icon-gallery, :before;
+                font-size: inherit !important;
+            }
+        }
+    }
+
+    &__item {
+
+        &:not(:first-child) {
+            display: none;
+        }
+    }
+
+    &:hover, &:focus, &:active {
+
+        .gallery__tag {
+            background-color: rgba($accent-color, 1.0);
+        }
+    }
+}
