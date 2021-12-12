@@ -113,7 +113,7 @@ $(document).ready(function () {
         let $appScrollView = $(".app-scroll-view");
         $upButton.on("click", function() {
             $appScrollView.animate(
-                { scrollTop: "300px" });
+                { scrollTop: "0px" });
         })
     };
 
