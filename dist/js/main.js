@@ -47,6 +47,21 @@ $(document).ready(function () {
         idleTime: 3,
         gutter: 50,
         toolbar  : true,
+        // Transition effect between slides
+        //
+        // Possible values:
+        //   false            - disable
+        //   "fade'
+        //   "slide'
+        //   "circular'
+        //   "tube'
+        //   "zoom-in-out'
+        //   "rotate'
+        //
+        transitionEffect: "tube",
+
+        // Duration in ms for transition animation
+        transitionDuration: 275,
         afterLoad : function(instance, current) {
             var pixelRatio = window.devicePixelRatio || 1;
     

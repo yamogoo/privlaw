@@ -3,8 +3,12 @@
     @include flex-direction(column);
     gap: 50px;
 
-    &-section {
+    &-date {
+        @extend %entity__item-date;
+    }
 
+    &-tag {
+        @extend %entity__item__article-tag;
     }
 
     &-content {
@@ -65,10 +69,6 @@
             margin: 30px 0px;
             border: initial;
             border-top: 1px solid $divider-color;
-        }
-    
-        .article-gallery {
-            padding-bottom: 40px;
         }
     
         img {

@@ -1,0 +1,12 @@
+.article-header {
+    padding-bottom: 40px;
+    
+    &-group {
+        @include flexbox;
+
+        &--columns {
+            @include flexbox;
+            @include justify-content(space-between);
+        }
+    }
+}
