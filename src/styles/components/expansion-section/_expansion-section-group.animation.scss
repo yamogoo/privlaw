@@ -1,0 +1,20 @@
+.expansion-section-group {
+
+    &-body {
+        @include transition(height, 125ms, ease-out);
+    }
+
+    &-header {
+
+        &-container {
+            @include transition(padding border, 125ms, ease-out);
+        }
+    }
+
+    &-icon {
+
+        &::before {
+            @include transition(transform, 125ms, ease-out);
+        }
+    }
+ }

@@ -1,0 +1,5 @@
+.expansion-section {
+    @include flexbox();
+    @include flex-direction(column);
+    gap: 30px;
+}

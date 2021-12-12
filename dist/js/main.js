@@ -327,28 +327,52 @@ $(document).ready(function () {
         });
     }
 
+    // function toggleSelfClassByClick(el1, cl1) {
+    //     st1 = false;
+    //     el1.on("click", function (e) {
+    //         st1 = !st1;
+    //         if (st1 === false)
+    //             $(this).removeClass(cl1);
+    //         else {
+    //             $(this).addClass(cl1);
+    //         }
+    //         e.preventDefault();
+    //     });
+    // }
+
     function toggleSelfClassByClick(el1, cl1) {
-        st1 = false;
         el1.on("click", function (e) {
-            if (el1.hasClass(cl1)) {
-                $(this).removeClass(cl1);
-            } else {
-                $(this).toggleClass(cl1)
-            }
-            st1 = !st1;
+            $(this).toggleClass(cl1);
             e.preventDefault();
         });
     }
 
+    // function toggleSelfClassByClick(el1, cl1) {
+    //     count = 0;
+    //     el1.on("click", function (e) {
+    //         count ++
+    //         if (count === 1) {
+    //             count = 0;
+    //             if (el1.hasClass(cl1))
+    //                 $(this).removeClass(cl1);
+    //             else {
+    //                 $(this).addClass(cl1);
+    //             }
+    //             e.preventDefault();
+    //         }
+    //     });
+    // }
+
     //
     //
-    // Elements
+    //------------- Elements -------------//
 
     let $appMenuToggleButton = $('#app-menu-toggle-button');
     let $appMenu = $('#app-menu');
     let $appSearchButton = $('#app-search-button');
     let $appSearchField = $('#app-search-field');
     let $appSearchButtonClose = $('#app-search-button-close');
+    let $expansionSection = $(".expansion-section");
     
     //
     //
@@ -362,6 +386,15 @@ $(document).ready(function () {
     //     }
     // };
 
+    // Expansion Section Group
+
+    function expansionSectionGroup(el) {
+        container = el;
+        group = container.find('.expansion-section-group');
+        groupBody = group.find('.expansion-section-group-body');
+        groupBody.css({"height" : groupBody.height()});
+        toggleSelfClassByClick(group, 'hide');
+    };
 
     function search() {
         $appSearchButton.on("click", function() {
@@ -376,14 +409,13 @@ $(document).ready(function () {
         });
     }
 
-
-
     function menu() {
         changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
     }
 
     menu();
     search();
+    expansionSectionGroup($expansionSection);
 
     // $($appScrollView).scroll(function () {
     //     var scrolled = $($appScrollView).scrollTop();
