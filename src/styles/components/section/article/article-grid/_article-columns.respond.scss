@@ -1,0 +1,16 @@
+@include respond-above(md) {
+
+    .article-columns {
+        @include flex-direction(row);
+        gap: 50px;
+    }
+}
+
+@include respond-below(md) {
+
+    .article-columns {
+        @include flex-direction(column);
+        gap: 30px;
+    }
+}
+
