@@ -1,0 +1,28 @@
+doctype html
+html
+    head
+    include ../components/src/meta.pug
+    title Контакты
+    include ../components/src/style.pug
+    //- <script type="text/javascript" charset="utf-8" async src="./js/contacts/map.js"></script>
+    
+    //- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae9b28e3e773c9d096e9d4136b228d37f3dbc110644177bf96bee8cbc0e1c4fd5&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+body
+    include ../components/preloader/preloader.pug
+    div.app.theme-header--light.theme-app--normal#app
+        div.app-container
+
+            include ../components/header/header.pug
+
+            main.app-content
+
+                include ../components/up-button/up-button.pug
+                
+                div.app-scroll-view
+                    div.app-content-container
+
+                        include ../views/contacts/contacts.pug
+                    
+                    include ../components/footer/footer.pug
+
+    include ../components/src/javascript.pug

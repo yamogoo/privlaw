@@ -1,13 +1,11 @@
 $filter-dropdown-list-item-height: 53px;
 
 .filter-dropdown {
-    position: relative;
-    width: 275px;
-    cursor: pointer;
+    @extend %filter;
 
     &__expansion-icon {
         @extend .icon-expansion-arrow;
-        font-family: icomoon;
+        @extend %filter-icon;
     }
 
     &-container {

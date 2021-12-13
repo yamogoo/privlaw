@@ -17,6 +17,7 @@ let breakepoints = {
     xl: 1280
 };
 
+
 // Gallery
 $(document).ready(function () {
 
@@ -388,14 +389,15 @@ $(document).ready(function () {
 
     // Expansion Section Group
 
-    function expansionSectionGroup(el) {
-        container = el;
+    function expansionSectionGroup() {
+        container = $expansionSection;
         group = container.find('.expansion-section-group');
         groupBody = group.find('.expansion-section-group-body');
         groupBody.css({"height" : groupBody.height()});
         toggleSelfClassByClick(group, 'hide');
     };
 
+    // Search
     function search() {
         $appSearchButton.on("click", function() {
             if (!$appSearchField.hasClass('active')) {
@@ -409,13 +411,48 @@ $(document).ready(function () {
         });
     }
 
+    // Menu
+
     function menu() {
         changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
     }
 
+    // Filters
+    // Filter Search
+    let $filterSearch = $('#filter-search');
+
+    function filterSearch() {
+        $input = $filterSearch.find('input');
+        $filteredItems = $('.persons__item');
+        $filteredItemsName = $('h3');
+        var value = $input.val();
+        
+        if ($filteredItemsName.text().indexOf(`${value}`) > -1) {
+            $filteredItemsName.closest('.persons__item').show();
+        } else {
+            $filteredItemsName.closest('.persons__item').hide();
+        }
+
+        // console.log($filteredItemsName.text().indexOf(`${value}`));
+        // console.log($filteredItemsName.text());
+
+        // $filteredItemsName.contains(`${value}`).closest('.persons__item').hide;
+        // $filterSearch.keyup(function(){
+ 
+        //     // Search text
+        //     var text = $(this).val();
+        //     // Hide all content class element
+        //     $('.persons__item').hide();
+        //     // Search 
+        //     $('.persons__item .persons__item-title:contains("'+text+'")').closest('.persons__item').show();
+           
+        // });
+    }
+
     menu();
     search();
-    expansionSectionGroup($expansionSection);
+    expansionSectionGroup();
+    filterSearch();
 
     // $($appScrollView).scroll(function () {
     //     var scrolled = $($appScrollView).scrollTop();

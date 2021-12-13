@@ -19,7 +19,7 @@ section.section
             //- div.filter-search
             //-     input.filter-search-field(type="text")
 
-            include ../../components/filter/filter-dropdown-for-persons.pug
+            include ../../components/filter/filter-search-for-persons.pug
 
         // Section Header
         // Section Body
@@ -34,7 +34,7 @@ section.section
                                 div.expansion-section-group-icon
                     div.expansion-section-group-body
                         div.persons
-                            div.persons-container
+                            div.persons-container#filtered-list
                                 // Items
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
@@ -89,7 +89,7 @@ section.section
                                 div.expansion-section-group-icon
                     div.expansion-section-group-body
                         div.persons
-                            div.persons-container
+                            div.persons-container#filtered-list
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
                                         span.persons__item-image
@@ -175,7 +175,7 @@ section.section
                                 div.expansion-section-group-icon
                     div.expansion-section-group-body
                         div.persons
-                            div.persons-container
+                            div.persons-container#filtered-list
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
                                         span.persons__item-image

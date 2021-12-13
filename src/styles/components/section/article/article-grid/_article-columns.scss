@@ -1,0 +1,5 @@
+.article-columns {
+    @include flexbox;
+    @include flex-direction(row);
+    gap: 50px;
+}

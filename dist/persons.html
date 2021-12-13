@@ -48,7 +48,7 @@
                                                                 <p>Видео</p></a>
                                                               <div class="navigation-menu-secondary__list-item-underline"></div>
                                                             </li>
-                                                            <li class="navigation-menu-secondary__list-item"><a class="navigation-menu-secondary__list-item-link" href="contacts">
+                                                            <li class="navigation-menu-secondary__list-item"><a class="navigation-menu-secondary__list-item-link" href="contacts.html">
                                                                 <p>Контакты</p></a>
                                                               <div class="navigation-menu-secondary__list-item-underline"></div>
                                                             </li>
@@ -265,24 +265,14 @@
                 <div class="section-header">
                   <h5 class="section-title">Персоналии</h5>
                   <!-- Search Filter-->
-                  <!-- Filter Dropdown-->
-                  <div class="filter-dropdown">
-                    <div class="filter-dropdown-container">
-                      <input type="radio" name="tags"><span id="text-tags">Все подразделения</span>
-                      <div class="filter-dropdown__expansion-icon"></div>
-                    </div>
-                    <div class="filter-dropdown-list">
-                      <p class="active">Все подразделения</p>
-                      <p>ИЦЧП</p>
-                      <p>РШЧП</p>
-                      <p>Совет по кодификации</p>
-                      <p>Диссертационный совет</p>
-                      <p>Диалоги о частном праве</p>
-                      <p>Клуб семейного права</p>
-                      <p>Алексеевские чтения</p>
+                  <!-- Filter Search-->
+                  <div class="filter-search" id="filter-search">
+                    <div class="filter-search-container">
+                      <input type="text" name="filter">
+                      <div class="filter-search-icon"></div>
                     </div>
                   </div>
-                  <!-- Filter Dropdown-->
+                  <!-- Filter Search-->
                 </div>
                 <!-- Section Header-->
                 <!-- Section Body-->
@@ -300,7 +290,7 @@
                       </div>
                       <div class="expansion-section-group-body">
                         <div class="persons">
-                          <div class="persons-container">
+                          <div class="persons-container" id="filtered-list">
                             <!-- Items-->
                             <div class="persons__item"><a class="persons__item-container" href="persons-detail.html"><span class="persons__item-image"><img src="images/persons/persons_miheeva_sm-1.png"></span>
                                 <div class="persons__item-content">
@@ -343,7 +333,7 @@
                       </div>
                       <div class="expansion-section-group-body">
                         <div class="persons">
-                          <div class="persons-container">
+                          <div class="persons-container" id="filtered-list">
                             <div class="persons__item"><a class="persons__item-container" href="persons-detail.html"><span class="persons__item-image"><img src="images/persons/persons_miheeva_sm-1.png"></span>
                                 <div class="persons__item-content">
                                   <h3 class="persons__item-name">Михеева Лидия Юрьевна</h3>
@@ -405,7 +395,7 @@
                       </div>
                       <div class="expansion-section-group-body">
                         <div class="persons">
-                          <div class="persons-container">
+                          <div class="persons-container" id="filtered-list">
                             <div class="persons__item"><a class="persons__item-container" href="persons-detail.html"><span class="persons__item-image"><img src="images/persons/persons_slesarev_sm-1.png"></span>
                                 <div class="persons__item-content">
                                   <h3 class="persons__item-name">Слесарев Владимир Львович</h3>
