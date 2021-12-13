@@ -3,7 +3,7 @@
   <head></head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1.0, width=device-width">
-  <title>Фото и видео</title>
+  <title>Контакты</title>
   <link href="./fonts/icons/style.css" rel="stylesheet">
   <link href="./css/style.css" rel="stylesheet">
 </html>
@@ -44,11 +44,11 @@
                                                                 <p>Персоналии</p></a>
                                                               <div class="navigation-menu-secondary__list-item-underline"></div>
                                                             </li>
-                                                            <li class="navigation-menu-secondary__list-item"><a class="navigation-menu-secondary__list-item-link" href="photos-and-videos.html">
-                                                                <p>Фото и видео</p></a>
+                                                            <li class="navigation-menu-secondary__list-item"><a class="navigation-menu-secondary__list-item-link" href="videos.html">
+                                                                <p>Видео</p></a>
                                                               <div class="navigation-menu-secondary__list-item-underline"></div>
                                                             </li>
-                                                            <li class="navigation-menu-secondary__list-item"><a class="navigation-menu-secondary__list-item-link" href="contacts">
+                                                            <li class="navigation-menu-secondary__list-item"><a class="navigation-menu-secondary__list-item-link" href="contacts.html">
                                                                 <p>Контакты</p></a>
                                                               <div class="navigation-menu-secondary__list-item-underline"></div>
                                                             </li>
@@ -181,7 +181,7 @@
                       <li><a href="events.html">Мероприятия</a></li>
                       <li><a href="news.html">Новости</a></li>
                       <li><a href="persons.html">Персоналии</a></li>
-                      <li><a href="photos-and-videos.html">Фото и видео</a></li>
+                      <li><a href="videos.html">Видео</a></li>
                       <li><a href="contacts.html">Контакты</a></li>
                     </ul>
                   </div>
@@ -244,74 +244,66 @@
       </div>
       <!-- App Header Wrapper-->
       <main class="app-content">
+        <!-- Up Button-->
+        <div class="up-button">
+          <div class="up-button-container"><span class="up-button-icon icon-up-button-arrow"></span></div>
+        </div>
         <div class="app-scroll-view">
           <div class="app-content-container">
-            <!-- Photos and videos-->
+            <!-- News-->
             <section class="section">
               <div class="section-container">
                 <!--Nav Line-->
                 <div class="nav-line">
                   <ul class="nav-line-container">
                     <li class="nav-line__item"><a href="index.html">Главная</a></li>
-                    <li class="nav-line__item"><a href="photos-and-videos.html">Фото и видео</a></li>
+                    <li class="nav-line__item"><a href="contacts.html">Контакты</a></li>
+                    <li class="nav-line__item"><a href="contacts-ekaterinburg.html">Екатеринбург</a></li>
                   </ul>
                 </div>
                 <!--Nav Line-->
+                <!-- Section Nav-->
+                <div class="section-nav-wrapper">
+                  <div class="section-nav--primary">
+                    <ul class="section-nav-container">
+                      <li class="section-nav__item"><a href="contacts.html">Москва</a></li>
+                      <li class="section-nav__item active"><a href="contacts-ekaterinburg.html">Екатеринбург</a></li>
+                    </ul>
+                  </div>
+                </div>
                 <!-- Section Header-->
                 <div class="section-header">
-                  <h5 class="section-title">Фото и видео</h5>
-                  <!-- Filter Dropdown-->
-                  <div class="filter-dropdown">
-                    <div class="filter-dropdown-container">
-                      <input type="radio" name="tags"><span id="text-tags">Все публикации</span>
-                      <div class="filter-dropdown__expansion-icon"></div>
-                    </div>
-                    <div class="filter-dropdown-list">
-                      <p class="active">Все публикации</p>
-                      <p>Фото</p>
-                      <p>Видео</p>
-                    </div>
-                  </div>
-                  <!-- Filter Dropdown-->
+                  <h1 class="section-title">Контакты</h1>
                 </div>
                 <!-- Section Header-->
-                <div class="photos-and-videos">
-                  <div class="photos-and-videos-container">
-                    <!-- Items-->
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news1.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">17 октября 2021</span>
-                          <h3 class="photos-and-videos__item-title">Исследовательский центр посетила делегация цивилистов из Казахстана</h3>
-                        </div></a></div>
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news2.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">11 октября 2021</span>
-                          <h3 class="photos-and-videos__item-title">Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом</h3>
-                        </div></a></div>
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news3.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">4 октября 2021</span>
-                          <h3 class="photos-and-videos__item-title">Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП</h3>
-                        </div></a></div>
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news1.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">28 сентября 2021</span>
-                          <h3 class="photos-and-videos__item-title">Проект «Диалоги о частном праве» возобновляет работу</h3>
-                        </div></a></div>
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news2.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">21 сентября 2021</span>
-                          <h3 class="photos-and-videos__item-title">Студенты-первокурсники РШЧП получили студенческие билеты</h3>
-                        </div></a></div>
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news3.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">19 сентября 2021</span>
-                          <h3 class="photos-and-videos__item-title">Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр</h3>
-                        </div></a></div>
-                    <div class="photos-and-videos__item"><a class="news__item-container" href="/"><span class="photos-and-videos__item-image"><img src="images/background/news1.jpg"></span>
-                        <div class="photos-and-videos__item-content"><span class="photos-and-videos__item-date">8 июля 2021</span>
-                          <h3 class="photos-and-videos__item-title">Лекции зарубежных профессоров в РШЧП в новом учебном году</h3>
-                        </div></a></div>
+                <div class="section-body">
+                  <div class="section-body-container">
+                    <div class="article">
+                      <!-- Article-->
+                      <div class="article-section">
+                        <div class="article-section-body">
+                          <div class="article-columns">
+                            <div class="article-content">
+                              <p>Уральский филиал федерального государственного бюджетного научного учреждения «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации»</p>
+                            </div>
+                            <div class="article-content">
+                              <p>Адрес: 620014 г. Екатеринбург, ул. Вайнера, 9-а</p><br>
+                              <p>Телефон: <a href="tel:+7-343-371-36-41">8 (343) 371-36-41</a></p><br>
+                              <p>E-mail: <a href="mailto:uril@privlaw.ru">uril@privlaw.ru</a></p><br>
+                              <p>Сайт: <a href="www.privlaw-ural.ru">www.privlaw-ural.ru</a></p>
+                            </div>
+                          </div>
+                          <iframe class="contacts-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae9b28e3e773c9d096e9d4136b228d37f3dbc110644177bf96bee8cbc0e1c4fd5&amp;amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-                <!-- Items-->
+                <div class="section-footer">
+                  <div class="section-button"><a href="index.html">На главную</a></div>
+                </div>
               </div>
             </section>
-            <!-- News-->
           </div>
           <!-- Footer-->
           <footer class="app-footer">
@@ -352,7 +344,7 @@
                             <li><a href="events.html">Мероприятия</a></li>
                             <li><a href="news.html">Новости</a></li>
                             <li><a href="persons.html">Персоналии</a></li>
-                            <li><a href="photos-and-videos.html">Фото и видео</a></li>
+                            <li><a href="videos.html">Видео</a></li>
                             <li><a href="contacts.html">Контакты</a></li>
                           </ul>
                         </div>
@@ -467,7 +459,9 @@
     </div>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.14/lottie.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
   <script type="text/javascript" src="./js/owl.carousel/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="./js/fancybox/jquery.fancybox.js"></script>
 </body>

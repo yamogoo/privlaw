@@ -1,17 +1,21 @@
 .article-section {
-    @include flexbox;
-    @include flex-direction(column);
-    gap: 40px;
+    @extend %article-section;
 
     &-header {
+        @extend %article-section-header;
 
         &-title, h3, h3, h5 {
-            font-size: 28px;
-            font-weight: 500;
+            @extend %article-section-header-title;
         }
     }
 
     &-body {
         width: 100%;
+    }
+
+    &:not(:last-child) {
+        padding-bottom: 60px;
+        margin-bottom: 60px;
+        border-bottom: 1px solid $divider-color;
     }
 }

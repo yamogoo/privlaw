@@ -435,27 +435,12 @@ $(document).ready(function () {
         } else {
             $filteredItemsName.closest('.persons__item').hide();
         }
-
-        // console.log($filteredItemsName.text().indexOf(`${value}`));
-        // console.log($filteredItemsName.text());
-
-        // $filteredItemsName.contains(`${value}`).closest('.persons__item').hide;
-        // $filterSearch.keyup(function(){
- 
-        //     // Search text
-        //     var text = $(this).val();
-        //     // Hide all content class element
-        //     $('.persons__item').hide();
-        //     // Search 
-        //     $('.persons__item .persons__item-title:contains("'+text+'")').closest('.persons__item').show();
-           
-        // });
     }
 
     menu();
     search();
     expansionSectionGroup();
-    filterSearch();
+    // filterSearch();
 
     // $($appScrollView).scroll(function () {
     //     var scrolled = $($appScrollView).scrollTop();

@@ -1,0 +1,27 @@
+@include respond-above(lg) {
+
+    .section-side-panel {
+        width: $section-side-panel-width-lg;
+    }
+}
+
+@include respond-between(md,lg) {
+
+    .section-side-panel {
+        width: $section-side-panel-width-md;
+    }
+}
+
+@include respond-between(sm,md) {
+
+    .section-side-panel {
+        width: $section-side-panel-width-md;
+    }
+}
+
+@include respond-below(sm) {
+
+    .section-side-panel {
+        width: $section-side-panel-width-sm;
+    }
+}

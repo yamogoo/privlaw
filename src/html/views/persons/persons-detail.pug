@@ -22,42 +22,77 @@ section.section
         // Section Header
         div.section-body
             div.section-body-container
-                article.article
-                    div.article-container-columns
-                        //- div.article-header
-                        //-     p.article-date 7 октября 2021
-                        div.article-side-content
-                            div.article-side-content-container
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_miheeva_sm-1.png")
-                                        div.persons__item-content
-                                            //- h3.persons__item-name Козырь Оксана Михайловна
-                                            p.persons__item-description Заведующая кафедрой, кандидат юридических наук.
-                                            //- span.persons__item-tag Исследовательский центр
+                div.article
+                    // Documents
+                    div.article-section
+                        div.article-container-columns
+                            div.article-side-content
+                                div.article-side-content-container
+                                    div.persons__item
+                                        a(href="persons-detail.html" class="persons__item-container")
+                                            span.persons__item-image
+                                                img(src="images/persons/persons_miheeva_sm-1.png")
+                                            div.persons__item-content
+                                                p.persons__item-description Заведующая кафедрой, кандидат юридических наук.
+                            div.article-section
+                                div.article-section-header
+                                    span.article-tag #Исследовательский центр
+                                div.article-section-list
+                                    div.article-section
+                                        div.article-content
+                                            p Родилась в г. Москве. В 1984 г. окончила юридический факультет Московского государственного университета имени М. В. Ломоносова; в 1987 г. — аспирантуру юридического факультета МГУ по кафедре гражданского права и в 1988 г. защитила кандидатскую диссертацию по теме «Право на недвижимость по английскому праву». Работала в юридическом отделе Президиума Верховного Совета СССР (1988-1991 гг.), в Исследовательском центре частного права (1992-2009 гг., 2014-н.вр.), возглавляла Отдел гражданского кодекса. В настоящее время является начальником отдела законодательства о вещных правах.
+                                            p В 2010-2014 гг. работала судьей ВАС РФ.
+                                            br
+                                            p С 1988 г. принимает участие в законопроектной работе по совершенствованию гражданского законодательства. В 1992-2006 гг. являлась членом основной рабочей группы по разработке Гражданского кодекса Российской Федерации, в 2008-2009 гг. принимала участие в разработке Концепции развития гражданского законодательства, в 2009-2013 гг. и с 2018 г. – в разработке проекта изменений Гражданского кодекса Российской Федерации на основании Концепции развития гражданского законодательства.
+                                            br
+                                            p Автор около 100 публикаций по вопросам гражданского права (право собственности и другие вещные права, правовой режим недвижимости, аренда, право интеллектуальной собственности и др.), земельного права, зарубежного гражданского права, правового регулирования третейского разбирательства.
+                                            br
+                                            p Член Совета по кодификации и совершенствованию гражданского законодательства при Президенте Российской Федерации. Член научно-консультативного совета Суда по интеллектуальным правам.
+                                            br
+                                            p Заслуженный юрист Российской Федерации.
+                                            br
+                                            p Входит в состав редколлегии журнала «Вестник гражданского права»; редакционного совета журнала «Коммерческий арбитраж».
+                                            br
+                                            p Является арбитром МКАС при ТПП РФ и арбитром Арбитражного центра при РСПП..
+                                    // Events
+                                    include ../read-on/read-on-for-persons.pug
+
+                                    // Documents
+                                    div.article-section
+                                        div.article-section-header
+                                            h3.article-section-header-title Научные работы
+                                        div.article-section-body
+                                            div.documents
+                                                div.documents-container
+                                                    // Items
+                                                    div.documents__item
+                                                        a.documents__item-container(href="/")
+                                                            div.documents__item-icon
+                                                                img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                            div.documents__item-content
+                                                                div.documents__item-content-group
+                                                                    h3.documents__item-title Копия Свидетельства государственной аккредитации
+                                                                    span.documents__item-size PDF 42КБ
+                                                                span.documents__item-helper-icon.icon-download
+                                                    div.documents__item
+                                                        a.documents__item-container(href="/")
+                                                            div.documents__item-icon
+                                                                img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                            div.documents__item-content
+                                                                div.documents__item-content-group
+                                                                    h3.documents__item-title Копия Свидетельство о профессионально-общественной аккредитации МАГИСТРАТУРА
+                                                                    span.documents__item-size PDF 2МБ
+                                                                span.documents__item-helper-icon.icon-download
+                                                    div.documents__item
+                                                        a.documents__item-container(href="/")
+                                                            div.documents__item-icon
+                                                                img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                            div.documents__item-content
+                                                                div.documents__item-content-group
+                                                                    h3.documents__item-title Копии СВИДЕТЕЛЬСТВ к товарным знакам
+                                                                    span.documents__item-size PDF 2МБ
+                                                                span.documents__item-helper-icon.icon-download
                             
-                        div.article-content
-                            //- div.article-gallery
-                            //-     img(src="images/news/news_04.10.2021_lg-1.png")
-                            div.article-header
-                                span.article-tag #Исследовательский центр
-
-                            p Родилась в г. Москве. В 1984 г. окончила юридический факультет Московского государственного университета имени М. В. Ломоносова; в 1987 г. — аспирантуру юридического факультета МГУ по кафедре гражданского права и в 1988 г. защитила кандидатскую диссертацию по теме «Право на недвижимость по английскому праву». Работала в юридическом отделе Президиума Верховного Совета СССР (1988-1991 гг.), в Исследовательском центре частного права (1992-2009 гг., 2014-н.вр.), возглавляла Отдел гражданского кодекса. В настоящее время является начальником отдела законодательства о вещных правах.
-                            p В 2010-2014 гг. работала судьей ВАС РФ.
-                            br
-                            p С 1988 г. принимает участие в законопроектной работе по совершенствованию гражданского законодательства. В 1992-2006 гг. являлась членом основной рабочей группы по разработке Гражданского кодекса Российской Федерации, в 2008-2009 гг. принимала участие в разработке Концепции развития гражданского законодательства, в 2009-2013 гг. и с 2018 г. – в разработке проекта изменений Гражданского кодекса Российской Федерации на основании Концепции развития гражданского законодательства.
-                            br
-                            p Автор около 100 публикаций по вопросам гражданского права (право собственности и другие вещные права, правовой режим недвижимости, аренда, право интеллектуальной собственности и др.), земельного права, зарубежного гражданского права, правового регулирования третейского разбирательства.
-                            br
-                            p Член Совета по кодификации и совершенствованию гражданского законодательства при Президенте Российской Федерации. Член научно-консультативного совета Суда по интеллектуальным правам.
-                            br
-                            p Заслуженный юрист Российской Федерации.
-                            br
-                            p Входит в состав редколлегии журнала «Вестник гражданского права»; редакционного совета журнала «Коммерческий арбитраж».
-                            br
-                            p Является арбитром МКАС при ТПП РФ и арбитром Арбитражного центра при РСПП..
-
         div.section-footer
             div.section-button
                 a(href="news.html") Все новости
