@@ -390,11 +390,14 @@ $(document).ready(function () {
     // Expansion Section Group
 
     function expansionSectionGroup() {
-        container = $expansionSection;
+        container = $('.expansion-section');
         group = container.find('.expansion-section-group');
+        groupHeader = group.find('.expansion-section-group-header');
         groupBody = group.find('.expansion-section-group-body');
         groupBody.css({"height" : groupBody.height()});
-        toggleSelfClassByClick(group, 'hide');
+        groupHeader.on('click', function () {
+            $(this).closest('.expansion-section-group').toggleClass('hide');
+        })
     };
 
     // Search

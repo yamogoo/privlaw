@@ -1,6 +1,6 @@
 .section-header {
     @include flexbox();
-    @include flex-direction(column);
+    @include flex-direction(row);
     @include justify-content(space-between);
     @include align-items(left);
     @include flex-wrap(wrap);

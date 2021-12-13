@@ -44,14 +44,19 @@ $nav-line-icon-offset-y: px2em(3px);
                 gap: $nav-line-icon-offset-x;
                 @extend .icon-navigation-line !optional;
 
+
                 &::after {
                     position: absolute;
                     right: $nav-line-icon-offset-x;
                     line-height: 1.0;
                     top: $nav-line-icon-offset-y;
                     font-family: icomoon;
-                    @extend .icon-navigation-line, :before !optional;
+                    @extend .icon-navigation-line, :after !optional;
                     color: inherit;
+                }
+
+                &::before {
+                    display: none;
                 }
             }
             //
