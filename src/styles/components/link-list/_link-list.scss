@@ -1,0 +1,55 @@
+.link-list {
+
+    &-container, ul {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        @include box(inherit);
+        list-style: none;
+    }
+
+    &__item, li {
+        @include flexbox();
+        @include flex-direction(row);
+        @include align-items(center);
+        position: relative;
+        @include box(inherit);
+        gap: 20px;
+        color: $accent-color;
+        padding: px2em(20px) px2em(0px);
+        
+        &__link, a {
+            @include flexbox();
+            @include flex-direction(row);
+            @include justify-content(flex-start);
+            @include align-items(center);
+            gap: px2em(20px);
+            height: inherit;
+            color: inherit;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: px2em(0.3px);
+            padding: px2em(16px) px2em(0px);
+            cursor: pointer;
+
+            &.active, &:hover, &:focus, &:active {
+                text-decoration: underline;
+            }
+        }
+
+        &-icon {
+                
+            &::before {
+                font-family: icomoon;
+                font-size: 28px;
+                color: $neutral-color;
+                @extend .icon-list-link-arrow, :before !optional;
+                // text-decoration: none !important;
+            }
+        }
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $border-color;
+        }
+    }
+}

@@ -38,6 +38,10 @@
                 color: $white;
                 background-color: $accent-color;
             }
+
+            &.active {
+                pointer-events: none;
+            }
         }
     }
 
@@ -61,6 +65,10 @@
             &.active, &:hover {
                 color: $accent-color;
                 border-color: $accent-color;
+            }
+
+            &.active {
+                pointer-events: none;
             }
         }
     }

@@ -92,8 +92,8 @@
 
     // Large
 
-    & {
-        &-container {
+    &:not(.md, .sm) {
+        .persons-container {
             @extend %entities-container-persons;
         }
     }
@@ -102,8 +102,14 @@
 
     &.sm {
 
-        &-container {
+        .persons-container {
             @extend %entities-container-persons--sm;
+        }
+    }
+    &.md {
+
+        .persons-container {
+            @extend %entities-container-persons--md;
         }
     }
 }

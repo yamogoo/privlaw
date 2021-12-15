@@ -1,0 +1,13 @@
+.section-list {
+
+    .section {
+        padding-bottom: 75px;
+        // &:not(:first-child) {
+        //     padding-bottom: 50px;
+        // }
+
+        .section-header {
+            padding-bottom: 50px;
+        }
+    }
+}

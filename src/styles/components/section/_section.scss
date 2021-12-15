@@ -42,6 +42,11 @@
         background-color: $app-page-background-color;
     }
 
+    &-container-columns {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
     //Header
     // .section-header {
     //     @include flexbox();

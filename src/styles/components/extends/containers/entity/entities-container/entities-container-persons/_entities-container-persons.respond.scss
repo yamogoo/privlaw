@@ -6,6 +6,10 @@
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
 
+    %entities-container-persons--md {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     %entities-container-persons--sm {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
@@ -16,6 +20,10 @@
 
     %entities-container-persons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    %entities-container-persons--md {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     %entities-container-persons--sm {
@@ -29,6 +37,10 @@
         grid-template-columns: 1fr 1fr 1fr;
     }
 
+    %entities-container-persons--md {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     %entities-container-persons--sm {
         grid-template-columns: 1fr 1fr 1fr;
     }
@@ -37,6 +49,10 @@
 @include respond-below (sm) {
 
     %entities-container-persons {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    %entities-container-persons--md {
         grid-template-columns: 1fr 1fr;
     }
 

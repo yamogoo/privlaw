@@ -9,3 +9,9 @@
     gap: 30px;
     padding-bottom: $entities-container-padding-bottom;
 }
+
+%entities-container-persons--md {
+    display: grid;
+    gap: 40px;
+    padding-bottom: $entities-container-padding-bottom;
+}

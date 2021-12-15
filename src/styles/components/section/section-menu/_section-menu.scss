@@ -1,0 +1,54 @@
+.section-menu {
+    position: sticky;
+    top: 50px;
+    width: 100%;
+
+    &-container {
+        @include box(inherit);
+    }
+
+    &-group {
+        @include box(100%, auto);
+    }
+
+    ul {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(flex-start);
+        @include box(inherit);
+        list-style: none;
+
+        li {
+            @include flexbox();
+            @include flex-direction(column);
+            position: relative;
+            @include box(inherit);
+
+            a {
+                @include flexbox();
+                @include flex-direction(row);
+                @include justify-content(flex-start);
+                gap: $navigation-menu-item-content-gap;
+                height: inherit;
+                color: inherit;
+                font-size: 18px;
+                font-weight: 500;
+                letter-spacing: px2em(0.3px);
+                padding: px2em(16px) px2em(0px);
+                cursor: pointer;                
+            }
+
+            &:not(.active) {
+                color: $neutral-color;
+            }
+            
+            &.active, &:hover, &:focus {
+                color: $accent-color !important;
+            }
+
+            &.active {
+                pointer-events: none;
+            }
+        }
+    }
+}

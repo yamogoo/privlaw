@@ -12,6 +12,7 @@
 
     &__item {
         @include flexbox;
+        margin-top: 10px;
         border-radius: px2em(20px);
 
         a {
