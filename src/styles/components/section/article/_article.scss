@@ -19,26 +19,23 @@
 
         h4 {
             font-size: 24px;
-            // padding: px2em(15px) px2em(0px);
         }
 
         h5 {
             font-size: 22px;
-            // padding: px2em(15px) px2em(0px);
         }
     
         // Paragraph
         p {
-            font-size: 17px;
-            // line-height: 1.72;
+            @extend %main-p;
         }
 
         b {
-            font-weight: 500;
+            @extend %main-p-b;
         }
 
         i {
-            font-style: italic;
+            @extend %main-p-i;
         }
     
         // Quotes

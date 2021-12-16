@@ -17,14 +17,14 @@
             grid-template-rows: auto 1fr;
             gap: 20px;
 
-            &:hover {
+            &-hover, &:hover {
 
-                h3, .persons__item-name {
+                h3, .persons__item-name, &-persons__item-name {
                     color: $accent-color;
                     text-decoration: underline;
                 }
 
-                p, .persons__item-description {
+                p, .persons__item-description, &-persons__item-description {
                     color: $primary-color;
                 }
 
@@ -46,7 +46,7 @@
             overflow: hidden;
             // width: 80px;
 
-            img {
+            &-img, img {
                 // width: 100%;
                 // @include box(160px);
                 object-fit: cover;
@@ -75,20 +75,20 @@
             @extend %entity__item-tag--clear-text;
             font-size: px2em(12px);
             padding: 0;
+            
         }
 
         &-description {
-            font-size: px2em(13px);
+            font-size: 13px;
             font-weight: 400;
-            color: $primary-color;//$neutral-color;
+            color: $primary-color;
             white-space: break-spaces;
         }
 
         &-name {
-            font-size: px2em(17px);
+            font-size: 17px;
             font-weight: 500;
             color: $primary-color;
-            // color: $accent-color;
         }
     }
 }

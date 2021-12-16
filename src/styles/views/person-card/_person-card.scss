@@ -1,0 +1,59 @@
+.person-card {
+
+    &-container, a {
+        display: grid;
+
+        &:hover {
+            @extend %persons__item-container-hover;
+
+            h3, .person-card__item-name {
+                color: $accent-color;
+                text-decoration: underline;
+            }
+
+            p, .person-card__item-description {
+                color: $primary-color;
+            }
+        }
+    }
+
+    &__section-image {
+
+    }
+
+    &__section-content {
+        @include flexbox;
+        @include flex-direction(column);
+        gap: 30px;
+
+        &-header {
+            @include flexbox;
+            @include flex-direction(column);
+            gap: 10px;
+        }
+
+        &-body {
+
+        }
+    }
+
+    &-image {
+        @extend %persons__item-image;
+
+        img {
+            @extend %persons__item-image-img;
+        }
+    }
+
+    &__item-name {
+        @extend %persons__item-name;
+    }
+
+    &__item-description {
+        @extend %persons__item-description;
+    }
+
+    &__item-tag {
+        @extend %persons__item-tag;
+    }
+}
