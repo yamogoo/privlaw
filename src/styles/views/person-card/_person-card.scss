@@ -42,6 +42,7 @@
 
         img {
             @extend %persons__item-image-img;
+            max-width: 200px;
         }
     }
 

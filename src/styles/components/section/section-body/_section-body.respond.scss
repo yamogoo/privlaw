@@ -15,8 +15,8 @@
     .section-body {
 
         &-container {
-            display: grid;
-            grid-template-rows: 1fr;
+            @include flexbox;
+            @include flex-direction(column);
             gap: 30px;
         }
     }

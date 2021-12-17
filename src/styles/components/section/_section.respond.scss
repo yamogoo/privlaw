@@ -102,3 +102,28 @@
         }
     }
 }
+
+
+@include respond-above(md) {
+
+    .section {
+
+        &-container-columns {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 60px;
+        }
+    }
+}
+
+@include respond-below(md) {
+
+    .section {
+
+        &-container-columns {
+            @include flexbox;
+            @include flex-direction(column);
+            gap: 40px;
+        }
+    }
+}

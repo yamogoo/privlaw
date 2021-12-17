@@ -1,0 +1,50 @@
+@include respond-above (md) {
+
+    .section-menu {
+        position: sticky;
+        top: 50px;
+        width: 100%;
+    
+        ul {
+            @include flex-direction(column);
+    
+            li {
+                @include flexbox();
+                @include flex-direction(column);
+    
+                a {
+                    font-size: 16px;
+                    white-space: pre;
+                    padding: px2em(16px) px2em(0px);
+                }
+            }
+        }
+    }
+}
+
+@include respond-below (md) {
+
+    .section-menu {
+        position: relative;
+        top: 0px;
+        width: 100%;
+        margin-bottom: 40px;
+    
+        ul {
+            @include flex-direction(row);
+    
+            li {
+                display: inline;
+                position: relative;
+    
+                a {
+                    display: inline-block;
+                    font-size: 16px;
+                    white-space: nowrap;
+                    padding: px2em(12px) px2em(0px);
+                    padding-right: px2em(20px);
+                }
+            }
+        }
+    }
+}
