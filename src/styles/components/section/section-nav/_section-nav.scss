@@ -48,6 +48,7 @@
 
     &--secondary {
         @extend %section-nav;
+        margin-bottom: 30px;
 
         .section-nav-container {
             @extend %section-nav-container;
@@ -76,6 +77,7 @@
 
     &--tritic {
         @extend %section-nav;
+        padding-bottom: 0px;
 
         .section-nav-container {
             @extend %section-nav-container;
@@ -87,6 +89,9 @@
             // padding-left: 0px;
             // border-width: 1px;
             // border-style: solid;
+            a {
+                font-size: 17px !important;
+            }
             
             &:not(.active) {
                 color: $primary-color;
