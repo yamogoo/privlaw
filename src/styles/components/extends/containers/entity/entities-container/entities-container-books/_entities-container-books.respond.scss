@@ -1,0 +1,33 @@
+//Card Template
+//entities-container-books
+@include respond-above (xl) {
+
+    %entities-container-books {
+        gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@include respond-between (md, xl) {
+
+    %entities-container-books {
+        gap: 40px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@include respond-between (sm, md) {
+
+    %entities-container-books {
+        gap: 30px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@include respond-below (sm) {
+
+    %entities-container-books {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}

@@ -11,19 +11,91 @@ section.section
                 li.nav-line__item
                     a(href="center_editions.html") Издания
         //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="center_about-center.html") О центре
+                    li.section-nav__item
+                        a(href="center_expert-and-research-activities.html") Экспертная и научно-исследовательская деятельность
+                    li.section-nav__item
+                        a(href="center_scientific-departments.html") Научные отделы
+                    li.section-nav__item.active
+                        a(href="center_editions.html") Издания
+                    li.section-nav__item
+                        a(href="center_ural-branch.html") Уральский филиал
+                    li.section-nav__item
+                        a(href="center_countering-terrorism-and-corruption.html") Противодействие терроризму и коррупции
+        // Section Nav
         // Section Header
         div.section-header
             h1.section-title Издания
+
+            include ../../components/filter/filter-for-books.pug
+            
         // Section Header
-        div.section
-            div.section-body
-                div.section-body-container
-                    div.article
-                        div.article-section-list
-                            div.article-section
-                                div.article-section-body
-                                    div.article-content
-                                        p Текст-описание о Комиссии. Кроме того, активную, а скорее даже креативную роль Центр сыграл в исключительно важном деле сближения, гармонизации и унификации частного права, государств, образовавшихся на пространстве бывшего СССР. В 1994-1995 годах была подготовлена Модель Гражданского кодекса для стран СНГ.
-                                        br
-                                        p На основе этой модели ГК, с небольшим числом отступлений от нее, были приняты гражданские кодексы в восьми государствах – участниках СНГ: Армении, Белоруссии, Казахстане, Кыргызстане, России, Таджикистане, Туркменистане и Узбекистане. Позднее эта модель была во многом использована при создании ГК Украины.
-                            // Books
+        // Books
+        div.books
+            div.books-container
+                // Items
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_01.jpg")
+                        div.books__item-content
+                            h3.books__item-title Смотрим кино, понимаем жизнь
+                            span.books__item-author Вадим Радаев
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_02.jpg")
+                        div.books__item-content
+                            h3.books__item-title Ценность всех вещей
+                            span.books__item-author Дэвид Харви
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_03.jpg")
+                        div.books__item-content
+                            h3.books__item-title Состояние постмодерна
+                            span.books__item-author Мариана Маццукато
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_04.jpg")
+                        div.books__item-content
+                            h3.books__item-title Завтра 3.0. Трансакционные издержки и экономика совместного использования
+                            span.books__item-author Майкл Мангер
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_05.jpg")
+                        div.books__item-content
+                            h3.books__item-title История и культура Японии. Вып. 13
+                            span.books__item-author Сост. и отв. ред. А.Н. Мещеряков
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_06.jpg")
+                        div.books__item-content
+                            h3.books__item-title Политика у шимпанзе. Власть и секс у приматов. 6-е изд.
+                            span.books__item-author Франс де Валь
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_07.jpg")
+                        div.books__item-content
+                            h3.books__item-title Успех и удача. Фактор везения и миф меритократии. 2-е изд.
+                            span.books__item-author Роберт Фрэнк
+                div.books__item
+                    a(href="books-detail.html" class="books__item-container")
+                        span.books__item-image
+                            img(src="images/books/book_08.jpg")
+                        div.books__item-content
+                            h3.books__item-title От марксизма к постмарксизму?
+                            span.books__item-author Йоран Терборн
+                // Items
+            div.section-footer
+                include ../../components/pagination/pagination.pug
+            // Books

@@ -15,7 +15,18 @@
 
     &:not(:last-child) {
         padding-bottom: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 0px;
         border-bottom: 1px solid $divider-color;
+    }
+}
+
+.article-section-list {
+
+    .article-section {
+        // gap: 40px;
+
+        &:not(:last-child) {
+            margin-bottom: 60px !important;
+        }
     }
 }
