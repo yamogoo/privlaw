@@ -26,7 +26,7 @@
 
     &-title, h5 {
         font-size: 22px;
-        color: $accent-color;
+        color: $primary-color;
     }
 
     &-icon {
@@ -62,12 +62,16 @@
     }
 
     &:hover {
-        border: 1px solid rgba($divider-color, 0.0) !important;
+        // border: 1px solid rgba($divider-color, 0.0) !important;
 
         .expansion-section-group-header-container {
-            padding-left: 20px;
-            padding-right: 20px;
-            border: 1px solid rgba($divider-color, 1.0);
+            // padding-left: 20px;
+            // padding-right: 20px;
+            // border: 1px solid rgba($divider-color, 1.0);
+        }
+
+        .expansion-section-group-title, h5 {
+            color: $accent-color;
         }
     }
 }
