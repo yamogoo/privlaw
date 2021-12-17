@@ -1,15 +1,17 @@
 $nav-line-color: 'neutralColor';
 $nav-line-active-color: 'accentColor';
-$nav-line-gap: px2em(50px);
+$nav-line-gap: px2em(0px);
 // $nav-line-icon-offset-x: px2em(20px);
-$nav-line-icon-offset-x: px2em(-35px);
+$nav-line-icon-offset-x: px2em(-20px);
 $nav-line-icon-offset-y: px2em(3px);
 
 .nav-line {
     // padding-top: 30px;
+    margin-bottom: 10px;
 
     &-container {
-        display: flex;
+        @include flexbox;
+        @include flex-wrap(wrap);
         position: relative;
         gap: $nav-line-gap;
     }
@@ -19,8 +21,14 @@ $nav-line-icon-offset-y: px2em(3px);
         position: relative;
         @include box(auto);
         list-style: none;
+        margin-bottom: px2em(15px);
+
+        // &:not(:first-child) {
+        //     margin-left: 40px;
+        // }
 
         a {
+            @include flexbox();
         }
 
         //Last child
@@ -40,6 +48,8 @@ $nav-line-icon-offset-y: px2em(3px);
             a {
                 color: $neutral-color; //default
                 @include flexbox();
+                @include justify-content(center);
+                @include align-items(center);
                 @include themify($themes-app) {
                     color: themed($nav-line-color) !important; 
                 }
@@ -48,13 +58,15 @@ $nav-line-icon-offset-y: px2em(3px);
 
 
                 &::after {
-                    position: absolute;
+                    position: relative;
                     right: $nav-line-icon-offset-x;
                     line-height: 1.0;
                     top: $nav-line-icon-offset-y;
                     font-family: icomoon;
                     @extend .icon-navigation-line, :after !optional;
                     color: inherit;
+                    margin-right: 40px;
+                    top: -1px;
                 }
 
                 &::before {

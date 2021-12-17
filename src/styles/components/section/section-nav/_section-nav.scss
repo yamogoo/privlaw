@@ -3,6 +3,7 @@
     @include flex-direction(column);
     // gap: 30px;
     width: 100%;
+    margin-bottom: 10px;
 
     &~.section-nav--primary {
 
@@ -65,6 +66,36 @@
             &.active, &:hover {
                 color: $accent-color;
                 border-color: $accent-color;
+            }
+
+            &.active {
+                pointer-events: none;
+            }
+        }
+    }
+
+    &--tritic {
+        @extend %section-nav;
+
+        .section-nav-container {
+            @extend %section-nav-container;
+            gap: 25px;
+        }
+
+        .section-nav__item {
+            @extend %section-nav__item--tritic;
+            // padding-left: 0px;
+            // border-width: 1px;
+            // border-style: solid;
+            
+            &:not(.active) {
+                color: $primary-color;
+                // border-color: $background-color;
+            }
+    
+            &.active, &:hover {
+                color: $accent-color;
+                // border-color: $accent-color;
             }
 
             &.active {
