@@ -4,6 +4,7 @@
     &-icon {
         @extend .icon-filter-search;
         @extend %filter-icon;
+        color: $neutral-color;
     }
 
     &-container {
@@ -11,15 +12,20 @@
         @include align-items(center);
         @include justify-content(space-between);
         width: 100%;
-        padding: 15px 20px;
+        padding: 0px 20px;
         border: 1px solid $border-color;
         border-radius: 6px;
 
         input {
-            display: none;
-            position: absolute;
+            display: inline-flex;
+            position: relative;
             top: 0;
             left: 0;
+            width: 100%;
+            border: none;
+            color: $primary-color;
+            @extend %filter-p;
+            padding: 15px 0px;
         }
     }
 }

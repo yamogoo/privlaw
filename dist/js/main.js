@@ -601,16 +601,19 @@ $(document).ready(function () {
             });
         });
     });
+
+
+    // Filter (Hideseek)
     
     $('#search').hideseek();
     $('#search').hideseek({
         highlight: true,
         nodata:        'Элемент не найден',
-        min_chars: 1,
-        hidden_mode:    false,
-        navigation:     false,
-        ignore_accents: false,
-        attribute: '',
+        // min_chars: 1,
+        // hidden_mode:    false,
+        // navigation:     false,
+        // ignore_accents: false,
+        // attribute: '',
       });
 
 

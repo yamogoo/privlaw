@@ -61,6 +61,7 @@ $filter-dropdown-list-item-height: 53px;
         }
 
         p {
+            @extend %filter-p;
             // $color: $primary-color;
 
             // &:hover {
