@@ -456,50 +456,186 @@ $(document).ready(function () {
     //         });
     // }
 
-    var lastId;
-    var topMenu = $("#section-menu");
-    let $appScrollView = $('.app-scroll-view');
-    var topMenuHeight = topMenu.outerHeight(); //цифра это расстояние от верхушки меню до нужной секции(можно менять)
-    var menuItems = topMenu.find("a");
-        // Anchors corresponding to menu items
-    var scrollItems = menuItems.map(function(){
-        var item = $($(this).attr("href"));
-        if (item.length) { return item; }
+    // function sectionMenu() {
+    //     var lastId;
+    //     let $appScrollView = $('.app-scroll-view');
+    //     var $menu = $("#section-menu");
+    //     var $menuHeight = $menu.outerHeight(); //цифра это расстояние от верхушки меню до нужной секции(можно менять)
+    //     var $menuItems = $menu.find("a");
+    //     // Anchors corresponding to menu items
+    //     var $scrollItems = $menuItems.map(function(){
+    //         var item = $($(this).attr("href"));
+    //         if (item.length) { return item; }
+    //         });
+    //     // Bind click handler to menu items
+    //     // so we can get a fancy scroll animation
+    //     $menuItems.click(function(e){
+    //         var href = $(this).attr("href"),
+    //             offsetTop = href === "#" ? 0 : $(href).offset().top-$menuHeight+11;
+    //             $appScrollView.stop().animate({ 
+    //             scrollTop: offsetTop
+    //         }, 300);
+    //         e.preventDefault();
+    //     });
+
+    //     // Bind to scroll
+    //     $($appScrollView).scroll(function(){
+    //     // Get container scroll position
+    //     var fromTop = $(this).scrollTop()+$menuHeight;
+        
+    //     // Get id of current scroll item
+    //     var cur = $scrollItems.map(function(){
+    //         if ($(this).offset().top < fromTop)
+    //         return this;
+    //     });
+    //     // Get the id of the current element
+    //     cur = cur[cur.length-1];
+    //     var id = cur && cur.length ? cur[0].id : "";
+        
+    //     if (lastId !== id) {
+    //         lastId = id;
+    //         // Set/remove active class
+    //         $menuItems
+    //             .parent().removeClass("active")
+    //             .end().filter(`[href=${id}]`).parent().addClass("active");
+    //     }                   
+    //     });
+    // };
+
+
+
+    // function sectionMenu() {
+    //     var lastId;
+    //     let $appScrollView = $('.app-scroll-view');
+    //     var $menu = $("#section-menu");
+    //     var $menuHeight = $menu.outerHeight();
+    //     var $menuItems = $menu.find("a");
+    //     var $sectionList = $('#section-list');
+    //     var $sectionItems = $sectionList.find().attr('href');
+    //     // Anchors corresponding to menu items
+    //     var $scrollItems = $menuItems.map(function(){
+    //         var item = $($(this).attr("href"));
+    //         if (item.length) { return item; }
+    //         });
+    //     // Bind click handler to menu items
+    //     // so we can get a fancy scroll animation
+    //     $menuItems.click(function(e){
+    //         var href = $(this).attr("href");
+    //         var target = $sectionList.find().attr(href);
+
+    //         var offsetTop = href === "#" ? 0 : $(target).offset().top;
+    //             $appScrollView.stop().animate({ 
+    //             scrollTop: offsetTop
+    //         }, 300);
+    //         e.preventDefault();
+    //         console.log(href);
+    //     });
+    // };
+
+    // function sectionMenu () {
+
+    //     function scrollTosec(){
+    //         $('a[href^="#section"]').click(function(e) {
+    //             e.preventDefault();
+    //             var target = $(this).attr('href');
+    //             var stop = $(target).offset().top;
+    //             var delay = 200;
+    //             $('body').animate({scrollTop: stop + 'px'}, delay);
+    //         });
+    //    };
+
+    //    scrollTosec();
+    // }
+
+    // function sectionMenu() {
+    //     var lastId;
+    //     let $appScrollView = $('.app-scroll-view');
+    //     var $menu = $("#section-menu");
+    //     var $menuHeight = $menu.outerHeight();
+    //     var $menuItems = $menu.find("a");
+    //     var $sectionList = $('#section-list');
+
+    //     // $menuItems.click(function(e){
+    //     //     var href = $(this).attr("href");
+    //     //     // var target = $sectionList.find().attr(href);
+
+    //     //     var offsetTop = $(href).offset().top;
+    //     //         $appScrollView.stop().animate({ 
+    //     //         scrollTop: offsetTop
+    //     //     }, 300);
+    //     //     e.preventDefault();
+    //     //     console.log(href);
+    //     // });
+
+    //     $(function() {
+    //         $menuItems.click(function(e) {
+    //             var href = $(this).attr("href");
+    //             // var $sectionItems = $sectionList.find('#');
+    //             console.log(href);
+    //             e.preventDefault();
+    //             // var target = $(this).attr('href');
+    //             var target = $sectionList.find(`${href}`);
+    //             console.log(target);
+    //             // var stop = $(target).offset().top;
+    //             // var delay = 1000;
+    //             // $appScrollView.animate({scrollTop: stop + 'px'}, delay);
+    //         });
+    //     });
+    // }
+
+    document.querySelectorAll('a[href^="#section"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
-
-    // Bind click handler to menu items
-    // so we can get a fancy scroll animation
-    menuItems.click(function(e){
-    var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+11;//цифру можно менять или убрать..
-        $appScrollView.stop().animate({ 
-        scrollTop: offsetTop
-    }, 300);
-    e.preventDefault();
     });
-
-    // Bind to scroll
-    $($appScrollView).scroll(function(){
-    // Get container scroll position
-    var fromTop = $(this).scrollTop()+topMenuHeight;
     
-    // Get id of current scroll item
-    var cur = scrollItems.map(function(){
-        if ($(this).offset().top < fromTop)
-        return this;
-    });
-    // Get the id of the current element
-    cur = cur[cur.length-1];
-    var id = cur && cur.length ? cur[0].id : "";
-    
-    if (lastId !== id) {
-        lastId = id;
-        // Set/remove active class
-        menuItems
-            .parent().removeClass("active")
-            .end().filter("[href='#"+id+"']").parent().addClass("active");
-    }                   
-    });
+    $('#search').hideseek();
+    $('#search').hideseek({
+        highlight: true
+      });
+
+
+    // $(document).ready(function() {
+    //     $("#search").keyup(function() {
+    //       var filter = $(this).val();
+    //       $(".persons__item").find(".persons__item-name").each(function() {
+    //         !$(this).includes(filter) ? $(this).hide() : $(this).show();
+    //         if (filter == "") {
+    //           $(this).show();
+    //         }
+    //       });
+    //     });
+    //   });
+    // $('a[href*="#section"]').on('click', (event) => {
+
+    //     let $appScrollView = $('.app-scroll-view');
+    //     const hash = event.currentTarget.hash;
+    //     if (hash) {
+    //       event.preventDefault();
+    //       $($appScrollView).animate({scrollTop: $(hash).offset().top - 100}, 750);
+    //     }
+    //   });
+
+    function ScrollTo () {
+        // $('a').click(function(){
+        //     $appScrollView.animate({
+        //         scrollTop: $( $.attr(this, 'href') ).offset().top
+        //     }, 500);
+        //     return false;
+        // });
+    }
+    // let $appScrollView = $('.app-scroll-view');
+    // var $sectionList = $('#section-list');
+    // // var $sectionItem = $sectionList.find($('id^="section-"'));
+    // $('a[href^="#section-"]').click(function () {
+    //     $appScrollView.animate({
+    //         scrollTop: $( $.attr(this, 'href') ).offset().top
+    //     }, 500);
+    //     return false;
+    // });
         
 
     // $($appScrollView).scroll(function () {
@@ -527,3 +663,4 @@ $(document).ready(function () {
     // showSearch();
     // showMenu();
 });
+

@@ -18,8 +18,15 @@ section.section
             // Search Filter
             //- div.filter-search
             //-     input.filter-search-field(type="text")
-
-            include ../../components/filter/filter-search-for-persons.pug
+            //- <input id="search" name="search" placeholder="Поиск..." type="text" data-list=".list">
+            // Filter Search
+            div.filter-search#filter-search
+                div.filter-search-container
+                    //- input(type="text" name="filter")
+                    input(id="search" name="search" placeholder="Поиск..." type="text" data-list="#filtered-list" data-toggle="hideseek")
+                    div.filter-search-icon
+            // Filter Search
+            //- include ../../components/filter/filter-search-for-persons.pug
 
         // Section Header
         // Section Body
