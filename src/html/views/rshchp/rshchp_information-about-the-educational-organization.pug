@@ -39,6 +39,13 @@ section.section
             h1.section-title Сведения об образовательной организации
         // Section Header
         div.section
+            // Filter Search
+            div.filter-wrapper
+                div.filter-search#filter-search
+                    div.filter-search-container
+                        input(id="search" name="search" placeholder="Поиск..." type="text" data-list=".documents-container" data-toggle="hideseek")
+                        div.filter-search-icon
+            // Filter Search  
             div.section-body
                 // Expansion Group
                 div.expansion-section
