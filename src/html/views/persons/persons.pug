@@ -23,7 +23,7 @@ section.section
             div.filter-search#filter-search
                 div.filter-search-container
                     //- input(type="text" name="filter")
-                    input(id="search" name="search" placeholder="Поиск..." type="text" data-list="#filtered-list" data-toggle="hideseek")
+                    input(id="search" name="search" placeholder="Поиск..." type="text" data-list=".persons-container" data-toggle="hideseek")
                     div.filter-search-icon
             // Filter Search
             //- include ../../components/filter/filter-search-for-persons.pug
@@ -42,7 +42,7 @@ section.section
                                 div.expansion-section-group-icon
                     div.expansion-section-group-body
                         div.persons
-                            div.persons-container#filtered-list
+                            div.persons-container
                                 // Items
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
@@ -52,10 +52,6 @@ section.section
                                             h3.persons__item-name Михеева Лидия Юрьевна
                                             p.persons__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
                                             span.persons__item-tag Исследовательский центр
-                                            //- div.persons__item-tag-group
-                                            //-     span.persons__item-tag Исследовательский центр
-                                            //-     span.persons__item-tag РШЧП
-                                            //-     span.persons__item-tag Совет по кодификации
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
                                         span.persons__item-image
@@ -97,7 +93,7 @@ section.section
                                 div.expansion-section-group-icon
                     div.expansion-section-group-body
                         div.persons
-                            div.persons-container#filtered-list
+                            div.persons-container
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
                                         span.persons__item-image
@@ -183,7 +179,7 @@ section.section
                                 div.expansion-section-group-icon
                     div.expansion-section-group-body
                         div.persons
-                            div.persons-container#filtered-list
+                            div.persons-container
                                 div.persons__item
                                     a(href="persons-detail.html" class="persons__item-container")
                                         span.persons__item-image

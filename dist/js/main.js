@@ -390,14 +390,24 @@ $(document).ready(function () {
     // Expansion Section Group
 
     function expansionSectionGroup() {
-        container = $('.expansion-section');
-        group = container.find('.expansion-section-group');
-        groupHeader = group.find('.expansion-section-group-header');
-        groupBody = group.find('.expansion-section-group-body');
-        groupBody.css({"height" : groupBody.height()});
+        var container = $('.expansion-section');
+        var group = container.find('.expansion-section-group');
+        var groupHeader = group.find('.expansion-section-group-header');
+        var groupBody = group.find('.expansion-section-group-body');
+        var getHeight = groupBody.children().height();
+        // groupBody.css({"height" : getHeight});
         groupHeader.on('click', function () {
             $(this).closest('.expansion-section-group').toggleClass('hide');
-        })
+        });
+        
+        // $('#your-resizing-div').bind('getheight', function() {
+        //     $('#your-resizing-div').height();
+        // });
+        
+        // function your_function_to_load_content() {
+        //     /*whatever your thing does*/
+        //     $('#your-resizing-div').trigger('getheight');
+        // }
     };
 
     // Search
@@ -594,8 +604,17 @@ $(document).ready(function () {
     
     $('#search').hideseek();
     $('#search').hideseek({
-        highlight: true
+        highlight: true,
+        nodata:        'Элемент не найден',
+        min_chars: 1,
+        hidden_mode:    false,
+        navigation:     false,
+        ignore_accents: false,
+        attribute: '',
       });
+
+
+      
 
 
     // $(document).ready(function() {
@@ -664,3 +683,6 @@ $(document).ready(function () {
     // showMenu();
 });
 
+// new ResizeSensor($('.persons'), function() {
+//     console.log('myelement has been resized');
+// });
