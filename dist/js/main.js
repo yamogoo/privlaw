@@ -527,5 +527,3 @@ $(document).ready(function () {
     // showSearch();
     // showMenu();
 });
-
-  

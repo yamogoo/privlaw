@@ -49,6 +49,10 @@
         i {
             @extend %main-p-i;
         }
+
+        br {
+            @extend %main-br;
+        }
     
         // Quotes
         q {
