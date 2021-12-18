@@ -1,0 +1,6 @@
+.filter-wrapper {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(flex-end);
+    width: 100%;
+}

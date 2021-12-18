@@ -1,0 +1,47 @@
+@include respond-above(sm) {
+
+    .students {
+
+        &-container {
+            
+        }
+    
+        &__item {
+
+            &-container {
+                grid-template-columns: 240px auto;
+                gap: 60px;
+            }
+    
+            &-side-content {
+                
+            }
+    
+            &-content {
+    
+            }
+        }
+    }
+}
+
+@include respond-below(sm) {
+
+    .students {
+
+        &-container {
+            grid-template-columns: 240px auto;
+            gap: 60px;
+        }
+    
+        &__item {
+    
+            &-side-content {
+                
+            }
+    
+            &-content {
+    
+            }
+        }
+    }
+}

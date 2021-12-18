@@ -90,7 +90,7 @@
             // border-width: 1px;
             // border-style: solid;
             a {
-                font-size: 17px !important;
+                font-size: 16px !important;
             }
             
             &:not(.active) {
@@ -107,5 +107,9 @@
                 pointer-events: none;
             }
         }
+    }
+
+    &--tritic + &--tritic {
+        
     }
 }

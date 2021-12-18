@@ -1,0 +1,256 @@
+// News
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="rshchp.html") РШЧП
+                li.nav-line__item
+                    a(href="rshchp_graduates.html") Выпускники
+                li.nav-line__item
+                    a(href="rshchp_graduates.html") Москва
+                li.nav-line__item
+                    a(href="rshchp_graduates.html") 1997
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="rshchp.html") Об РШЧП
+                    li.section-nav__item
+                        a(href="rshchp_masters-degree.html") Магистратура
+                    li.section-nav__item
+                        a(href="rshchp_training.html") Повышение квалификации
+                    li.section-nav__item
+                        a(href="rshchp_cathedras.html") Кафедры
+                    li.section-nav__item.active
+                        a(href="rshchp_graduates.html") Выпускники
+                    li.section-nav__item
+                        a(href="rshchp_graduate-school.html") Аспирантура
+                    li.section-nav__item
+                        a(href="rshchp_internships-and-practice.html") Стажировки и практика
+                    li.section-nav__item
+                        a(href="rshchp_information-about-the-educational-organization.html") Сведения об образовательной организации
+            div.section-nav--secondary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="rshchp_graduates.html") Выпускники
+                    li.section-nav__item
+                        a(href="rshchp_candidates-of-science.html") Кандидаты наук
+                    li.section-nav__item
+                        a(href="rshchp_doctors-of-science.html") Доктора наук
+                
+        // Section Nav
+        // Section Header
+        div.section-header
+            h1.section-title Выпускники
+        
+            //- // Filter Search
+            //- div.filter-search#filter-search
+            //-     div.filter-search-container
+            //-         //- input(type="text" name="filter")
+            //-         input(id="search" name="search" placeholder="Поиск..." type="text" data-list=".students-container" data-toggle="hideseek")
+            //-         div.filter-search-icon
+            //- // Filter Search
+        // Section Nav
+        //- div.section-nav-wrapper
+        div.section-nav-wrapper
+            div.section-nav--tritic
+                ul.section-nav-container
+                    li.section-nav__item.active
+                        a(href="rshchp_graduates.html") Москва
+                    li.section-nav__item
+                        a(href="rshchp_graduates_ekaterinburg.html") Екатеринбург
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--tritic
+                ul.section-nav-container
+                    each val in [1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
+                        if val == 1997
+                            li.section-nav__item.active
+                                a(href=`rshchp_graduates_${val}.html`)=val
+                        else
+                            li.section-nav__item
+                                a(href=`rshchp_graduates_${val}.html`)=val
+        // Filter Search
+        div.filter-wrapper
+            div.filter-search#filter-search
+                div.filter-search-container
+                    //- input(type="text" name="filter")
+                    input(id="search" name="search" placeholder="Поиск..." type="text" data-list=".students-container" data-toggle="hideseek")
+                    div.filter-search-icon
+        // Filter Search     
+        // Section Header
+        div.section-body
+            // Students
+            div.students
+                div.students-container
+                    // Items
+                    div.students__item
+                        div.students__item-container
+                            div.students__item-side-content
+                                h3.students__item-name Астахов Валерий Иванович
+                            div.students__item-content
+                                div.students__item-content-group
+                                    p.students__item-description Вопросы применения норм гражданского законодательства. Относительно недействительные сделки в российском гражданском праве
+                                div.documents
+                                    div.documents-container
+                                        // Items
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Патентные права
+                                                        span.documents__item-size PDF 42КБ
+                                                    span.documents__item-helper-icon.icon-download
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Средства индивидуализации
+                                                        span.documents__item-size PDF 2МБ
+                                                    span.documents__item-helper-icon.icon-download
+                    div.students__item
+                        div.students__item-container
+                            div.students__item-side-content
+                                h3.students__item-name Бартош Владимир Михайлович
+                            div.students__item-content
+                                p.students__item-description Перспективы применения формулярного права в строительном подряде
+                                div.documents
+                                    div.documents-container
+                                        // Items
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Патентные права
+                                                        span.documents__item-size PDF 42КБ
+                                                    span.documents__item-helper-icon.icon-download
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Средства индивидуализации
+                                                        span.documents__item-size PDF 2МБ
+                                                    span.documents__item-helper-icon.icon-download
+                    div.students__item
+                        div.students__item-container
+                            div.students__item-side-content
+                                h3.students__item-name Воинов Владимир Валентинович
+                            div.students__item-content
+                                p.students__item-description Правовая квалификация договора о создании совместного предприятия
+                                div.documents
+                                    div.documents-container
+                                        // Items
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Патентные права
+                                                        span.documents__item-size PDF 42КБ
+                                                    span.documents__item-helper-icon.icon-download
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Средства индивидуализации
+                                                        span.documents__item-size PDF 2МБ
+                                                    span.documents__item-helper-icon.icon-download
+                    div.students__item
+                        div.students__item-container
+                            div.students__item-side-content
+                                h3.students__item-name Гришин Дмитрий Алексеевич
+                            div.students__item-content
+                                div.students__item-content-group
+                                    p.students__item-description Неустойка в гражданском праве России
+                                div.documents
+                                    div.documents-container
+                                        // Items
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Патентные права
+                                                        span.documents__item-size PDF 42КБ
+                                                    span.documents__item-helper-icon.icon-download
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Средства индивидуализации
+                                                        span.documents__item-size PDF 2МБ
+                                                    span.documents__item-helper-icon.icon-download
+                    div.students__item
+                        div.students__item-container
+                            div.students__item-side-content
+                                h3.students__item-name Еникеев Станислав Гумерович
+                            div.students__item-content
+                                p.students__item-description Иностранные инвестиции и правовой статус нерезидентов в Российской Федерации
+                                div.documents
+                                    div.documents-container
+                                        // Items
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Патентные права
+                                                        span.documents__item-size PDF 42КБ
+                                                    span.documents__item-helper-icon.icon-download
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Средства индивидуализации
+                                                        span.documents__item-size PDF 2МБ
+                                                    span.documents__item-helper-icon.icon-download
+                    div.students__item
+                        div.students__item-container
+                            div.students__item-side-content
+                                h3.students__item-name Епишина Лариса Викторовна
+                            div.students__item-content
+                                p.students__item-description Доверительное управление имуществом и управление ценными бумагами на рынке ценных бумаг
+                                div.documents
+                                    div.documents-container
+                                        // Items
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Патентные права
+                                                        span.documents__item-size PDF 42КБ
+                                                    span.documents__item-helper-icon.icon-download
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title Интеллектуальные права. Средства индивидуализации
+                                                        span.documents__item-size PDF 2МБ
+                                                    span.documents__item-helper-icon.icon-download

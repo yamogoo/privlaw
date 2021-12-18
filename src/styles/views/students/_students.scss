@@ -1,0 +1,42 @@
+.students {
+
+    &-container {
+        @extend %students-container;
+    }
+
+    &__item {
+        @extend %students__item;
+
+        &-container {
+            display: grid;
+        }
+
+        &-side-content {
+
+        }
+
+        &-content {
+            // @include flexbox;
+            // @include flex-direction(column);
+            // gap: 40px;
+
+            &-group {
+                @include flexbox;
+                @include flex-direction(column);
+                gap: 20px;
+            }
+        }
+
+        &-name {
+
+        }
+
+        &-description {
+
+        }
+
+        &-tag {
+
+        }
+    }
+}
