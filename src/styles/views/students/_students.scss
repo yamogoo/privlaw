@@ -32,7 +32,12 @@
         }
 
         &-description {
+            margin-bottom: 10px;
+        }
 
+        &-placeholder {
+            font-size: 14px;
+            color: $neutral-color;
         }
 
         &-tag {

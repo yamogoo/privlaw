@@ -86,6 +86,7 @@
 
         .section-nav__item {
             @extend %section-nav__item--tritic;
+            margin: 0px;
             // padding-left: 0px;
             // border-width: 1px;
             // border-style: solid;
