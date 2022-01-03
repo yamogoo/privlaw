@@ -266,6 +266,7 @@ $(document).ready(function () {
 
     upButton();
 
+    // Lottie
     // Menu Toggle Buttton
     var $iconAppMenuToggleButton = bodymovin.loadAnimation({
         wrapper: document.getElementById('app-menu-toggle-button-icon'),
@@ -273,6 +274,14 @@ $(document).ready(function () {
         loop: false,
         autoplay: false,
         path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json' //'assets/lottie/app-menu-toggle-button.json'
+    });
+
+    var $iconFilterSearchButton = bodymovin.loadAnimation({
+        wrapper: document.getElementById('anim-icon-filter-search'),
+        animType: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'https://assets2.lottiefiles.com/private_files/lf30_gvb3xjns.json' //'assets/lottie/app-menu-toggle-button.json'
     });
 
     // var iconAppMenuToggleButton = LottieInteractivity.create({
@@ -432,25 +441,60 @@ $(document).ready(function () {
 
     // Filters
     // Filter Search
-    let $filterSearch = $('#filter-search');
 
-    function filterSearch() {
-        $input = $filterSearch.find('input');
-        $filteredItems = $('.persons__item');
-        $filteredItemsName = $('h3');
-        var value = $input.val();
+    function filterSearch(el, elLottie = false) {
+        $input = el.find('input');
+        $button = el.find('button');
+        state = false;
         
-        if ($filteredItemsName.text().indexOf(`${value}`) > -1) {
-            $filteredItemsName.closest('.persons__item').show();
-        } else {
-            $filteredItemsName.closest('.persons__item').hide();
+        function handleClear () {
+            state = true;
+            el.addClass('type');
+            elLottie.setDirection(1);
+            elLottie.play();
         }
+        function handleDefault () {
+            state = false;
+            el.removeClass('type');
+            elLottie.setDirection(-1);
+            elLottie.play();
+        }
+
+        $input.bind('input', function() {
+            value = $(this).val();
+            length = value.length;
+            if (length > 0 ) {
+                handleClear();
+            } else if (length === 0) {
+                handleDefault();
+            }
+        });
+        $button.on("click", function() {
+            $input.val('');
+            el.removeClass('type');
+            handleDefault();
+        });
     }
+
+    // function filterSearch() {
+    //     $input = $filterSearch.find('input');
+    //     $filteredItems = $('.persons__item');
+    //     $filteredItemsName = $('h3');
+    //     var value = $input.val();
+        
+    //     if ($filteredItemsName.text().indexOf(`${value}`) > -1) {
+    //         $filteredItemsName.closest('.persons__item').show();
+    //     } else {
+    //         $filteredItemsName.closest('.persons__item').hide();
+    //     }
+    // }
+
+    let $filterSearch = $('#filter-search');
 
     menu();
     search();
     expansionSectionGroup();
-    // filterSearch();
+    filterSearch($filterSearch, $iconFilterSearchButton);
 
     // Section Menu
 
@@ -605,8 +649,8 @@ $(document).ready(function () {
 
     // Filter (Hideseek)
     
-    $('#search').hideseek();
-    $('#search').hideseek({
+    $('#filter-search-input').hideseek();
+    $('#filter-search-input').hideseek({
         highlight: true,
         nodata:        'Элемент не найден',
         // min_chars: 1,

@@ -1,0 +1,40 @@
+// News
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="codification-council.html") Совет по кодификации
+                li.nav-line__item
+                    a(href="codification-council_.html") Материалы работы Совета
+                li.nav-line__item
+                    a(href="codification-council_meetings-of-the-council.html") Заседания Совета
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="codification-council.html") О Совете
+                    li.section-nav__item
+                        a(href="codification-council_working-groups.html") Рабочие группы
+                    li.section-nav__item.active
+                        a(href="codification-council_meetings-of-the-council.html") Заседания Совета
+                    li.section-nav__item
+                        a(href="codification-council_expert-opinions.html") Материалы работы Совета                
+        // Section Nav
+        // Section Header
+        div.section-header
+            h1.section-title Заседания Совета
+
+            include ../../components/filter/filter-for-events.pug
+   
+        // Section Header
+        div.section-body
+            include ../events/events-list.pug
+        //Pagination
+        div.section-footer
+            include ../../components/pagination/pagination.pug

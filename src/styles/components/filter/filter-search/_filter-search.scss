@@ -1,10 +1,44 @@
 .filter-search {
     @extend %filter;
 
-    &-icon {
-        @extend .icon-filter-search;
-        @extend %filter-icon;
-        color: $neutral-color;
+    &-button {
+        width: 2.5em;
+        cursor: initial;
+
+        &-icon {
+            // @extend .icon-filter-search;
+            @extend %filter-icon;
+            color: $neutral-color;
+            @include transition(color, 125ms, ease-out);
+
+            svg {
+                @include box(16px !important);
+                
+                path {
+                    stroke: $neutral-color;
+                    @include transition(stroke, 125ms, ease-out);
+                }
+            }
+        }
+    }
+
+    &.type {
+
+        .filter-search-button {
+            cursor: pointer;
+
+            &-icon {
+                color: $primary-color;
+    
+                svg {
+                    @include box(16px !important);
+                    
+                    path {
+                        stroke: $primary-color !important;
+                    }
+                }
+            }
+        }
     }
 
     &-container {
@@ -12,7 +46,7 @@
         @include align-items(center);
         @include justify-content(space-between);
         width: 100%;
-        padding: 0px 20px;
+        padding: 0px 10px 0px 20px;
         border: 1px solid $border-color;
         border-radius: 6px;
 
@@ -26,6 +60,12 @@
             color: $primary-color;
             @extend %filter-p;
             padding: 15px 0px;
+        }
+    }
+
+    .type {
+        .filter-search-icon {
+            
         }
     }
 }
