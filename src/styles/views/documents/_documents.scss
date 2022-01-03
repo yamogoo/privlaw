@@ -48,10 +48,6 @@
             color: $primary-color;
         }
 
-        &-description {
-
-        }
-
         &-size {
             
         }
@@ -59,6 +55,11 @@
         &-description, &-size {
             font-size: 13px;
             color: $neutral-color;
+
+            p {
+                font-size: inherit;
+                color: inherit;
+            }
         }
 
         &:hover {
