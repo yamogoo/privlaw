@@ -281,7 +281,7 @@ $(document).ready(function () {
         animType: 'svg',
         loop: false,
         autoplay: false,
-        path: 'https://assets2.lottiefiles.com/private_files/lf30_gvb3xjns.json' //'assets/lottie/app-menu-toggle-button.json'
+        path: 'https://assets9.lottiefiles.com/private_files/lf30_l9rr0rau.json' //'assets/lottie/app-menu-toggle-button.json'
     });
 
     // var iconAppMenuToggleButton = LottieInteractivity.create({
@@ -442,11 +442,12 @@ $(document).ready(function () {
     // Filters
     // Filter Search
 
+    // Task .focus();
     function filterSearch(el, elLottie = false) {
         $input = el.find('input');
         $button = el.find('button');
         state = false;
-        
+
         function handleClear () {
             state = true;
             el.addClass('type');

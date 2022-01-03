@@ -49,6 +49,7 @@
         padding: 0px 10px 0px 20px;
         border: 1px solid $border-color;
         border-radius: 6px;
+        @include transition(border, 125ms, ease-out);
 
         input {
             display: inline-flex;
@@ -66,6 +67,13 @@
     .type {
         .filter-search-icon {
             
+        }
+    }
+
+    &.focus {
+
+        .filter-search-container {
+            border: 1px solid $primary-color;
         }
     }
 }
