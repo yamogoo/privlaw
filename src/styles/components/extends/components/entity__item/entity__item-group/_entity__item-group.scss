@@ -1,0 +1,6 @@
+%entity__item-group {
+    @include flexbox;
+    @include flex-direction(column);
+    gap: 10px;
+    margin-bottom: 10px;
+}

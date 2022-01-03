@@ -1,0 +1,9 @@
+%entity__item-description {
+    font-size: px2em(15px);
+    font-weight: 400;
+    color: $neutral-color;
+
+    b {
+        color: $primary-color;
+    }
+}

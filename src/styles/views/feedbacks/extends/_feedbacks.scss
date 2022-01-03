@@ -1,0 +1,48 @@
+$feedbacks-item-image-size: 64px;
+$feedbacks-item-image-border-radius: calc($feedbacks-item-image-size/2);
+
+%feedbacks {
+
+    &-container {
+
+    }
+
+    &__item {
+        @extend %entity__item;
+
+        // &-container {
+        //     @extend %entity__item-container;
+        //     padding-bottom: 0px;
+        // }
+
+        &-image {
+            display: block;
+            height: auto;
+            border-radius: $feedbacks-item-image-border-radius;
+            overflow: hidden;
+
+            &-img, img {
+                object-fit: cover;
+                border-radius: $feedbacks-item-image-border-radius;
+                @include box($feedbacks-item-image-size);
+                filter: grayscale(1.0);
+            }
+        }
+
+        // &-name {
+        //     @extend %entity__item-title;
+        // }
+        
+        // &-position {
+        //     @extend %entity__item-description;
+        // }
+
+        // &-date {
+        //     @extend %entity__item-description;
+        // }
+
+        // &-content {
+        //     @extend %entity__item-content;
+        // }
+    }
+}

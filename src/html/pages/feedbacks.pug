@@ -1,0 +1,25 @@
+doctype html
+html
+    head
+    include ../components/src/meta.pug
+    title Отзывы
+    include ../components/src/style.pug
+body
+    include ../components/preloader/preloader.pug
+    div.app.theme-header--light.theme-app--normal#app
+        div.app-container
+
+            include ../components/header/header.pug
+
+            main.app-content
+
+                include ../components/up-button/up-button.pug
+                
+                div.app-scroll-view
+                    div.app-content-container
+
+                        include ../views/feedbacks/feedbacks.pug
+                    
+                    include ../components/footer/footer.pug
+
+    include ../components/src/javascript.pug
