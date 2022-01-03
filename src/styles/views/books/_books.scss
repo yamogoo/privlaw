@@ -1,4 +1,9 @@
 $books-image-drop-shadow-width: px2em(12px);
+$books-image-border-radius: 9px;
+$books-image-detail-border-radius: 9px;
+
+$books-image-max-width: 200px;
+$books-image-detail-max-width: 100%;
 
 .books {
     
@@ -23,8 +28,8 @@ $books-image-drop-shadow-width: px2em(12px);
             filter: drop-shadow($books-image-drop-shadow-width $books-image-drop-shadow-width 0px #F0F0F0);
 
             img {
-                max-width: 200px;
-                border-radius: 9px;
+                max-width: $books-image-max-width;
+                border-radius: $books-image-border-radius;
             }
         }
 
@@ -53,6 +58,22 @@ $books-image-drop-shadow-width: px2em(12px);
 
         &-title {
             @extend %entity__item-title;
+        }
+
+        // Detail
+        &--detail {
+
+            .books__item {
+
+                &-image {
+                    filter: none;
+
+                    img {
+                        max-width: $books-image-detail-max-width;
+                        border-radius: $books-image-detail-border-radius;
+                    }
+                }
+            }
         }
     }
 }

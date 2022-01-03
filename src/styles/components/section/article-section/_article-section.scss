@@ -4,6 +4,10 @@
     &-header {
         @extend %article-section-header;
 
+        &-container-rows {
+            @extend %article-section-header-container-rows;
+        }
+
         &-title, h3, h3, h5 {
             @extend %article-section-header-title;
         }

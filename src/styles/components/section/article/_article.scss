@@ -3,6 +3,28 @@
     @include flex-direction(column);
     gap: 50px;
 
+    &-title {
+
+        &:not(.accent) {
+            color: $primary-color;
+        }
+        
+        &.accent {
+            color: $accent-color;
+        }
+    }
+
+    &-description {
+        color: $neutral-color;
+
+        b {
+            color: $primary-color;
+            font-size: inherit;
+            font-weight: inherit;
+            font-style: inherit;
+        }
+    }
+
     &-date {
         @extend %entity__item-date;
     }

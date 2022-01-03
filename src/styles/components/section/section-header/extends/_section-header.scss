@@ -1,0 +1,20 @@
+%section-header {
+    
+    &-container {
+        @include flexbox();
+        @include flex-direction(column);
+        gap: 20px;
+
+        &--row {
+            @include flexbox();
+            @include flex-direction(row);
+            gap: inherit;
+        }
+
+        &--column {
+            @include flexbox();
+            @include flex-direction(column);
+            gap: inherit;
+        }
+    }
+}

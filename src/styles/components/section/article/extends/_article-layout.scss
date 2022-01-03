@@ -1,0 +1,15 @@
+%article {
+
+    &-content {
+        width: 100%;
+    }
+
+    &-side-content {
+        // width: 200px;
+    }
+
+    &-side-content-container {
+        position: sticky;
+        top: 50px;
+    }
+}

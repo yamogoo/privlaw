@@ -5,15 +5,20 @@
     }
 
     &-content {
-        width: 100%;
+        @extend %article-content;
     }
 
-    &-side-content {
+    &-side-content, &-side-content--md {
+        @extend %article-side-content;
         width: 200px;
+    }
 
-        &-container {
-            position: sticky;
-            top: 50px;
-        }
+    &-side-content--lg {
+        @extend %article-side-content;
+        width: 300px;
+    }
+    
+    &-side-content-container {
+        @extend %article-side-content-container;
     }
 }

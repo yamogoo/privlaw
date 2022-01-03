@@ -1,10 +1,19 @@
 %article-section {
     @include flexbox;
     @include flex-direction(column);
-    // padding-bottom: 40px;
 
     &-header {
         margin-bottom: 40px;
+
+        &-container {
+            @include flexbox;
+        }
+
+        &-container-rows {
+            @include flexbox;
+            @include flex-direction(column);
+            gap: 20px;
+        }
 
         &-title, h3, h3, h5 {
             font-size: 28px;

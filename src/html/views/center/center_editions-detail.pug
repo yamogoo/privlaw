@@ -1,0 +1,84 @@
+// News
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="center_about-center.html") Центр
+                li.nav-line__item
+                    a(href="center_editions.html") Издания
+                li.nav-line__item
+                    a(href="center_editions-detail.html") Смотрим кино, понимаем жизнь
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="center_about-center.html") О центре
+                    li.section-nav__item
+                        a(href="center_expert-and-research-activities.html") Экспертная и научно-исследовательская деятельность
+                    li.section-nav__item
+                        a(href="center_scientific-departments.html") Научные отделы
+                    li.section-nav__item.active
+                        a(href="center_editions.html") Издания
+                    li.section-nav__item
+                        a(href="center_ural-branch.html") Уральский филиал
+                    li.section-nav__item
+                        a(href="center_countering-terrorism-and-corruption.html") Противодействие терроризму и коррупции
+        // Section Nav
+        // Section Header
+        div.section-header
+            div.section-header-container
+                h1.section-title Смотрим кино, понимаем жизнь
+                h3.section-description 19 социологических очерков            
+        // Section Header
+        div.section-body
+            div.section-body-container
+                div.article
+                    // Editions
+                    div.article-section
+                        div.article-container-columns
+                            div.article-side-content--lg
+                                div.article-side-content-container
+                                    div.books__item--detail
+                                        div.books__item-container
+                                            span.books__item-image
+                                                img(src="images/books/book_01.jpg" alt="")
+                            div.article-section
+                                div.article-section-header
+                                    div.article-section-header-container-rows
+                                        span.article-title.accent Вадим Радаев
+                                        span.article-description Год издания: <b>2021</b>
+                                        span.article-description Исследовательский центр
+                                div.article-section-list
+                                    div.article-section
+                                        div.article-section-header
+                                            h5.article-section-header-title О книге
+                                        div.article-content
+                                            p Это книга не о кино, а о многих жизненных вопросах, которые волнуют каждого из нас, — о человеческих страхах и ускользающей любви,о мужской мифологии и женских играх, о межпоколенческих конфликтах и сложных профессиональных дилеммах, об особенностях национального характера и мучительном расставании с советским прошлым, о том, почему люди выставляют частную жизнь на публичное обозрение и как они ведут себя в условиях шока.
+                                            br
+                                            p Все эти вопросы обсуждаются на материале известных кинофильмов.
+
+                                    // Documents
+                                    div.article-section
+                                        div.article-section-body
+                                            div.documents
+                                                div.documents-container
+                                                    // Items
+                                                    div.documents__item
+                                                        a.documents__item-container(href="/")
+                                                            div.documents__item-icon
+                                                                img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                                            div.documents__item-content
+                                                                div.documents__item-content-group
+                                                                    h3.documents__item-title Ознакомительный фрагмент
+                                                                    span.documents__item-size PDF 12КБ
+                                                                span.documents__item-helper-icon.icon-download
+                                                    
+        div.section-footer
+            div.section-button
+                a(href="news.html") Все издания
