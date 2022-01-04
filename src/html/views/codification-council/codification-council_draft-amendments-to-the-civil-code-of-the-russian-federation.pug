@@ -123,7 +123,9 @@ section.section
                                                     img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
                                                 div.documents__item-content
                                                     div.documents__item-content-group
-                                                        h3.documents__item-title=document.name
-                                                        span.documents__item-description=document.description
+                                                        if document.name != ''
+                                                            h3.documents__item-title=document.name
+                                                        if document.description != ''
+                                                            span.documents__item-description=document.description
                                                         span.documents__item-size=document.size
                                                     span.documents__item-helper-icon.icon-download

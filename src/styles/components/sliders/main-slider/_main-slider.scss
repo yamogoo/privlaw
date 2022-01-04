@@ -12,10 +12,6 @@ $main-slider-background-gradient: 270deg, rgba(85, 66, 73, 0) 30%, rgba(0, 0, 0,
         background-color: rgba($white, 1.0);
 
         &-container {
-            // @include flexbox();
-            // @include justify-content(flex-start);
-            // @include box(inherit);
-            // @extend %main-container;
             display: block;
             @include box(100%);
             background: linear-gradient($main-slider-background-gradient);
@@ -79,33 +75,7 @@ $main-slider-background-gradient: 270deg, rgba(85, 66, 73, 0) 30%, rgba(0, 0, 0,
         }
 
         &-button, button {
-            display: inline-flex;
-            height: initial;
-            width: auto;
-            border-width: 1px;
-            border-style: solid;
-
-            &-link, a {
-                @include flexbox();
-                @include justify-content(center);
-                @include align-items(center);
-                color: inherit;
-                font-size: 16px;
-                letter-spacing: 0.3px;
-                padding: px2em(10px) px2em(20px);
-            }
-
-            &:not(.active, :hover, :focus, :active) {
-                color: $white;
-                border-color: $white;
-                background-color: rgba($accent-color, 0.0);
-            }
-            
-            &.active, &:hover, &:focus, &:active {
-                color: $white;
-                border-color: $accent-color;
-                background-color: $accent-color;
-            }
+            @extend %banner-button;
         }
     }
 }

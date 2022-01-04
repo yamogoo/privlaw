@@ -1,0 +1,60 @@
+$banners-item-border-radius: px2em(12px);
+$banners-item-background-gradient: 270deg, rgba($primary-color, 0.15), rgba($primary-color, 0.85);
+
+.banners {
+
+    &-container {
+        @include flexbox;
+        @include flex-direction(column);
+    }
+
+    &__item {
+        width: 100%;
+        background-position: center;
+        border-radius: $banners-item-border-radius;
+        overflow: hidden;
+
+        &-container {
+            display: block;
+            @include box(100%);
+        }
+
+        &-content {
+            @include flexbox;
+            @include justify-content(space-between);
+            position: relative;
+            @extend %main-container;
+            @include box(100%);
+
+            &-group {
+                @include flexbox;
+                position: relative;
+                @include justify-content(center);
+                height: 100%;
+            }
+
+            &-footer {
+                width: auto;
+
+                &-container {
+                    @include flexbox;
+                    position: relative;
+                    @include justify-content(flex-end);
+                    @include align-items(flex-end);
+                    position: relative;
+                    @include box(100%);
+                }
+            }
+        }
+
+        h3 {
+            // font-size: 36px;
+            letter-spacing: px2em(0.3px);
+            color: $white;
+        }
+
+        &-button, button {
+            @extend %banner-button;
+        }
+    }
+}

@@ -1,30 +1,35 @@
+-
+    var banners = [
+        {
+            title: "Повышение квалификации",
+            description: "Повышение квалификации преподавателей кафедр гражданского права и смежных дисциплин",
+            image: "slider_01.png",
+            url: "#"
+        },
+        {
+            title: "Повышение квалификации",
+            description: "Повышение квалификации преподавателей кафедр гражданского права и смежных дисциплин",
+            image: "slider_01.png",
+            url: "#"
+        },
+        {
+            title: "Повышение квалификации",
+            description: "Повышение квалификации преподавателейк афедр гражданского права и смежных дисциплин",
+            image: "slider_01.png",
+            url: "#"
+        }
+    ]
+
 // Carousel
 div.main-slider.owl-carousel.owl-theme-privlaw
-    div.main-slider__item(style="background-image: url('images/main-slider/slider_01.png');")
-        div.main-slider__item-container
-            div.main-slider__item-content
-                span.main-slider__item-content-group
-                    h3 Повышение квалификации
-                    p Повышение квалификации преподавателей кафедр гражданского права и смежных дисциплин
-                    div.main-slider__item-content-group-footer
-                        button.main-slider__item-button
-                            a.main-slider__item-button-link(href="/") Подробнее
-    div.main-slider__item(style="background-image: url('images/main-slider/slider_01.png');")
-        div.main-slider__item-container
-            div.main-slider__item-content
-                span.main-slider__item-content-group
-                    h3 Повышение квалификации
-                    p Повышение квалификации преподавателей кафедр гражданского права и смежных дисциплин
-                    div.main-slider__item-content-group-footer
-                        button.main-slider__item-button
-                            a.main-slider__item-button-link(href="/") Подробнее
-    div.main-slider__item(style="background-image: url('images/main-slider/slider_01.png');")
-        div.main-slider__item-container
-            div.main-slider__item-content
-                span.main-slider__item-content-group
-                    h3 Повышение квалификации
-                    p Повышение квалификации преподавателейк афедр гражданского права и смежных дисциплин
-                    div.main-slider__item-content-group-footer
-                        button.main-slider__item-button
-                            a.main-slider__item-button-link(href="/") Подробнее
+    each banner in banners
+        div.main-slider__item(style=`background-image: url(images/main-slider/${banner.image});`)
+            div.main-slider__item-container
+                div.main-slider__item-content
+                    span.main-slider__item-content-group
+                        h3=banner.title
+                        p=banner.description
+                        div.main-slider__item-content-group-footer
+                            button.main-slider__item-button
+                                a.main-slider__item-button-link(href=`${banner.url}`) Подробнее
 // Carousel

@@ -1,0 +1,60 @@
+-
+    var banners = [
+        {
+            title: "К 95-летию со дня рождения Сергея Сергеивича Алексеева",
+            description: "",
+            image: "museum_01.png",
+            url: "museum-detail.html"
+        },
+        {
+            title: "Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом",
+            description: "",
+            image: "museum_02.png",
+            url: "museum-detail.html"
+        },
+        {
+            title: "Проект «Диалоги о частном праве» возобновляет работу",
+            description: "",
+            image: "museum_03.png",
+            url: "museum-detail.html"
+        },
+        {
+            title: "Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр",
+            description: "",
+            image: "museum_04.png",
+            url: "museum-detail.html"
+        }
+    ]
+
+// Museum
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="museum.html") Музей
+        //Nav Line
+        // Section Header
+        div.section-header
+            h5.section-title Музей
+        // Section Header
+        div.banners
+            div.banners-container
+                // Items
+                each banner in banners
+                    div.banners__item(style=`background-image: url(images/museum/${banner.image});`)
+                        div.banners__item-container
+                            div.banners__item-content
+                                div.banners__item-content-group
+                                    if banner.title != ''
+                                        h3=banner.title
+                                    if banner.description != ''
+                                        p=banner.description
+                                div.banners__item-content-footer
+                                    div.banners__item-content-footer-container
+                                        button.banners__item-button
+                                            a(class="banners__item-button-link" href=`${banner.url}`) Подробнее
+// Museum
