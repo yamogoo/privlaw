@@ -1,4 +1,58 @@
-// News
+-
+    var groups = [
+        {
+            name: "I.",
+            documents: [
+                {
+                    name: "Проект федерального закона № 47538-6 «О внесении изменений в части первую, вторую, третью, третью и четвертую Гражданского кодекса Российской Федерации, а также в отдельные законодательные акты Российской Федерации»",
+                    description: "Проект федерального закона о внесении изменений в Гражданский кодекс Российской Федерации, внесенный Президентом Российской Федерации в Государственную Думу 2 апреля 2012 года, разработан Советом при Президенте Российской Федерации по кодификации и совершенствованию гражданского законодательства во исполнение Указа Президента Российской Федерации от 18 июля 2008 года № 1108 «О совершенствовании гражданского законодательства». В соответствии с Указом Президента Российской Федерации изменения в Гражданский кодекс вносятся в целях: а) дальнейшего развития основных принципов гражданского законодательства Российской Федерации, соответствующих новому уровню развития рыночных отношений; б) отражения в Гражданском кодексе Российской Федерации опыта его применения и толкования судом; в) сближения положений Гражданского кодекса Российской Федерации с правилами регулирования соответствующих отношений в праве Европейского Союза; г) использования в гражданском законодательстве Российской Федерации новейшего положительного опыта модернизации гражданских кодексов ряда европейских стран; д) поддержания единообразия регулирования гражданско-правовых отношений в государствах – участниках Содружества Независимых Государств; е) обеспечения стабильности гражданского законодательства Российской Федерации.",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Пояснительная записка к проекту федерального закона «О внесении изменений в части первую, вторую, третью и четвертую Гражданского кодекса Российской Федерации, а также в отдельные законодательные акты Российской Федерации»",
+                    description: "В 2018 году была создана рабочая группа под руководством В.В. Витрянского, которая доработала законопроект в части положений о вещных правах. Законопроект был обсужден в г. Екатеринбурге, г. Казани, и г. Краснодаре.",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Проект Федерального закона № 47538-6/5 «О внесении изменений в часть первую Гражданского кодекса Российской Федерации»",
+                    description: "",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Справка о результатах деятельности рабочей группы Совета по приведению проекта федерального закона № 47538-6/5 «О внесении изменений в часть первую Гражданского кодекса Российской Федерации»  (во втором чтении) в актуально состояние.",
+                    description: "",
+                    type: "pdf",
+                    size: "12КБ"
+                }
+            ]
+        },
+        {
+            name: "II.",
+            documents: [
+                {
+                    name: "Проект федерального закона № 1158774-7 «О внесении изменений в статью 181-2 части первой Гражданского кодекса Российской Федерации» (о дистанционном участии в собраниях).",
+                    description: "Проект федерального закона № 1158774-7 «О внесении изменений в статью 181-2 части первой Гражданского кодекса Российской Федерации», внесенный депутатами Государственной Думы П.В. Крашенинниковым и А.М. Макаровым, разработан рабочей группой Совета при Президенте Российской Федерации по кодификации и совершенствованию гражданского законодательства по подготовке предложений о внесении изменений в главу 9.1 части первой Гражданского кодекса Российской Федерации по вопросу дистанционного участия в собрании (создана решением Совета от 11 февраля 2021 г., протокол № 206). Текст законопроекта был обсужден и рекомендован ко внесению в Государственную Думу на заседании Совета 25 марта 2021 года (протокол № 207).",
+                    type: "pdf",
+                    size: "12КБ"
+                }
+            ]
+        },
+        {
+            name: "III.",
+            documents: [
+                {
+                    name: "Проект федерального закона «О внесении изменений в часть четвертую Гражданского кодекса Российской Федерации»",
+                    description: "Проект федерального закона «О внесении изменений в часть четвертую Гражданского кодекса Российской Федерации» разработан рабочей группой Совета при Президенте Российской Федерации по кодификации и совершенствованию гражданского законодательства по совершенствованию законодательства в области сообладания исключительными правами (создана решением Совета от 14 ноября 2019 г., протокол № 192). Текст законопроекта после рассмотрения и обсуждения одобрен Советом на заседании 1 июля 2021 года (протокол № 210).",
+                    type: "pdf",
+                    size: "12КБ"
+                }
+            ]
+        }
+    ]
+
 section.section
     div.section-container
         //Nav Line
@@ -51,92 +105,25 @@ section.section
             // Expansion Group
             div.expansion-section
                 // Expansion Group
-                div.expansion-section-group
-                    div.expansion-section-group-header
-                        div.expansion-section-group-header-container
-                            div.expansion-section-group-header-content
-                                h5.expansion-section-group-title I.
-                                div.expansion-section-group-icon
-                    div.expansion-section-group-body
-                        div.documents
-                            div.documents-container
+                each group in groups
+                    div.expansion-section-group
+                        div.expansion-section-group-header
+                            div.expansion-section-group-header-container
+                                div.expansion-section-group-header-content
+                                    h5.expansion-section-group-title=group.name
+                                    div.expansion-section-group-icon
+                        div.expansion-section-group-body
+                            div.documents
                                 // Items
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Концепция развития законодательства о юридических лицах (проект рекомендован Советом к опубликованию в целях обсуждения (протокол № 68 от 16 марта 2009 г.))
-                                                span.documents__item-description Проект федерального закона о внесении изменений в Гражданский кодекс Российской Федерации, внесенный Президентом Российской Федерации в Государственную Думу 2 апреля 2012 года, разработан Советом при Президенте Российской Федерации по кодификации и совершенствованию гражданского законодательства во исполнение Указа Президента Российской Федерации от 18 июля 2008 года № 1108 «О совершенствовании гражданского законодательства». В соответствии с Указом Президента Российской Федерации изменения в Гражданский кодекс вносятся в целях:<br><br>а) дальнейшего развития основных принципов гражданского законодательства Российской Федерации, соответствующих новому уровню развития рыночных отношений;<br>б) отражения в Гражданском кодексе Российской Федерации опыта его применения и толкования судом;<br>в) сближения положений Гражданского кодекса Российской Федерации с правилами регулирования соответствующих отношений в праве Европейского Союза;<br>г) использования в гражданском законодательстве Российской Федерации новейшего положительного опыта модернизации гражданских кодексов ряда европейских стран;<br>д) поддержания единообразия регулирования гражданско-правовых отношений в государствах – участниках Содружества Независимых Государств; <br> е) обеспечения стабильности гражданского законодательства Российской Федерации.
-                                                span.documents__item-size PDF 23 КБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Пояснительная записка к проекту федерального закона «О внесении изменений в части первую, вторую, третью и четвертую Гражданского кодекса Российской Федерации, а также в отдельные законодательные акты Российской Федерации»
-                                                span.documents__item-description В 2018 году была создана рабочая группа под руководством В.В. Витрянского, которая доработала законопроект в части положений о вещных правах. Законопроект был обсужден в г. Екатеринбурге, г. Казани, и г. Краснодаре.
-                                                span.documents__item-size PDF 1.3 МБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Проект Федерального закона № 47538-6/5 «О внесении изменений в часть первую Гражданского кодекса Российской Федерации»
-                                                span.documents__item-size PDF 1.2 МБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Справка о результатах деятельности рабочей группы Совета по приведению проекта федерального закона № 47538-6/5 «О внесении изменений в часть первую Гражданского кодекса Российской Федерации»  (во втором чтении) в актуально состояние.
-                                                span.documents__item-size PDF 234 КБ
-                                            span.documents__item-helper-icon.icon-download
-                // Expansion Group
-                div.expansion-section-group
-                    div.expansion-section-group-header
-                        div.expansion-section-group-header-container
-                            div.expansion-section-group-header-content
-                                h5.expansion-section-group-title II.
-                                div.expansion-section-group-icon
-                    div.expansion-section-group-body
-                        div.documents
-                            div.documents-container
-                                // Items
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Проект федерального закона № 1158774-7 «О внесении изменений в статью 181-2 части первой Гражданского кодекса Российской Федерации» (о дистанционном участии в собраниях).
-                                                span.documents__item-description Проект федерального закона № 1158774-7 «О внесении изменений в статью 181-2 части первой Гражданского кодекса Российской Федерации», внесенный депутатами Государственной Думы П.В. Крашенинниковым и А.М. Макаровым, разработан рабочей группой Совета при Президенте Российской Федерации по кодификации и совершенствованию гражданского законодательства по подготовке предложений о внесении изменений в главу 9.1 части первой Гражданского кодекса Российской Федерации по вопросу дистанционного участия в собрании (создана решением Совета от 11 февраля 2021 г., протокол № 206). Текст законопроекта был обсужден и рекомендован ко внесению в Государственную Думу на заседании Совета 25 марта 2021 года (протокол № 207).
-                                                span.documents__item-size PDF 2 МБ
-                                            span.documents__item-helper-icon.icon-download
-                // Expansion Group
-                div.expansion-section-group
-                    div.expansion-section-group-header
-                        div.expansion-section-group-header-container
-                            div.expansion-section-group-header-content
-                                h5.expansion-section-group-title III.
-                                div.expansion-section-group-icon
-                    div.expansion-section-group-body
-                        div.documents
-                            div.documents-container
-                                // Items
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Проект федерального закона «О внесении изменений в часть четвертую Гражданского кодекса Российской Федерации»
-                                                span.documents__item-size PDF 2 МБ
-                                            span.documents__item-helper-icon.icon-download
+                                div.documents-container
+                                    each document in group.documents
+                                        div.documents__item
+                                            a.documents__item-container(href="/")
+                                                div.documents__item-icon
+                                                    img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                                                div.documents__item-content
+                                                    div.documents__item-content-group
+                                                        h3.documents__item-title=document.name
+                                                        span.documents__item-description=document.description
+                                                        span.documents__item-size=document.size
+                                                    span.documents__item-helper-icon.icon-download
