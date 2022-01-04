@@ -1,0 +1,89 @@
+-
+    var dissertations = [
+        {
+            author: "Астахов Валерий Иванович",
+            title: "Вопросы применения норм гражданского законодательства. Относительно недействительные сделки в российском гражданском праве",
+            date: "02.12.2021"
+        },
+        {
+            author: "Бугорский Владимир Павлович",
+            title: "Перспективы применения формулярного права в строительном подряде",
+            date: "02.12.2021"
+        },
+        {
+            author: "Денисов Сергей Анатольевич",
+            title: "Момент заключения договора по гражданскому праву Российской Федерации [ с 1999 года — кандидат юридических наук ]",
+            date: "02.12.2021"
+        },
+        {
+            author: "Дятлов Владислав Валерьевич",
+            title: "Юрисдикция органов государственной власти в процессе реализации закона",
+            date: "02.12.2021"
+        },
+        {
+            author: "Астахов Валерий Иванович",
+            title: "Вопросы применения норм гражданского законодательства. Относительно недействительные сделки в российском гражданском праве",
+            date: "02.12.2021"
+        },
+        {
+            author: "Бугорский Владимир Павлович",
+            title: "Перспективы применения формулярного права в строительном подряде",
+            date: "02.12.2021"
+        },
+        {
+            author: "Денисов Сергей Анатольевич",
+            title: "Момент заключения договора по гражданскому праву Российской Федерации [ с 1999 года — кандидат юридических наук ]",
+            date: "02.12.2021"
+        },
+        {
+            author: "Дятлов Владислав Валерьевич",
+            title: "Юрисдикция органов государственной власти в процессе реализации закона",
+            date: "02.12.2021"
+        }
+    ]
+
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="dissertation-council.html") Диссертационный совет
+                li.nav-line__item
+                    a(href="dissertation-council_upcoming-protections.html") Предстоящие защиты
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="dissertation-council.html") О Совете
+                    li.section-nav__item.active
+                        a(href="dissertation-council_upcoming-protections.html") Предстоящие защиты
+                    li.section-nav__item
+                        a(href="dissertation-council_completed-defenses.html") Состоявшиеся защиты       
+        // Section Nav
+        // Section Header
+        div.section-header
+            h1.section-title Предстоящие защиты диссертаций
+        // Filter Search
+        div.filter-wrapper
+            div.filter-search#filter-search
+                div.filter-search-container
+                    input(id="filter-search-input" name="search" placeholder="Поиск..." type="text" data-list=".dissertations-container" data-toggle="hideseek")
+                    button.filter-search-button
+                        span.filter-search-button-icon#anim-icon-filter-search
+        // Filter Search     
+        // Section Header
+        div.section-body
+            div.dissertations
+                div.dissertations-container
+                    // Items
+                    each dissertation in dissertations
+                        div.div.dissertations__item
+                            div.div.dissertations__item-container
+                                h3.dissertations__item-author=dissertation.author
+                                h5.dissertations__item-title=dissertation.title
+                                span.dissertations__item-date="Дата защиты: " + dissertation.date
