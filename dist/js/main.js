@@ -301,6 +301,7 @@ $(document).ready(function () {
 
     // Toggle a class of the first element and change the class of the second element (optional)
     // depands on class of the first element and play the lottie icon of the first element (optional)
+    
     function changeClassByClickOnElement(el1, cl1, el2 = false, cl2 = false, elLottie1 = false) {
         st1 = false
         el1.on("click", function (e) {
@@ -337,24 +338,70 @@ $(document).ready(function () {
         });
     }
 
-    // function toggleSelfClassByClick(el1, cl1) {
-    //     st1 = false;
-    //     el1.on("click", function (e) {
-    //         st1 = !st1;
-    //         if (st1 === false)
-    //             $(this).removeClass(cl1);
-    //         else {
-    //             $(this).addClass(cl1);
-    //         }
-    //         e.preventDefault();
-    //     });
-    // }
+    // Toggle Class
 
     function toggleSelfClassByClick(el1, cl1) {
         el1.on("click", function (e) {
             $(this).toggleClass(cl1);
             e.preventDefault();
         });
+    }
+
+    // Focus
+
+    // el2 - another element that receives focus (optional)
+
+    function elOnFocus(el, el2 = false, cl) {
+        el.on('focus', function () {
+            if (el2 === false) {
+                el.addClass('focus');
+            } else {
+                el2.addClass('focus');
+            }
+        });
+        el.on('blur', function () {
+            if (el2 === false) {
+                el.removeClass('focus');
+            } else {
+                el2.removeClass('focus');
+            }
+        });
+    }
+
+    // Search Field
+
+    // clType - class when the input contains some characters
+    // clFocus - class when the input is in focus
+
+    function filterSearch(el, clType, clFocus, elLottie = false) {
+        $input = el.find('input');
+        $button = el.find('button');
+
+        function handleClear () {
+            el.addClass(clType);
+            elLottie.setDirection(1);
+            elLottie.play();
+        }
+        function handleDefault () {
+            el.removeClass(clType);
+            elLottie.setDirection(-1);
+            elLottie.play();
+        }
+        $input.bind('input', function() {
+            value = $(this).val();
+            length = value.length;
+            if (length > 0 ) {
+                handleClear();
+            } else if (length === 0) {
+                handleDefault();
+            }
+        });
+        $button.on("click", function() {
+            $input.val('');
+            el.removeClass(clType);
+            handleDefault();
+        });
+        elOnFocus($input, el, clFocus);
     }
 
     // function toggleSelfClassByClick(el1, cl1) {
@@ -388,14 +435,6 @@ $(document).ready(function () {
     //
     // Actions
 
-    // function search() {
-    //     if (!$appSearchField('active')) {
-    //         changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
-    //     } else if ($appSearchField.hasClass('active')) {
-    //         changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
-    //     }
-    // };
-
     // Expansion Section Group
 
     function expansionSectionGroup() {
@@ -408,18 +447,10 @@ $(document).ready(function () {
         groupHeader.on('click', function () {
             $(this).closest('.expansion-section-group').toggleClass('hide');
         });
-        
-        // $('#your-resizing-div').bind('getheight', function() {
-        //     $('#your-resizing-div').height();
-        // });
-        
-        // function your_function_to_load_content() {
-        //     /*whatever your thing does*/
-        //     $('#your-resizing-div').trigger('getheight');
-        // }
     };
 
     // Search
+
     function search() {
         $appSearchButton.on("click", function() {
             if (!$appSearchField.hasClass('active')) {
@@ -443,59 +474,13 @@ $(document).ready(function () {
     // Filter Search
 
     // Task .focus();
-    function filterSearch(el, elLottie = false) {
-        $input = el.find('input');
-        $button = el.find('button');
-        state = false;
-
-        function handleClear () {
-            state = true;
-            el.addClass('type');
-            elLottie.setDirection(1);
-            elLottie.play();
-        }
-        function handleDefault () {
-            state = false;
-            el.removeClass('type');
-            elLottie.setDirection(-1);
-            elLottie.play();
-        }
-
-        $input.bind('input', function() {
-            value = $(this).val();
-            length = value.length;
-            if (length > 0 ) {
-                handleClear();
-            } else if (length === 0) {
-                handleDefault();
-            }
-        });
-        $button.on("click", function() {
-            $input.val('');
-            el.removeClass('type');
-            handleDefault();
-        });
-    }
-
-    // function filterSearch() {
-    //     $input = $filterSearch.find('input');
-    //     $filteredItems = $('.persons__item');
-    //     $filteredItemsName = $('h3');
-    //     var value = $input.val();
-        
-    //     if ($filteredItemsName.text().indexOf(`${value}`) > -1) {
-    //         $filteredItemsName.closest('.persons__item').show();
-    //     } else {
-    //         $filteredItemsName.closest('.persons__item').hide();
-    //     }
-    // }
 
     let $filterSearch = $('#filter-search');
 
     menu();
     search();
     expansionSectionGroup();
-    filterSearch($filterSearch, $iconFilterSearchButton);
+    filterSearch($filterSearch, 'type', 'focus', $iconFilterSearchButton);
 
     // Section Menu
 
