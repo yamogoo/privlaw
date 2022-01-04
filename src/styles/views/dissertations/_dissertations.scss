@@ -1,25 +1,45 @@
 .dissertations {
 
     &-container {
-
+        @extend %dissertations-container;
     }
 
     &__item {
+        @extend %entity__item;
+        margin: 0px;
 
         &-container {
-            
+            padding-bottom: 50px;
+        }
+
+        &-content {
+            @include flexbox;
+            @include flex-direction(column);
+            gap: 25px;
+        }
+
+        &-footer {
+            padding-top: 40px;
+
+            &-container {
+                padding-left: 35px;
+            }
         }
 
         &-author {
-            
+            @extend %entity__item-author;
         }
 
         &-title {
-
+            @extend %entity__item-title;
         }
 
         &-date {
-            
+            @extend %entity__item-date;
+        }
+
+        &:not(:nth-last-child(1)) {
+            border-bottom: 1px solid $divider-color;
         }
     }
 }

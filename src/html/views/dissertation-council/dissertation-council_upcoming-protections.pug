@@ -3,42 +3,178 @@
         {
             author: "Астахов Валерий Иванович",
             title: "Вопросы применения норм гражданского законодательства. Относительно недействительные сделки в российском гражданском праве",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Бугорский Владимир Павлович",
             title: "Перспективы применения формулярного права в строительном подряде",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Денисов Сергей Анатольевич",
             title: "Момент заключения договора по гражданскому праву Российской Федерации [ с 1999 года — кандидат юридических наук ]",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Дятлов Владислав Валерьевич",
             title: "Юрисдикция органов государственной власти в процессе реализации закона",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Астахов Валерий Иванович",
             title: "Вопросы применения норм гражданского законодательства. Относительно недействительные сделки в российском гражданском праве",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Бугорский Владимир Павлович",
             title: "Перспективы применения формулярного права в строительном подряде",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Денисов Сергей Анатольевич",
             title: "Момент заключения договора по гражданскому праву Российской Федерации [ с 1999 года — кандидат юридических наук ]",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         },
         {
             author: "Дятлов Владислав Валерьевич",
             title: "Юрисдикция органов государственной власти в процессе реализации закона",
-            date: "02.12.2021"
+            date: "02.12.2021",
+            documents: [
+                {
+                    name: "Диссертация",
+                    type: "pdf",
+                    size: "12КБ"
+                },
+                {
+                    name: "Автореферат",
+                    type: "pdf",
+                    size: "36КБ"
+                },
+                {
+                    name: "Отзыв научного руководителся",
+                    type: "doc",
+                    size: "117КБ"
+                }
+            ]
         }
     ]
 
@@ -82,8 +218,24 @@ section.section
                 div.dissertations-container
                     // Items
                     each dissertation in dissertations
-                        div.div.dissertations__item
-                            div.div.dissertations__item-container
-                                h3.dissertations__item-author=dissertation.author
-                                h5.dissertations__item-title=dissertation.title
-                                span.dissertations__item-date="Дата защиты: " + dissertation.date
+                        div.dissertations__item
+                            div.dissertations__item-container
+                                div.dissertations__item-content
+                                    h3.dissertations__item-author=dissertation.author
+                                    h5.dissertations__item-title=dissertation.title
+                                    span.dissertations__item-date="Дата защиты: " + dissertation.date
+                                div.dissertations__item-footer
+                                    div.dissertations__item-footer-container
+                                        div.documents
+                                            div.documents-container
+                                                // Items
+                                                each document in dissertation.documents
+                                                    div.documents__item
+                                                        a.documents__item-container(href="/")
+                                                            div.documents__item-icon
+                                                                img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                                                            div.documents__item-content
+                                                                div.documents__item-content-group
+                                                                    h3.documents__item-title=document.name
+                                                                    span.documents__item-size=document.size
+                                                                span.documents__item-helper-icon.icon-download
