@@ -2,6 +2,12 @@
     font-size: px2em(17px);
     font-weight: 500;
     color: $primary-color;
+
+    b {
+        font-size: inherit;
+        font-weight: inherit;
+        color: $accent-color;
+    }
 }
 
 %entity__item-title--sm {

@@ -2,10 +2,22 @@
     font-size: px2em(14px);
     font-weight: 400;
     color: $neutral-color;
+
+    b {
+        font-size: inherit;
+        font-weight: inherit;
+        color: $accent-color;
+    }
 }
 
 %entity__item-date--sm {
     font-size: px2em(14px);
     font-weight: 400;
     color: $neutral-color;
+
+    b {
+        font-size: inherit;
+        font-weight: inherit;
+        color: $accent-color;
+    }
 }

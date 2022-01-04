@@ -1,4 +1,10 @@
 %entity__item-author {
     font-size: 22px;
     font-weight: 400;
+
+    b {
+        font-size: inherit;
+        font-weight: inherit;
+        color: $accent-color;
+    }
 }
