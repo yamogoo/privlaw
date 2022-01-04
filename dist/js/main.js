@@ -167,27 +167,15 @@ $(document).ready(function () {
             }
         }
     })
-
-    // Detect Scroll Down/Top Direction
-    // $(window).bind('mousewheel', function (event) {
-    //     if (event.originalEvent.wheelDelta >= 0) {
-    //         console.log('Scroll up');
-    //     }
-    //     else {
-    //         console.log('Scroll down');
-    //     }
-    // });
-
-
-
+    
     // Filter
     function toggleFilter() {
-        let $filter = $('.filter-dropdown');
-        let $field = $filter.find('.filter-dropdown-container');
-        let $list = $filter.find('.filter-dropdown-list');
-        let $item = $('.filter-dropdown-list p');
-        let $clear = $('.filter__wrapper-clear');
-        let $eventClear = $('.events-filter .filter__wrapper-clear');
+        let $filter = $('.filter-dropdown'),
+            $field = $filter.find('.filter-dropdown-container'),
+            $list = $filter.find('.filter-dropdown-list'),
+            $item = $('.filter-dropdown-list p'),
+            $clear = $('.filter__wrapper-clear'),
+            $eventClear = $('.events-filter .filter__wrapper-clear');
 
         // Height of List
         $($list).each((i, el) => {
@@ -215,25 +203,6 @@ $(document).ready(function () {
             $(this).parent().prev().children('span').text($(this).text());
             $(this).parent().prev().children('input')[0].value = ($(this).text());
         });
-
-        //Hide List
-        // overlay.on('click', function () {
-        //     button.parent().removeClass('active');
-        // });
-        // clear.on('click', function () {
-        //     button.removeClass('active');
-        //     item.removeClass('active');
-        //     item.parent().slideUp();
-        //     button.children('input')[0].value = '';
-        //     $('#text-years').text('Р’СЃРµ РіРѕРґС‹');
-        //     $('#text-tags').text('Р’СЃРµ РЅРѕРІРѕСЃС‚Рё');
-        //     $('#calendar').datepicker('setDate', null);
-        //     $('.filter__wrapper-input input')[0].value = '';
-        // });
-        // eventClear.on('click', function () {
-        //     $('#text-tags').text('Р’СЃРµ РјРµСЂРѕРїСЂРёСЏС‚РёСЏ');
-        //     $('#calendar').datepicker('setDate', null);
-        // });
 
         //Click Outside
         $(document).on("click", function (event) {
@@ -266,34 +235,34 @@ $(document).ready(function () {
 
     upButton();
 
-    // Lottie
+    // Lottie icons
+
     // Menu Toggle Buttton
     var $iconAppMenuToggleButton = bodymovin.loadAnimation({
         wrapper: document.getElementById('app-menu-toggle-button-icon'),
         animType: 'svg',
         loop: false,
         autoplay: false,
-        path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json' //'assets/lottie/app-menu-toggle-button.json'
+        path: 'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json'
     });
 
+    // Search filter icon
     var $iconFilterSearchButton = bodymovin.loadAnimation({
         wrapper: document.getElementById('anim-icon-filter-search'),
         animType: 'svg',
         loop: false,
         autoplay: false,
-        path: 'https://assets9.lottiefiles.com/private_files/lf30_l9rr0rau.json' //'assets/lottie/app-menu-toggle-button.json'
+        path: 'https://assets9.lottiefiles.com/private_files/lf30_l9rr0rau.json'
     });
 
-    // var iconAppMenuToggleButton = LottieInteractivity.create({
-    //     wrapper: document.getElementById('app-menu-toggle-button-icon'),
-    //     mode:"cursor",
-    //     player: "#seventhLottie",
-    //     // animationData: 
-    //     // path: 'assets/lottie/app-menu-toggle-button.json'//'https://assets6.lottiefiles.com/private_files/lf30_dwpb7ksx.json' //
-    // });
-
-
-    // iconAppMenuToggleButton.addEventListener('DOMLoaded',startAnimation);
+    // Expansion section group icon
+    var $iconExpansionSectionGroup = bodymovin.loadAnimation({
+        wrapper: document.getElementById('anim-icon-expansion-section-group'),
+        animType: 'svg',
+        loop: false,
+        autoplay: false,
+        path: 'https://assets5.lottiefiles.com/private_files/lf30_7wgtigoq.json'
+    });
 
     //
     //
@@ -301,7 +270,7 @@ $(document).ready(function () {
 
     // Toggle a class of the first element and change the class of the second element (optional)
     // depands on class of the first element and play the lottie icon of the first element (optional)
-    
+
     function changeClassByClickOnElement(el1, cl1, el2 = false, cl2 = false, elLottie1 = false) {
         st1 = false
         el1.on("click", function (e) {
@@ -374,7 +343,7 @@ $(document).ready(function () {
     // clFocus - class when the input is in focus
 
     function filterSearch(el, clType, clFocus, elLottie = false) {
-        $input = el.find('input');
+        $input = el.find('input')
         $button = el.find('button');
 
         function handleClear () {
@@ -430,22 +399,46 @@ $(document).ready(function () {
     let $appSearchField = $('#app-search-field');
     let $appSearchButtonClose = $('#app-search-button-close');
     let $expansionSection = $(".expansion-section");
+    let $filterSearch = $('#filter-search');
     
     //
     //
     // Actions
 
+    // Filter (Hideseek)
+    
+    $('#filter-search-input').hideseek();
+    $('#filter-search-input').hideseek({
+        highlight: true,
+        nodata:        'Элемент не найден',
+        min_chars: 1,
+        // hidden_mode:    false,
+        navigation:     true,
+        // ignore_accents: true,
+        // attribute: '',
+      });
+
     // Expansion Section Group
 
     function expansionSectionGroup() {
-        var container = $('.expansion-section');
-        var group = container.find('.expansion-section-group');
-        var groupHeader = group.find('.expansion-section-group-header');
-        var groupBody = group.find('.expansion-section-group-body');
-        var getHeight = groupBody.children().height();
+        var container = $('.expansion-section'),
+            group = container.find('.expansion-section-group'),
+            groupHeader = group.find('.expansion-section-group-header'),
+            groupBody = group.find('.expansion-section-group-body'),
+            getHeight = groupBody.children().height();
+
+        let elLottie = $iconExpansionSectionGroup;
+
         // groupBody.css({"height" : getHeight});
         groupHeader.on('click', function () {
             $(this).closest('.expansion-section-group').toggleClass('hide');
+            // if ($(this).closest('.expansion-section-group').hasClass('hide')) {
+            //     elLottie.setDirection(1);
+            //     elLottie.play();
+            // } else {
+            //     elLottie.setDirection(-1);
+            //     elLottie.play();
+            // }
         });
     };
 
@@ -474,8 +467,6 @@ $(document).ready(function () {
     // Filter Search
 
     // Task .focus();
-
-    let $filterSearch = $('#filter-search');
 
     menu();
     search();
@@ -633,18 +624,7 @@ $(document).ready(function () {
     });
 
 
-    // Filter (Hideseek)
     
-    $('#filter-search-input').hideseek();
-    $('#filter-search-input').hideseek({
-        highlight: true,
-        nodata:        'Элемент не найден',
-        // min_chars: 1,
-        // hidden_mode:    false,
-        // navigation:     false,
-        // ignore_accents: false,
-        // attribute: '',
-      });
 
 
       
