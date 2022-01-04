@@ -196,7 +196,7 @@ section.section
                 li.nav-line__item
                     a(href="dissertation-council.html") Диссертационный совет
                 li.nav-line__item
-                    a(href="dissertation-council_upcoming-protections.html") Предстоящие защиты
+                    a(href="dissertation-council_completed-defenses.html") Состоявшиеся защиты 
         //Nav Line
         // Section Nav
         div.section-nav-wrapper
@@ -204,14 +204,14 @@ section.section
                 ul.section-nav-container
                     li.section-nav__item
                         a(href="dissertation-council.html") О Совете
-                    li.section-nav__item.active
-                        a(href="dissertation-council_upcoming-protections.html") Предстоящие защиты
                     li.section-nav__item
+                        a(href="dissertation-council_upcoming-defenses.html") Предстоящие защиты
+                    li.section-nav__item.active
                         a(href="dissertation-council_completed-defenses.html") Состоявшиеся защиты       
         // Section Nav
         // Section Header
         div.section-header
-            h1.section-title Предстоящие защиты диссертаций
+            h1.section-title Состоявшиеся защиты диссертаций
         // Filter Search
         div.filter-wrapper
             div.filter-search#filter-search
@@ -231,6 +231,9 @@ section.section
                                 div.dissertations__item-content
                                     h3.dissertations__item-author=dissertation.author
                                     h5.dissertations__item-title=dissertation.title
+                                    a.dissertations__item-link(href="videos-detail.html" target="_blank")
+                                        span.dissertations__item-link-icon
+                                        p Видеозапись защиты
                                     p.dissertations__item-description=dissertation.description
                                     span.dissertations__item-date Дата защиты: 
                                         b=dissertation.date

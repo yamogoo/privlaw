@@ -1,0 +1,42 @@
+%entity__item-link {
+    font-size: 17px;
+    font-weight: 400;
+    color: $accent-color;
+
+    p {
+        font-size: inherit;
+        font-style: inherit;
+        color: inherit;
+    }
+
+    &:hover {
+        
+        p {
+            text-decoration: underline;
+        }
+    }
+}
+
+%entity__item-link-icon {
+    @include flexbox;
+    @include flex-direction(row);
+    @include justify-content(flex-start);
+    @include align-items(center);
+    gap: px2em(10px);  
+    font-size: 17px;
+    font-weight: 400;
+    color: $accent-color;
+
+    p {
+        font-size: inherit;
+        font-style: inherit;
+        color: inherit;
+    }
+
+    &:hover {
+        
+        p {
+            text-decoration: underline;
+        }
+    }
+}
