@@ -70,10 +70,34 @@
         > h1 {
             font-size: 36px;
         }
+
+        > a {
+            text-decoration: underline;
+        }
     
         // Paragraph
         > p {
             @extend %main-p;
+
+            p {
+                @extend %main-p;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            b {
+                @extend %main-p-b;
+            }
+
+            i {
+                @extend %main-p-i;
+            }
+    
+            br {
+                @extend %main-br;
+            }
         }
 
         > b {

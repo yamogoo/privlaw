@@ -1,4 +1,78 @@
 -
+    var events = 
+        {
+            future: [
+                {
+                    title: "Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми",
+                    image: "events/events_22.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "пятница",
+                        number: "22",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                },
+                {
+                    title: "Проблемы компенсации морального вреда в судебной практике» проведет Исследовательский центр частного права",
+                    image: "events/events_21.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "пятница",
+                        number: "21",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                }
+            ],
+            passed: [
+                {
+                    title: "Совет по кодификации рекомендовал начать реформу вещного права с блока норм о недвижимости",
+                    image: "events/events_20.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "пятница",
+                        number: "20",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                },
+                {
+                    title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
+                    image: "events/events_17.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "вторник",
+                        number: "17",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                },
+                {
+                    title: "Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми",
+                    image: "events/events_22.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "понедельник",
+                        number: "17",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                }
+            ]
+        }
+
+-
     var persons = [
         {
             name: "Михеева Лидия Юрьевна",
@@ -174,12 +248,7 @@ section.section
                                 a(href="#section-3") Подать заявку на участие
                             li
                                 a(href="#section-4") Прошедшие конференции
-                            li
-                                a(href="#section-5") Спикеры
-                            li
-                                a(href="#section-6") Партнеры
             // Section Menu
-
             div.section-list#section-list
                 // О центре
                 div.section
@@ -194,7 +263,7 @@ section.section
                                     div.article-content
                                         // О проекте
                                         h3#section-1 О проекте
-                                        p <b>Задача</b> Проекта состоит в продвижении идей частного права, поиске новых имён в цивилистической науке, в организации тесного общения разных научных школ в городах России.
+                                        p <b>Задача</b> проекта состоит в продвижении идей частного права, поиске новых имён в цивилистической науке, в организации тесного общения разных научных школ в городах России.
                                         br
                                         p Центр вместе с ведущими юридическими вузами страны и в сотрудничестве с органами судебной системы проводит серию научно-практических конференций в Екатеринбурге, Томске, Владивостоке, Краснодаре, Казани и других городах России.
                                         br
@@ -208,96 +277,54 @@ section.section
                                         h3#section-2 Предстоящие мероприятия
                                         div.section
                                             div.section-body
-                                                div.person-card
-                                                    a(href="persons-detail.html" class="person-card-container")
-                                                        div.person-card__section-image
-                                                            span.person-card-image
-                                                                img(src="images/persons/persons_miheeva_sm-1.png")
-                                                        div.person-card__section-content
-                                                            div.person-card__section-content-header
-                                                                h3.person-card__item-name Михеева Лидия Юрьевна
-                                                                p.person-card__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
-                                                                span.person-card__item-tag Исследовательский центр
-                                                            div.person-card__section-content-body
-                                                                div.article
-                                                                    div.article-content
-                                                                        p В соответствии с Уставом Исследовательский центр возглавляет председатель совета, который является единоличным исполнительным органом Исследовательского центра.
-                                                                        br 
-                                                                        p Председателем совета Центра является доктор юридических наук, профессор, заслуженный юрист Российской Федерации Михеева Лидия Юрьевна. Михеева Л.Ю. была избрана председателем совета на заседании совета Центра, состоявшемся 24 июля 2019 года, и утверждена в должности распоряжением Правительства Российской Федерации от 31 августа 2019 года № 1936-Р.
-                                                div.section-footer.align-right
-                                                    div.section-button
-                                                        a(href="persons-detail.html") Читать полностью
+                                                // Events
+                                                div.events
+                                                    div.events-container-list
+                                                        each event in events.future
+                                                            div.events__item
+                                                                a(href="events-detail.html" class="events__item-container")
+                                                                    span.events__item-image
+                                                                        span.events__item-tag-state
+                                                                        img(src=`images/${event.image}`)
+                                                                    div.events__item-content
+                                                                        div.events__item-content-group
+                                                                            each tag in event.tags
+                                                                                span.events__item-tag=tag
+                                                                            h3.events__item-title=event.title
+                                                                            span.date-box__number=event.date.number
+                                                                            div.date-box__group
+                                                                                span.date-box__month=event.date.month
+                                                                                span.date-box__day=event.date.day
                                         // Подать заявку на участие
                                         h3#section-3 Подать заявку на участие
+                                        p Хотите принять участие как гость или выступить в качестве спикера?
+                                        br
+                                        p Заполните форму ниже, и наш сотрудник с Вами обязательно свяжется.
                                         div.section
                                             div.section-body
-                                                div.persons.sm
-                                                    div.persons-container
-                                                        each person in persons
-                                                            div.persons__item
-                                                                a(href=person.url class="persons__item-container")
-                                                                    span.persons__item-image
-                                                                        img(src=`images/${person.image}`)
-                                                                    div.persons__item-content
-                                                                        h3.persons__item-name=person.name
-                                                                        p.persons__item-description=person.description
-                                                                        each tag in person.tags
-                                                                            span.persons__item-tag=tag                            
+                                                                           
                                         // Прошедшие мероприятия
                                         h3#section-4 Прошедшие мероприятия
                                         div.section
                                             div.section-body
-                                                div.person-card
-                                                    a(href="persons-detail.html" class="person-card-container")
-                                                        div.person-card__section-image
-                                                            span.person-card-image
-                                                                img(src="images/persons/persons_suhanov_sm-1.png")
-                                                        div.person-card__section-content
-                                                            div.person-card__section-content-header
-                                                                h3.person-card__item-name Суханов Евгений Алексеевич
-                                                                p.person-card__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
-                                                                span.person-card__item-tag Исследовательский центр
-                                                            div.person-card__section-content-body
-                                                                div.article
-                                                                    div.article-content
-                                                                        p В соответствии с пунктом 23 Устава Исследовательского центра частного права  научный руководитель осуществляет координацию научной деятельности Исследовательского центра.
-                                                                        br 
-                                                                        p Научный руководитель избирается открытым голосованием на заседании совета на 5 лет из числа ведущих российских ученых, пользующихся авторитетом в мировом научном сообществе, внесших существенный вклад в развитие юридической науки.
-                                                div.section-footer.align-right
-                                                    div.section-button
-                                                        a(href="persons-detail.html") Читать полностью
-                                        // Попечительский совет
-                                        h3#section-5 Попечительский совет
-                                        div.section
-                                            div.section-body
-                                                div.persons.sm
-                                                    div.persons-container
-                                                        each person in persons
-                                                            div.persons__item
-                                                                a(href=person.url class="persons__item-container")
-                                                                    span.persons__item-image
-                                                                        img(src=`images/${person.image}`)
-                                                                    div.persons__item-content
-                                                                        h3.persons__item-name=person.name
-                                                                        p.persons__item-description=person.description
-                                                                        each tag in person.tags
-                                                                            span.persons__item-tag=tag
-                                        // Документы Центра
-                                        h3#section-5 Документы Центра
-                                        div.section
-                                            div.section-body
-                                                div.documents
-                                                    div.documents-container
-                                                        // Items
-                                                        each document in documents
-                                                            div.documents__item
-                                                                a.documents__item-container(href=document.url)
-                                                                    div.documents__item-icon
-                                                                        img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
-                                                                    div.documents__item-content
-                                                                        div.documents__item-content-group
-                                                                            h3.documents__item-title=document.name
-                                                                            if document.description != ''
-                                                                                span.documents__item-description=document.description
-                                                                            span.documents__item-size=document.type + " " + document.size
-                                                                        span.documents__item-helper-icon.icon-download
+                                                div.events
+                                                    div.events-container-list
+                                                        // Items future
+                                                        each event in events.passed
+                                                            div.events__item.passed
+                                                                a(href="events-detail.html" class="events__item-container")
+                                                                    span.events__item-image
+                                                                        span.events__item-tag-state
+                                                                        img(src=`images/${event.image}`)
+                                                                    div.events__item-content
+                                                                        div.events__item-content-group
+                                                                            each tag in event.tags
+                                                                                span.events__item-tag=tag
+                                                                            h3.events__item-title=event.title
+                                                                            span.date-box__number=event.date.number
+                                                                            div.date-box__group
+                                                                                span.date-box__month=event.date.month
+                                                                                span.date-box__day=event.date.day
+                                                    div.section-footer.align-right
+                                                        div.section-button
+                                                            a(href="events.html") Все мероприятия
