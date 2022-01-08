@@ -166,7 +166,25 @@ $(document).ready(function () {
                 margin: 40
             }
         }
-    })
+    });
+
+    // Section slider
+    $('#section-slider').owlCarousel({
+        autoplay: true,
+        autoplayTimeout: 2000,
+        loop: true,
+        smartSpeed: 250,
+        slideBy: 1,
+        nav: false,
+        dots: false,
+        responsiveRefreshRate: 20,
+        responsive: {
+            0: {
+                items: 1,
+                margin: 0
+            }
+        }
+    });
     
     // Filter
     function toggleFilter() {

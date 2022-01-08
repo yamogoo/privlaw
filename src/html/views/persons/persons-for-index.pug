@@ -1,3 +1,98 @@
+-
+    var persons = [
+        {
+            name: "Михеева Лидия Юрьевна",
+            description: "Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_miheeva_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр",
+                "РШЧП"
+            ]
+        },
+        {
+            name: "Суханов Евгений Алексеевич",
+            description: "Научный руководитель Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_suhanov_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Новоселова Людмила Александровна",
+            description: "Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_navoselova_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Степанов Дмитрий Иванович",
+            description: "Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA",
+            image: "persons/persons_slesarev_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            description: "Заведующий кафедрой теории и истории частного права, д.ю.н., профессор",
+            image: "persons/persons_dozhdev_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Павлова Елена Александровна",
+            description: "Начальник отдела законодательства об интеллектуальных правах Исследовательского центра, заведующая кафедрой интеллектуального права, к.ю.н., доцент",
+            image: "persons/persons_pavlova_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Скловский Константин Ильич",
+            description: "Профессор кафедры вещного права, д.ю.н., профессор",
+            image: "persons/persons_sklovskiy_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Ширвиндт Андрей Михайлович",
+            description: "Профессор кафедры обязательственного права, к.ю.н, LL.M",
+            image: "persons/persons_sirvindt_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Тололаева Наталья Владимировна",
+            description: "Старший научный сотрудник отдела договорного права Исследовательского центра, доцент кафедры обязательственного права, к.ю.н.",
+            image: "persons/persons_tololaeva-scaled_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Слесарев Владимир Львович",
+            description: "Начальник отдела договорного права Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_slesarev_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+    ]
+    
 // Persons
 section.section
     div.section-container
@@ -5,91 +100,101 @@ section.section
         div.section-header
             h5.section-title Наши сотрудники
         // Section Header
-        
         div.persons.index
-            //- div.persons-container
             div.section-slider.owl-carousel#section-slider-persons
                 // Items
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_miheeva_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Михеева Лидия Юрьевна
-                            p.persons__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_suhanov_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Суханов Евгений Алексеевич
-                            p.persons__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_navoselova_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Новоселова Людмила Александровна
-                            p.persons__item-description Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_slesarev_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Степанов Дмитрий Иванович
-                            p.persons__item-description Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_dozhdev_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Дождев Дмитрий Вадимович
-                            p.persons__item-description Заведующий кафедрой теории и истории частного права, д.ю.н., профессор
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_pavlova_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Павлова Елена Александровна
-                            p.persons__item-description Начальник отдела законодательства об интеллектуальных правах Исследовательского центра, заведующая кафедрой интеллектуального права, к.ю.н., доцент
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_sklovskiy_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Скловский Константин Ильич
-                            p.persons__item-description Профессор кафедры вещного права, д.ю.н., профессор
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_sirvindt_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Ширвиндт Андрей Михайлович
-                            p.persons__item-description Профессор кафедры обязательственного права, к.ю.н, LL.M
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_tololaeva-scaled_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Тололаева Наталья Владимировна
-                            p.persons__item-description Старший научный сотрудник отдела договорного права Исследовательского центра, доцент кафедры обязательственного права, к.ю.н.
-                            span.persons__item-tag Исследовательский центр
-                div.persons__item
-                    a(href="persons-detail.html" class="persons__item-container")
-                        span.persons__item-image
-                            img(src="images/persons/persons_slesarev_sm-1.png")
-                        div.persons__item-content
-                            h3.persons__item-name Слесарев Владимир Львович
-                            p.persons__item-description Начальник отдела договорного права Исследовательского центра, д.ю.н., профессор
-                            span.persons__item-tag Исследовательский центр
+                each person in persons
+                    div.persons__item
+                        a(href=person.url class="persons__item-container")
+                            span.persons__item-image
+                                img(src=`images/${person.image}`)
+                            div.persons__item-content
+                                h3.persons__item-name=person.name
+                                p.persons__item-description=person.description
+                                each tag in person.tags
+                                    span.persons__item-tag=tag 
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_miheeva_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Михеева Лидия Юрьевна
+                //-             p.persons__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_suhanov_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Суханов Евгений Алексеевич
+                //-             p.persons__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_navoselova_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Новоселова Людмила Александровна
+                //-             p.persons__item-description Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_slesarev_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Степанов Дмитрий Иванович
+                //-             p.persons__item-description Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_dozhdev_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Дождев Дмитрий Вадимович
+                //-             p.persons__item-description Заведующий кафедрой теории и истории частного права, д.ю.н., профессор
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_pavlova_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Павлова Елена Александровна
+                //-             p.persons__item-description Начальник отдела законодательства об интеллектуальных правах Исследовательского центра, заведующая кафедрой интеллектуального права, к.ю.н., доцент
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_sklovskiy_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Скловский Константин Ильич
+                //-             p.persons__item-description Профессор кафедры вещного права, д.ю.н., профессор
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_sirvindt_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Ширвиндт Андрей Михайлович
+                //-             p.persons__item-description Профессор кафедры обязательственного права, к.ю.н, LL.M
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_tololaeva-scaled_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Тололаева Наталья Владимировна
+                //-             p.persons__item-description Старший научный сотрудник отдела договорного права Исследовательского центра, доцент кафедры обязательственного права, к.ю.н.
+                //-             span.persons__item-tag Исследовательский центр
+                //- div.persons__item
+                //-     a(href="persons-detail.html" class="persons__item-container")
+                //-         span.persons__item-image
+                //-             img(src="images/persons/persons_slesarev_sm-1.png")
+                //-         div.persons__item-content
+                //-             h3.persons__item-name Слесарев Владимир Львович
+                //-             p.persons__item-description Начальник отдела договорного права Исследовательского центра, д.ю.н., профессор
+                //-             span.persons__item-tag Исследовательский центр
+
+
                 //- div.persons__item
                 //-     a(href="persons-detail.html" class="persons__item-container")
                 //-         span.persons__item-image
