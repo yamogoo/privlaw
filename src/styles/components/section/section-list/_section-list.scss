@@ -1,7 +1,12 @@
 .section-list {
 
     .section {
-        padding-bottom: 75px;
+        @include respond-above(md) {
+            padding-bottom: $section-padding-bottom-lg;
+        }
+        @include respond-below(md) {
+            padding-bottom: $section-padding-bottom-sm;
+        }
 
         .section-header {
             padding-bottom: 50px;
