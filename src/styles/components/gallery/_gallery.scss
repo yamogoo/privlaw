@@ -46,6 +46,12 @@
 
     &__item {
 
+        img {
+            width: 100%;
+            @extend %article-content-image;
+            height: 320px;
+        }
+
         &:not(:first-child) {
             display: none;
         }

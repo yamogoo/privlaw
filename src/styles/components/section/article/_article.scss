@@ -39,45 +39,57 @@
             line-height: 1.82;
         }
 
-        h4 {
+        > h2[id^="section-"], h3[id^="section-"], h4[id^="section-"], h5[id^="section-"] {
+            padding-bottom: 50px;
+        }
+
+        > h2[id^="section-"] {
+            @extend %section-title-primary;
+        }
+
+        > h3[id^="section-"] {
+            @extend %section-title-secondary;
+        }
+
+        > h4 {
             font-size: 24px;
         }
 
-        h5 {
+        > h5 {
             font-size: 22px;
         }
 
-        h3 {
+        > h3 {
             font-size: 28px;
         }
 
-        h2 {
+        > h2 {
             font-size: 32px;
         }
 
-        h1 {
+        > h1 {
             font-size: 36px;
         }
     
         // Paragraph
-        p {
+        > p {
             @extend %main-p;
         }
 
-        b {
+        > b {
             @extend %main-p-b;
         }
 
-        i {
+        > i {
             @extend %main-p-i;
         }
 
-        br {
+        > br {
             @extend %main-br;
         }
     
         // Quotes
-        q {
+        > q {
             display: block;
             font-style: italic;
             font-size: 1.1em;
@@ -99,21 +111,18 @@
             }
         }
 
-        hr{
-            width: 100%;
-            margin: 30px 0px;
-            border: initial;
-            border-top: 1px solid $divider-color;
+        > hr{
+            @extend %article-hr;
+        }
+
+        > hr.section {
+            @extend %article-hr;
         }
     
-        img {
-            width: 100%;
-            border-radius: 4px;
-            height: 320px;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 320px;
-            object-fit: cover;
+        > img {
+            @extend %article-content-image;
+            padding-bottom: 40px;
+            // height: 320px;
         }
     
         &-header {

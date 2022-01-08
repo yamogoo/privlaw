@@ -1,0 +1,11 @@
+%article-hr {
+    width: 100%;
+    border: initial;
+    border-top: 1px solid $divider-color;
+    @include respond-above(md) {
+        margin: $section-padding-top-lg 0px $section-padding-bottom-lg 0px;
+    }
+    @include respond-below(md) {
+        margin: $section-padding-top-sm 0px $section-padding-bottom-sm 0px;
+    }
+}

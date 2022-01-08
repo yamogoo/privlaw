@@ -1,0 +1,32 @@
+// %section-title {
+//     font-weight: 500;
+//     @include respond-above(sm) {
+//         font-size: 38px !important;
+//     }
+    
+//     @include respond-below(sm) {
+//         font-size: 32px !important;
+//     }
+// }
+
+%section-title-primary {
+    font-weight: 500;
+    @include respond-above(sm) {
+        font-size: 38px !important;
+    }
+    
+    @include respond-below(sm) {
+        font-size: 32px !important;
+    }
+}
+
+%section-title-secondary {
+    font-weight: 500;
+    @include respond-above(sm) {
+        font-size: 28px !important;
+    }
+    
+    @include respond-below(sm) {
+        font-size: 26px !important;
+    }
+}

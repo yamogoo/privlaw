@@ -1,3 +1,141 @@
+-
+    var persons = [
+        {
+            name: "Михеева Лидия Юрьевна",
+            description: "Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_miheeva_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр",
+                "РШЧП"
+            ]
+        },
+        {
+            name: "Суханов Евгений Алексеевич",
+            description: "Научный руководитель Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_suhanov_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Новоселова Людмила Александровна",
+            description: "Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_navoselova_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Степанов Дмитрий Иванович",
+            description: "Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA",
+            image: "persons/persons_slesarev_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            description: "Заведующий кафедрой теории и истории частного права, д.ю.н., профессор",
+            image: "persons/persons_dozhdev_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Павлова Елена Александровна",
+            description: "Начальник отдела законодательства об интеллектуальных правах Исследовательского центра, заведующая кафедрой интеллектуального права, к.ю.н., доцент",
+            image: "persons/persons_pavlova_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Скловский Константин Ильич",
+            description: "Профессор кафедры вещного права, д.ю.н., профессор",
+            image: "persons/persons_sklovskiy_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Ширвиндт Андрей Михайлович",
+            description: "Профессор кафедры обязательственного права, к.ю.н, LL.M",
+            image: "persons/persons_sirvindt_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+    ]
+
+-
+    var documents = [
+        {
+            name: "Копия Устава",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "12КБ"
+        },
+        {
+            name: "Копия распоряжения",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "119КБ"
+        },
+        {
+            name: "Копия Лицензии на образовательную деятельность",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "87КБ"
+        },
+        {
+            name: "Копия Свидетельства государственной аккредитации",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "36КБ"
+        },
+        {
+            name: "Копия Свидетельства ФНС",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "265КБ"
+        },
+        {
+            name: "Положение о научных исследованиях",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "211КБ"
+        },
+        {
+            name: "Копия Свидетельство о профессионально-общественной аккредитации МАГИСТРАТУРА",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "117КБ"
+        },
+        {
+            name: "Копии СВИДЕТЕЛЬСТВ к товарным знакам",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "144КБ"
+        },
+    ]
+
+            
 // Centre
 section.section
     div.section-container
@@ -34,324 +172,149 @@ section.section
                 div.section-menu#section-menu
                     div.section-menu-container
                         ul
-                            li.active
-                                a(href="#section-o-centre") О Центре
                             li
-                                a(href="#section-predsedatel-soveta") Председатель совета
+                                a(href="#section-1") О Центре
                             li
-                                a(href="#section-sovet-centra") Совет Центра
+                                a(href="#section-2") Председатель совета
                             li
-                                a(href="#section-nauchnyj-rukovoditel") Научный руководитель
+                                a(href="#section-3") Совет Центра
                             li
-                                a(href="#section-popechitelskij-sovet") Попечительский совет
+                                a(href="#section-4") Научный руководитель
                             li
-                                a(href="#section-dokumenty-centra") Документы Центра
+                                a(href="#section-5") Попечительский совет
+                            li
+                                a(href="#section-6") Документы Центра
             // Section Menu
 
             div.section-list#section-list
                 
                 // О центре
-                div.section#section-o-centre
+                div.section
                     // Section Header
                     div.section-header
-                        h5.section-title Центр
-                    // Section Header
+                        h1.section-title Исследовательский Центр
                     div.section-body
                         div.article
                             div.article-section-list
                                 // Article
                                 div.article-section
                                     div.article-content
-                                        p Федеральное государственное бюджетное научное учреждение «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Центр) создано распоряжением Президента РСФСР Б.Н. Ельцина от 27 декабря 1991 года. ( Устав Центра ). Имя Сергея Сергеевича Алексеева отражено в наименовании Центра в соответствии с Указом Президента Российской Федерации от 30.09.2013 № 748 «Об увековечивании памяти С.С. Алексеева» в знак признания его выдающегося вклада в развитие отечественной науки и его роли в создании Центра. С момента основания перед Центром была поставлена задача в максимально сжатые сроки привести правовое регулирование в соответствие с новыми экономическими отношениями. Сердцевиной этой работы стала разработка нового Гражданского кодекса Российской Федерации – экономической конституции страны. По итогам напряженной творческой работы коллектива Центра в промежутке с 1994 по 2006 годы увидели свет четыре части Гражданского кодекса Российской Федерации, а в 2008-2010 годы подготовлены развернутые поправки к нему, призванные модернизировать гражданское законодательство и привести его в соответствие с прошедшими заметную эволюцию общественными и экономическими отношениями.
-                
-                // Председатель совета
-                div.section#section-predsedatel-soveta
-                    // Section Header
-                    div.section#o-centre
-                        // Section Header
-                        div.section-header
-                            h5.section-title Председатель совета
-                        // Section Header
-                        div.section-body
-                            div.person-card
-                                a(href="persons-detail.html" class="person-card-container")
-                                    div.person-card__section-image
-                                        span.person-card-image
-                                            img(src="images/persons/persons_miheeva_sm-1.png")
-                                    div.person-card__section-content
-                                        div.person-card__section-content-header
-                                            h3.person-card__item-name Михеева Лидия Юрьевна
-                                            p.person-card__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
-                                            span.person-card__item-tag Исследовательский центр
-                                        div.person-card__section-content-body
-                                            div.article
-                                                div.article-content
-                                                    p В соответствии с Уставом Исследовательский центр возглавляет председатель совета, который является единоличным исполнительным органом Исследовательского центра.
-                                                    br 
-                                                    p Председателем совета Центра является доктор юридических наук, профессор, заслуженный юрист Российской Федерации Михеева Лидия Юрьевна. Михеева Л.Ю. была избрана председателем совета на заседании совета Центра, состоявшемся 24 июля 2019 года, и утверждена в должности распоряжением Правительства Российской Федерации от 31 августа 2019 года № 1936-Р.
-                            div.section-footer.align-right
-                                div.section-button
-                                    a(href="persons-detail.html") Читать полностью                   
-
-                // Совет Центра
-                div.section#section-sovet-centra
-                    // Section Header
-                    div.section-header
-                        h5.section-title Совет Центра
-                    // Section Header
-                    div.section-body
-                        div.persons.sm
-                            div.persons-container
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_miheeva_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Михеева Лидия Юрьевна
-                                            p.persons__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_suhanov_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Суханов Евгений Алексеевич
-                                            p.persons__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_navoselova_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Новоселова Людмила Александровна
-                                            p.persons__item-description Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_slesarev_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Степанов Дмитрий Иванович
-                                            p.persons__item-description Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_dozhdev_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Дождев Дмитрий Вадимович
-                                            p.persons__item-description Заведующий кафедрой теории и истории частного права, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_pavlova_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Павлова Елена Александровна
-                                            p.persons__item-description Начальник отдела законодательства об интеллектуальных правах Исследовательского центра, заведующая кафедрой интеллектуального права, к.ю.н., доцент
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_sklovskiy_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Скловский Константин Ильич
-                                            p.persons__item-description Профессор кафедры вещного права, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_sirvindt_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Ширвиндт Андрей Михайлович
-                                            p.persons__item-description Профессор кафедры обязательственного права, к.ю.н, LL.M
-                                            span.persons__item-tag Исследовательский центр
-                
-                // Научный руководитель
-                div.section-list#section-nauchnyj-rukovoditel
-                    // O centre
-                    div.section#o-centre
-                        // Section Header
-                        div.section-header
-                            h5.section-title Научный руководитель
-                        // Section Header
-                        div.section-body
-                            div.person-card
-                                a(href="persons-detail.html" class="person-card-container")
-                                    div.person-card__section-image
-                                        span.person-card-image
-                                            img(src="images/persons/persons_suhanov_sm-1.png")
-                                    div.person-card__section-content
-                                        div.person-card__section-content-header
-                                            h3.person-card__item-name Суханов Евгений Алексеевич
-                                            p.person-card__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
-                                            span.person-card__item-tag Исследовательский центр
-                                        div.person-card__section-content-body
-                                            div.article
-                                                div.article-content
-                                                    p В соответствии с пунктом 23 Устава Исследовательского центра частного права  научный руководитель осуществляет координацию научной деятельности Исследовательского центра.
-                                                    br 
-                                                    p Научный руководитель избирается открытым голосованием на заседании совета на 5 лет из числа ведущих российских ученых, пользующихся авторитетом в мировом научном сообществе, внесших существенный вклад в развитие юридической науки.
-                            div.section-footer.align-right
-                                div.section-button
-                                    a(href="persons-detail.html") Читать полностью                   
-                
-                // Совет Центра
-                div.section#section-popechitelskij-sovet
-                    // Section Header
-                    div.section-header
-                        h5.section-title Попечительский совет
-                    // Section Header
-                    div.section-body
-                        div.persons.sm
-                            div.persons-container
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_miheeva_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Михеева Лидия Юрьевна
-                                            p.persons__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_suhanov_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Суханов Евгений Алексеевич
-                                            p.persons__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_navoselova_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Новоселова Людмила Александровна
-                                            p.persons__item-description Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_slesarev_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Степанов Дмитрий Иванович
-                                            p.persons__item-description Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_dozhdev_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Дождев Дмитрий Вадимович
-                                            p.persons__item-description Заведующий кафедрой теории и истории частного права, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_pavlova_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Павлова Елена Александровна
-                                            p.persons__item-description Начальник отдела законодательства об интеллектуальных правах Исследовательского центра, заведующая кафедрой интеллектуального права, к.ю.н., доцент
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_sklovskiy_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Скловский Константин Ильич
-                                            p.persons__item-description Профессор кафедры вещного права, д.ю.н., профессор
-                                            span.persons__item-tag Исследовательский центр
-                                div.persons__item
-                                    a(href="persons-detail.html" class="persons__item-container")
-                                        span.persons__item-image
-                                            img(src="images/persons/persons_sirvindt_sm-1.png")
-                                        div.persons__item-content
-                                            h3.persons__item-name Ширвиндт Андрей Михайлович
-                                            p.persons__item-description Профессор кафедры обязательственного права, к.ю.н, LL.M
-                                            span.persons__item-tag Исследовательский центр
-                
-                // Документы Центра
-                div.section#section-dokumenty-centra
-                    // Section Header
-                    div.section-header
-                        h5.section-title Документы Центра
-                    // Section Header
-                    div.section-body
-                        div.documents
-                            div.documents-container
-                                // Items
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия Устава
-                                                span.documents__item-size PDF 2 МБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия распоряжения
-                                                span.documents__item-size PDF 23 КБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия Лицензии на образовательную деятельность
-                                                span.documents__item-size PDF 1.3 МБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия Свидетельства государственной аккредитации
-                                                span.documents__item-size PDF 1.2 МБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия Свидетельства ФНС
-                                                span.documents__item-size PDF 234 КБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия Положение о научных исследованиях
-                                                span.documents__item-size PDF 32 КБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копия Свидетельство о профессионально-общественной аккредитации МАГИСТРАТУРА
-                                                span.documents__item-size PDF 17 КБ
-                                            span.documents__item-helper-icon.icon-download
-                                div.documents__item
-                                    a.documents__item-container(href="/")
-                                        div.documents__item-icon
-                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                        div.documents__item-content
-                                            div.documents__item-content-group
-                                                h3.documents__item-title Копии СВИДЕТЕЛЬСТВ к товарным знакам
-                                                span.documents__item-size PDF 501 КБ
-                                            span.documents__item-helper-icon.icon-download
-        //- div.section-footer
-        //-     include ../../components/pagination/pagination.pug
-// News
+                                        h3#section-1 О центре
+                                        p Федеральное государственное бюджетное научное учреждение «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Центр) создано распоряжением Президента РСФСР Б.Н. Ельцина от 27 декабря 1991 года. ( Устав Центра ). Имя Сергея Сергеевича Алексеева отражено в наименовании Центра в соответствии с Указом Президента Российской Федерации от 30.09.2013 № 748 «Об увековечивании памяти С.С. Алексеева» в знак признания его выдающегося вклада в развитие отечественной науки и его роли в создании Центра.
+                                        br
+                                        p С момента основания перед Центром была поставлена задача в максимально сжатые сроки привести правовое регулирование в соответствие с новыми экономическими отношениями. Сердцевиной этой работы стала разработка нового Гражданского кодекса Российской Федерации – экономической конституции страны. По итогам напряженной творческой работы коллектива Центра в промежутке с 1994 по 2006 годы увидели свет четыре части Гражданского кодекса Российской Федерации, а в 2008-2010 годы подготовлены развернутые поправки к нему, призванные модернизировать гражданское законодательство и привести его в соответствие с прошедшими заметную эволюцию общественными и экономическими отношениями.
+                                        hr
+                                        // Председатель совета
+                                        div.section#section-2
+                                            // Section Header
+                                            div.section-header
+                                                h3.section-title Председатель совета
+                                            // Section Header
+                                            div.section-body
+                                                div.person-card
+                                                    a(href="persons-detail.html" class="person-card-container")
+                                                        div.person-card__section-image
+                                                            span.person-card-image
+                                                                img(src="images/persons/persons_miheeva_sm-1.png")
+                                                        div.person-card__section-content
+                                                            div.person-card__section-content-header
+                                                                h3.person-card__item-name Михеева Лидия Юрьевна
+                                                                p.person-card__item-description Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор
+                                                                span.person-card__item-tag Исследовательский центр
+                                                            div.person-card__section-content-body
+                                                                div.article
+                                                                    div.article-content
+                                                                        p В соответствии с Уставом Исследовательский центр возглавляет председатель совета, который является единоличным исполнительным органом Исследовательского центра.
+                                                                        br 
+                                                                        p Председателем совета Центра является доктор юридических наук, профессор, заслуженный юрист Российской Федерации Михеева Лидия Юрьевна. Михеева Л.Ю. была избрана председателем совета на заседании совета Центра, состоявшемся 24 июля 2019 года, и утверждена в должности распоряжением Правительства Российской Федерации от 31 августа 2019 года № 1936-Р.
+                                                div.section-footer.align-right
+                                                    div.section-button
+                                                        a(href="persons-detail.html") Читать полностью  
+                                        // Совет Центра
+                                        div.section#section-3
+                                            // Section Header
+                                            div.section-header
+                                                h3.section-title Совет Центра
+                                            // Section Header
+                                            div.section-body
+                                                div.persons.sm
+                                                    div.persons-container
+                                                        each person in persons
+                                                            div.persons__item
+                                                                a(href=person.url class="persons__item-container")
+                                                                    span.persons__item-image
+                                                                        img(src=`images/${person.image}`)
+                                                                    div.persons__item-content
+                                                                        h3.persons__item-name=person.name
+                                                                        p.persons__item-description=person.description
+                                                                        each tag in person.tags
+                                                                            span.persons__item-tag=tag                            
+                                        // Научный руководитель
+                                        div.section-list#section-4
+                                            // O centre
+                                            div.section#o-centre
+                                                // Section Header
+                                                div.section-header
+                                                    h3.section-title Научный руководитель
+                                                // Section Header
+                                                div.section-body
+                                                    div.person-card
+                                                        a(href="persons-detail.html" class="person-card-container")
+                                                            div.person-card__section-image
+                                                                span.person-card-image
+                                                                    img(src="images/persons/persons_suhanov_sm-1.png")
+                                                            div.person-card__section-content
+                                                                div.person-card__section-content-header
+                                                                    h3.person-card__item-name Суханов Евгений Алексеевич
+                                                                    p.person-card__item-description Научный руководитель Исследовательского центра, д.ю.н., профессор
+                                                                    span.person-card__item-tag Исследовательский центр
+                                                                div.person-card__section-content-body
+                                                                    div.article
+                                                                        div.article-content
+                                                                            p В соответствии с пунктом 23 Устава Исследовательского центра частного права  научный руководитель осуществляет координацию научной деятельности Исследовательского центра.
+                                                                            br 
+                                                                            p Научный руководитель избирается открытым голосованием на заседании совета на 5 лет из числа ведущих российских ученых, пользующихся авторитетом в мировом научном сообществе, внесших существенный вклад в развитие юридической науки.
+                                                    div.section-footer.align-right
+                                                        div.section-button
+                                                            a(href="persons-detail.html") Читать полностью
+                                        // Попечительский совет
+                                        div.section#section-5
+                                            // Section Header
+                                            div.section-header
+                                                h3.section-title Попечительский совет
+                                            // Section Header
+                                            div.section-body
+                                                div.persons.sm
+                                                    div.persons-container
+                                                        each person in persons
+                                                            div.persons__item
+                                                                a(href=person.url class="persons__item-container")
+                                                                    span.persons__item-image
+                                                                        img(src=`images/${person.image}`)
+                                                                    div.persons__item-content
+                                                                        h3.persons__item-name=person.name
+                                                                        p.persons__item-description=person.description
+                                                                        each tag in person.tags
+                                                                            span.persons__item-tag=tag
+                                        // Документы Центра
+                                        div.section#section-6
+                                            // Section Header
+                                            div.section-header
+                                                h3.section-title Документы Центра
+                                            // Section Header
+                                            div.section-body
+                                                div.documents
+                                                    div.documents-container
+                                                        // Items
+                                                        each document in documents
+                                                            div.documents__item
+                                                                a.documents__item-container(href=document.url)
+                                                                    div.documents__item-icon
+                                                                        img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                                                                    div.documents__item-content
+                                                                        div.documents__item-content-group
+                                                                            h3.documents__item-title=document.name
+                                                                            if document.description != ''
+                                                                                span.documents__item-description=document.description
+                                                                            span.documents__item-size=document.type + " " + document.size
+                                                                        span.documents__item-helper-icon.icon-download

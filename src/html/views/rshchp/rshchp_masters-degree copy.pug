@@ -75,66 +75,6 @@
         },
     ]
 
--
-    var documents = [
-        {
-            name: "Формы заявлений для поступления",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "12КБ"
-        },
-        {
-            name: "Порядок подачи документов в электронной форме",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "119КБ"
-        },
-        {
-            name: "Программа вступительных испытаний 2022",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "87КБ"
-        },
-        {
-            name: "Положение о приемной комиссии",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "36КБ"
-        },
-        {
-            name: "Положение об экзаменационной комиссии",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "265КБ"
-        },
-        {
-            name: "Положение об апелляционной комиссии",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "211КБ"
-        },
-        {
-            name: "Положение о предоставление снижения стоимости",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "117КБ"
-        },
-        {
-            name: "Образец договора об оказании платных образовательных услуг",
-            description: "",
-            url: "",
-            type: "pdf",
-            size: "144КБ"
-        },
-    ]
-
 section.section
     div.section-container
         //Nav Line
@@ -188,23 +128,20 @@ section.section
                                 a(href="#section-6") Стипендии и материальная поддержка
                             li
                                 a(href="#section-7") Для иностранных граждан
-                            //- li
-                            //-     a(href="#section-8") Партнеры
+                            li
+                                a(href="#section-8") Партнеры
             // Section Menu
 
             div.section-list
                 // О программе
                 div.section
-                    // Section Header
-                    div.section-header
-                        h1.section-title Магистратура
                     div.section-body
                         div.article
                             div.article-section-list
                                 // Article
                                 div.article-section
                                     div.article-content
-                                        h3#section-1 О программе
+                                        h2#section-1 О программе
                                         p Количество мест для приема на обучение по магистерской программе  «Магистр частного права» по различным условиям поступления составляет в 2022 году:
                                         br
                                         ul
@@ -226,7 +163,7 @@ section.section
                                         br
                                         p Количество мест для приема на обучение по магистерской программе <b>«Магистр частного права»</b> по различным условиям поступления составляет в 2022 году:
                                         hr
-                                        h3#section-2 Дисциплины
+                                        h2#section-2 Дисциплины
                                         p В федеральном государственном бюджетном научном учреждении «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Исследовательский центр, ИЦЧП) в соответствии с Правилами приема в 2022 году предусмотрен прием заявлений о допуске к участию в конкурсе для поступления на очную форму обучения по направлению подготовки 40.04.01 Юриспруденция (магистерская программа «Магистр частного права») (далее – заявление) с приложением необходимых документов в соответствии с Правилами приема в электронной форме по E-mail: 
                                             a(href="mailto:nazmova@privlaw.ru") nazmova@privlaw.ru (г. Москва),
                                             a(href="mailto:uril@privlaw.ru") uril@privlaw.ru (г. Екатеринбург).
@@ -261,15 +198,15 @@ section.section
                                                                 img(src="./assets/images/docs/icon-document-pdf.png", alt="")
                                                             div.documents__item-content
                                                                 div.documents__item-content-group
-                                                                    h3.documents__item-title Положение о научных исследованиях
-                                                                    span.documents__item-size PDF 14 КБ
+                                                                    h3.documents__item-title Учебный план по программе магистратуры
+                                                                    span.documents__item-size PDF 2 МБ
                                                                 span.documents__item-helper-icon.icon-download
                                         hr
                                         // Преподаватели
                                         div.section#section-3
                                             // Section Header
                                             div.section-header
-                                                h3.section-title Преподаватели
+                                                h5.section-title Преподаватели
                                             // Section Header
                                             div.section-body
                                                 div.persons.sm
@@ -284,30 +221,101 @@ section.section
                                                                         p.persons__item-description=person.description
                                                                         each tag in person.tags
                                                                             span.persons__item-tag=tag
-                                        // Документы для поступления
-                                        div.section#section-4
-                                            // Section Header
-                                            div.section-header
-                                                h3.section-title Документы для поступления
-                                            // Section Header
-                                            div.section-body
-                                                div.documents
-                                                    div.documents-container
-                                                        // Items
-                                                        each document in documents
-                                                            div.documents__item
-                                                                a.documents__item-container(href=document.url)
-                                                                    div.documents__item-icon
-                                                                        img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
-                                                                    div.documents__item-content
-                                                                        div.documents__item-content-group
-                                                                            h3.documents__item-title=document.name
-                                                                            if document.description != ''
-                                                                                span.documents__item-description=document.description
-                                                                            span.documents__item-size=document.type + " " + document.size
-                                                                        span.documents__item-helper-icon.icon-download
-                                        // Приемная кампания 2021
-                                        h3#section-5 Приемная кампания 2021
+                // Документы для поступления
+                div.section#dokumenty-dlya-postupleniya
+                    // Section Header
+                    div.section-header
+                        h5.section-title Документы для поступления
+                    // Section Header
+                    div.section-body
+                        div.documents
+                            div.documents-container
+                                // Items
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Формы заявлений для поступления
+                                                span.documents__item-size PDF 2 МБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Порядок подачи документов в электронной форме
+                                                span.documents__item-size PDF 23 КБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Программа вступительных испытаний 2022
+                                                span.documents__item-size PDF 1.3 МБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Положение о приемной комиссии
+                                                span.documents__item-size PDF 1.2 МБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Положение об экзаменационной комиссии
+                                                span.documents__item-size PDF 234 КБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Положение об апелляционной комиссии
+                                                span.documents__item-size PDF 32 КБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Положение о предоставление снижения стоимости
+                                                span.documents__item-size PDF 17 КБ
+                                            span.documents__item-helper-icon.icon-download
+                                div.documents__item
+                                    a.documents__item-container(href="/")
+                                        div.documents__item-icon
+                                            img(src="./assets/images/docs/icon-document-pdf.png", alt="")
+                                        div.documents__item-content
+                                            div.documents__item-content-group
+                                                h3.documents__item-title Образец договора об оказании платных образовательных услуг
+                                                span.documents__item-size PDF 501 КБ
+                                            span.documents__item-helper-icon.icon-download
+
+                // Приемная кампания 2021
+                div.section#priemnaya-kampaniya-2021
+                    // Section Header
+                    div.section-header
+                        h5.section-title Приемная кампания 2021
+                    // Section Header
+                    div.section-body
+                        div.article
+                            div.article-section-list
+                                // Article
+                                div.article-section
+                                    div.article-content
                                         p В федеральном государственном бюджетном научном учреждении «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Исследовательский центр, ИЦЧП) в соответствии с Правилами приема в 2022 году предусмотрен прием заявлений о допуске к участию в конкурсе для поступления на очную форму обучения по направлению подготовки 40.04.01 Юриспруденция (магистерская программа «Магистр частного права») (далее – заявление) с приложением необходимых документов в соответствии с Правилами приема в электронной форме по E-mail: nazmova@privlaw.ru (г. Москва), uril@privlaw.ru (г. Екатеринбург).
                                         br
                                         p Прием заявлений осуществляется с 20 июня по 25 июля 2022 года (до 18.00 по местному времени).
@@ -321,9 +329,19 @@ section.section
                                         p Письма без прикрепленных файлов, в том числе реферата, а также при несоответствии перечня прикрепленных файлов требованиям Правил приема, не рассматриваются, информационное письмо о принятии документов абитуриенту не отправляется.
                                         br
                                         p Документы считаются принятыми к рассмотрению после получения абитуриентом подтверждения на электронный адрес поступающего.
-                                        hr
-                                        // Приемная кампания 2021
-                                        h3#section-6 Стипендии и материальная поддержка
+                
+                // Для иностранных граждан
+                div.section#priemnaya-kampaniya-2021
+                    // Section Header
+                    div.section-header
+                        h5.section-title Для иностранных граждан
+                    // Section Header
+                    div.section-body
+                        div.article
+                            div.article-section-list
+                                // Article
+                                div.article-section
+                                    div.article-content
                                         p В федеральном государственном бюджетном научном учреждении «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Исследовательский центр, ИЦЧП) в соответствии с Правилами приема в 2022 году предусмотрен прием заявлений о допуске к участию в конкурсе для поступления на очную форму обучения по направлению подготовки 40.04.01 Юриспруденция (магистерская программа «Магистр частного права») (далее – заявление) с приложением необходимых документов в соответствии с Правилами приема в электронной форме по E-mail: nazmova@privlaw.ru (г. Москва), uril@privlaw.ru (г. Екатеринбург).
                                         br
                                         p Прием заявлений осуществляется с 20 июня по 25 июля 2022 года (до 18.00 по местному времени).
@@ -337,9 +355,46 @@ section.section
                                         p Письма без прикрепленных файлов, в том числе реферата, а также при несоответствии перечня прикрепленных файлов требованиям Правил приема, не рассматриваются, информационное письмо о принятии документов абитуриенту не отправляется.
                                         br
                                         p Документы считаются принятыми к рассмотрению после получения абитуриентом подтверждения на электронный адрес поступающего.
-                                        hr
-                                        // Для иностранных граждан
-                                        h3#section-7 Для иностранных граждан
+
+                // Приемная кампания 2021
+                div.section#stipendii-i-materialnaya-podderzhka
+                    // Section Header
+                    div.section-header
+                        h5.section-title Стипендии и материальная поддержка
+                    // Section Header
+                    div.section-body
+                        div.article
+                            div.article-section-list
+                                // Article
+                                div.article-section
+                                    div.article-content
+                                        p В федеральном государственном бюджетном научном учреждении «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Исследовательский центр, ИЦЧП) в соответствии с Правилами приема в 2022 году предусмотрен прием заявлений о допуске к участию в конкурсе для поступления на очную форму обучения по направлению подготовки 40.04.01 Юриспруденция (магистерская программа «Магистр частного права») (далее – заявление) с приложением необходимых документов в соответствии с Правилами приема в электронной форме по E-mail: nazmova@privlaw.ru (г. Москва), uril@privlaw.ru (г. Екатеринбург).
+                                        br
+                                        p Прием заявлений осуществляется с 20 июня по 25 июля 2022 года (до 18.00 по местному времени).
+                                        br
+                                        p Поступающий заполняет заявление, согласие на обработку персональных данных, согласие на зачисление (с указанием: бюджетные места/места с оплатой стоимости по договору), размещенные на сайте Исследовательского центра.
+                                        br 
+                                        p Заявления, подписанные лично с указанием даты заполнения, а также требуемые документы необходимо отсканировать и прикрепить к электронному письму с указанием темы: поступление/заявление на поступление. Допустимые форматы файлов: jpg, jpeg, pdf. Одновременно с документами направляется реферат в формате Word, pdf. В электронном письме указывается перечень направляемых документов.
+                                        br
+                                        p Отсканированные копии документов должны быть четкими и с хорошо читаемыми печатями. Заверения указанных копий документов не требуется.
+                                        br 
+                                        p Письма без прикрепленных файлов, в том числе реферата, а также при несоответствии перечня прикрепленных файлов требованиям Правил приема, не рассматриваются, информационное письмо о принятии документов абитуриенту не отправляется.
+                                        br
+                                        p Документы считаются принятыми к рассмотрению после получения абитуриентом подтверждения на электронный адрес поступающего.
+
+
+                // Приемная кампания 2021
+                div.section#priemnaya-kampaniya-2021
+                    // Section Header
+                    div.section-header
+                        h5.section-title Приемная кампания 2021
+                    // Section Header
+                    div.section-body
+                        div.article
+                            div.article-section-list
+                                // Article
+                                div.article-section
+                                    div.article-content
                                         p В федеральном государственном бюджетном научном учреждении «Исследовательский центр частного права имени С.С. Алексеева при Президенте Российской Федерации» (далее – Исследовательский центр, ИЦЧП) в соответствии с Правилами приема в 2022 году предусмотрен прием заявлений о допуске к участию в конкурсе для поступления на очную форму обучения по направлению подготовки 40.04.01 Юриспруденция (магистерская программа «Магистр частного права») (далее – заявление) с приложением необходимых документов в соответствии с Правилами приема в электронной форме по E-mail: nazmova@privlaw.ru (г. Москва), uril@privlaw.ru (г. Екатеринбург).
                                         br
                                         p Прием заявлений осуществляется с 20 июня по 25 июля 2022 года (до 18.00 по местному времени).

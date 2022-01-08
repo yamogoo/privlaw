@@ -400,6 +400,7 @@ $(document).ready(function () {
     let $appSearchButtonClose = $('#app-search-button-close');
     let $expansionSection = $(".expansion-section");
     let $filterSearch = $('#filter-search');
+    let $sectionMenu = $('.section-menu');
     
     //
     //
@@ -622,6 +623,17 @@ $(document).ready(function () {
             });
         });
     });
+
+    function sectionMenu() {
+        menu = $sectionMenu;
+        menuItem = $sectionMenu.find('li');
+        menuItem.on("click", function() {
+            menuItem.removeClass("active");
+            $(this).toggleClass("active");
+        })
+    };
+
+    sectionMenu();
 
 
     

@@ -1,18 +1,18 @@
-@include respond-above(sm) {
+// @include respond-above(sm) {
 
-    .section-header {
+//     .section-header {
         
-        h5, .section-title {
-            font-size: 38px !important;
-        }
-     }
-}
+//         h5, .section-title {
+//             font-size: 38px !important;
+//         }
+//      }
+// }
 
-@include respond-below(sm) {
+// @include respond-below(sm) {
 
-    .section-header {
-        h5, .section-title {
-            font-size: 32px !important;
-        }
-     }
-}
+//     .section-header {
+//         h5, .section-title {
+//             font-size: 32px !important;
+//         }
+//      }
+// }

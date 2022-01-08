@@ -9,30 +9,6 @@
         }
     }
 
-    // // If First Section
-    // &:nth-child(1) {
-
-    //     .section-container {
-    //         padding-top: 80px;
-    //     }
-    // }
-
-    // // If not Last Section
-    // &:not(:nth-last-child(1)) {
-
-    //     .section-container {
-    //         padding-bottom: 60px;
-    //     }
-    // }
-
-    // // If Last Section
-    // &:nth-last-child(1) {
-
-    //     .section-container {
-    //         padding-bottom: 80px;
-    //     }
-    // }
-
     &-container {
         display: flex;
         flex-direction: column;
@@ -46,23 +22,6 @@
         // display: grid;
         // grid-template-columns: 1fr auto;
     }
-
-    //Header
-    // .section-header {
-    //     @include flexbox();
-    //     @include flex-direction(row);
-    //     @include justify-content(space-between);
-    //     @include align-items(center);
-    //     @include flex-wrap(wrap);
-    //     width: 100%;
-    //     padding-bottom: 20px;
-    //     gap: 20px;
-        
-    //     h5, .section-title {
-    //         font-size: 38px;
-    //         font-weight: 500;
-    //     }
-    // }
 
     //Body
     .section-body {

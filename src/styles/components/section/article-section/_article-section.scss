@@ -24,6 +24,11 @@
     }
 }
 
+.article-section-inner {
+    @extend %article-section;
+    padding-top: 50px;
+}
+
 .article-section-list {
 
     .article-section {

@@ -12,6 +12,14 @@
         font-weight: 500;
     }
 
+    h1.section-title, h2.section-title, h5.section-title {
+        @extend %section-title-primary;
+    }
+
+    h3.section-title {
+        @extend %section-title-secondary;
+    }
+
     p, .section-date {
         @extend %entity__item-date;
     }
