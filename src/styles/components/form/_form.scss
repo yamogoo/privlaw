@@ -1,0 +1,85 @@
+$form-gap: 20px;
+
+$form-field-input-padding-x: px2em(20px);
+$form-field-input-padding-y: px2em(20px);
+$form-field-input-padding: $form-field-input-padding-y $form-field-input-padding-x;
+
+$form-field-label-top-normal: 20px;
+$form-field-label-top-active: -6px;
+$form-field-label-padding-x: px2em(5px);
+$form-field-label-padding: 0px $form-field-label-padding-x;
+$form-field-input-left: $form-field-input-padding-x - $form-field-label-padding-x;
+
+.form, form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    &-container {
+        @include flexbox;
+        @include flex-direction(column);
+        gap: $form-gap;
+        position: relative;
+        width: 100%;
+    }
+
+    &__field {
+        @include flexbox;
+        @include flex-direction(column);
+        gap: 0px;
+        position: relative;
+        width: 100%;
+        padding: auto;
+
+        input, textarea {
+            font-size: 16px;
+            padding: $form-field-input-padding;
+            border: 1px solid $divider-color;
+
+            &:focus, &:active {
+                border: 1px solid $primary-color;
+            }
+        }
+
+        // Placeholder
+        label {
+            position: absolute;
+            font-size: inherit;
+            background-color: $white;
+            top: $form-field-label-top-normal;
+            left: $form-field-input-left;
+            padding: $form-field-label-padding;
+            @include transition(top color font-size, 125ms, ease-out);
+        }
+
+        &.active, &.typed {
+
+            label {
+                font-size: 12px;
+                top: $form-field-label-top-active;
+            }
+        }
+
+        &:not(.typed) {
+
+            label {
+                color: $primary-color;
+            }
+        }
+
+        &:not(.active) {
+            color: $secondary-color;
+        }
+    }
+
+    &-group {
+        @include flexbox;
+        @include flex-direction(column);
+        gap: $form-gap;
+        position: relative;
+        width: 100%;
+
+        &.columns {
+            @include flex-direction(row);
+        }
+    }
+} 

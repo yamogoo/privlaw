@@ -653,7 +653,56 @@ $(document).ready(function () {
 
     sectionMenu();
 
+    function inputHighlight(el, cl1, cl2) {
+        el.each(function (){
+            var state;
+            el.on("focus", function() {
+                state = true;
+                handleState($(this), state, cl1);
+            });
+            el.on("blur", function() {
+                state = false;
+                if (state == false) {
+                    handleState($(this), state, cl1);
+                }
+            });
+            el.bind('input', function() {
+                if ( $(this).val().length != 0) {
+                    state = true;
+                    handleState($(this), state, cl2);
+                } else {
+                    state = false;
+                    handleState($(this), state, cl2);
+                }   
+            });
+            function handleState(el, state, cl) {
+                if (state == true) {
+                    el.parent().addClass(cl);
+                } else {
+                    el.parent().removeClass(cl);
+                }
+            }            
+        });
+        
+    }
 
+
+    function formInput () {
+        form = $(".form");
+        input = form.find("input, textarea"); //[type=textarea], input[type=password], textarea
+        label = form.find("label");
+        inputHighlight(input, 'active', 'typed');
+        // input.bind('input', function() {
+        //     inputHighlight(input, 'active');
+        //     if ( $(this).val().length != 0 ) {
+        //         $(this).parent().addClass('active');
+        //     } else {
+        //         $(this).parent().removeClass('active');
+        //     }   
+        // });
+    };
+
+    formInput();
     
 
 
