@@ -1,0 +1,26 @@
+-
+    var error = {
+        title: "К сожалению, страница не найдена",
+        description: "Такой страницы не существует, или она была удалена. Проверьте, правильно ли вы ввели адрес",
+        number: "404",
+    }
+    
+// Error
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="search.html")="Ошибка" + " " + error.number
+        //Nav Line
+
+        // Section Header
+        div.section-header
+            div.section-header-container
+                h5.section-title-primary=error.number
+                h5.section-title=error.title
+                p=error.description
+        // Section Header

@@ -16,11 +16,16 @@
         @extend %section-title-primary;
     }
 
+    h5.section-title-primary {
+        @extend %section-title-primary;
+        font-size: 72px !important;
+    }
+
     h3.section-title {
         @extend %section-title-secondary;
     }
 
-    p, .section-date {
+    .section-date {
         @extend %entity__item-date;
     }
 }
