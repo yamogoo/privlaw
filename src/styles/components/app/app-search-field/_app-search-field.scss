@@ -1,5 +1,4 @@
 .app-search-field {
-    // display: none;
     position: absolute;
     top: 0;
     width: 100vw;
@@ -8,9 +7,6 @@
     border-bottom-style: solid;
     border-bottom-width: $app-header-border-bottom-width;
     border-bottom-color: $app-header-border-bottom-color;
-    // box-shadow: 0px 4px 16px rgba($app-header-shadow-color, 0.1);
-
-    // height: 
 
     &-container {
         @extend %main-container;
@@ -20,5 +16,17 @@
 
     &-content {
         @include flexbox();
+    }
+}
+
+.app-search-button, button {
+    .icon {
+        // font-family: icomoon;
+        // @extend .icon-search-cross;
+
+        // &:before {
+        //     font-family: icomoon;
+        //     @extend .icon-search-cross;
+        // }
     }
 }
