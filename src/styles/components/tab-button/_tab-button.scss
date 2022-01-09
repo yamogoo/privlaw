@@ -2,6 +2,7 @@
     @include flexbox();
     height: 100%;
 }
+
 .tab-button {
     @include flexbox();
     @include justify-content(center);
@@ -59,6 +60,18 @@
     @include flex-wrap(nowrap);
     gap: 0;
     height: 100%;
+    @include respond-below (xl) {
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(space-between);
+        width: 100px;
+    }
+
+    .tab-button {
+        @include respond-below (xl) {
+            width: inherit;
+        }
+    }
 }
 
 .tab-button.poor-vision {

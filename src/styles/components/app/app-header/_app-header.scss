@@ -27,7 +27,12 @@
     }
 
     &__tabbar {
-        
+
+        &-controllers {
+            @include respond-below (xl) {
+                display: none;
+            }
+        }
     }
 
     &__content-section {
