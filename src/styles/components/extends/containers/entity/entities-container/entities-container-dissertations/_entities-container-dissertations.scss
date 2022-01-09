@@ -1,5 +1,3 @@
 %entities-container-dissertations {
-    @include flexbox;
-    @include flex-direction(column);
-    padding-bottom: $entities-container-padding-bottom;
+    @extend %entities-main-container;
 }

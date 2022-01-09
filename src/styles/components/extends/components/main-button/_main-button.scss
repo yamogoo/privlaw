@@ -1,0 +1,46 @@
+%base-button {
+    @include flexbox();
+    position: relative;
+    overflow: hidden;
+    border-radius: px2em(3px);
+    border: 1px solid $accent-color;
+    @include transition(transform, 50ms, ease-out);
+
+    a, input, * {
+        font-size: px2em(16px);
+        color: inherit;
+        padding: px2em(10px) px2em(20px);
+    }
+
+    input {
+        padding: px2em(0px) px2em(20px);
+    }
+
+    &:hover {
+    }
+
+    &:active {
+        transform: scale(0.97);
+    }
+}
+
+%main-button {
+    @extend %base-button;
+    color: $accent-color;
+
+    &:hover {
+        color: $white;
+        background-color: $accent-color;
+    }
+}
+
+%main-button-inverse {
+    @extend %base-button;
+    color: $white;
+    background-color: $accent-color;
+
+    &:hover {
+        color: $accent-color;
+        background-color: $white;
+    }
+}

@@ -54,6 +54,12 @@
             border-bottom: $entity-item-border-bottom;
         }
     }
+    .events.list {
+        
+        .events__item:not(:nth-last-child(1)) {
+            border-bottom: $entity-item-border-bottom !important;
+        }
+    }
 }
 @include respond-below(lg) {
 
@@ -63,4 +69,10 @@
             border-bottom: $entity-item-border-bottom;
         }
     }
+    .events.list {
+
+        .events__item:not(:nth-last-child(1)) {
+            border-bottom: $entity-item-border-bottom !important;
+        }
+    } 
 }

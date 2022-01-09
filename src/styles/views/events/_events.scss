@@ -4,6 +4,10 @@
         @extend %entities-container-events;
     }
 
+    &-container-list {
+        @extend %entities-main-container;
+    }
+
     &__item {
 
         &-container {
@@ -78,6 +82,10 @@
                     content: 'Завершено';
                 }
             }
+        }
+
+        &.list {
+            
         }
     }
 }

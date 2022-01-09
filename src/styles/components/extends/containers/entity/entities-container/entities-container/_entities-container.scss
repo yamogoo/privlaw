@@ -1,0 +1,9 @@
+%entities-container {
+    @include flexbox;
+    @include flex-direction(column);
+    padding-bottom: $entities-container-padding-bottom;
+}
+
+%entities-main-container {
+    @extend %entities-container;
+}

@@ -291,7 +291,7 @@ section.section
                                         div.section
                                             div.section-body
                                                 // Events
-                                                div.events
+                                                div.events.list
                                                     div.events-container-list
                                                         each event in events.future
                                                             div.events__item
@@ -311,16 +311,48 @@ section.section
                                         // Подать заявку на участие
                                         h3#section-3 Подать заявку на участие
                                         p Хотите принять участие как гость или выступить в качестве спикера?
-                                        br
                                         p Заполните форму ниже, и наш сотрудник с Вами обязательно свяжется.
                                         div.section
                                             div.section-body
-                                                                           
+                                                div.form-wrapper 
+                                                    form.form
+                                                        div.form-container
+                                                            div.form-body
+                                                                div.form-group.columns
+                                                                    div.form__field
+                                                                        label(for="name") ФИО
+                                                                        input(type="text" name="name")
+                                                                    div.form__field
+                                                                        label(for="email") Email
+                                                                        input(type="email" required name="email")
+                                                                div.form-group.columns
+                                                                    div.form__field
+                                                                        label(for="phone") Телефон
+                                                                        input(type="phone" name="phone")
+                                                                    div.form__field
+                                                                        label(for="event-place") Место проведения конференции
+                                                                        input(type="text" required name="event-place")
+                                                                div.form-group.columns
+                                                                    div.form__field
+                                                                        label(for="work") Место работы
+                                                                        input(type="ptexthone" name="work")
+                                                                    div.form__field
+                                                                        label(for="position") Должность
+                                                                        input(type="text" required name="position")
+                                                                div.form__field
+                                                                    label(for="city") Город
+                                                                    input(type="text" name="city")
+                                                                div.form__field
+                                                                    label(for="message") Дополнительная информация
+                                                                    textarea(rows="10" name="message")
+                                                            div.form-footer.align-right
+                                                                div.form-button
+                                                                    input(type="submit" value="Отправить")                         
                                         // Прошедшие мероприятия
                                         h3#section-4 Прошедшие мероприятия
                                         div.section
                                             div.section-body
-                                                div.events
+                                                div.events.list
                                                     div.events-container-list
                                                         // Items future
                                                         each event in events.passed

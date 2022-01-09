@@ -91,22 +91,20 @@ section.section
                         div.article-section-body
                             form.form
                                 div.form-container
-                                    //- <label for="username">ФИО</label><br>
-                                    //- <input type="text" id="username" name="username"><br>
-                                    //- <label for="email">Email</label><br>
-                                    //- <input type="email" id="email" name="email"><br>
-                                    //- <label for="theme">Тема</label><br>
-                                    //- <input type="text" id="theme" name="theme"><br>
-                                    div.form-group.columns
+                                    div.form-body
+                                        div.form-group.columns
+                                            div.form__field
+                                                label(for="name") ФИО
+                                                input(type="text" name="name")
+                                            div.form__field
+                                                label(for="email") Email
+                                                input(type="email" required name="email")
                                         div.form__field
-                                            label(for="name") ФИО
-                                            input(type="text" name="name")
+                                            label(for="theme") Тема
+                                            input(type="text" name="theme")
                                         div.form__field
-                                            label(for="email") Email
-                                            input(type="text" name="email")
-                                    div.form__field
-                                        label(for="theme") Тема
-                                        input(type="text" name="theme")
-                                    div.form__field
-                                        label(for="message") Текст сообщения
-                                        textarea(rows="10" name="message")
+                                            label(for="message") Текст сообщения
+                                            textarea(rows="10" name="message")
+                                    div.form-footer.align-right
+                                        div.form-button
+                                            input(type="submit" value="Отправить")

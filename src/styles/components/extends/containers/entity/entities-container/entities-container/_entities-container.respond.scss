@@ -1,0 +1,15 @@
+//Card Template
+//entities-container-persons
+@include respond-above (md) {
+
+    %entities-main-container {
+        gap: 60px;
+    }
+}
+
+@include respond-below (md) {
+
+    %entities-main-container {
+        gap: 60px;
+    }
+}

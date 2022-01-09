@@ -1,5 +1,9 @@
 .person-card {
 
+    &-container-list {
+        @extend %entities-main-container;
+    }
+
     &-container, a {
         display: grid;
 
