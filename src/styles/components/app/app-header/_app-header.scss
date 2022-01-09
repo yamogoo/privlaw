@@ -26,6 +26,10 @@
         width: 100%;
     }
 
+    &__tabbar {
+        
+    }
+
     &__content-section {
         @include flexbox();
         @include flex-direction(column);

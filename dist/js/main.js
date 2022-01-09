@@ -206,10 +206,8 @@ $(document).ready(function () {
 
         //Filter Input
         $field.on('click', function () {
-            // $(this).next().slideToggle();
+            $field.parent().removeClass('active');
             $(this).parent().toggleClass('active');
-            // button.not(this).parent().removeClass('active');
-            // button.not(this).next().slideUp();
         });
 
         $item.on('click', function () {
@@ -253,7 +251,7 @@ $(document).ready(function () {
 
     upButton();
 
-    // Lottie icons
+    //--------------------------------- Lottie Setup ---------------------------------//
 
     // Menu Toggle Buttton
     var $iconAppMenuToggleButton = bodymovin.loadAnimation({
@@ -284,7 +282,7 @@ $(document).ready(function () {
 
     //
     //
-    // Functions
+    //--------------------------------- Common Fucntions ---------------------------------//
 
     // Toggle a class of the first element and change the class of the second element (optional)
     // depands on class of the first element and play the lottie icon of the first element (optional)
@@ -409,7 +407,7 @@ $(document).ready(function () {
 
     //
     //
-    //------------- Elements -------------//
+    //--------------------------------- Elements ---------------------------------//
 
     let $appMenuToggleButton = $('#app-menu-toggle-button');
     let $appMenu = $('#app-menu');
@@ -422,7 +420,7 @@ $(document).ready(function () {
     
     //
     //
-    // Actions
+    //--------------------------------- Actions ---------------------------------//
 
     // Filter (Hideseek)
     

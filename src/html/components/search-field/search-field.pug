@@ -2,13 +2,16 @@
 div.app-search-field#app-search-field
     div.app-search-field-container
         div.app-search-field-content
-            div.search
+            form.search
                 div.search-container
-                    div.search-group
+                    div.search__field
                         input(id="main-search" type="text" placeholder="Введите поисковый запрос")
-                    div.search-group
+                    div.search-controllers
                         include ../filter/filter-dropdown-for-search.pug
-                        button(type="submit").app-search-button-start#search-button-start Поиск
-                        button.app-search-button-close#app-search-button-close
+                        button(type="submit").search-button#search-button
+                            span Поиск
+                        //- div.form-button
+                        //-     input(type="submit" value="Отправить")
+                        button.search-button-close#search-button-close
                             span.icon
 // Search Field

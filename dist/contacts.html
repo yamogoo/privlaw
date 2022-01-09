@@ -57,19 +57,22 @@
                     </div>
                   </div>
                   <!-- Navigation Top Menu-->
-                  <!--Search Button-->
-                  <div class="search-button" id="app-search-button">
-                    <div class="search-button-icon"></div>
-                  </div>
-                  <!--Search Button-->
-                  <div class="tab-button-group">
-                    <button class="tab-button poor-vision"><span class="tab-button-container"><span class="tab-button-box"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></span></span></button>
-                    <button class="tab-button"><span class="tab-button-content">
-                        <p>Ru</p></span></button>
-                    <button class="tab-button"><span class="tab-button-content">
-                        <p>Для студентов</p></span></button>
-                    <button class="tab-button last" id="app-menu-toggle-button"><span class="tab-button-content">
-                        <div style="width:32px; height: 32px;" id="app-menu-toggle-button-icon"></div></span></button>
+                  <div class="tabbar app-header-tabbar">
+                    <!--Search Button-->
+                    <div class="tab-button-group">
+                      <button class="tab-button app-search-button" id="app-search-button"><span class="tab-button-content">
+                          <div class="search-button-icon"></div></span></button>
+                    </div>
+                    <!--Search Button-->
+                    <div class="tab-button-group">
+                      <button class="tab-button poor-vision"><span class="tab-button-container"><span class="tab-button-box"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></span></span></button>
+                      <button class="tab-button"><span class="tab-button-content">
+                          <p>Ru</p></span></button>
+                      <button class="tab-button"><span class="tab-button-content">
+                          <p>Для студентов</p></span></button>
+                      <button class="tab-button last" id="app-menu-toggle-button"><span class="tab-button-content">
+                          <div style="width:32px; height: 32px;" id="app-menu-toggle-button-icon"></div></span></button>
+                    </div>
                   </div>
                 </div>
                 <div class="app-header__content-section-bottom">
@@ -146,12 +149,12 @@
         <div class="app-search-field" id="app-search-field">
           <div class="app-search-field-container">
             <div class="app-search-field-content">
-              <div class="search">
+              <form class="search">
                 <div class="search-container">
-                  <div class="search-group">
+                  <div class="search__field">
                     <input id="main-search" type="text" placeholder="Введите поисковый запрос">
                   </div>
-                  <div class="search-group">
+                  <div class="search-controllers">
                     <!-- Filter Dropdown-->
                     <div class="filter-dropdown">
                       <div class="filter-dropdown-container">
@@ -167,11 +170,11 @@
                       </div>
                     </div>
                     <!-- Filter Dropdown-->
-                    <button class="app-search-button-start" type="submit" id="search-button-start">Поиск</button>
-                    <button class="app-search-button-close" id="app-search-button-close"><span class="icon"></span></button>
+                    <button class="search-button" type="submit" id="search-button"><span>Поиск</span></button>
+                    <button class="search-button-close" id="search-button-close"><span class="icon"></span></button>
                   </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>

@@ -9,24 +9,16 @@
     border-bottom-color: $app-header-border-bottom-color;
 
     &-container {
+        @include flexbox;
+        @include align-items(center);
         @extend %main-container;
         padding-top: 20px;
         padding-bottom: 20px;
+        @include box(100%);
     }
 
     &-content {
         @include flexbox();
-    }
-}
-
-.app-search-button, button {
-    .icon {
-        // font-family: icomoon;
-        // @extend .icon-search-cross;
-
-        // &:before {
-        //     font-family: icomoon;
-        //     @extend .icon-search-cross;
-        // }
+        @include box(100%);
     }
 }

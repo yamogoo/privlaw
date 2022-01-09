@@ -1,5 +1,7 @@
 %banner-button {
     display: inline-flex;
+    @include justify-content(center);
+    @include align-items(center);
     height: initial;
     width: auto;
     border-width: 1px;

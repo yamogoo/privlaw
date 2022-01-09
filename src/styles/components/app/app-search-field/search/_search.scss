@@ -1,21 +1,50 @@
 .search {
+    @include flexbox;
+    @include align-items(center);
     width: 100%;
 
     &-container {
         @include flexbox();
         width: 100%;
+        gap: 20px;
     }
     
-    input {
-        width: 100%;
-        border: none;
-        font-size: 20px;
-        border-bottom: 1px solid $divider-color;
-    }
-
-    &-group {
+    &__field {
         @include flexbox();
         width: 100%;
+
+        input {
+            width: 100%;
+            border: none;
+            font-size: 20px;
+            border-bottom: 1px solid $divider-color;
+
+            &:focus {
+                border-bottom: 1px solid $primary-color;
+            }
+        }
+    }
+
+    &-controllers {
+        @include flexbox();
+        gap: 20px;
+        width: auto;
+    }
+
+    &-button {
+        @extend %main-button-inverse;
+    }
+
+    &-button-close {
+        .icon {
+            font-family: icomoon;
+            @extend .icon-search-cross;
+    
+            &:before {
+                font-family: icomoon;
+                @extend .icon-search-cross;
+            }
+        }
     }
 
 }

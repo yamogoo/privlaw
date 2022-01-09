@@ -62,31 +62,17 @@ $filter-dropdown-list-item-height: 53px;
 
         p {
             @extend %filter-p;
-            // $color: $primary-color;
+        }
+    }
 
-            // &:hover {
-            //     color: $neutral-color;
-            //     background-color: $background-color;
-            // }
+    &.active {
 
-            // &.active {
-            //     display: none;
-            // }
+        .filter-dropdown-container {
+            border: 1px solid $secondary-color;
         }
 
-        //Count
-
-        // &:matches(& *:nth-last-child(n+4)~*) {
-        //     height: 53px * 3;
-        // }
-        // &:has(&:nth-last-child(n+4)) {
-        //     height: 100px !important;
-        // }
-        // &:not(:has(*:nth-child(4))) {
-        //     height: auto !important;
-        // }
-        // &:not(*:nth-child(n+4)) {
-        //     height: 100px !important;
-        // }
+        .filter-dropdown-list {
+            border: 1px solid $divider-color;
+        }
     }
 }

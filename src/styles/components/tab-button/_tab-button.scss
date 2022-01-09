@@ -1,3 +1,7 @@
+.tabbar {
+    @include flexbox();
+    height: 100%;
+}
 .tab-button {
     @include flexbox();
     @include justify-content(center);
