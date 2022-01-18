@@ -1,0 +1,98 @@
+-
+    var videos = [
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
+            image: "video_01.jpg",
+            date: "17 октября 2021",
+            url: "personal-area_lectures_detail.html"
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом",
+            image: "video_02.jpg",
+            date: "11 октября 2021",
+            url: "personal-area_lectures_detail.html"
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП",
+            image: "video_03.jpg",
+            date: "4 октября 2021",
+            url: "personal-area_lectures_detail.html"
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Проект «Диалоги о частном праве» возобновляет работу",
+            image: "video_04.jpg",
+            date: "28 сентября 2021",
+            url: "personal-area_lectures_detail.html"
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Студенты-первокурсники РШЧП получили студенческие билеты",
+            image: "video_05.jpg",
+            date: "21 сентября 2021",
+            url: "personal-area_lectures_detail.html"
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр",
+            image: "video_06.jpg",
+            date: "19 сентября 2021",
+            url: "personal-area_lectures_detail.html"
+        },
+        {
+            name: "Дождев Дмитрий Вадимович",
+            title: "Лекции зарубежных профессоров в РШЧП в новом учебном году",
+            image: "video_07.jpg",
+            date: "8 июля 2021",
+            url: "personal-area_lectures_detail.html"
+        }
+    ]
+
+// Personal Area
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="personal-area_schedule-and-curriculam.html") Личный кабинет
+                li.nav-line__item
+                    a(href="personal-area_lectures.html") Лекции
+                li.nav-line__item
+                    a(href="personal-area_lectures.html") 2022
+                li.nav-line__item
+                    a(href="personal-area_lectures.html") Дождев Дмитрий Вадимович
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="personal-area_schedule-and-curriculam.html") Расписание и учебные планы
+                    li.section-nav__item.active
+                        a(href="personal-area_lectures.html") Лекции
+                    li.section-nav__item
+                        a(href="personal-area_documents.html") Материалы и документы
+        // Section Header
+        div.section-header
+            h1.section-title Дождев Дмитрий Вадимович
+        div.section-body
+            // Section Header
+            div.videos
+                div.videos-container
+                    // Items
+                    each item in videos
+                        div.videos__item
+                            a(href=`${item.url}` class="videos__item-container")
+                                span.videos__item-image
+                                    span.videos__item-tag-state
+                                    img(src=`images/videos/${item.image}`)
+                                div.videos__item-content
+                                    span.videos__item-date=item.date
+                                    span.videos__item-author=item.name
+                                    h3.videos__item-title=item.title

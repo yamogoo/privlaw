@@ -1,3 +1,49 @@
+-
+    var videos = [
+        {
+            title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
+            image: "video_01.jpg",
+            date: "17 октября 2021",
+            url: "videos-detail.html"
+        },
+        {
+            title: "Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом",
+            image: "video_02.jpg",
+            date: "11 октября 2021",
+            url: "videos-detail.html"
+        },
+        {
+            title: "Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП",
+            image: "video_03.jpg",
+            date: "4 октября 2021",
+            url: "videos-detail.html"
+        },
+        {
+            title: "Проект «Диалоги о частном праве» возобновляет работу",
+            image: "video_04.jpg",
+            date: "28 сентября 2021",
+            url: "videos-detail.html"
+        },
+        {
+            title: "Студенты-первокурсники РШЧП получили студенческие билеты",
+            image: "video_05.jpg",
+            date: "21 сентября 2021",
+            url: "videos-detail.html"
+        },
+        {
+            title: "Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр",
+            image: "video_06.jpg",
+            date: "19 сентября 2021",
+            url: "videos-detail.html"
+        },
+        {
+            title: "Лекции зарубежных профессоров в РШЧП в новом учебном году",
+            image: "video_07.jpg",
+            date: "8 июля 2021",
+            url: "videos-detail.html"
+        }
+    ]
+
 // Photos and videos
 section.section
     div.section-container
@@ -20,68 +66,14 @@ section.section
         div.videos
             div.videos-container
                 // Items
-                div.videos__item
-                    a(href="videos-detail.html" class="videos__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_01.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 17 октября 2021
-                            h3.videos__item-title Исследовательский центр посетила делегация цивилистов из Казахстана
-
-                div.videos__item
-                    a(href="videos-detail.html" class="videos__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_02.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 11 октября 2021
-                            h3.videos__item-title Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом
-
-                div.videos__item
-                    a(href="videos-detail.html" class="videos__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_03.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 4 октября 2021
-                            h3.videos__item-title Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП
-
-                div.videos__item
-                    a(href="videos-detail.html" class="videos__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_04.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 28 сентября 2021
-                            h3.videos__item-title Проект «Диалоги о частном праве» возобновляет работу
-
-                div.videos__item
-                    a(href="videos-detail.html" class="videos__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_05.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 21 сентября 2021
-                            h3.videos__item-title Студенты-первокурсники РШЧП получили студенческие билеты
-
-                div.videos__item
-                    a(href="videos-detail.html" class="videos__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_06.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 19 сентября 2021
-                            h3.videos__item-title Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр
-
-                div.videos__item
-                    a(href="videos-detail.html" class="video__item-container")
-                        span.videos__item-image
-                            span.videos__item-tag-state
-                            img(src="images/videos/video_07.jpg")
-                        div.videos__item-content
-                            span.videos__item-date 8 июля 2021
-                            h3.videos__item-title Лекции зарубежных профессоров в РШЧП в новом учебном году
-                            
+                each item in videos
+                    div.videos__item
+                        a(href=`${item.url}` class="videos__item-container")
+                            span.videos__item-image
+                                span.videos__item-tag-state
+                                img(src=`images/videos/${item.image}`)
+                            div.videos__item-content
+                                span.videos__item-date=item.date
+                                h3.videos__item-title=item.title                            
         // Items
 // News
