@@ -21,7 +21,7 @@ form {
   padding-top: 20px;
   padding-bottom: 20px;
 
-  * {
+  input > * {
     line-height: 1 !important;
   }
 
@@ -34,6 +34,8 @@ form {
   }
 
   &-header {
+    padding-bottom: 20px;
+
     &-title {
       @extend %section-title-primary;
     }
@@ -93,6 +95,7 @@ form {
       left: $form-field-input-left;
       padding: $form-field-label-padding;
       @include transition(top color font-size, 125ms, ease-out);
+      pointer-events: none;
     }
 
     &.active,
@@ -128,6 +131,11 @@ form {
       @include respond-below(md) {
         @include flex-direction(column);
       }
+    }
+
+    &.helper {
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
   }
 

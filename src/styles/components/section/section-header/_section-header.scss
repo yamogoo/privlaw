@@ -1,43 +1,49 @@
 .section-header {
-    @include flexbox();
-    @include flex-direction(row);
-    @include justify-content(space-between);
-    @include align-items(left);
-    @include flex-wrap(wrap);
-    width: 100%;
-    padding-bottom: 20px;
-    gap: 20px;
-    
-    h1, h2, h3, h4, h5, .section-title, .section-description {
-        font-weight: 500;
-    }
+  @include flexbox();
+  @include flex-direction(row);
+  @include justify-content(space-between);
+  @include align-items(left);
+  @include flex-wrap(wrap);
+  width: 100%;
+  padding-bottom: 20px;
+  gap: 20px;
 
-    h1.section-title, h2.section-title, h5.section-title {
-        @extend %section-title-primary;
-    }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .section-title,
+  .section-description {
+    font-weight: 500;
+  }
 
-    h5.section-title-primary {
-        @extend %section-title-primary;
-        font-size: 72px !important;
-    }
+  h1.section-title,
+  h2.section-title,
+  h5.section-title {
+    @extend %section-title-primary;
+  }
 
-    h3.section-title {
-        @extend %section-title-secondary;
-    }
+  h5.section-title-primary {
+    @extend %section-title-primary;
+    font-size: 72px !important;
+  }
 
-    .section-date {
-        @extend %entity__item-date;
-    }
+  h3.section-title {
+    @extend %section-title-secondary;
+  }
+
+  .section-date {
+    @extend %entity__item-date;
+  }
 }
 
-
 .section-header {
-    
-    &-container {
-        @extend %section-header-container;
+  &-container {
+    @extend %section-header-container;
 
-        &--row {
-            @extend %section-header-container;
-        }
+    &--row {
+      @extend %section-header-container;
     }
+  }
 }

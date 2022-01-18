@@ -1,11 +1,17 @@
 .modal {
-  border-radius: 6px;
-  border: 1px solid $divider-color;
-  box-sizing: border-box;
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
-  @extend %modal-container;
+  @extend %modal-main-container;
 
   &-container {
+    border-radius: 6px;
+    border: 1px solid $divider-color;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.05);
+    padding-bottom: 40px;
+    padding-top: 40px;
+  }
+
+  &-content {
+    @extend %modal-container;
   }
 
   .form {
