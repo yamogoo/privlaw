@@ -1,0 +1,84 @@
+-
+    var documents = [
+        {
+            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2016 года по 31 декабря 2016 года",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "12КБ"
+        },
+        {
+            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2015 года по 31 декабря 2015 года",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "119КБ"
+        },
+        {
+            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2014 года по 31 декабря 2014 года",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "87КБ"
+        },
+        {
+            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2013 года по 31 декабря 2013 года",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "36КБ"
+        }
+    ]
+
+// Personal Area
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="personal-area__schedule-and-curriculam.html") Личный кабинет
+                li.nav-line__item
+                    a(href="personal-area__documents.html") Документы
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item
+                        a(href="personal-area__schedule-and-curriculam.html") Расписание и учебные планы
+                    li.section-nav__item
+                        a(href="personal-area__lectures.html") Лекции
+                    li.section-nav__item.active
+                        a(href="personal-area__documents.html") Документы
+        // Section Header
+        div.section-header
+            h1.section-title Документы
+        div.section
+            div.section-body
+                div.section-body-container
+                    div.article
+                        div.article-section-list
+                            div.article-section
+                                div.article-section-body
+                                    div.article-content
+                                        p Описание. Полезные документы. Потребность в повышении квалификации научно-педагогических кадров юридических специальностей в области частного права для решения задач кадрового обеспечения преподавательского состава кафедр гражданского и смежных отраслей права федеральных.
+                                        hr
+                                        // Documents
+                                        div.article-section
+                                            div.article-section-body
+                                                div.documents
+                                                    div.documents-container
+                                                        // Items
+                                                        each document in documents
+                                                            div.documents__item
+                                                                a.documents__item-container(href="/")
+                                                                    div.documents__item-icon
+                                                                        img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                                                                    div.documents__item-content
+                                                                        div.documents__item-content-group
+                                                                            h3.documents__item-title=document.name
+                                                                            span.documents__item-size=document.size
+                                                                        span.documents__item-helper-icon.icon-download

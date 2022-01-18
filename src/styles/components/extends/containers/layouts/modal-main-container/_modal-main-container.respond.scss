@@ -1,6 +1,6 @@
 @include respond-above(xl) {
   %modal-main-container {
-    max-width: $modal-main-container-width-lg;
+    width: $modal-main-container-width-lg;
     padding-left: $modal-main-container-padding-lg;
     padding-right: $modal-main-container-padding-lg;
   }

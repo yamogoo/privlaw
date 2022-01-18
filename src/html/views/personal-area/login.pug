@@ -1,0 +1,42 @@
+-
+    var error = {
+        title: "К сожалению, страница не найдена",
+        description: "Такой страницы не существует, или она была удалена. Проверьте, правильно ли вы ввели адрес",
+        number: "404",
+    }
+    
+// Personal Area
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="personal-area.html") Вход в личный кабинет
+        //Nav Line
+        //- div.section-body
+        //-     //- div.section-container
+        div.modal
+            div.modal-container
+                div.modal-content
+                    // Form
+                    form.form
+                        div.form-container
+                            div.form-header
+                                h3.form-header-title-primary Вход в личный кабинет
+                            div.form-body
+                                div.form-group.columns
+                                    div.form__field
+                                        label(for="email") Email или Логин
+                                        input(type="email")
+                                    div.form__field
+                                        label(for="password") Пароль
+                                        input(type="password")
+                                div.form-group.helper
+                                    p Для получения доступа к личному кабинету обратитесь к администратору сайта.
+                            div.form-footer.align-right
+                                div.form-button
+                                    input(type="submit" value="Отправить")
+        // Section Header

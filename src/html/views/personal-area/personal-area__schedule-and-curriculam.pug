@@ -1,0 +1,72 @@
+-
+    var documents = [
+        {
+            name: "Расписание",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "12КБ"
+        },
+        {
+            name: "Учебный план 2020",
+            description: "",
+            url: "",
+            type: "doc",
+            size: "84КБ"
+        },
+        {
+            name: "Учебный план 2021",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "119КБ"
+        },
+        {
+            name: "Учебный план 2022",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "87КБ"
+        }
+    ]
+
+// Personal Area
+section.section
+    div.section-container
+        //Nav Line
+        div.nav-line
+            ul.nav-line-container
+                li.nav-line__item
+                    a(href="index.html") Главная
+                li.nav-line__item
+                    a(href="personal-area__schedule-and-curriculam.html") Личный кабинет
+                li.nav-line__item
+                    a(href="personal-area__schedule-and-curriculam.html") Расписание и учебные планы
+        //Nav Line
+        // Section Nav
+        div.section-nav-wrapper
+            div.section-nav--primary
+                ul.section-nav-container
+                    li.section-nav__item.active
+                        a(href="personal-area__schedule-and-curriculam.html") Расписание и учебные планы
+                    li.section-nav__item
+                        a(href="personal-area__lectures.html") Лекции
+                    li.section-nav__item
+                        a(href="personal-area__documents.html") Документы
+        // Section Header
+        div.section-header
+            h1.section-title Расписание и учебные планы
+        div.section-body
+            div.documents
+                div.documents-container
+                    // Items
+                    each document in documents
+                        div.documents__item
+                            a.documents__item-container(href="/")
+                                div.documents__item-icon
+                                    img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                                div.documents__item-content
+                                    div.documents__item-content-group
+                                        h3.documents__item-title=document.name
+                                        span.documents__item-size=document.size
+                                    span.documents__item-helper-icon.icon-download
