@@ -1,4 +1,63 @@
-// News
+-
+    var documents = [
+        {
+            name: "Копия Устава",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "12КБ"
+        },
+        {
+            name: "Копия распоряжения",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "119КБ"
+        },
+        {
+            name: "Копия Лицензии на образовательную деятельность",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "87КБ"
+        },
+        {
+            name: "Копия Свидетельства государственной аккредитации",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "36КБ"
+        },
+        {
+            name: "Копия Свидетельства ФНС",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "265КБ"
+        },
+        {
+            name: "Положение о научных исследованиях",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "211КБ"
+        },
+        {
+            name: "Копия Свидетельство о профессионально-общественной аккредитации МАГИСТРАТУРА",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "117КБ"
+        },
+        {
+            name: "Копии СВИДЕТЕЛЬСТВ к товарным знакам",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "144КБ"
+        },
+    ]
+
 section.section
     div.section-container
         //Nav Line
@@ -57,84 +116,24 @@ section.section
                                     p На основе Концепции Исследовательский центр выступил одним из основных разработчиков внесенного Президентом Российской Федерации в Государственную Думу и принятого в первом чтении 27 апреля 2012 г. проекта федерального закона № 47538-6 «О внесении изменений в части первую, вторую, третью, третью и четвертую Гражданского кодекса Российской Федерации, а также в отдельные законодательные акты Российской Федерации», предусматривающего внесение в Кодекс масштабных изменений. При непосредственном и самом активном участии Исследовательского центра отдельные части этого законопроекта подготовлены и были приняты в качестве отдельных федеральных законов.
                                     br
                                     p В настоящее время усилия Исследовательского центра направлены на разработку концепции развития положений части второй Гражданского кодекса Российской Федерации о договоре страхования, совершенствование законодательства о вещных правах (соответствующие рабочие группы созданы решениями Совета), а также на осуществление экспертной деятельности по вопросам, относящимся к области частного права и смежным областям права.
+                                    hr
                                     // Documents
-                        // Documents
-                        div.article-section
-                            div.article-section-header
-                                    h3.article-section-header-title Документы
-                            div.article-section-body
-                                div.documents
-                                    div.documents-container
-                                        // Items
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия Устава
-                                                        span.documents__item-size PDF 2 МБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия распоряжения
-                                                        span.documents__item-size PDF 23 КБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия Лицензии на образовательную деятельность
-                                                        span.documents__item-size PDF 1.3 МБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия Свидетельства государственной аккредитации
-                                                        span.documents__item-size PDF 1.2 МБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия Свидетельства ФНС
-                                                        span.documents__item-size PDF 234 КБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия Положение о научных исследованиях
-                                                        span.documents__item-size PDF 32 КБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копия Свидетельство о профессионально-общественной аккредитации МАГИСТРАТУРА
-                                                        span.documents__item-size PDF 17 КБ
-                                                    span.documents__item-helper-icon.icon-download
-                                        div.documents__item
-                                            a.documents__item-container(href="/")
-                                                div.documents__item-icon
-                                                    img(src="./assets/images/docs/icon-document-pdf.png", alt="")
-                                                div.documents__item-content
-                                                    div.documents__item-content-group
-                                                        h3.documents__item-title Копии СВИДЕТЕЛЬСТВ к товарным знакам
-                                                        span.documents__item-size PDF 501 КБ
-                                                    span.documents__item-helper-icon.icon-download
+                                    h3#section Документы
+                                    div.article-section
+                                        //- div.article-section-header
+                                        //-         h3.article-section-header-title Документы
+                                        div.article-section-body
+                                            div.documents
+                                                div.documents-container
+                                                    // Items
+                                                    each document in documents
+                                                        div.documents__item
+                                                            a.documents__item-container(href="/")
+                                                                div.documents__item-icon
+                                                                    img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                                                                div.documents__item-content
+                                                                    div.documents__item-content-group
+                                                                        h3.documents__item-title=document.name
+                                                                        span.documents__item-size=document.size
+                                                                    span.documents__item-helper-icon.icon-download
+                                                    

@@ -1,0 +1,23 @@
+@include respond-above(xl) {
+  %modal-container {
+    max-width: $modal-container-width-lg;
+    padding-left: $modal-container-padding-lg;
+    padding-right: $modal-container-padding-lg;
+  }
+}
+
+@include respond-between(sm, xl) {
+  %modal-container {
+    width: $modal-container-width-md;
+    padding-left: $modal-container-padding-md;
+    padding-right: $modal-container-padding-md;
+  }
+}
+
+@include respond-below(sm) {
+  %modal-container {
+    width: $modal-container-width-sm;
+    padding-left: $modal-container-padding-sm;
+    padding-right: $modal-container-padding-sm;
+  }
+}

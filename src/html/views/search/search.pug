@@ -1,3 +1,103 @@
+-
+    var filter = [
+        "Мероприятия",
+        "Новости",
+        "Документы",
+        "Издания",
+        "Видео",
+        "Персоналии"
+    ]
+
+-
+    var news = [
+        {
+            title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
+            url: "news-detail.html",
+            tags: [
+                "Исследовательский центр",
+            ],
+            date: "17 октября 2021"
+        },
+        {
+            title: "Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом",
+            url: "news-detail.html",
+            tags: [
+                "Исследовательский центр",
+                "РШЧП"
+            ],
+            date: "11 октября 2021"
+        },
+        {
+            title: "Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП",
+            url: "news-detail.html",
+            tags: [
+                "РШЧП"
+            ],
+            date: "Исследовательский центр"
+        }
+    ]
+
+-
+    var events = 
+        {
+            future: [
+                {
+                    title: "Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми",
+                    image: "events/events_22.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "пятница",
+                        number: "22",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                }
+            ],
+            passed: [
+                {
+                    title: "Совет по кодификации рекомендовал начать реформу вещного права с блока норм о недвижимости",
+                    image: "events/events_21.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "пятница",
+                        number: "20",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                },
+                {
+                    title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
+                    image: "events/events_17.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "вторник",
+                        number: "20",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                },
+                {
+                    title: "Исследовательский центр с успехом провел «Диалоги о частном праве» в Перми",
+                    image: "events/events_20.10.2021_sm-1.png",
+                    tags: [
+                        "Исследовательский центр",
+                    ],
+                    date: {
+                        day: "понедельник",
+                        number: "17",
+                        month: "октября 2021",
+                        year: "2021"
+                    }
+                }
+            ]
+        }
+
 // Search
 section.section
     div.section-container
@@ -13,13 +113,58 @@ section.section
         // Section Header
         div.section-header
             h5.section-title Поиск
-
-            include ../../components/filter/filter-for-videos.pug
-
+            // Filter Dropdown
+            div.filter-dropdown
+                div.filter-dropdown-container
+                    input(type="radio" name="tags")
+                    span#text-tags Все разделы
+                    div.filter-dropdown__expansion-icon
+                div.filter-dropdown-list
+                    p.active Все разделы
+                    each item in filter
+                        p=item
+            // Filter Dropdown
         // Section Header
         div.search
-            div.search-container
-                // Items
-                
-                            
-        // Items
+            div.search-container-list
+                // News
+                div.section
+                    div.section-header
+                        h3.section-title Новости
+                    div.section-body
+                        div.news
+                            div.news-container
+                                // Items
+                                each item in news
+                                    div.news__item
+                                        a(href=`${item.url}` class="news__item-container")
+                                            span.news__item-image
+                                                img(src="images/news/news_17.10.2021_sm-1.png")
+                                            div.news__item-content
+                                                span.news__item-date=item.date
+                                                h3.news__item-title=item.title
+                                                each tag in item.tags
+                                                    span.news__item-tag=item.tag
+                // Events
+                div.section
+                    div.section-header
+                            h3.section-title Мероприятия
+                    div.section-body
+                        // Events
+                        div.events.list
+                            div.events-container-list
+                                each event in events.passed
+                                    div.events__item.passed
+                                        a(href="events-detail.html" class="events__item-container")
+                                            span.events__item-image
+                                                span.events__item-tag-state
+                                                img(src=`images/${event.image}`)
+                                            div.events__item-content
+                                                div.events__item-content-group
+                                                    each tag in event.tags
+                                                        span.events__item-tag=tag
+                                                    h3.events__item-title=event.title
+                                                    span.date-box__number=event.date.number
+                                                    div.date-box__group
+                                                        span.date-box__month=event.date.month
+                                                        span.date-box__day=event.date.day

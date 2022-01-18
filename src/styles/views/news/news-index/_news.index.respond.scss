@@ -1,11 +1,9 @@
-@include respond-above (md) {
-    .news.index {
-
-        .news__item {
-
-            &:nth-child(4) {
-                display: none;
-            }
-        }
+@include respond-above(md) {
+  .news.index {
+    .news__item {
+      // &:nth-child(4) {
+      //     display: none;
+      // }
     }
+  }
 }

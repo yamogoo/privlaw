@@ -1,3 +1,72 @@
+-
+    var news = [
+        {
+            title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
+            image: "news_17.10.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "17 октября 2021",
+            tags: [
+                "Исследовательский центр",
+                "РШЧП"
+            ]
+        },
+        {
+            title: "Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом",
+            image: "news_11.10.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "11 октября 2021",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            title: "Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП",
+            image: "news_04.10.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "4 октября 2021",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            title: "Проект «Диалоги о частном праве» возобновляет работу",
+            image: "news_28.09.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "28 сентября 2021",
+            tags: [
+                "Исследовательский центр",
+                "Диалоги о частном праве"
+            ]
+        },
+        {
+            title: "Студенты-первокурсники РШЧП получили студенческие билеты",
+            image: "news_21.09.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "21 сентября 2021",
+            tags: [
+                "РШЧП"
+            ]
+        },
+        {
+            title: "Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр",
+            image: "news_19.09.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "19 сентября 2021",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            title: "Лекции зарубежных профессоров в РШЧП в новом учебном году",
+            image: "news_08.07.2021_sm-1.png",
+            url: "news-detail.html",
+            date: "8 июля 2021",
+            tags: [
+                "РШЧП"
+            ]
+        }
+    ]
+    
 // News
 section.section
     div.section-container
@@ -20,62 +89,16 @@ section.section
         div.news
             div.news-container
                 // Items
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_17.10.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 17 октября 2021
-                            h3.news__item-title Исследовательский центр посетила делегация цивилистов из Казахстана
-                            span.news__item-tag Исследовательский центр
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_11.10.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 11 октября 2021
-                            h3.news__item-title Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом
-                            span.news__item-tag Исследовательский центр
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_04.10.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 4 октября 2021
-                            h3.news__item-title Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП
-                            span.news__item-tag Исследовательский центр
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_28.09.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 28 сентября 2021
-                            h3.news__item-title Проект «Диалоги о частном праве» возобновляет работу
-                            span.news__item-tag Диалоги о частном праве
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_21.09.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 21 сентября 2021
-                            h3.news__item-title Студенты-первокурсники РШЧП получили студенческие билеты
-                            span.news__item-tag РШЧП
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_19.09.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 19 сентября 2021
-                            h3.news__item-title Визит сотрудников Посольства ФРГ в г. Москва в Исследовательский центр
-                            span.news__item-tag Исследовательский центр
-                div.news__item
-                    a(href="news-detail.html" class="news__item-container")
-                        span.news__item-image
-                            img(src="images/news/news_08.07.2021_sm-1.png")
-                        div.news__item-content
-                            span.news__item-date 8 июля 2021
-                            h3.news__item-title Лекции зарубежных профессоров в РШЧП в новом учебном году
-                            span.news__item-tag РШЧП
+                each item in news
+                    div.news__item
+                        a(href=`${item.url}` class="news__item-container")
+                            span.news__item-image
+                                img(src=`images/news/${item.image}`)
+                            div.news__item-content
+                                span.news__item-date=item.date
+                                h3.news__item-title=item.title
+                                each tag in item.tags
+                                    span.news__item-tag=tag
         // Items
         div.section-footer
             include ../../components/pagination/pagination.pug

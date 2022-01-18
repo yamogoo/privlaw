@@ -1,41 +1,50 @@
 .article-section {
-    @extend %article-section;
+  @extend %article-section;
 
-    &-header {
-        @extend %article-section-header;
+  &-header {
+    @extend %article-section-header;
 
-        &-container-rows {
-            @extend %article-section-header-container-rows;
-        }
-
-        &-title, h3, h3, h5 {
-            @extend %article-section-header-title;
-        }
+    &-container-rows {
+      @extend %article-section-header-container-rows;
     }
 
-    &-body {
-        width: 100%;
+    &-title,
+    h3,
+    h3,
+    h5 {
+      @extend %article-section-header-title;
     }
+  }
 
-    &:not(:last-child) {
-        padding-bottom: 60px;
-        margin-bottom: 0px;
-        border-bottom: 1px solid $divider-color;
-    }
+  &-body {
+    width: 100%;
+  }
+
+  &:not(:last-child) {
+    padding-bottom: 60px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid $divider-color;
+  }
 }
 
 .article-section-inner {
-    @extend %article-section;
-    padding-top: 50px;
+  @extend %article-section;
+  padding-top: 50px;
 }
 
 .article-section-list {
+  .article-section {
+    // gap: 40px;
 
-    .article-section {
-        // gap: 40px;
-
-        &:not(:last-child) {
-            margin-bottom: 60px !important;
-        }
+    &:not(:last-child) {
+      margin-bottom: 60px !important;
     }
+  }
+}
+
+.article-content {
+  .article-section {
+    padding-bottom: 0px;
+    border-bottom: 0px;
+  }
 }

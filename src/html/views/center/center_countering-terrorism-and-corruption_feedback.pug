@@ -1,4 +1,3 @@
-// News
 section.section
     div.section-container
         //Nav Line
@@ -45,7 +44,6 @@ section.section
         // Section Header
         div.section-header
             h1.section-title Обратная связь
-            //- p.section-date 7 октября 2021
         // Section Header
         div.section-body
             div.section-body-container
@@ -56,11 +54,8 @@ section.section
                             div.article-columns
                                 div.article-content
                                     p Текст с рекомендациями, как сообщать о фактах коррупции. Кроме того, активную, а скорее даже креативную роль Центр сыграл в исключительно важном деле сближения, гармонизации и унификации частного права, государств, образовавшихся на пространстве бывшего СССР. В 1994-1995 годах была подготовлена Модель Гражданского кодекса для стран СНГ. На основе этой модели ГК, с небольшим числом отступлений от нее, были приняты гражданские кодексы в восьми государствах – участниках СНГ: Армении, Белоруссии, Казахстане, Кыргызстане, России, Таджикистане, Туркменистане и Узбекистане. Позднее эта модель была во многом использована при создании ГК Украины.
-                                    br
                                     hr
-                                    br
                                     h3 Контакты для обращения в кадровую службу
-                                    br
                                     br
                                     p по телефонам: 
                                         a(href="tel:+7495-606-36-39") 8 (495) 606-34-28
@@ -69,42 +64,45 @@ section.section
                                     br
                                     p или по адресу электронной почты: 
                                         a(href="mailto:info@privlaw.ru") info@privlaw.ru
-                    // Documents
-                    div.article-section
-                        div.article-section-body
-                            div.documents
-                                div.documents-container
-                                    // Items
-                                    div.documents__item
-                                        a.documents__item-container(href="/")
-                                            div.documents__item-icon
-                                                img(src="./assets/images/docs/icon-document-doc.png", alt="")
-                                            div.documents__item-content
-                                                div.documents__item-content-group
-                                                    h3.documents__item-title Уведомление о факте обращения каких-либо лиц в целях склонения работника Исследовательского центра частного права имени С.С. Алексеева при Президенте Российской Федерации к совершению коррупционных правонарушений
-                                                    span.documents__item-size DOC 2 МБ
-                                                span.documents__item-helper-icon.icon-download
-                    // Feedback
-                    div.article-section
-                        div.article-section-header
-                            h3.article-section-header-title Форма обратной связи
-                        div.article-section-body
-                            form.form
-                                div.form-container
-                                    div.form-body
-                                        div.form-group.columns
-                                            div.form__field
-                                                label(for="name") ФИО
-                                                input(type="text" name="name")
-                                            div.form__field
-                                                label(for="email") Email
-                                                input(type="email" required name="email")
-                                        div.form__field
-                                            label(for="theme") Тема
-                                            input(type="text" name="theme")
-                                        div.form__field
-                                            label(for="message") Текст сообщения
-                                            textarea(rows="10" name="message")
-                                    div.form-footer.align-right
-                                        div.form-button
-                                            input(type="submit" value="Отправить")
+                                    hr
+                                    // Documents
+                                    div.article-section
+                                        div.article-section-body
+                                            div.documents
+                                                div.documents-container
+                                                    // Items
+                                                    div.documents__item
+                                                        a.documents__item-container(href="/")
+                                                            div.documents__item-icon
+                                                                img(src="./assets/images/docs/icon-document-doc.png", alt="")
+                                                            div.documents__item-content
+                                                                div.documents__item-content-group
+                                                                    h3.documents__item-title Уведомление о факте обращения каких-либо лиц в целях склонения работника Исследовательского центра частного права имени С.С. Алексеева при Президенте Российской Федерации к совершению коррупционных правонарушений
+                                                                    span.documents__item-size DOC 2 МБ
+                                                                span.documents__item-helper-icon.icon-download
+                                    hr
+                                    // Feedback
+                                    h3#section Форма обратной связи
+                                    div.article-section
+                                        //- div.article-section-header
+                                        //-     h3.article-section-header-title Форма обратной связи
+                                        div.article-section-body
+                                            form.form
+                                                div.form-container
+                                                    div.form-body
+                                                        div.form-group.columns
+                                                            div.form__field
+                                                                label(for="name") ФИО
+                                                                input(type="text" name="name")
+                                                            div.form__field
+                                                                label(for="email") Email
+                                                                input(type="email" required name="email")
+                                                        div.form__field
+                                                            label(for="theme") Тема
+                                                            input(type="text" name="theme")
+                                                        div.form__field
+                                                            label(for="message") Текст сообщения
+                                                            textarea(rows="10" name="message")
+                                                    div.form-footer.align-right
+                                                        div.form-button
+                                                            input(type="submit" value="Отправить")
