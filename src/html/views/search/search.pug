@@ -13,27 +13,27 @@
         {
             title: "Исследовательский центр посетила делегация цивилистов из Казахстана",
             url: "news-detail.html",
+            date: "17 октября 2021",
             tags: [
                 "Исследовательский центр",
-            ],
-            date: "17 октября 2021"
+            ]
         },
         {
             title: "Руководитель Исследовательского центра Л.Ю. Михеева выступила с докладом",
             url: "news-detail.html",
+            date: "11 октября 2021",
             tags: [
                 "Исследовательский центр",
                 "РШЧП"
-            ],
-            date: "11 октября 2021"
+            ]
         },
         {
             title: "Встреча с представителями проекта «Первый экономический хакатон» прошла в ИЦЧП",
             url: "news-detail.html",
+            date: "Исследовательский центр",
             tags: [
                 "РШЧП"
-            ],
-            date: "Исследовательский центр"
+            ]
         }
     ]
 
@@ -197,14 +197,12 @@ section.section
                         p=item
             // Filter Dropdown
         // Section Header
-        div.search
-            div.search-container-list
+        div.section-search
+            div.section-search-container
                 // News
                 each item in news
                     div.news__item
                         a(href=`${item.url}` class="news__item-container")
-                            //- span.news__item-image
-                            //-     img(src="images/news/news_17.10.2021_sm-1.png")
                             div.news__item-content
                                 span.news__item-date=item.date
                                 h3.news__item-title=item.title
@@ -214,9 +212,6 @@ section.section
                 each event in events.passed
                     div.events__item.passed
                         a(href="events-detail.html" class="events__item-container")
-                            //- span.events__item-image
-                            //-     span.events__item-tag-state
-                            //-     img(src=`images/${event.image}`)
                             div.events__item-content
                                 div.events__item-content-group
                                     each tag in event.tags
@@ -241,10 +236,11 @@ section.section
                 each person in persons
                     div.persons__item
                         a(href=person.url class="persons__item-container")
-                            span.persons__item-image
-                                img(src=`images/${person.image}`)
                             div.persons__item-content
                                 h3.persons__item-name=person.name
                                 p.persons__item-description=person.description
                                 each tag in person.tags
                                     span.persons__item-tag=tag
+                // Items
+                div.section-footer
+                    include ../../components/pagination/pagination.pug

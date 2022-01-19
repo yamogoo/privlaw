@@ -1,0 +1,11 @@
+%search__entity__item {
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  width: auto;
+  overflow: hidden;
+  border-bottom: 1px solid $divider-color;
+  margin: 0px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}

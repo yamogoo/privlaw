@@ -1,0 +1,11 @@
+%search__entity__item-container {
+  padding: 0px;
+  @extend %entity__item-container--hover;
+}
+
+%entity__item-container--clear {
+  @extend %entity__item-container--hover;
+  @include respond-below(sm) {
+    padding-bottom: 0px;
+  }
+}

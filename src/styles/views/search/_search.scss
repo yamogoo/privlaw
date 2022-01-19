@@ -1,0 +1,45 @@
+.section-search {
+  width: 100%;
+
+  &-container {
+    width: 100%;
+  }
+
+  // News
+  .news__item,
+  .videos__item,
+  .events__item,
+  .persons__item,
+  .documents__item {
+    @extend %search__entity__item;
+
+    &-container {
+      @extend %search__entity__item-container;
+    }
+  }
+
+  .news__item,
+  .videos__item,
+  .events__item,
+  .persons__item {
+    &-container {
+      // gap: 0px;
+    }
+  }
+  // // Documents
+  // .documents__item {
+  //   @extend %search__entity__item;
+  // }
+  // // Videos
+  // .videos__item {
+  //   @extend %search__entity__item;
+  // }
+  // // Events
+  // .events__item {
+  //   @extend %search__entity__item;
+  // }
+  // // Persons
+  // .persons__item {
+  //   @extend %search__entity__item;
+  // }
+}
