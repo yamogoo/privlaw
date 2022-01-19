@@ -1,35 +1,51 @@
 .footer-copyright {
-    width: 100%;
-    padding-top: 30px;
-    border-top: 1px solid rgba($white, 0.15);
+  width: 100%;
+  padding-top: 30px;
+  border-top: 1px solid rgba($white, 0.15);
 
-    &-container {
-        @include flexbox();
-        @include flex-direction(row);
-        @include justify-content(space-between);
-        @include box(inherit);
-        @include flex-wrap(wrap);
-        gap: px2em(0px);
-    }
+  &-container {
+    @include flexbox();
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include box(inherit);
+    @include flex-wrap(wrap);
+    gap: px2em(0px);
+  }
 
-    &-column {
-        display: block;
-    }
+  &-column {
+    display: block;
+  }
 
-    a, p, span {
-        display: inline-block;
-        color: $app-footer-copyright-font-color;//$accent-light-color;
-        font-size: px2em(14px);
-        font-weight: 400;
-        letter-spacing: px2em(0.3px);
-        @include respond-above (sm) {
-            padding: px2em(10px);
-        }
-        @include respond-below (sm) {
-            padding: px2em(4px);
-        }
-        // padding: px2em(8px) px2em(0px);
-        text-decoration: none;
-        white-space: nowrap;
+  a,
+  p,
+  span {
+    display: inline-block;
+    color: $app-footer-copyright-font-color; //$accent-light-color;
+    font-size: px2em(14px);
+    font-weight: 400;
+    letter-spacing: px2em(0.3px);
+    @include respond-above(sm) {
+      padding: px2em(10px);
     }
+    @include respond-below(sm) {
+      padding: px2em(4px);
+    }
+    // padding: px2em(8px) px2em(0px);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  a,
+  p,
+  span {
+    display: inline-flex;
+    @include justify-content(center);
+    @include align-items(center);
+    // @include flexbox;
+    // @include justify-content(center);
+
+    .icon-link {
+      font-size: inherit;
+    }
+  }
 }
