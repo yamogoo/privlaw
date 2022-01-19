@@ -389,6 +389,7 @@ $(document).ready(function () {
         $expansionSection = $(".expansion-section"),
         $filterSearch = $('#filter-search'),
         $sectionMenu = $('.section-menu'),
+        $dropdownSelector = $('.dropdown-selector'),
         // Forms
         $formFeedback = $('#form-feedback'),
         $formLogin = $('#form-login'),
@@ -446,6 +447,24 @@ $(document).ready(function () {
     function menu() {
         changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
     }
+
+    function dropdownSelector(el, cl) {
+        let dropdownSelector = el,
+            button = dropdownSelector.find('.dropdown-selector-button');
+            item = dropdownSelector.find('.dropdown-selector-list li');
+        changeClassByClickOnElement(button, cl, dropdownSelector, cl);
+        item.on("click", function() {
+            dropdownSelector.removeClass(cl);
+        });
+        //Click Outside
+        $(document).on("click", function (event) {
+            if (!$(event.target).closest(dropdownSelector).length) {
+                dropdownSelector.removeClass('active');
+            }
+        });
+    }
+
+    dropdownSelector($dropdownSelector, 'active');
 
     //--------------------------------- Forms ---------------------------------//
 

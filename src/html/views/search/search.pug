@@ -98,6 +98,78 @@
             ]
         }
 
+-
+    var persons = [
+        {
+            name: "Михеева Лидия Юрьевна",
+            description: "Председатель совета (руководитель) Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_miheeva_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр",
+                "РШЧП"
+            ]
+        },
+        {
+            name: "Суханов Евгений Алексеевич",
+            description: "Научный руководитель Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_suhanov_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Новоселова Людмила Александровна",
+            description: "Заведующая кафедрой финансовых сделок и новых технологий в праве Исследовательского центра, д.ю.н., профессор",
+            image: "persons/persons_navoselova_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        },
+        {
+            name: "Степанов Дмитрий Иванович",
+            description: "Заведующий кафедрой корпоративного права Исследовательского центра, к.ю.н., LL.M, MPA",
+            image: "persons/persons_slesarev_sm-1.png",
+            url: "persons-detail.html",
+            tags: [
+                "Исследовательский центр"
+            ]
+        }
+    ]
+
+-
+    var documents = [
+        {
+            name: "Копия Устава",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "12КБ"
+        },
+        {
+            name: "Копия распоряжения",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "119КБ"
+        },
+        {
+            name: "Копия Лицензии на образовательную деятельность",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "87КБ"
+        },
+        {
+            name: "Копия Свидетельства государственной аккредитации",
+            description: "",
+            url: "",
+            type: "pdf",
+            size: "36КБ"
+        }
+    ]
 // Search
 section.section
     div.section-container
@@ -128,43 +200,51 @@ section.section
         div.search
             div.search-container-list
                 // News
-                div.section
-                    div.section-header
-                        h3.section-title Новости
-                    div.section-body
-                        div.news
-                            div.news-container
-                                // Items
-                                each item in news
-                                    div.news__item
-                                        a(href=`${item.url}` class="news__item-container")
-                                            span.news__item-image
-                                                img(src="images/news/news_17.10.2021_sm-1.png")
-                                            div.news__item-content
-                                                span.news__item-date=item.date
-                                                h3.news__item-title=item.title
-                                                each tag in item.tags
-                                                    span.news__item-tag=item.tag
+                each item in news
+                    div.news__item
+                        a(href=`${item.url}` class="news__item-container")
+                            //- span.news__item-image
+                            //-     img(src="images/news/news_17.10.2021_sm-1.png")
+                            div.news__item-content
+                                span.news__item-date=item.date
+                                h3.news__item-title=item.title
+                                each tag in item.tags
+                                    span.news__item-tag=item.tag
                 // Events
-                div.section
-                    div.section-header
-                            h3.section-title Мероприятия
-                    div.section-body
-                        // Events
-                        div.events.list
-                            div.events-container-list
-                                each event in events.passed
-                                    div.events__item.passed
-                                        a(href="events-detail.html" class="events__item-container")
-                                            span.events__item-image
-                                                span.events__item-tag-state
-                                                img(src=`images/${event.image}`)
-                                            div.events__item-content
-                                                div.events__item-content-group
-                                                    each tag in event.tags
-                                                        span.events__item-tag=tag
-                                                    h3.events__item-title=event.title
-                                                    span.date-box__number=event.date.number
-                                                    div.date-box__group
-                                                        span.date-box__month=event.date.month
-                                                        span.date-box__day=event.date.day
+                each event in events.passed
+                    div.events__item.passed
+                        a(href="events-detail.html" class="events__item-container")
+                            //- span.events__item-image
+                            //-     span.events__item-tag-state
+                            //-     img(src=`images/${event.image}`)
+                            div.events__item-content
+                                div.events__item-content-group
+                                    each tag in event.tags
+                                        span.events__item-tag=tag
+                                    h3.events__item-title=event.title
+                                    span.date-box__number=event.date.number
+                                    div.date-box__group
+                                        span.date-box__month=event.date.month
+                                        span.date-box__day=event.date.day
+                // Documents
+                each document in documents
+                    div.documents__item
+                        a.documents__item-container(href="/")
+                            div.documents__item-icon
+                                img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
+                            div.documents__item-content
+                                div.documents__item-content-group
+                                    h3.documents__item-title=document.name
+                                    span.documents__item-size=document.size
+                                span.documents__item-helper-icon.icon-download
+                // Persons
+                each person in persons
+                    div.persons__item
+                        a(href=person.url class="persons__item-container")
+                            span.persons__item-image
+                                img(src=`images/${person.image}`)
+                            div.persons__item-content
+                                h3.persons__item-name=person.name
+                                p.persons__item-description=person.description
+                                each tag in person.tags
+                                    span.persons__item-tag=tag

@@ -8,13 +8,20 @@ div.tabbar.app-header-tabbar
     div.tab-button-group.app-header__tabbar-controllers
         button.tab-button.poor-vision
             span.tab-button-container
-                span.tab-button-box
+                a.tab-button-box(href="#poor-vision")
                     span.tab-button-content
                         span.icon-poor-vision
         button.tab-button
-            span.tab-button-content
-                p Ru
-        button.tab-button
+            div.dropdown-selector
+                div.dropdown-selector-container
+                    div.dropdown-selector-button
+                        p Ru
+                    ul.dropdown-selector-list
+                        li.active
+                            a(href="#ru") Ru
+                        li
+                            a(href="#en") En
+        button.tab-button.last
             span.tab-button-content
                 a(href="login.html") Войти
     // Search Toggle

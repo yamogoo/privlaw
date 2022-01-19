@@ -1,91 +1,92 @@
 .events {
+  &-container:not(.list) {
+    @extend %entities-container-events;
+  }
 
+  &-container-list {
+    @extend %entities-main-container;
+  }
+
+  &__item {
     &-container {
-        @extend %entities-container-events;
+      @extend %entity__item-container;
+      height: 100%;
+      padding-bottom: 32px;
+      gap: 30px;
+
+      &:hover {
+        h3,
+        .events__item-title {
+          color: $accent-color;
+          text-decoration: underline;
+        }
+      }
     }
 
-    &-container-list {
-        @extend %entities-main-container;
+    &-image {
+      @include themify($themes-app) {
+        display: themed("visibility");
+      }
+      position: relative;
+      border-radius: $entity-item-image-border-radius;
+
+      img {
+        border-radius: $entity-item-image-border-radius;
+        max-width: 200px;
+      }
     }
 
-    &__item {
+    &-content {
+      @include flexbox();
+      @include flex-direction(column);
+      @include justify-content(space-between);
+      gap: 15px;
+      padding-top: 0px;
+      width: 100%;
 
-        &-container {
-            @extend %entity__item-container;
-            height: 100%;
-            padding-bottom: 32px;
-            gap: 30px;
-
-            &:hover {
-
-                h3, .events__item-title {
-                    color: $accent-color;
-                    text-decoration: underline;
-                }
-            }
-        }
-
-        &-image {
-            @include themify($themes-app) {
-                display: themed('visibility'); 
-            }
-            position: relative;
-            border-radius: $entity-item-image-border-radius;
-
-            img {
-                border-radius: $entity-item-image-border-radius;
-                max-width: 200px;
-            }
-        }
-
-        &-content {
-            @include flexbox();
-            @include flex-direction(column);
-            @include justify-content(space-between);
-            gap: 15px;
-            padding-top: 0px;
-            width: 100%;
-
-            &-group {
-                @include flexbox();
-                @include flex-direction(column);
-                gap: 15px;
-                width: 100%;
-            }
-        }
-
-        &-tag{
-            @extend %entity__item-tag--clear-text;
-        }
-
-        &-title {
-            @extend %entity__item-title;
-        }
-
-        &-tag-state {
-            @extend %entity__item-tag--events;
-            color: $primary-color;
-            background-color: rgba($white, 0.9);
-            
-            &::before {
-                content: 'Скоро';
-            }
-        }
-
-        &.passed {
-
-            .events__item-tag-state {
-                color: $white;
-                background-color: rgba($accent-color, 0.9) !important;
-
-                &::before {
-                    content: 'Завершено';
-                }
-            }
-        }
-
-        &.list {
-            
-        }
+      &-group {
+        @include flexbox();
+        @include flex-direction(column);
+        gap: 15px;
+        width: 100%;
+      }
     }
+
+    &-tag {
+      @extend %entity__item-tag--clear-text;
+    }
+
+    &-title {
+      @extend %entity__item-title;
+    }
+
+    &-tag-state {
+      @extend %entity__item-tag--events;
+      color: $primary-color;
+      background-color: rgba($white, 0.9);
+
+      &::before {
+        content: "Скоро";
+      }
+    }
+
+    &.passed {
+      .events__item-tag-state {
+        color: $white;
+        background-color: rgba($accent-color, 0.9) !important;
+
+        &::before {
+          content: "Завершено";
+        }
+      }
+    }
+
+    &.list {
+    }
+  }
+  &.list {
+    .events-container {
+      @extend %entities-main-container;
+    }
+  }
 }

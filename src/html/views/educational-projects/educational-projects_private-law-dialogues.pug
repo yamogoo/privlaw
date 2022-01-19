@@ -302,39 +302,50 @@ section.section
                                         div.section
                                             div.section-body
                                                 div.form-wrapper 
-                                                    form.form
+                                                    form.form#form-educational-projects(action="#")
                                                         div.form-container
                                                             div.form-body
                                                                 div.form-group.columns
                                                                     div.form__field
-                                                                        label(for="name") ФИО
-                                                                        input(type="text" name="name")
+                                                                        label(for="name") ФИО *
+                                                                        input(type="text" name="name" id="name" required)
                                                                     div.form__field
-                                                                        label(for="email") Email
-                                                                        input(type="email" required name="email")
+                                                                        label(for="email") Email *
+                                                                        input(type="email" name="email" id="email" required)
                                                                 div.form-group.columns
                                                                     div.form__field
-                                                                        label(for="phone") Телефон
-                                                                        input(type="phone" name="phone")
+                                                                        label(for="phone") Телефон *
+                                                                        input(type="phone" name="phone" id="phone" required)
                                                                     div.form__field
-                                                                        label(for="event-place") Место проведения конференции
-                                                                        input(type="text" required name="event-place")
+                                                                        label(for="place") Место проведения конференции *
+                                                                        input(type="text" name="place" id="place" required)
                                                                 div.form-group.columns
                                                                     div.form__field
-                                                                        label(for="work") Место работы
-                                                                        input(type="ptexthone" name="work")
+                                                                        label(for="work") Место работы *
+                                                                        input(type="text" name="work" id="work" required)
                                                                     div.form__field
-                                                                        label(for="position") Должность
-                                                                        input(type="text" required name="position")
+                                                                        label(for="position") Должность *
+                                                                        input(type="text" name="position" id="position" required)
                                                                 div.form__field
-                                                                    label(for="city") Город
-                                                                    input(type="text" name="city")
+                                                                    label(for="city") Город *
+                                                                    input(type="text" name="city" id="city" required)
                                                                 div.form__field
                                                                     label(for="message") Дополнительная информация
-                                                                    textarea(rows="10" name="message")
+                                                                    textarea(rows="10" name="message" id="message")
+                                                                div.form-group.helpers
+                                                                    p * Поля обязательные к заполнению
                                                             div.form-footer.align-right
                                                                 div.form-button
-                                                                    input(type="submit" value="Отправить")                   
+                                                                    input(type="submit" value="Отправить")
+                                                            div.form-modal
+                                                                div.form-modal-container
+                                                                    div.form-modal-sheet
+                                                                        div.form-modal-sheet-container
+                                                                            div.form-modal-sheet__button-close
+                                                                                span.icon
+                                                                            div.form-modal-sheet-content
+                                                                                span.icon-form-confirm
+                                                                                p Форма успешно отправлена                  
                                         // Прошедшие мероприятия
                                         h3#section-4 Прошедшие мероприятия
                                         div.section

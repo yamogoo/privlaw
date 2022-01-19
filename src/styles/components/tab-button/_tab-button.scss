@@ -1,82 +1,81 @@
 .tabbar {
-    @include flexbox();
-    height: 100%;
+  @include flexbox();
+  height: 100%;
 }
 
 .tab-button {
+  @include flexbox();
+  @include justify-content(center);
+  @include align-items(center);
+  height: 100%;
+  min-width: 70px;
+
+  &-container {
     @include flexbox();
     @include justify-content(center);
     @include align-items(center);
-    height: 100%;
+    @include box(100%);
+    padding: 3px;
+  }
 
-    &-container {
-        @include flexbox();
-        @include justify-content(center);
-        @include align-items(center);
-        @include box (100%);
-        padding: 3px;
-    }
+  &-box {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    @include box(100%);
+    border-radius: 4px;
+    // background-color: $background-color;
+  }
 
-    &-box {
-        @include flexbox();
-        @include justify-content(center);
-        @include align-items(center);
-        @include box (100%);
-        border-radius: 4px;
-        // background-color: $background-color;
-    }
-    
-    &-content {
-        @include flexbox();
-        @include justify-content(center);
-        @include align-items(center);
-        padding: px2em(0px) px2em(20px);
-    }
+  &-content {
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    padding: px2em(0px) px2em(20px);
+  }
 
-    p {
-        font-size: px2em(14px);
-        font-weight: 400;
-        color: $primary-color;
-        white-space: nowrap;
-    }
+  p,
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    color: $primary-color;
+    white-space: nowrap;
+  }
 
-    & {
-        border-left: 1px solid $divider-color;
-    }
+  & {
+    border-left: 1px solid $divider-color;
+  }
 
-    &.last {
-
-        .tab-button-content {
-            padding-right: px2em(0px);
-        }
+  &.last {
+    .tab-button-content {
+      padding-right: px2em(0px);
     }
+  }
 }
 
-
 .tab-button-group {
+  @include flexbox();
+  @include flex-direction(row);
+  @include align-items(center);
+  @include flex-wrap(nowrap);
+  gap: 0;
+  height: 100%;
+  @include respond-below(xl) {
     @include flexbox();
-    @include flex-direction(row);
-    @include align-items(center);
-    @include flex-wrap(nowrap);
-    gap: 0;
-    height: 100%;
-    @include respond-below (xl) {
-        @include flexbox();
-        @include flex-direction(column);
-        @include justify-content(space-between);
-        width: 100px;
-    }
+    @include flex-direction(column);
+    @include justify-content(space-between);
+    width: 100px;
+  }
 
-    .tab-button {
-        @include respond-below (xl) {
-            width: inherit;
-        }
+  .tab-button {
+    @include respond-below(xl) {
+      width: inherit;
     }
+  }
 }
 
 .tab-button.poor-vision {
-
-    .icon-poor-vision {
-        font-size: px2em(24px);
-    }
+  .icon-poor-vision {
+    font-size: px2em(24px);
+  }
 }

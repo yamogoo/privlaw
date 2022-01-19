@@ -65,10 +65,21 @@
                     </div>
                     <!-- Controllers-->
                     <div class="tab-button-group app-header__tabbar-controllers">
-                      <button class="tab-button poor-vision"><span class="tab-button-container"><span class="tab-button-box"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></span></span></button>
-                      <button class="tab-button"><span class="tab-button-content">
-                          <p>Ru</p></span></button>
-                      <button class="tab-button"><span class="tab-button-content"><a href="login.html">Войти</a></span></button>
+                      <button class="tab-button poor-vision"><span class="tab-button-container"><a class="tab-button-box" href="#poor-vision"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></a></span></button>
+                      <button class="tab-button">
+                        <div class="dropdown-selector">
+                          <div class="dropdown-selector-container">
+                            <div class="dropdown-selector-button">
+                              <p>Ru</p>
+                            </div>
+                            <ul class="dropdown-selector-list">
+                              <li class="active"><a href="#ru">Ru</a></li>
+                              <li><a href="#en">En</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </button>
+                      <button class="tab-button last"><span class="tab-button-content"><a href="login.html">Войти</a></span></button>
                     </div>
                     <!-- Search Toggle-->
                     <div class="tab-button-group app-header__tabbar-menu-toggle-button">
