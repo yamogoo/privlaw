@@ -1,7 +1,15 @@
 %entity__item {
-    @include flexbox();
-    @include flex-direction(column);
-    position: relative;
-    width: auto;
-    overflow: hidden;
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  width: auto;
+  overflow: hidden;
+}
+
+%entity__item--clear {
+  @include flexbox();
+  @include flex-direction(column);
+  position: relative;
+  width: auto;
+  overflow: hidden;
 }

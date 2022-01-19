@@ -1,32 +1,58 @@
 -
-    var documents = [
+    var partners = [
         {
-            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2016 года по 31 декабря 2016 года",
+            name: "Арбитражный суд Уральского округа",
             description: "",
             url: "",
-            type: "pdf",
-            size: "12КБ"
+            image: "partner_logo_01.jpg",
         },
         {
-            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2015 года по 31 декабря 2015 года",
+            name: "Уральский Государственный юридический университет",
             description: "",
             url: "",
-            type: "pdf",
-            size: "119КБ"
+            image: "partner_logo_02.jpg",
         },
         {
-            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2014 года по 31 декабря 2014 года",
+            name: "Национальный исследовательский Томский государственный университет",
             description: "",
             url: "",
-            type: "pdf",
-            size: "87КБ"
+            image: "partner_logo_03.jpg",
         },
         {
-            name: "Сведения о доходах, расходах, об имуществе и обязательствах имущественного характера, представленные работниками, замещающими руководящие должности в организации, созданной для выполнения задач, поставленных перед Правительством Российской Федерации, за период с 1 января 2013 года по 31 декабря 2013 года",
+            name: "Информационно-правовое обеспечение ГАРАНТ",
             description: "",
             url: "",
-            type: "pdf",
-            size: "36КБ"
+            image: "partner_logo_04.jpg",
+        },
+        {
+            name: "Дальневосточный федеральный университет",
+            description: "",
+            url: "",
+            image: "partner_logo_05.jpg",
+        },
+        {
+            name: "Кубанский государственный университет",
+            description: "",
+            url: "",
+            image: "partner_logo_06.jpg",
+        },
+        {
+            name: "Кемеровский государственный университет",
+            description: "",
+            url: "",
+            image: "partner_logo_07.jpg",
+        },
+        {
+            name: "Казанский федеральный университет",
+            description: "",
+            url: "",
+            image: "partner_logo_08.jpg",
+        },
+        {
+            name: "Коллегия адвокатов Регион Сервис",
+            description: "",
+            url: "",
+            image: "partner_logo_09.jpg",
         }
     ]
     
@@ -87,16 +113,13 @@ section.section
                                             //- div.article-section-header
                                             //-     h3.article-section-header-title Партнеры
                                             div.article-section-body
-                                                div.documents
-                                                    div.documents-container
+                                                div.partners
+                                                    div.partners-container
                                                         // Items
-                                                        each document in documents
-                                                            div.documents__item
-                                                                a.documents__item-container(href="/")
-                                                                    div.documents__item-icon
-                                                                        img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
-                                                                    div.documents__item-content
-                                                                        div.documents__item-content-group
-                                                                            h3.documents__item-title=document.name
-                                                                            span.documents__item-size=document.size
-                                                                        span.documents__item-helper-icon.icon-download
+                                                        each item in partners
+                                                            div.partners__item
+                                                                a(href=`${item.url}` class="partners__item-container" target="blank")
+                                                                    span.partners__item-image
+                                                                        img(src=`images/partners/${item.image}`)
+                                                                    div.partners__item-content
+                                                                        h3.partners__item-title=item.name       

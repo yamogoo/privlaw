@@ -1,14 +1,15 @@
 %entity__item-image {
-    @include themify($themes-app) {
-        display: themed('visibility'); 
-    }
-    width: inherit;
-    border-radius: $entity-item-image-border-radius;
-    overflow: hidden;
+  //   @include themify($themes-app) {
+  //     display: themed("visibility");
+  //   }
+  @include flexbox;
+  width: inherit;
+  border-radius: $entity-item-image-border-radius;
+  overflow: hidden;
 
-    img {
-        width: 100%;
-        object-fit: cover;
-        border-radius: $entity-item-image-border-radius;
-    }
+  img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: $entity-item-image-border-radius;
+  }
 }

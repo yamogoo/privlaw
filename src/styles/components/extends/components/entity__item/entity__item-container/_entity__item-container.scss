@@ -1,15 +1,22 @@
 %entity__item-container--hover {
-
-    &:hover {
-
-        h3, h5, %entity__item-title {
-            color: $accent-color;
-            text-decoration: underline;
-        }
+  &:hover {
+    h3,
+    h5,
+    %entity__item-title {
+      color: $accent-color;
+      text-decoration: underline;
     }
+  }
 }
 
 %entity__item-container {
+  padding-bottom: 30px;
+  @extend %entity__item-container--hover;
+}
+
+%entity__item-container--clear {
+  @extend %entity__item-container--hover;
+  @include respond-below(sm) {
     padding-bottom: 30px;
-    @extend %entity__item-container--hover;
+  }
 }

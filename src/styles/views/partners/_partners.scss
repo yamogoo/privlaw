@@ -1,0 +1,37 @@
+.partners {
+  &-container {
+    @extend %entities-container-news;
+  }
+
+  &-container-list {
+    @extend %entities-main-container;
+  }
+
+  &__item {
+    @extend %entity__item--clear;
+
+    &-container {
+      @extend %entity__item-container--clear;
+    }
+
+    &-image {
+      @extend %entity__item-image;
+      @include flexbox;
+      border: 1px solid $divider-color;
+    }
+
+    &-content {
+      @extend %entity__item-content;
+    }
+
+    &-tag {
+      @extend %entity__item-tag--clear-text;
+    }
+
+    &-title {
+      @extend %entity__item-description;
+      font-size: 13px;
+      letter-spacing: px2em(0.5px);
+    }
+  }
+}
