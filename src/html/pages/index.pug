@@ -8,27 +8,15 @@ body
     include ../components/preloader/preloader.pug
     div.app.theme-header--light.theme-app--normal#app
         div.app-container
-
             include ../components/header/header.pug
-
             main.app-content
-
                 include ../components/up-button/up-button.pug
-                
                 div.app-scroll-view
-                
                     include ../components/main-slider/main-slider.pug
-
                     div.app-content-container
-
                         include ../views/news/news-for-index.pug
-
                         include ../views/events/events-for-index.pug
-
-                        include ../views/persons/persons-for-index.pug
-
-                        //- include ../views/persons/persons-for-index.pug
-                    
+                        include ../views/about-center/about-center.pug
+                        include ../views/persons/persons-for-index.pug   
                     include ../components/footer/footer.pug
-
     include ../components/src/javascript.pug

@@ -1,8 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 
-// let forms = require('./forms');
-
 // Preloader
 $(window).on('load', function () {
     var $preloader = $('#preloader'),

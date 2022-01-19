@@ -37,6 +37,16 @@
       line-height: 1.9; //1.82;
     }
 
+    .columns {
+      p {
+        @include respond-above(md) {
+          column-count: 2;
+          column-gap: 40px;
+        }
+        @extend %main-p;
+      }
+    }
+
     > h2[id^="section"],
     h3[id^="section"],
     h4[id^="section"],
