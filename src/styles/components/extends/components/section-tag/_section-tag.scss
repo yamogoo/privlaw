@@ -1,0 +1,13 @@
+%section-tag {
+  position: absolute;
+  bottom: -1px;
+  right: 0;
+  background-color: $white;
+  border: 1px solid $divider-color;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: px2em(1px);
+  text-transform: uppercase;
+  padding: px2em(5px) px2em(10px);
+  color: $neutral-color;
+}

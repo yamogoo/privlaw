@@ -202,6 +202,7 @@ section.section
                 // News
                 each item in news
                     div.news__item
+                        div.section-tag Новости
                         a(href=`${item.url}` class="news__item-container")
                             div.news__item-content
                                 span.news__item-date=item.date
@@ -211,6 +212,7 @@ section.section
                 // Events
                 each event in events.passed
                     div.events__item.passed
+                        div.section-tag Мероприятия
                         a(href="events-detail.html" class="events__item-container")
                             div.events__item-content
                                 div.events__item-content-group
@@ -224,6 +226,7 @@ section.section
                 // Documents
                 each document in documents
                     div.documents__item
+                        div.section-tag Документы
                         a.documents__item-container(href="/")
                             div.documents__item-icon
                                 img(src=`./assets/images/docs/icon-document-${document.type}.png`, alt="")
@@ -235,6 +238,7 @@ section.section
                 // Persons
                 each person in persons
                     div.persons__item
+                        div.section-tag Персоналии
                         a(href=person.url class="persons__item-container")
                             div.persons__item-content
                                 h3.persons__item-name=person.name
