@@ -1,24 +1,24 @@
 .app-search-field {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    background-color: $white;
-    @extend %app-header--height;
-    border-bottom-style: solid;
-    border-bottom-width: $app-header-border-bottom-width;
-    border-bottom-color: $app-header-border-bottom-color;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  background-color: $white;
+  @extend %app-header--height;
+  border-bottom-style: solid;
+  border-bottom-width: $app-header-border-bottom-width;
+  border-bottom-color: $app-header-border-bottom-color;
 
-    &-container {
-        @include flexbox;
-        @include align-items(center);
-        @extend %main-container;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        @include box(100%);
-    }
+  &-container {
+    @include flexbox;
+    @include align-items(center);
+    @extend %main-container;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @include box(100%);
+  }
 
-    &-content {
-        @include flexbox();
-        @include box(100%);
-    }
+  &-content {
+    @include flexbox();
+    @include box(100%);
+  }
 }

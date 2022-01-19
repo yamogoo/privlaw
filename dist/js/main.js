@@ -383,7 +383,7 @@ $(document).ready(function () {
         $appMenu = $('#app-menu'),
         $appSearchButton = $('#app-search-button'),
         $appSearchField = $('#app-search-field'),
-        $appSearchButtonClose = $('#app-search-button-close'),
+        $appSearchButtonClose = $('#search-button-close'),
         $expansionSection = $(".expansion-section"),
         $filterSearch = $('#filter-search'),
         $sectionMenu = $('.section-menu'),

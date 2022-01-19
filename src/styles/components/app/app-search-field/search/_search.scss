@@ -1,50 +1,60 @@
 .search {
-    @include flexbox;
-    @include align-items(center);
+  @include flexbox;
+  @include align-items(center);
+  width: 100%;
+
+  &-container {
+    @include flexbox();
+    width: 100%;
+    gap: 20px;
+    @include respond-below(md) {
+      @include flex-wrap(wrap);
+      gap: 30px;
+    }
+  }
+
+  &__field {
+    @include flexbox();
     width: 100%;
 
-    &-container {
-        @include flexbox();
-        width: 100%;
-        gap: 20px;
+    input {
+      width: 100%;
+      border: none;
+      font-size: 20px;
+      border-bottom: 1px solid $divider-color;
+
+      &:focus {
+        border-bottom: 1px solid $primary-color;
+      }
     }
-    
-    &__field {
-        @include flexbox();
-        width: 100%;
+  }
 
-        input {
-            width: 100%;
-            border: none;
-            font-size: 20px;
-            border-bottom: 1px solid $divider-color;
-
-            &:focus {
-                border-bottom: 1px solid $primary-color;
-            }
-        }
+  &-controllers {
+    @include flexbox();
+    gap: 20px;
+    width: auto;
+    @include respond-below(md) {
+      @include justify-content(flex-end);
+      width: 100%;
     }
+  }
 
-    &-controllers {
-        @include flexbox();
-        gap: 20px;
-        width: auto;
+  &-button {
+    @extend %main-button-inverse;
+    z-index: 5;
+  }
+
+  &-button-close {
+    min-width: 40px;
+
+    .icon {
+      font-family: icomoon;
+      @extend .icon-search-cross;
+
+      &:before {
+        font-family: icomoon;
+        @extend .icon-search-cross;
+      }
     }
-
-    &-button {
-        @extend %main-button-inverse;
-    }
-
-    &-button-close {
-        .icon {
-            font-family: icomoon;
-            @extend .icon-search-cross;
-    
-            &:before {
-                font-family: icomoon;
-                @extend .icon-search-cross;
-            }
-        }
-    }
-
+  }
 }

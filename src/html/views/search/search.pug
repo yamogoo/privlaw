@@ -186,15 +186,22 @@ section.section
         div.section-header
             h5.section-title Поиск
             // Filter Dropdown
-            div.filter-dropdown
-                div.filter-dropdown-container
-                    input(type="radio" name="tags")
-                    span#text-tags Все разделы
-                    div.filter-dropdown__expansion-icon
-                div.filter-dropdown-list
-                    p.active Все разделы
-                    each item in filter
-                        p=item
+            form.search
+                div.search-container
+                    div.search__field
+                        input(id="main-search" type="text" placeholder="Введите поисковый запрос")
+                    div.search-controllers
+                        div.filter-dropdown
+                            div.filter-dropdown-container
+                                input(type="radio" name="tags")
+                                span#text-tags Все разделы
+                                div.filter-dropdown__expansion-icon
+                            div.filter-dropdown-list
+                                p.active Все разделы
+                                each item in filter
+                                    p=item
+                        button(type="submit").search-button#search-button
+                            span Поиск            
             // Filter Dropdown
         // Section Header
         div.section-search

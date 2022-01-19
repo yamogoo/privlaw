@@ -1,3 +1,13 @@
+-
+    var filter = [
+        "Мероприятия",
+        "Новости",
+        "Документы",
+        "Издания",
+        "Видео",
+        "Персоналии"
+    ]
+
 // Search Field
 div.app-search-field#app-search-field
     div.app-search-field-container
@@ -7,7 +17,15 @@ div.app-search-field#app-search-field
                     div.search__field
                         input(id="main-search" type="text" placeholder="Введите поисковый запрос")
                     div.search-controllers
-                        include ../filter/filter-dropdown-for-search.pug
+                        div.filter-dropdown
+                            div.filter-dropdown-container
+                                input(type="radio" name="tags")
+                                span#text-tags Все разделы
+                                div.filter-dropdown__expansion-icon
+                            div.filter-dropdown-list
+                                p.active Все разделы
+                                each item in filter
+                                    p=item
                         button(type="submit").search-button#search-button
                             span Поиск
                         //- div.form-button
