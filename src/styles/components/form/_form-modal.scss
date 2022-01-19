@@ -1,0 +1,87 @@
+.form,
+form {
+  .form-modal {
+    position: absolute;
+    display: none;
+    @include justify-content(center);
+    @include align-items(center);
+    @include box(100%);
+    background-color: rgba($white, 0);
+    @include transition(display background-color, 125ms, ease-out);
+
+    &-container {
+    }
+
+    &-sheet {
+      @include flexbox;
+      border-radius: 6px;
+      border: 1px solid $divider-color;
+      min-width: 320px;
+      min-height: 240px;
+      background-color: $white;
+      transform: translateY(-200px);
+      @include transition(transform, 125ms, ease-out);
+
+      &-container {
+        @include flexbox;
+        @include flex-direction(row);
+        @include justify-content(center);
+        @include align-items(center);
+        position: relative;
+        width: 100%;
+        padding: px2em(40px), px2em(60px);
+      }
+
+      &-content {
+        position: relative;
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+      }
+
+      &__button-close {
+        position: absolute;
+        right: 12px;
+        top: 12px;
+        @include flexbox;
+        @include justify-content(center);
+        @include align-items(center);
+        @include box(20px);
+
+        .icon {
+          @include flexbox;
+          @include justify-content(center);
+          @include align-items(center);
+          // @extend .icon-search-cross;
+          color: $primary-color;
+          transform: rotate(0deg);
+          @include transition(transform, 125ms, ease-out);
+          cursor: pointer;
+          line-height: 1;
+
+          &::before {
+            content: "\e918";
+            font-family: icomoon;
+            line-height: inherit;
+            // @extend .icon-search-cross, :before;
+          }
+
+          &:active,
+          &:focus,
+          &:hover {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+
+    &.active {
+      background-color: rgba($white, 0.9);
+      @include flexbox;
+
+      .form-modal-sheet {
+        transform: translateY(0px);
+      }
+    }
+  }
+}

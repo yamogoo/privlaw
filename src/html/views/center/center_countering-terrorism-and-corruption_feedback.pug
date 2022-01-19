@@ -87,22 +87,33 @@ section.section
                                         //- div.article-section-header
                                         //-     h3.article-section-header-title Форма обратной связи
                                         div.article-section-body
-                                            form.form
+                                            form.form#form-feedback(action="#")
                                                 div.form-container
                                                     div.form-body
                                                         div.form-group.columns
                                                             div.form__field
-                                                                label(for="name") ФИО
-                                                                input(type="text" name="name")
+                                                                label(for="name") ФИО *
+                                                                input(type="text" name="name" id="name" minlength="2" required)
                                                             div.form__field
-                                                                label(for="email") Email
-                                                                input(type="email" required name="email")
+                                                                label(for="email") Email *
+                                                                input(type="email" name="email" id="email" required)
                                                         div.form__field
-                                                            label(for="theme") Тема
-                                                            input(type="text" name="theme")
+                                                            label(for="subject") Тема *
+                                                            input(type="text" name="subject" id="subject" minlength="1" required)
                                                         div.form__field
-                                                            label(for="message") Текст сообщения
-                                                            textarea(rows="10" name="message")
+                                                            label(for="message") Текст сообщения *
+                                                            textarea(rows="10" name="message" id="message" minlength="1" required)
+                                                        div.form-group.helpers
+                                                            p * Поля обязательные к заполнению
                                                     div.form-footer.align-right
                                                         div.form-button
                                                             input(type="submit" value="Отправить")
+                                                    div.form-modal
+                                                        div.form-modal-container
+                                                            div.form-modal-sheet
+                                                                div.form-modal-sheet-container
+                                                                    div.form-modal-sheet__button-close
+                                                                        span.icon
+                                                                    div.form-modal-sheet-content
+                                                                        span.icon-form-confirm
+                                                                        p Форма успешно отправлена

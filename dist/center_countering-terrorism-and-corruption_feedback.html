@@ -68,7 +68,7 @@
                       <button class="tab-button poor-vision"><span class="tab-button-container"><span class="tab-button-box"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></span></span></button>
                       <button class="tab-button"><span class="tab-button-content">
                           <p>Ru</p></span></button>
-                      <button class="tab-button"><span class="tab-button-content"><a href="login.html">Для студентов</a></span></button>
+                      <button class="tab-button"><span class="tab-button-content"><a href="login.html">Войти</a></span></button>
                     </div>
                     <!-- Search Toggle-->
                     <div class="tab-button-group app-header__tabbar-menu-toggle-button">
@@ -345,31 +345,46 @@
                               <h3 id="section">Форма обратной связи</h3>
                               <div class="article-section">
                                 <div class="article-section-body">
-                                  <form class="form">
+                                  <form class="form" id="form-feedback" action="#">
                                     <div class="form-container">
                                       <div class="form-body">
                                         <div class="form-group columns">
                                           <div class="form__field">
-                                            <label for="name">ФИО</label>
-                                            <input type="text" name="name">
+                                            <label for="name">ФИО *</label>
+                                            <input type="text" name="name" id="name" minlength="2" required>
                                           </div>
                                           <div class="form__field">
-                                            <label for="email">Email</label>
-                                            <input type="email" required name="email">
+                                            <label for="email">Email *</label>
+                                            <input type="email" name="email" id="email" required>
                                           </div>
                                         </div>
                                         <div class="form__field">
-                                          <label for="theme">Тема</label>
-                                          <input type="text" name="theme">
+                                          <label for="subject">Тема *</label>
+                                          <input type="text" name="subject" id="subject" minlength="1" required>
                                         </div>
                                         <div class="form__field">
-                                          <label for="message">Текст сообщения</label>
-                                          <textarea rows="10" name="message"></textarea>
+                                          <label for="message">Текст сообщения *</label>
+                                          <textarea rows="10" name="message" id="message" minlength="1" required></textarea>
+                                        </div>
+                                        <div class="form-group helpers">
+                                          <p>* Поля обязательные к заполнению</p>
                                         </div>
                                       </div>
                                       <div class="form-footer align-right">
                                         <div class="form-button">
                                           <input type="submit" value="Отправить">
+                                        </div>
+                                      </div>
+                                      <div class="form-modal">
+                                        <div class="form-modal-container">
+                                          <div class="form-modal-sheet">
+                                            <div class="form-modal-sheet-container">
+                                              <div class="form-modal-sheet__button-close"><span class="icon"></span></div>
+                                              <div class="form-modal-sheet-content"><span class="icon-form-confirm"></span>
+                                                <p>Форма успешно отправлена</p>
+                                              </div>
+                                            </div>
+                                          </div>
                                         </div>
                                       </div>
                                     </div>
@@ -550,7 +565,9 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.14/lottie.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
+  <!-- Pluggins-->
   <script type="text/javascript" src="./js/owl.carousel/owl.carousel.min.js"></script>
   <script type="text/javascript" src="./js/fancybox/jquery.fancybox.js"></script>
   <script type="text/javascript" src="./js/hideseek/jquery.hideseek.min.js"></script>
+  <script type="text/javascript" src="./js/validate/jquery.validate.min.js"></script>
 </body>

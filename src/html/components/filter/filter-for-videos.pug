@@ -3,11 +3,16 @@ div.filter
     div.filter-dropdown
         div.filter-dropdown-container
             input(type="radio" name="tags")
-            span#text-tags Все подразделения
+            span#text-tags Все видео
             div.filter-dropdown__expansion-icon
         div.filter-dropdown-list
-            p.active Все подразделения
+            p.active Все видео
             p ИЦЧП
             p РШЧП
             p Совет по кодификации
-    // Filter Dropdown
+            p Диссертационный совет
+            p Диалоги о частном праве
+            p Клуб семейного права
+            p Алексеевские чтения
+    include ./filter-dropdown--years.pug
+    

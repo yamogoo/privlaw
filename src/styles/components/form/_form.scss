@@ -52,6 +52,7 @@ form {
     gap: $form-gap;
     position: relative;
     width: 100%;
+    padding-top: 10px;
   }
 
   &-footer {
@@ -90,6 +91,7 @@ form {
     label {
       position: absolute;
       font-size: inherit;
+      line-height: 1;
       background-color: $white;
       top: $form-field-label-top-normal;
       left: $form-field-input-left;
@@ -114,6 +116,30 @@ form {
 
     &:not(.active) {
       color: $secondary-color;
+    }
+
+    // Errors
+    &.error {
+      input,
+      textarea {
+        border: 1px solid $error-color;
+      }
+
+      label {
+        color: $error-color;
+      }
+    }
+
+    & {
+      input.error,
+      textarea.error {
+        color: $error-color;
+        border: 1px solid $error-color;
+      }
+      input.error ~ label,
+      textarea.error ~ label {
+        color: $error-color;
+      }
     }
   }
 

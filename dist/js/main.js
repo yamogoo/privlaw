@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 
+// let forms = require('./forms');
+
 // Preloader
 $(window).on('load', function () {
     var $preloader = $('#preloader'),
@@ -72,20 +74,6 @@ $(document).ready(function () {
             }
         }
     });
-
-    // function upButton() {
-    //     var $changedObject = $('up-button');
-    //     var $appScrollView = $('app-scroll-view');
-    //     $($appScrollView).scroll(function () {
-    //         var scrolled = $($appScrollView).scrollTop();
-    //         let scrollDistance = 300;
-    //         if (scrolled > scrollDistance) {
-    //             $changedObject.addClass('active')
-    //         } else {
-    //             $changedObject.removeClass("active")
-    //         }
-    //     });
-    // }
 
     // App Header
     function appHeaderChangeTheme() {
@@ -389,34 +377,24 @@ $(document).ready(function () {
         elOnFocus($input, el, clFocus);
     }
 
-    // function toggleSelfClassByClick(el1, cl1) {
-    //     count = 0;
-    //     el1.on("click", function (e) {
-    //         count ++
-    //         if (count === 1) {
-    //             count = 0;
-    //             if (el1.hasClass(cl1))
-    //                 $(this).removeClass(cl1);
-    //             else {
-    //                 $(this).addClass(cl1);
-    //             }
-    //             e.preventDefault();
-    //         }
-    //     });
-    // }
-
     //
     //
     //--------------------------------- Elements ---------------------------------//
 
-    let $appMenuToggleButton = $('#app-menu-toggle-button');
-    let $appMenu = $('#app-menu');
-    let $appSearchButton = $('#app-search-button');
-    let $appSearchField = $('#app-search-field');
-    let $appSearchButtonClose = $('#app-search-button-close');
-    let $expansionSection = $(".expansion-section");
-    let $filterSearch = $('#filter-search');
-    let $sectionMenu = $('.section-menu');
+    let $appMenuToggleButton = $('#app-menu-toggle-button'),
+        $appMenu = $('#app-menu'),
+        $appSearchButton = $('#app-search-button'),
+        $appSearchField = $('#app-search-field'),
+        $appSearchButtonClose = $('#app-search-button-close'),
+        $expansionSection = $(".expansion-section"),
+        $filterSearch = $('#filter-search'),
+        $sectionMenu = $('.section-menu'),
+        // Forms
+        $formFeedback = $('#form-feedback'),
+        $formLogin = $('#form-login'),
+        $formProjects = $('#form-educational-projects'),
+        $formModal = $('.form-modal'),
+        $formModalSheetButtonClose = $formModal.find('.form-modal-sheet__button-close');
     
     //
     //
@@ -429,16 +407,13 @@ $(document).ready(function () {
         highlight: true,
         nodata:        'Элемент не найден',
         min_chars: 1,
-        // hidden_mode:    false,
         navigation:     true,
-        // ignore_accents: true,
-        // attribute: '',
       });
 
     // Expansion Section Group
 
     function expansionSectionGroup() {
-        var container = $('.expansion-section'),
+        let container = $('.expansion-section'),
             group = container.find('.expansion-section-group'),
             groupHeader = group.find('.expansion-section-group-header'),
             groupBody = group.find('.expansion-section-group-body'),
@@ -446,16 +421,8 @@ $(document).ready(function () {
 
         let elLottie = $iconExpansionSectionGroup;
 
-        // groupBody.css({"height" : getHeight});
         groupHeader.on('click', function () {
             $(this).closest('.expansion-section-group').toggleClass('hide');
-            // if ($(this).closest('.expansion-section-group').hasClass('hide')) {
-            //     elLottie.setDirection(1);
-            //     elLottie.play();
-            // } else {
-            //     elLottie.setDirection(-1);
-            //     elLottie.play();
-            // }
         });
     };
 
@@ -480,10 +447,82 @@ $(document).ready(function () {
         changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
     }
 
-    // Filters
-    // Filter Search
+    //--------------------------------- Forms ---------------------------------//
 
-    // Task .focus();
+    // Forms Feedback Validation
+    $formFeedback.validate({
+        rulles: {
+            name: "required",
+            subject: "required",
+            email: "required",
+            message: "required"
+        },
+        messages: {
+            name: "Поле не может оставаться пустым",
+            subject: "Поле не может оставаться пустым",
+            email: "Введите корректный email",
+            message: "Поле не может оставаться пустым"
+        }
+    });
+
+    // Close Form Modal
+    changeClassByClickOnElement($formModalSheetButtonClose, 'active', $formModal, 'active');
+
+    // Sending Form Data
+    $formFeedback.submit(function (e) {
+        e.preventDefault();
+         var form_data = $(this).serialize();
+         $.ajax({
+             type: "POST",
+             url: "", // Url ./file.php
+             data: form_data,
+             success: function () {
+                 // Success actions
+                //  $('.form-modal-sheet-content p').text('Форма успешно отправлена');
+                 $(this).trigger('reset');
+                 $('.form-modal').addClass('active'); // Modal Confirm
+             }
+         });
+     });
+
+     // Form Login Validation
+    $formLogin.validate({
+        rulles: {
+            email: "required",
+            password: "required"
+        },
+        messages: {
+            email: "Введите корректный email",
+            password: "Пароль должен не менее 5 символов"
+        }
+    });
+
+    // Forms Family Law Club Validation
+    $formProjects.validate({
+        rulles: {
+            name: "required",
+            email: "required",
+            phone: {
+                required: true,
+                phone: true
+            },
+            place: "required",
+            work: "required",
+            position: "required",
+            city: "required",
+            message: ""
+        },
+        messages: {
+            name: "Поле не может оставаться пустым",
+            email: "Введите корректный email",
+            phone: "Введите корректный номер",
+            place: "Поле не может оставаться пустым",
+            work: "Поле не может оставаться пустым",
+            position: "Поле не может оставаться пустым",
+            city: "Поле не может оставаться пустым",
+            message: ""
+        }
+    });
 
     menu();
     search();
@@ -491,145 +530,6 @@ $(document).ready(function () {
     filterSearch($filterSearch, 'type', 'focus', $iconFilterSearchButton);
 
     // Section Menu
-
-    // function sectionMenu() {
-    //     let $appScrollView = $('.app-scroll-view');
-    //     let sectionMenu = $('.section-menu');
-    //     let $sectionMenuItem = $sectionMenu.find('a');
-    //     $('a').click(function(){
-    //         var topOffset = 100;
-    //         $appScrollView.animate({
-    //         scrollTop: $($(this).attr('href')).offset().top-topOffset
-    //             }, 1500);
-    //         });
-    // }
-
-    // function sectionMenu() {
-    //     var lastId;
-    //     let $appScrollView = $('.app-scroll-view');
-    //     var $menu = $("#section-menu");
-    //     var $menuHeight = $menu.outerHeight(); //цифра это расстояние от верхушки меню до нужной секции(можно менять)
-    //     var $menuItems = $menu.find("a");
-    //     // Anchors corresponding to menu items
-    //     var $scrollItems = $menuItems.map(function(){
-    //         var item = $($(this).attr("href"));
-    //         if (item.length) { return item; }
-    //         });
-    //     // Bind click handler to menu items
-    //     // so we can get a fancy scroll animation
-    //     $menuItems.click(function(e){
-    //         var href = $(this).attr("href"),
-    //             offsetTop = href === "#" ? 0 : $(href).offset().top-$menuHeight+11;
-    //             $appScrollView.stop().animate({ 
-    //             scrollTop: offsetTop
-    //         }, 300);
-    //         e.preventDefault();
-    //     });
-
-    //     // Bind to scroll
-    //     $($appScrollView).scroll(function(){
-    //     // Get container scroll position
-    //     var fromTop = $(this).scrollTop()+$menuHeight;
-        
-    //     // Get id of current scroll item
-    //     var cur = $scrollItems.map(function(){
-    //         if ($(this).offset().top < fromTop)
-    //         return this;
-    //     });
-    //     // Get the id of the current element
-    //     cur = cur[cur.length-1];
-    //     var id = cur && cur.length ? cur[0].id : "";
-        
-    //     if (lastId !== id) {
-    //         lastId = id;
-    //         // Set/remove active class
-    //         $menuItems
-    //             .parent().removeClass("active")
-    //             .end().filter(`[href=${id}]`).parent().addClass("active");
-    //     }                   
-    //     });
-    // };
-
-
-
-    // function sectionMenu() {
-    //     var lastId;
-    //     let $appScrollView = $('.app-scroll-view');
-    //     var $menu = $("#section-menu");
-    //     var $menuHeight = $menu.outerHeight();
-    //     var $menuItems = $menu.find("a");
-    //     var $sectionList = $('#section-list');
-    //     var $sectionItems = $sectionList.find().attr('href');
-    //     // Anchors corresponding to menu items
-    //     var $scrollItems = $menuItems.map(function(){
-    //         var item = $($(this).attr("href"));
-    //         if (item.length) { return item; }
-    //         });
-    //     // Bind click handler to menu items
-    //     // so we can get a fancy scroll animation
-    //     $menuItems.click(function(e){
-    //         var href = $(this).attr("href");
-    //         var target = $sectionList.find().attr(href);
-
-    //         var offsetTop = href === "#" ? 0 : $(target).offset().top;
-    //             $appScrollView.stop().animate({ 
-    //             scrollTop: offsetTop
-    //         }, 300);
-    //         e.preventDefault();
-    //         console.log(href);
-    //     });
-    // };
-
-    // function sectionMenu () {
-
-    //     function scrollTosec(){
-    //         $('a[href^="#section"]').click(function(e) {
-    //             e.preventDefault();
-    //             var target = $(this).attr('href');
-    //             var stop = $(target).offset().top;
-    //             var delay = 200;
-    //             $('body').animate({scrollTop: stop + 'px'}, delay);
-    //         });
-    //    };
-
-    //    scrollTosec();
-    // }
-
-    // function sectionMenu() {
-    //     var lastId;
-    //     let $appScrollView = $('.app-scroll-view');
-    //     var $menu = $("#section-menu");
-    //     var $menuHeight = $menu.outerHeight();
-    //     var $menuItems = $menu.find("a");
-    //     var $sectionList = $('#section-list');
-
-    //     // $menuItems.click(function(e){
-    //     //     var href = $(this).attr("href");
-    //     //     // var target = $sectionList.find().attr(href);
-
-    //     //     var offsetTop = $(href).offset().top;
-    //     //         $appScrollView.stop().animate({ 
-    //     //         scrollTop: offsetTop
-    //     //     }, 300);
-    //     //     e.preventDefault();
-    //     //     console.log(href);
-    //     // });
-
-    //     $(function() {
-    //         $menuItems.click(function(e) {
-    //             var href = $(this).attr("href");
-    //             // var $sectionItems = $sectionList.find('#');
-    //             console.log(href);
-    //             e.preventDefault();
-    //             // var target = $(this).attr('href');
-    //             var target = $sectionList.find(`${href}`);
-    //             console.log(target);
-    //             // var stop = $(target).offset().top;
-    //             // var delay = 1000;
-    //             // $appScrollView.animate({scrollTop: stop + 'px'}, delay);
-    //         });
-    //     });
-    // }
 
     document.querySelectorAll('a[href^="#section"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -640,7 +540,6 @@ $(document).ready(function () {
             });
         });
     });
-
 
     function sectionMenu() {
         menu = $sectionMenu;
@@ -682,99 +581,15 @@ $(document).ready(function () {
                     el.parent().removeClass(cl);
                 }
             }            
-        });
-        
+        });        
     }
-
 
     function formInput () {
         form = $(".form");
         input = form.find("input, textarea"); //[type=textarea], input[type=password], textarea
         label = form.find("label");
         inputHighlight(input, 'active', 'typed');
-        // input.bind('input', function() {
-        //     inputHighlight(input, 'active');
-        //     if ( $(this).val().length != 0 ) {
-        //         $(this).parent().addClass('active');
-        //     } else {
-        //         $(this).parent().removeClass('active');
-        //     }   
-        // });
     };
 
     formInput();
-    
-
-
-      
-
-
-    // $(document).ready(function() {
-    //     $("#search").keyup(function() {
-    //       var filter = $(this).val();
-    //       $(".persons__item").find(".persons__item-name").each(function() {
-    //         !$(this).includes(filter) ? $(this).hide() : $(this).show();
-    //         if (filter == "") {
-    //           $(this).show();
-    //         }
-    //       });
-    //     });
-    //   });
-    // $('a[href*="#section"]').on('click', (event) => {
-
-    //     let $appScrollView = $('.app-scroll-view');
-    //     const hash = event.currentTarget.hash;
-    //     if (hash) {
-    //       event.preventDefault();
-    //       $($appScrollView).animate({scrollTop: $(hash).offset().top - 100}, 750);
-    //     }
-    //   });
-
-    function ScrollTo () {
-        // $('a').click(function(){
-        //     $appScrollView.animate({
-        //         scrollTop: $( $.attr(this, 'href') ).offset().top
-        //     }, 500);
-        //     return false;
-        // });
-    }
-    // let $appScrollView = $('.app-scroll-view');
-    // var $sectionList = $('#section-list');
-    // // var $sectionItem = $sectionList.find($('id^="section-"'));
-    // $('a[href^="#section-"]').click(function () {
-    //     $appScrollView.animate({
-    //         scrollTop: $( $.attr(this, 'href') ).offset().top
-    //     }, 500);
-    //     return false;
-    // });
-        
-
-    // $($appScrollView).scroll(function () {
-    //     var scrolled = $($appScrollView).scrollTop();
-    //     let scrollDistance = 200;
-    //     let $changedObject = $app;
-    //     if (scrolled >= scrollDistance) {
-    //         $changedObject.removeClass("theme-header--light").addClass("theme-header--dark")
-    //     } else {
-    //         $changedObject.removeClass("theme-header--dark").addClass("theme-header--light")
-    //     }
-    // });
-
-    // Menu.on("click")
-    // Show app-menu by click on app-menu-toggle-button
-    // function showSearch() {
-    //     changeClassByClickOnElement($appSearchButton, 'active', $appSearchField, 'active');
-    //     changeClassByClickOnElement($appSearchButtonClose, 'active', $appSearchField, 'active');
-    // };
-
-    // function showMenu() {
-    //     changeClassByClickOnElement($appMenuToggleButton, 'active', $appMenu, 'active', $iconAppMenuToggleButton);
-    // };
-
-    // showSearch();
-    // showMenu();
 });
-
-// new ResizeSensor($('.persons'), function() {
-//     console.log('myelement has been resized');
-// });

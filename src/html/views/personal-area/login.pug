@@ -22,18 +22,18 @@ section.section
             div.modal-container
                 div.modal-content
                     // Form
-                    form.form
+                    form.form#form-login(action="#")
                         div.form-container
                             div.form-header
                                 h3.form-header-title-primary Вход в личный кабинет
                             div.form-body
                                 div.form-group.columns
                                     div.form__field
-                                        label(for="email") Email или Логин
-                                        input(type="email")
+                                        label(for="email") Email
+                                        input(type="email" name="email" id="email" minlength="2" required)
                                     div.form__field
                                         label(for="password") Пароль
-                                        input(type="password")
+                                        input(type="password" name="password" id="password" minlength="5" required)
                                 div.form-group.helper
                                     p Для получения доступа к личному кабинету обратитесь к администратору сайта.
                             div.form-footer.align-right

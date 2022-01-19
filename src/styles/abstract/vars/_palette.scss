@@ -1,9 +1,10 @@
 $primary-color: #19191b;
-$secondary-color: #2B2F3C;
+$secondary-color: #2b2f3c;
 $neutral-color: #9093a2;
 $accent-color: #7a1c3e;
+$error-color: #ff174c;
 
-$accent-light-color: #FAC5D8;
+$accent-light-color: #fac5d8;
 
 $primary-color-lighten-30: lighten($primary-color, 3%);
 $primary-color-lighten-50: lighten($primary-color, 5%);
@@ -31,7 +32,6 @@ $accent-color-darken-25: darken($accent-color, 2.5%);
 $accent-color-darken-50: darken($accent-color, 5%);
 $accent-color-darken-100: darken($accent-color, 10%);
 
-
 $white: #fff;
 $black: #000;
 
@@ -39,11 +39,10 @@ $black: #000;
 // $primary-color-200: #50656e;
 // $primary-color-300: #627983;
 
-
 $divider-color: #e2e8f0;
-$divider-color-inverse: #2E333F;
+$divider-color-inverse: #2e333f;
 
-$border-color: #f3f2f2;//#d7d8db;
+$border-color: #f3f2f2; //#d7d8db;
 $border-color-inverse: $divider-color-inverse;
 
 $section-divider-color: lighten($primary-color, 80%);
@@ -52,16 +51,15 @@ $section-divider-color: lighten($primary-color, 80%);
 
 $foreground-color: $primary-color;
 
-$background-color: #F0F0F0;
+$background-color: #f0f0f0;
 $background-color-inverse: #1e2129;
 $background-color-1100: darken($background-color, 10%);
 
 $inactive-color-light: #dfdfdf;
 $inactive-color-light-inverse: $secondary-color;
 
-$menu-expantion-item-color: #60636A;
+$menu-expantion-item-color: #60636a;
 $menu-item-color: $background-color;
-
 
 // Temporary
 $instance-node-color: $white;
