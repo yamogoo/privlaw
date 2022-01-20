@@ -5,5 +5,11 @@
         font-size: 25px;
       }
     }
+    .login {
+      .icon-lock {
+        font-size: 18px;
+        color: $primary-color-lighten-700;
+      }
+    }
   }
 }

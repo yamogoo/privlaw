@@ -11,7 +11,7 @@ div.tabbar.app-header-tabbar
                 a.tab-button-box(href="#poor-vision")
                     span.tab-button-content
                         span.icon-poor-vision
-        button.tab-button
+        button.tab-button.lang
             div.dropdown-selector
                 div.dropdown-selector-container
                     div.dropdown-selector-button
@@ -21,9 +21,10 @@ div.tabbar.app-header-tabbar
                             a(href="#ru") Ru
                         li
                             a(href="#en") En
-        button.tab-button.last
-            span.tab-button-content
-                a(href="login.html") Войти
+        button.tab-button.login.last
+            a.tab-button-content(href="login.html")
+                span.icon-lock
+                span Войти
     // Search Toggle
     div.tab-button-group.app-header__tabbar-menu-toggle-button
         button.tab-button.last#app-menu-toggle-button

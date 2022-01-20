@@ -7,6 +7,9 @@
   border-bottom-style: solid;
   border-bottom-width: $app-header-border-bottom-width;
   border-bottom-color: $app-header-border-bottom-color;
+  @include respond-below(md) {
+    height: auto;
+  }
 
   &-container {
     @include flexbox;

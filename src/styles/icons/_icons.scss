@@ -1,6 +1,9 @@
 .icon-link:before {
   content: "\e917";
 }
+.icon-lock:before {
+  content: "\e919";
+}
 .icon-list-link-arrow:before {
   content: "\e916";
 }
@@ -30,15 +33,12 @@
 }
 .icon-list-square:before {
   content: "\e90e";
-  // color: #7a1c3e;
 }
 .icon-list-circle:before {
   content: "\e90c";
-  // color: #7a1c3e;
 }
 .icon-list-disk:before {
   content: "\e90d";
-  // color: #7a1c3e;
 }
 .icon-expansion-arrow:before {
   content: "\e90a";
@@ -76,12 +76,7 @@
 .icon-backward:before {
   content: "\e902";
 }
-
-
-
-
-
-
+//
 
 .icon-navigation-line:after {
   content: "\e909";

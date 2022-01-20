@@ -66,7 +66,7 @@
                     <!-- Controllers-->
                     <div class="tab-button-group app-header__tabbar-controllers">
                       <button class="tab-button poor-vision"><span class="tab-button-container"><a class="tab-button-box" href="#poor-vision"><span class="tab-button-content"><span class="icon-poor-vision"></span></span></a></span></button>
-                      <button class="tab-button">
+                      <button class="tab-button lang">
                         <div class="dropdown-selector">
                           <div class="dropdown-selector-container">
                             <div class="dropdown-selector-button">
@@ -79,7 +79,7 @@
                           </div>
                         </div>
                       </button>
-                      <button class="tab-button last"><span class="tab-button-content"><a href="login.html">Войти</a></span></button>
+                      <button class="tab-button login last"><a class="tab-button-content" href="login.html"><span class="icon-lock"></span><span>Войти</span></a></button>
                     </div>
                     <!-- Search Toggle-->
                     <div class="tab-button-group app-header__tabbar-menu-toggle-button">
@@ -184,7 +184,7 @@
                       </div>
                     </div>
                     <button class="search-button" type="submit" id="search-button"><span>Поиск</span></button>
-                    <button class="search-button-close" id="search-button-close"><span class="icon"></span></button>
+                    <button class="search-button-close" id="search-button-close" onclick="event.preventDefault()"><span class="icon"></span></button>
                   </div>
                 </div>
               </form>

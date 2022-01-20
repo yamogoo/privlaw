@@ -22,6 +22,9 @@
       border: none;
       font-size: 20px;
       border-bottom: 1px solid $divider-color;
+      @include respond-below(md) {
+        height: 50px;
+      }
 
       &:focus {
         border-bottom: 1px solid $primary-color;
