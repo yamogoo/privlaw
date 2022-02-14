@@ -1,177 +1,191 @@
 .article {
-  @include flexbox;
-  @include flex-direction(column);
-  gap: 50px;
+    @include flexbox;
+    @include flex-direction(column);
+    gap: 50px;
 
-  &-title {
-    &:not(.accent) {
-      color: $primary-color;
-    }
-
-    &.accent {
-      color: $accent-color;
-    }
-  }
-
-  &-description {
-    color: $neutral-color;
-
-    b {
-      color: $primary-color;
-      font-size: inherit;
-      font-weight: inherit;
-      font-style: inherit;
-    }
-  }
-
-  &-date {
-    @extend %entity__item-date;
-  }
-
-  &-tag {
-    @extend %entity__item__article-tag;
-  }
-
-  &-content {
-    > * {
-      line-height: 1.9; //1.82;
-    }
-
-    .columns {
-      p {
-        @include respond-above(md) {
-          column-count: 2;
-          column-gap: 40px;
+    &-title {
+        &:not(.accent) {
+            color: $primary-color;
         }
-        @extend %main-p;
-      }
+
+        &.accent {
+            color: $accent-color;
+        }
     }
 
-    > h2[id^="section"],
-    h3[id^="section"],
-    h4[id^="section"],
-    h5[id^="section"] {
-      padding-bottom: 50px;
-    }
+    &-description {
+        color: $neutral-color;
 
-    > h2[id^="section"] {
-      @extend %section-title-primary;
-    }
-
-    > h3[id^="section"] {
-      @extend %section-title-secondary;
-    }
-
-    > h4 {
-      font-size: 24px;
-    }
-
-    > h5 {
-      font-size: 22px;
-    }
-
-    > h3 {
-      font-size: 28px;
-    }
-
-    > h2 {
-      font-size: 32px;
-    }
-
-    > h1 {
-      font-size: 36px;
-    }
-
-    > a {
-      text-decoration: underline;
-    }
-
-    // Paragraph
-    > p {
-      @extend %main-p;
-
-      p {
-        @extend %main-p;
-      }
-
-      a {
-        text-decoration: underline;
-      }
-
-      b {
-        @extend %main-p-b;
-      }
-
-      i {
-        @extend %main-p-i;
-      }
-
-      br {
-        @extend %main-br;
-      }
-    }
-
-    > b {
-      @extend %main-p-b;
-    }
-
-    > i {
-      @extend %main-p-i;
-    }
-
-    > br {
-      @extend %main-br;
-    }
-
-    // Quotes
-    > q {
-      display: block;
-      font-style: italic;
-      font-size: 1.1em;
-      font-weight: 400;
-      padding: px2em(30px) px2em(30px) px2em(30px) px2em(50px);
-      margin: px2em(20px) px2em(0px);
-      background-color: $background-color;
-      line-height: 1.72;
-
-      &::before {
-        content: '"';
-        position: absolute;
-        transform: translate(-30px, -30px);
-        font-size: 44px;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-
-    > hr {
-      @extend %article-hr;
-    }
-
-    > hr.section {
-      @extend %article-hr;
-    }
-
-    > img {
-      @extend %article-content-image;
-      padding-bottom: 40px;
-      // height: 320px;
-    }
-
-    &-header {
-      @include flexbox();
-      @include justify-content(flex-end);
-      padding-bottom: 20px;
-    }
-
-    &-tag {
-      @extend %entity__item__article-tag;
+        b {
+            color: $primary-color;
+            font-size: inherit;
+            font-weight: inherit;
+            font-style: inherit;
+        }
     }
 
     &-date {
-      @extend %entity__item-date;
+        @extend %entity__item-date;
     }
-  }
+
+    &-tag {
+        @extend %entity__item__article-tag;
+    }
+
+    &-content {
+        > * {
+            line-height: 1.9; //1.82;
+        }
+
+        .columns {
+            p {
+                @include respond-above(md) {
+                    column-count: 2;
+                    column-gap: 40px;
+                }
+                @extend %main-p;
+            }
+        }
+
+        > h2[id^='section'],
+        h3[id^='section'],
+        h4[id^='section'],
+        h5[id^='section'] {
+            padding-bottom: 50px;
+        }
+
+        > h2[id^='section'] {
+            @extend %section-title-primary;
+        }
+
+        > h3[id^='section'] {
+            @extend %section-title-secondary;
+        }
+
+        > h4 {
+            font-size: 24px;
+        }
+
+        > h5 {
+            font-size: 22px;
+        }
+
+        > h3 {
+            font-size: 28px;
+        }
+
+        > h2 {
+            font-size: 32px;
+        }
+
+        > h1 {
+            font-size: 36px;
+        }
+
+        > a {
+            text-decoration: underline;
+        }
+
+        // Paragraph
+        > p {
+            @extend %main-p;
+
+            p {
+                @extend %main-p;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+
+            b {
+                @extend %main-p-b;
+            }
+
+            i {
+                @extend %main-p-i;
+            }
+
+            br {
+                @extend %main-br;
+            }
+        }
+
+        > b {
+            @extend %main-p-b;
+        }
+
+        > i {
+            @extend %main-p-i;
+        }
+
+        > br {
+            @extend %main-br;
+        }
+
+        // Quotes
+        > q {
+            display: block;
+            font-style: italic;
+            font-size: 1.1em;
+            font-weight: 400;
+            padding: px2em(30px) px2em(30px) px2em(30px) px2em(50px);
+            margin: px2em(20px) px2em(0px);
+            background-color: $background-color;
+            line-height: 1.72;
+
+            &::before {
+                content: '"';
+                position: absolute;
+                transform: translate(-30px, -30px);
+                font-size: 44px;
+            }
+
+            &::after {
+                display: none;
+            }
+        }
+
+        > hr {
+            @extend %article-hr;
+        }
+
+        > hr.section {
+            @extend %article-hr;
+        }
+
+        > img {
+            @extend %article-content-image;
+            padding-bottom: 40px;
+            // height: 320px;
+        }
+
+        &-header {
+            @include flexbox();
+            @include justify-content(flex-end);
+            padding-bottom: 20px;
+        }
+
+        &-tag {
+            @extend %entity__item__article-tag;
+        }
+
+        &-date {
+            @extend %entity__item-date;
+        }
+    }
+}
+
+.text-section {
+    .article-content {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            @extend %section-title-primary;
+            padding-bottom: 30px;
+        }
+    }
 }
