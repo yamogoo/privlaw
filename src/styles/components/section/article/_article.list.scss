@@ -5,12 +5,18 @@
             li[type='disk'],
             li[type='circle'],
             li[type='square'] {
-                display: grid;
-                grid-template-columns: 30px 1fr;
+                // display: grid;
+                // grid-template-columns: 30px 1fr;
+                width: 100%;
+                display: block;
 
                 p {
                     font-size: 17px;
                     line-height: 2.2;
+                }
+
+                a {
+                    display: inline-block;
                 }
             }
         }
@@ -18,7 +24,7 @@
         > ul,
         ol {
             padding: 0px 0px;
-            padding-left: 20px;
+            padding-left: 40px;
 
             li {
                 font-size: 17px;
@@ -37,6 +43,8 @@
                 list-style: none;
 
                 &::before {
+                    position: absolute;
+                    left: 15px;
                     font-size: 6px;
                 }
             }
