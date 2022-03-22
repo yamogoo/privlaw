@@ -124,26 +124,30 @@
         }
 
         // Quotes
-        > q {
-            display: block;
-            font-style: italic;
-            font-size: 1.1em;
-            font-weight: 400;
-            padding: px2em(30px) px2em(30px) px2em(30px) px2em(50px);
-            margin: px2em(20px) px2em(0px);
-            background-color: $background-color;
-            line-height: 1.72;
+        // > q {
+        //     display: block;
+        //     font-style: italic;
+        //     font-size: 1.1em;
+        //     font-weight: 400;
+        //     padding: px2em(30px) px2em(30px) px2em(30px) px2em(50px);
+        //     margin: px2em(20px) px2em(0px);
+        //     background-color: $background-color;
+        //     line-height: 1.72;
 
-            &::before {
-                content: '"';
-                position: absolute;
-                transform: translate(-30px, -30px);
-                font-size: 44px;
-            }
+        //     &::before {
+        //         content: '"';
+        //         position: absolute;
+        //         transform: translate(-30px, -30px);
+        //         font-size: 44px;
+        //     }
 
-            &::after {
-                display: none;
-            }
+        //     &::after {
+        //         display: none;
+        //     }
+        // }
+
+        q {
+            @extend %qoute;
         }
 
         > hr {

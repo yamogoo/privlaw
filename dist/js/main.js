@@ -108,10 +108,10 @@ $(document).ready(function () {
 
     // Main slider
     $('.main-slider').owlCarousel({
-        autoplay: false,
+        autoplay: true,
         autoplayTimeout: 5000,
         loop: true,
-        smartSpeed: 200,
+        smartSpeed: 450,
         margin: 0,
         nav: true,
         dots: true,
